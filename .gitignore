@@ -9,9 +9,5 @@ _site
 # Logs
 *.log
 
-
 # Packages
 node_modules
-
-# TB
-notes.txt

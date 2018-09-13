@@ -1,6 +1,6 @@
 const path        = require('path');
 const webpack     = require('webpack');
-const clientName  = '<Client Name>';
+const clientName  = 'Ocupop';
 const src         = 'src';
 const dest        = '_site';
 const assets      = 'src/assets';
@@ -16,7 +16,7 @@ module.exports = {
       jekyll:   true,
     },
     github: false,
-    firebase: true,
+    firebase: false,
   },
   tasks: {
     webpack:  true,

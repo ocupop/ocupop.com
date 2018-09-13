@@ -1,8 +1,8 @@
 # Site settings
-title: Client Name
+title: Ocupop
 email: dev@ocupop.com
 description: ''
-url: "http://client_url.com"
+url: "https://chartreuse-echidna.cloudvent.net/"
 permalink: pretty
 analytics_code:
 
@@ -29,12 +29,19 @@ source: src
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-seo-tag
   - jekyll-lunr-js-search
-
 
 # feed:
 #   title: Client Name
 #   description: Description of feed
 #   url: primary url
 #   path: alternate path
+
+categories:
+  - Branding
+  - Strategy
+  - Web
+  - Events
+  - Presentation
+  - Illustration
+  - Animation
