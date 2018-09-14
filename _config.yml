@@ -8,10 +8,10 @@ analytics_code:
 
 # Collections
 collections:
-  examples:
+  projects:
     output: true
-    layout: default
-    permalink: /examples/:path/
+    layout: project
+    permalink: /work/:path/
 
 # defaults:
 #   - 
