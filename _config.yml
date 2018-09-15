@@ -6,6 +6,11 @@ url: "https://chartreuse-echidna.cloudvent.net/"
 permalink: pretty
 analytics_code:
 
+placeholders:
+  hero: /assets/img/1800x800.png
+  aspect-4x3: /assets/img/768x500.png
+  aspect-1x1: /assets/img/768x768.png
+
 # Collections
 collections:
   projects:
