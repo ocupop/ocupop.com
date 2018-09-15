@@ -1,6 +1,23 @@
 <head>
+  <meta property="og:title" content="Ocupop" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ page.url | absolute_url }}" />
+  {% if page.layout != "post" %}<meta property="og:image" content="{{ 'assets/img/xxx.png' | absolute_url }}" />{% else %}<meta property="og:image" content="{{ page.featured_image_path  | absolute_url  }}" />{% endif %}
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
-  <!-- Adding feed.xml: https://github.com/jekyll/jekyll-feed -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="ocupop" />
+  <meta name="twitter:creator" content="ocupop" />
+  <meta name="twitter:title" content="Ocupop" />
+  <meta name="twitter:description" content="{{ page.title }}" />
+  <meta name="twitter:text:description" content="{{ site.description }}" />
+  {% if page.layout != "post" %}<meta name="twitter:image" content="{{ 'assets/img/xxx.png' | absolute_url }}" />{% else %}<meta name="twitter:image" content="{{ page.featured_image_path  | absolute_url  }}" />{% endif %}
+  <meta name="twitter:image:alt" content="Ocupop" />
+  
+   <!-- Adding feed.xml: https://github.com/jekyll/jekyll-feed -->
   {% feed_meta %}
 
   <!-- Fav and Touch Icons -->

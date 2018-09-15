@@ -6,6 +6,34 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col">
+        <h1>{{ page.title }}</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Client: {{ page.client }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <p>Summary: {{ page.summary }}</p>
+      </div>
+    </div>   
+    <div class="row">
+      <div class="col">
+        <p>Situation:</p>{{ page.description.situation_html }}
+        <p>Solution:</p>{{ page.description.solution_html }}
+        <p>Results:</p>{{ page.description.results_html }}
+      </div>
+    </div>    
+    <div class="row">
+      <div class="col">
+        {% for asset in page.gallery %}
+          <div class="gallery-asset">
+            <img src="{{ asset.image }}" alt="{{ asset.caption }}" class="img-fluid">
+            <p>{{ asset.caption }}</p>
+          </div> 
+        {% endfor %} 
       </div>
     </div>
   </div>
