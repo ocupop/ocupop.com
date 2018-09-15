@@ -19,7 +19,7 @@ collections:
     permalink: /work/:title/
   focuses:
     output: true
-    layout: project
+    layout: focus
     permalink: /focus/:title/
 
 # defaults:
