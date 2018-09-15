@@ -55,3 +55,7 @@ tags:
   - illustration
   - animation
   
+  project_statuses:
+    - active
+    - draft
+    - private
