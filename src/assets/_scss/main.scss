@@ -7,6 +7,9 @@
 @import 'fonts';
 @import 'animations';
 
+@import 'base/global';
+@import 'base/typography';
+
 @import 'layout/page_header';
 @import 'layout/page_content';
 @import 'layout/page_footer';
