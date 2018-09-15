@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Focus
+title: Expertise
 ---
 <section class="bg-light">
   <div class="container">
@@ -16,34 +16,18 @@ title: Focus
 </section>
 <section>
   <div class="container">
-    <div id="focus-accordion" class="accordion">
-      {% for focus in site.focuses %}
-      {% assign project = site.projects | where: "slug", focus.project | first %}
-      <div class="card">
-        <div class="card-header" id="heading-{{ forloop.index }}">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse-{{ forloop.index }}" aria-expanded="true" aria-controls="collapseOne">
-            {{ focus.title }}
-          </button>
-        </div>
-        <div id="collapse-{{ forloop.index }}" class="collapse {% if forloop.first %}show{% endif %}" aria-labelledby="headingOne" data-parent="#focus-accordion">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-6">
-                <div class="content">
-                  <div class="bg-image aspect-4x3 bg-light" style="background-image:url({{ project.image }})"></div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="content">
-                  {{ focus.title }}
-                  {{ focus.summary_html }}
-                </div>
-              </div>
+    <div class="row">
+        {% for focus in site.focuses %}
+        {% assign project = site.projects | where: "slug", focus.project | first %}
+          <div class="col-md-6">
+            <div class="content">
+              <div class="bg-image aspect-4x3 bg-light" style="background-image:url({{ project.image }})"></div>
+              <h3>{{ focus.title }}</h3>
+              <p>{{ focus.summary_html }}</p>
+              <a href="{{ focus.url }}" title="{{ focus.title }}">Learn more...</a>
             </div>
           </div>
-        </div>
-      </div>
-      {% endfor %}
+        {% endfor %}
     </div>
     <div class="row">
       <div class="col-12">
