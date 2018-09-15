@@ -2,3 +2,40 @@
 layout: default
 title: Us
 ---
+
+<section class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+          <h1>Culture</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum eos enim optio provident, nostrum nisi nobis! Earum eos, perferendis nisi tenetur adipisci magni labore harum.</p>
+          <h2>Philosophy</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et veniam neque libero, laborum quis aliquid quasi numquam at praesentium porro recusandae autem! Animi, unde deserunt?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="content">
+          <img src="https://via.placeholder.com/1400x800?text=Team+Photos+Videos" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for i in (1..8) %}
+      <div class="col-md-4">
+        <div class="content">
+          <div class="bg-image aspect-1x1 bg-light" style="background-image: url(https://via.placeholder.com/768x768?text=Team+Photos+Videos)">
+
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
