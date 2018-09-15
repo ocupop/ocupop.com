@@ -11,7 +11,11 @@ collections:
   projects:
     output: true
     layout: project
-    permalink: /work/:path/
+    permalink: /work/:title/
+  focuses:
+    output: true
+    layout: project
+    permalink: /focus/:title/
 
 # defaults:
 #   - 
@@ -37,11 +41,12 @@ plugins:
 #   url: primary url
 #   path: alternate path
 
-categories:
-  - Branding
-  - Strategy
-  - Web
-  - Events
-  - Presentation
-  - Illustration
-  - Animation
+tags:
+  - branding
+  - strategy
+  - web
+  - events
+  - presentation
+  - illustration
+  - animation
+  
