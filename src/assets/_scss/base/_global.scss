@@ -7,3 +7,15 @@ body {
 section {
   padding: 75px 0;
 }
+
+dl {
+  dt {
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    margin: 5px 0;
+  }
+
+  dd {
+
+  }
+}
