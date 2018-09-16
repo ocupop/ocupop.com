@@ -1,22 +1,30 @@
 ---
 layout: default
 ---
+{% assign project = page %}
+<section class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="project">
   <div class="container">
     <div class="row">
       <div class="col-12">
-          <img src="https://via.placeholder.com/1280x900?text=logo" class="img-fluid" alt="{{ project.title }}">
+        <h4>{{ project.client }}</h4>
+        <h1>{{ project.title }}</h1>
+        <p class="text-sans-serif text-uppercase">
+          {% for tag in project.tags %}{{ tag }}&nbsp;{% unless forloop.last %}&dot;{% endunless %}&nbsp;{% endfor %}
+        </p>
+        <hr>
       </div>
     </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <h2>{{ page.title }}</h2>
-          <h3>{{ page.client }}</h3>
-        </div>
-      </div>
-    </div>
+
     <div class="row">
       <div class="col-12">
         <div class="content">
