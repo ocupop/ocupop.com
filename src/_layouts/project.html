@@ -1,18 +1,6 @@
 ---
 layout: default
 ---
-<<<<<<< HEAD
-
-<div class="bg-image aspect-hero" style="background-image: url({{ page.hero_image | default: site.placeholders.hero }})"></div>
-<section id="project" class="pb-0">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="content">
-          <h2>{{ page.title }}</h2>
-          <h3>{{ page.client }}</h3>
-        </div>
-=======
 {% assign project = page %}
 <section class="bg-dark">
   <div class="container">
@@ -34,7 +22,6 @@ layout: default
           {% for tag in project.tags %}{{ tag }}&nbsp;{% unless forloop.last %}&dot;{% endunless %}&nbsp;{% endfor %}
         </p>
         <hr>
->>>>>>> 587133a081e6f6d655d6f12d98542d3e9ee86fae
       </div>
       <div class="col-md-6">
         <div class="project-tags content">
