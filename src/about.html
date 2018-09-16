@@ -46,6 +46,7 @@ title: Us
 <section>
   <div class="container">
     <div class="row">
+      {% for i in (1..6) %}
       <div class="col-md-6">
         <div class="content">
           <div class="bg-image aspect-4x3" style="background-image: url({{ site.placeholders.aspect-4x3 }})">
@@ -64,24 +65,8 @@ title: Us
           </dl>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="content">
-          <div class="bg-image aspect-4x3" style="background-image: url({{ site.placeholders.aspect-4x3 }})">
-          </div>
-          <h2>Michael Nieling</h2>
-          <h3>Founder, Creative Director</h3>
-          <dl>
-            <dt>Title you prefer</dt>
-            <dd>M</dd>
-            <dt>Spirit Animal</dt>
-            <dd>Wolf</dd>
-            <dt>What you want to be when you grow up</dt>
-            <dd>Robotron</dd>
-            <dt>Catch Phrase</dt>
-            <dd>I'm going to punch you in the throat</dd>
-          </dl>
-        </div>
-      </div>
+      {% endfor %}
+      
     </div>
   </div>
 </section>
