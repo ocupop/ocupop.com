@@ -2,11 +2,19 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $font-family-base;
+<<<<<<< HEAD
   font-size: 20px;
+=======
+  line-height: 1.5;
+>>>>>>> 587133a081e6f6d655d6f12d98542d3e9ee86fae
 }
 
 section {
   padding: 75px 0;
+}
+
+hr {
+  border-color: $primary;
 }
 
 dl {

@@ -7,24 +7,28 @@ testimonial:
   author: Alyssa Fox
   title: Founder, Fox Tax Service
 ---
-
-<section id="projects">
+<section class="bg-light">
   <div class="container">
-
     <div class="row">
-      <div class="col-12">
-        <p class="lead editable">Here's your chance to find out everything you ever wanted to know about Ocupop...get all your questions answered while more than doubling your recommended daily allowance of interweb vitamin-V (voyeryism). Like a myspace page that won't melt your eyeballs.</p>
-        <div class="editable mt-5">
-          <p>Everyone and their ideated, synergistic brother keeps throwing the B-word around, and though we are certainly NOT an ad agency or a marketing firm, it is starting to make us a little crazy. A Brand is not a logo, it is not something you make in the computer, it is a cohesive corporate experience; a holistic collaboration of colors, logos, commercials, benefits packages and CEO hairpieces. From the employees to the customers, a brand is, at its best, a distinct, cohesive, and resonant voice.</p>
-          <p>So while we are not a dyed-in-the-wool branding agency, we routinely find ourselves in a position to offer valuable strategy and direction for clients of all varieties. From message strategy and positioning for start-ups and mom and pops, to audits, protocol, and implementation for established corporations, Ocupop has the acumen and experience to foster responsible brand stewardship far and wide.</p>
+      <div class="col-md-6">
+        <div class="content editable">
+          <p class="lead">We have worked with clients of every imaginable size, with budgets from meager to massive, but above all else, we try to provide insightful, powerful, and sustainable design and marketing solutions that resonate with our clients and their customers.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content editable">
+          <p>Below are a few examples that we hope illustrate the scale and scope of our aptitude and experience. Ultimately, lots of work paired with lots of words, but we hope the breadth and depth of this case study content impresses and reassures. While certainly not our entire body of work, these pages highlight some of our favorite and most enlightening results.</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="row">
+<section class="bg-dark text-white">
+  <div class="container">
+    <div class="row d-none">
       <div class="col-12">
-        <hr>
-        <ul class="nav justify-content-center d-none">
+        <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link active" data-filter="all" href="#">all</a>
           </li>
@@ -40,15 +44,20 @@ testimonial:
     <div id="projectList" class="row">
       {% for project in site.projects %}
         {% if project.status == "active" %}
+<<<<<<< HEAD
           <div class="mix col-xs-12 col-lg-6 mb-5 {% for tag in project.tags %} {{ tag }}{% endfor %}">
             <div class="bg-image aspect-4x3" style="background-image: url({{ project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
             <h2 class="mt-4">{{ project.title }}</h2>
+=======
+          <div class="mix col-12 {% for tag in project.tags %} {{ tag }}{% endfor %}">
+            <div class="bg-image aspect-4x3 bg-black my-5"></div>
+            <h3 class="mt-4">{{ project.title }}</h3>
+>>>>>>> 587133a081e6f6d655d6f12d98542d3e9ee86fae
             <p>{{ project.summary }}</p>
             <a href="{{ project.url }}" class="btn btn-inline">Learn more...</a>
           </div>
         {% endif %}
       {% endfor %}
     </div>
-
   </div>
 </section>
