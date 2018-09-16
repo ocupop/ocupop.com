@@ -54,6 +54,9 @@
   &.aspect-16x9 {
     padding-top: 56.25%;
   }
+  &.aspect-hero {
+    padding-top: 42%;
+  }
 }
 
 
@@ -66,6 +69,23 @@
   fill: $white;
 }
 
+.dotted {
+  display: inline-block;
+  position: relative;
+  padding-right: 20px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 10px;
+    display: block;
+    background-color: $primary;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+  }
+}
 
 // Screen / Slides
 .full {
