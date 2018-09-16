@@ -1,3 +1,15 @@
+@keyframes iconZoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(20.0, 20.0, 20.0) translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1.0, 1.0, 1.0) translate3d(0, 0, 0);
+  }
+}
+
 // CARD SLIDE IN
 @keyframes cardSlideIn {
   from {
