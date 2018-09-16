@@ -28,6 +28,7 @@ addEventListener('install', installEvent => {
         '/assets/css/main.css',
         '/assets/js/main.js',
         '/offline/index.html',
+        '/contact/index.html',
         'favicon.png'
       ]); // end return addAll
     }) // end open then

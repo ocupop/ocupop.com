@@ -7,18 +7,13 @@ permalink: /work/
 <section id="projects">
   <div class="container">
     <div class="row">
-      <div class="col">
-        <h1>{{ page.title }}</h1>
+      {% for project in site.projects %}
+      <div class="work-project col-xs-12 col-lg-6">
+        <img src="https://via.placeholder.com/1280x900?text=logo" class="img-fluid" alt="{{ project.title }}">
+        <h2><a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></h2>
+        <p>{% for tag in project.tags %}{{ tag  | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
       </div>
-    </div>
-    <div class="row">
-      <div class="col">
-          <ul>
-            {% for project in site.projects %}
-              <li><a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></li>
-            {% endfor %}
-          </ul>
-      </div>
+      {% endfor %}
     </div>  
   </div>
 </section>
