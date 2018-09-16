@@ -1,32 +1,17 @@
 <!-- Javascript -->
 <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}"></script>
+
 <script>
-  console.log("READY");
-  $(function() {
-    console.log("SET");
-  });
-  
-  $(document).ready(function() {
-    console.log("GO");
-  });
+  // if (navigator.serviceWorker) {
+  // 	navigator.serviceWorker.register('/serviceworker.js')
+  // 	.then( function (registration) {
+  // 		console.log('ServiceWorker Loaded!', registration.scope);
+  // 	})
+  // 	.catch( function (error) {
+  // 		console.error('Failure on SW', error);
+  // 	});
+  // }
 </script>
-	<script>
-		// if (navigator.serviceWorker) {
-		// 	navigator.serviceWorker.register('/serviceworker.js')
-		// 	.then( function (registration) {
-		// 		console.log('ServiceWorker Loaded!', registration.scope);
-		// 	})
-		// 	.catch( function (error) {
-		// 		console.error('Failure on SW', error);
-		// 	});
-		// }
-	</script>
-
-<!-- Script for collapsing tab navigation on smaller screens, remove for your project if not needed -->
-<!-- <script src="{{ '/assets/js/vendor/tab-collapse-b4.js' | prepend: site.baseurl }}"></script> -->
-
-<!-- Search -->
-{% include search.html %}
 
 <!-- Analytics -->
 {% include analytics.html %}
