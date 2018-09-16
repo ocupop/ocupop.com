@@ -7,13 +7,37 @@ permalink: /work/
 <section id="projects">
   <div class="container">
     <div class="row">
-      {% for project in site.projects %}
-      <div class="work-project col-xs-12 col-lg-6">
-        <img src="https://via.placeholder.com/1280x900?text=logo" class="img-fluid" alt="{{ project.title }}">
-        <h2><a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></h2>
-        <p>{% for tag in project.tags %}{{ tag  | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+      <div class="col-12">
+        <div class="mb-5 editable lead">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, deleniti beatae deserunt mollitia obcaecati sunt ab id necessitatibus tempore vitae perspiciatis eius facilis vero illo expedita soluta unde voluptas. Ullam.</p>
+        </div>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="mb-5 editable">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit fuga sit sequi vitae nobis quo impedit, soluta ea commodi nihil reprehenderit, explicabo, hic dignissimos repellendus suscipit ducimus itaque! Culpa, modi?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <button type="button" data-filter="all">All</button>
+        {% for focus in site.focuses %}
+          <button type="button" data-filter=".{{ focus.title | downcase }}">{{ focus.title | downcase }}</button>
+        {% endfor %}
+      </div>
+    </div>
+    <div id="projectList" class="row">
+      {% for project in site.projects %}
+        <div class="mix col-xs-12 col-lg-6 {% for tag in project.tags %} {{ tag }}{% endfor %}">
+          <img src="{{ project.gallery[0].image | default: site.placeholders.aspect-4x3 }}" class="img-fluid" alt="{{ project.title }}">
+          <h2><a href="{{ project.url }}" title="{{ project.title }}">{{ project.title }}</a></h2>
+          <p>{% for tag in project.tags %}{{ tag  | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
+        </div>
       {% endfor %}
-    </div>  
+    </div>
   </div>
 </section>
