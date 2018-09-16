@@ -19,6 +19,9 @@
   @extend %clearfix;
 }
 
+.lead {
+  font-family: $font-family-base-bold;
+}
 
 // Responsive containers
 .container-4x3 {
