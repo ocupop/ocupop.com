@@ -29,7 +29,9 @@
 //         '/assets/js/main.js',
 //         '/offline/index.html',
 //         '/contact/index.html',
-//         'favicon.png'
+//         'favicon.png',
+//         'https://webfonts.fontstand.com/WF-031559-2b8cdb5c18c2686f822711d4a431fccf.css',
+//         'https://use.typekit.net/wzw6yzl.css'
 //       ]); // end return addAll
 //     }) // end open then
 //   ); // end waitUntil
