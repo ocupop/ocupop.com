@@ -58,3 +58,18 @@
 .bg-gray-800 {
   background-color: $gray-800;
 }
+
+.fill-white {
+  fill: $white;
+}
+
+.stroke-white {
+  stroke-color: $white;
+}
+
+// Screen / Slides
+.full {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
