@@ -1,20 +1,24 @@
 ---
 layout: default
-title: Expertise
+title: Focus
 ---
 <section class="bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <h1>Overview of Expertise</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque quia natus voluptatibus consequuntur velit deserunt aspernatur adipisci reprehenderit eligendi quidem! Repellat beatae sapiente totam eos.</p>
+      <div class="col-md-6">
+        <div class="content editable">
+          <p class="lead">Our smaller size affords us the agility to adapt to clients’ individual circumstances, while our experience, ingenuity, and unwillingness to sleep assures insightful, holistic, sustainable solutions in all variety of creative capacities.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content editable">
+          <p>For almost two decades, we have left a wake of satisfied customers and quality work in our path—so drop us a line, because we’re Ocupop, and that’s two O’s, two P’s and YOU! ...see that is the sort of shit we’re talking about, brilliant!</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section>
+<section class="bg-dark text-white">
   <div class="container">
     <div class="row">
         {% for focus in site.focuses %}
@@ -22,7 +26,7 @@ title: Expertise
           <div class="col-md-6">
             <div class="content">
               <div class="bg-image aspect-4x3 bg-light" style="background-image:url({{ project.image }})"></div>
-              <h3>{{ focus.title }}</h3>
+              <h2>{{ focus.title }}</h2>
               <p>{{ focus.summary_html }}</p>
               <a href="{{ focus.url }}" title="{{ focus.title }}">Learn more...</a>
             </div>

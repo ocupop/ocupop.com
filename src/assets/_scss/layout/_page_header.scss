@@ -29,7 +29,8 @@
         background-color: $orange;
         @include transition(.5s);
       }
-      &:hover, &.active {
+      &:hover,
+        &.active {
         &::after {
           left: 0;
         }
@@ -94,7 +95,6 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: $screen-md-min) {
-  
 }
 
 // Large devices (desktops, 992px and up)
