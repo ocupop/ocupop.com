@@ -5,7 +5,7 @@ $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
+$gray-500: #999999;
 $gray-600: #6c757d !default;
 $gray-700: #494949;
 $gray-800: #333333;
@@ -41,7 +41,7 @@ $font-family-base: 'Berlingske Serif Regular', Georgia, serif;
 $font-family-secondary: 'commuters-sans', Helvetica, Arial, sans-serif;
 $font-family-secondary-bold: 'Berlingske Serif ExtraBold', Georgia, serif;
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1.3rem; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
@@ -50,7 +50,7 @@ $font-weight-normal:          400 !default;
 $font-weight-bold:            700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
-$line-height-base:            1.5 !default;
+$line-height-base:            1.8 !default;
 
 $h1-font-size:                $font-size-base * 2.5 !default;
 $h2-font-size:                $font-size-base * 2 !default;
