@@ -44,15 +44,9 @@ testimonial:
     <div id="projectList" class="row">
       {% for project in site.projects %}
         {% if project.status == "active" %}
-<<<<<<< HEAD
-          <div class="mix col-xs-12 col-lg-6 mb-5 {% for tag in project.tags %} {{ tag }}{% endfor %}">
-            <div class="bg-image aspect-4x3" style="background-image: url({{ project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
-            <h2 class="mt-4">{{ project.title }}</h2>
-=======
           <div class="mix col-12 {% for tag in project.tags %} {{ tag }}{% endfor %}">
             <div class="bg-image aspect-4x3 bg-black my-5"></div>
             <h3 class="mt-4">{{ project.title }}</h3>
->>>>>>> 587133a081e6f6d655d6f12d98542d3e9ee86fae
             <p>{{ project.summary }}</p>
             <a href="{{ project.url }}" class="btn btn-inline">Learn more...</a>
           </div>
