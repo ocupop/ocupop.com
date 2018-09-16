@@ -18,7 +18,7 @@ $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
 $orange:  #ff9560;
-$yellow:  #f5C938;
+$yellow:  #f5c938;
 $green:   #87a63e;
 $teal:    #20c997 !default;
 $cyan:    #7dd0e8 !default;
@@ -39,7 +39,7 @@ $body-color:            $dark;
 
 $font-family-base: 'Berlingske Serif Regular', Georgia, serif;
 $font-family-secondary: 'commuters-sans', Helvetica, Arial, sans-serif;
-$font-family-secondary-bold: 'Berlingske Serif ExtraBold', Georgia, serif;
+$font-family-base-bold: 'Berlingske Serif ExtraBold', Georgia, serif;
 
 $font-size-base:              1.3rem; // Assumes the browser default, typically `16px`
 $font-size-lg:                ($font-size-base * 1.25) !default;
@@ -59,7 +59,7 @@ $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
 
-$headings-font-family:        $font-family-secondary;
+$headings-font-family:        $font-family-base-bold;
 $headings-font-weight:        400;
 $headings-line-height:        1.2 !default;
 $headings-color:              inherit !default;
