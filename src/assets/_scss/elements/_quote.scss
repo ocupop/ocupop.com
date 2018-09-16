@@ -1,0 +1,16 @@
+.quote {
+  font-family: $font-family-secondary-bold;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.quote-author {
+  font-family: $font-family-secondary;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 1px;
+  color: $gray-600;
+}

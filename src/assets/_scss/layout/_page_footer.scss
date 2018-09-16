@@ -1,7 +1,32 @@
 #page-footer {
+  padding: 50px 0;
+  background-color: $dark;
 
+  .nav-link {
+    color: $white;
+    font-weight: 100;
+    font-family: $font-family-secondary;
+  }
 }
 
+.logo-footer {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 190px;
+}
+
+.logo-footer-hover {
+  width: 190px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0;
+  @include transition(.5s);
+  &:hover {
+    opacity: 1;
+  }
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: $screen-sm-min) {}

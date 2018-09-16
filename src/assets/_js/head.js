@@ -2,10 +2,10 @@
 import WebFont from 'webfontloader';
 
 WebFont.load({
-  google: {
-    families: ['Open Sans']
-  },
-  // typekit: { id: '' },
+  // google: {
+  //   families: ['Open Sans']
+  // },
+  typekit: { id: 'zw6yzl' },
   loading: function() {
     window.console.log('LOADING FONTS');
   },
