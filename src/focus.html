@@ -25,20 +25,13 @@ title: Focus
         {% assign project = site.projects | where: "slug", focus.project | first %}
           <div class="col-md-6">
             <div class="content">
-              <div class="bg-image aspect-4x3 bg-light" style="background-image:url({{ project.image }})"></div>
-              <h2>{{ focus.title }}</h2>
-              <p>{{ focus.summary_html }}</p>
-              <a href="{{ focus.url }}" title="{{ focus.title }}">Learn more...</a>
+              <div class="bg-image aspect-4x3 bg-black mt-5" style="background-image:url({{ project.image }})"></div>
+              <h3 class="mt-5">{{ focus.title }}</h3>
+              <p>{{ focus.label }}</p>
+              <a class="btn btn-inline text-primary" href="{{ focus.url }}" title="{{ focus.title }}">Learn more...</a>
             </div>
           </div>
         {% endfor %}
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="content text-center">
-          <a href="#" class="btn btn-primary">Contact CTA</a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
