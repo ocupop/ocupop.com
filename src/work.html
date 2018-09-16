@@ -7,13 +7,28 @@ testimonial:
   author: Alyssa Fox
   title: Founder, Fox Tax Service
 ---
-
-<section>
+<section class="bg-light">
   <div class="container">
     <div class="row">
+      <div class="col-md-6">
+        <div class="content editable">
+          <p class="lead">We have worked with clients of every imaginable size, with budgets from meager to massive, but above all else, we try to provide insightful, powerful, and sustainable design and marketing solutions that resonate with our clients and their customers.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="content editable">
+          <p>Below are a few examples that we hope illustrate the scale and scope of our aptitude and experience. Ultimately, lots of work paired with lots of words, but we hope the breadth and depth of this case study content impresses and reassures. While certainly not our entire body of work, these pages highlight some of our favorite and most enlightening results.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-dark text-white">
+  <div class="container">
+    <div class="row d-none">
       <div class="col-12">
-        <hr>
-        <ul class="nav justify-content-center d-none">
+        <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link active" data-filter="all" href="#">all</a>
           </li>
@@ -29,9 +44,9 @@ testimonial:
     <div id="projectList" class="row">
       {% for project in site.projects %}
         {% if project.status == "active" %}
-          <div class="mix col-xs-12 col-lg-6 mb-5 {% for tag in project.tags %} {{ tag }}{% endfor %}">
-            <img src="{{ project.gallery[0].image | default: site.placeholders.aspect-4x3 }}" class="img-fluid" alt="{{ project.title }}">
-            <h2 class="mt-4">{{ project.title }}</h2>
+          <div class="mix col-12 {% for tag in project.tags %} {{ tag }}{% endfor %}">
+            <div class="bg-image aspect-4x3 bg-black my-5"></div>
+            <h3 class="mt-4">{{ project.title }}</h3>
             <p>{{ project.summary }}</p>
             <a href="{{ project.url }}" class="btn btn-inline">Learn more...</a>
           </div>
