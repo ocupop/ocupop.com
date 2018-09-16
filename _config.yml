@@ -38,7 +38,6 @@ source: src
 plugins:
   - jekyll-sitemap
   - jekyll-feed
-  - jekyll-lunr-js-search
 
 # feed:
 #   title: Client Name

@@ -10,4 +10,6 @@ import mixitup from 'mixitup';
 
 const containerEl = document.getElementById('projectList')
 
-var mixer = mixitup(containerEl);
+if (containerEl) {
+  var mixer = mixitup(containerEl);
+}
