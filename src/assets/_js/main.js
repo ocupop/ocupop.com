@@ -4,6 +4,10 @@ import 'bootstrap';
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
 
-import App from './App';
-import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
+// import App from './App';
+// import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
+import mixitup from 'mixitup';
 
+const containerEl = document.getElementById('projectList')
+
+var mixer = mixitup(containerEl);
