@@ -2,58 +2,30 @@
 layout: default
 ---
 {% assign project = page %}
-<section class="bg-dark">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-
-      </div>
-    </div>
-  </div>
-</section>
-
+<div class="bg-image aspect-hero" style="background-image:url({{ page.hero_image | default: site.placeholders.hero }})"></div>
 <section id="project">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h4>{{ project.client }}</h4>
-        <h1>{{ project.title }}</h1>
-        <p class="text-sans-serif text-uppercase">
-          {% for tag in project.tags %}{{ tag }}&nbsp;{% unless forloop.last %}&dot;{% endunless %}&nbsp;{% endfor %}
-        </p>
-        <hr>
+        <div class="content">
+          <h2>{{ project.client }}</h2>
+          <h3>{{ project.title }}</h3>
+          <div class="project-tags">
+            <p>{% for tag in page.tags %}<span {% unless forloop.last %}class="dotted"{% endunless %}>{{ tag  | capitalize }}</span>{% endfor %}</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-12">
+      <div class="col">
         <div class="content">
-          <div class="row">
-              <div class="col-xs-12 col-md-6">
-                {{ page.description.situation_html }}
-              </div>
-              <div class="col-xs-12 col-md-6">
-                {{ page.description.solution_html }}
-                {{ page.description.results_html }}
-              </div>
-          </div>
+          <hr>
         </div>
-      </div>
-      <div class="col-12">
-        <div class="content text-center">
-            <p>{% for tag in page.tags %}{{ tag  | capitalize }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
-        </div>
-      </div>
-    </div>    
-    <div class="row">
-      <div class="col-12">
-        {% for asset in page.gallery %}
-          <div class="gallery-asset">
-            <img src="{{ asset.image }}" alt="{{ asset.caption }}" class="img-fluid">
-            <p>{{ asset.caption }}</p>
-          </div> 
-        {% endfor %} 
       </div>
     </div>
   </div>
 </section>
+
+{{ page.content }}
+{% include related-projects.html %}

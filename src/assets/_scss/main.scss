@@ -14,9 +14,16 @@
 @import 'layout/page_content';
 @import 'layout/page_footer';
 
+
+// Import element specific styles
 @import 'elements/buttons';
 @import 'elements/cta_contact';
 @import 'elements/quote';
 @import 'elements/testimonials';
+
+// Import view specific styles
+@import 'views/project';
+
+
 
 @import 'elements/transitions';

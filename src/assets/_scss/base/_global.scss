@@ -2,6 +2,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: $font-family-base;
+  font-size: 20px;
   line-height: 1.5;
 }
 
@@ -28,4 +29,8 @@ dl {
   dd {
 
   }
+}
+
+hr {
+  border-top: 1px solid $primary;
 }
