@@ -23,3 +23,11 @@
     @include animation(bounceInUp, 1.2s, 2.3s);
   }
 }
+
+#home-copy {
+  @include animation(fadeIn, 1.2s, 6s);
+}
+
+#photo-grid {
+  @include animation(sectionSlideDown, 1.2s, 5.5s);
+}

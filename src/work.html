@@ -45,7 +45,7 @@ testimonial:
       {% for project in site.projects %}
         {% if project.status == "active" %}
           <div class="mix col-12 {% for tag in project.tags %} {{ tag }}{% endfor %}">
-            <div class="bg-image aspect-4x3 bg-black my-5"></div>
+            <div class="bg-image aspect-16x9 bg-black my-5" style="background-image: url({{ project.featured_image }})"></div>
             <h3 class="mt-4">{{ project.title }}</h3>
             <p>{{ project.summary }}</p>
             <a href="{{ project.url }}" class="btn btn-inline">Learn more...</a>
