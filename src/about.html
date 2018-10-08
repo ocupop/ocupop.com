@@ -6,40 +6,36 @@ title: About
 <section class="bg-light">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-8">
+      <div class="col-12">
         <div class="content editable">
           <p class="lead">We’re in this game to make our clients’ brands perform and we will fight and scrap and claw and beg until we’re satisfied that the result is nothing short of exemplary.</p>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="content editable">
-          <p>So, if you are looking for switchboards, hold music, synergy, ideation, and enough buzz-words to fill a conference room, we’re probably not the ONE. But, if you love what you do and are proud of your company, your product and your employees, chances are we might fit right in. We thrive on relationships of mutual respect, commitment and enjoyment – WITH our clients, our collaborators and each other; we’re all in this together right?</p>
+          <p class="mt-5">So, if you are looking for switchboards, hold music, synergy, ideation, and enough buzz-words to fill a conference
+            room, we’re probably not the ONE. But, if you love what you do and are proud of your company, your product and your
+            employees, chances are we might fit right in. We thrive on relationships of mutual respect, commitment and enjoyment
+            – WITH our clients, our collaborators and each other; we’re all in this together right?</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<div class="row no-gutters">
-  <div class="col-md-6">
-    <div class="bg-image aspect-1x1 editable" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
-  </div>
-  <div class="col-md-6">
-    <div class="bg-image aspect-1x1 editable" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
-  </div>
-</div>
 <section class="bg-dark text-white">
   <div class="container">
     <div class="row">
+      <div class="col-12">
+        <div class="bg-image aspect-4x3" style="background-image: url('/assets/img/about/ocupop-about-fucknoshityeah.jpg')"></div>
+      </div>
+    </div>
+    <div class="row">
       <div class="col-md-6">
         <div class="content editable">
-          <h2>Fuck No!</h2>
+          <h2 class="mt-5">Fuck No!</h2>
           <p>Ocupop fights the good fight, battling a sneaky culture of amateurism that too often poisons design and design relationships. We leverage the power of design thinking and take our role as a trusted expert VERY seriously. We work directly and openly with our clients, carefully sharing our process, researching and defending every decision, and earning and maintaining trust while we blow their fucking minds.</p>
           <a href="#">Listen to Michael's 'How to say Fuck No and still have them love you! SXSW Talk</a>
         </div>
       </div>
       <div class="col-md-6">
         <div class="content editable">
-          <h2>Shit Yeah!</h2>
+          <h2 class="mt-5">Shit Yeah!</h2>
           <p>‘Nothing comes from no.’ Though we aren’t afraid to say no when the circumstances demand it, we are equally passionate about charging ahead when an opening presents itself and building the experience and expertise vital to unleashing the full power of saying no...and yes. This energy and optimizism is core to how we’ve managed to design some of the most influential logos, campaigns, and user interfaces on the web over the last twenty years.</p>
           <a href="#">Listen to Michael's 'Screw Fuck No, Say Shit Yeah! SXSW Talk</a>
         </div>
@@ -50,22 +46,22 @@ title: About
 <section>
   <div class="container">
     <div class="row">
-      {% for i in (1..6) %}
+      {% for member in site.data.staff %}
       <div class="col-md-6">
         <div class="content editable">
-          <div class="bg-image aspect-4x3" style="background-image: url({{ site.placeholders.aspect-4x3 }})">
+          <div class="bg-image aspect-4x3" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})">
           </div>
-          <h3 class="mt-3">Michael Nieling</h3>
-          <h4>Founder, Creative Director</h4>
+          <h3 class="mt-3">{{ member.name }}</h3>
+          <h4>{{ member.role }}</h4>
           <dl class="mt-4">
             <dt>Title you prefer</dt>
-            <dd>M</dd>
+            <dd>{{ member.preferred_title }}</dd>
             <dt>Spirit Animal</dt>
-            <dd>Wolf</dd>
+            <dd>{{ member.spirit_animal}}</dd>
             <dt>What you want to be when you grow up</dt>
-            <dd>Robotron</dd>
+            <dd>{{ member.what_you_want_to_be_when_you_grow_up }}</dd>
             <dt>Catch Phrase</dt>
-            <dd>I'm going to punch you in the throat</dd>
+            <dd>{{ member.catch_phrase }}</dd>
           </dl>
         </div>
       </div>
