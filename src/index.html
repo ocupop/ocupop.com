@@ -29,21 +29,21 @@ title: Home
         <div class="content">
           <div class="row">
             <div class="col-md-8">
-              <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
+              <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-01.jpg)"></div>
             </div>
             <div class="col-md-4">
               <div class="d-flex h-100 flex-column justify-content-between">
-                <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
-                <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
+                <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-02.jpg)"></div>
+                <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-03.jpg)"></div>
               </div>
             </div>
           </div>
           <div class="row mt-4">
             <div class="col-md-6">
-              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-4x3 }})"></div>
+              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-04.jpg)"></div>
             </div>
             <div class="col-md-6">
-              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-4x3 }})"></div>
+              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-05.jpg)"></div>
             </div>
           </div>
         </div>
@@ -52,11 +52,7 @@ title: Home
   </div>
 </section>
 
-<section>
-  <div class="container">
 
-  </div>
-</section>
 
 <section class="bg-dark text-white">
   <div class="container">
@@ -75,24 +71,30 @@ title: Home
     </div>
   </div>
 </section>
-<section>
+<section class="bg-orange text-white">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="content">
-          <img src="{{ site.placeholders.hero }}" class="img-fluid" alt="">
+          <p class="h1 mb-0">"Biz Dev? Screw that...</p>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+
+<section>
+  <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="content editable">
-          <p class="quote">“BD? Screw that, We do good work for good people and they make referrals. For 20 years!”</p>
+          <p class="quote">..we do good work for good people and they make referrals. For 20 years!”</p>
           <p class="quote-author"><strong>Michael Nieling</strong><br>Founder and Creative Director</p>
         </div>
         <div class="content editable">
           <p>No cheesy sale-sters in EXPRESS shiny shirts, no account planners, no middle men, and none of the overhead that goes along with ‘em! We interface directly with decision makers and fanatically pursue perfection in planning, execution, and implementation. Projects are completed quickly and e ciently, and with refreshing candor and commitment...always aspiring to the ideal that we work WITH you, not for you.</p>
-          <a href="#" class="btn btn-inline">Contact</a>
+          <a href="#" class="btn btn-inline">Learn More...</a>
         </div>
       </div>
     </div>
@@ -110,17 +112,29 @@ title: Home
       <div class="col-md-6">
         <div class="content editable">
           <p>Ocupop has helped to define the visual language of the web and beyond since 2000, we’ve led design projects for companies at all ends of the spectrum—from Google, Facebook, and Mozilla to PBS, SXSW, and Burton Snowboards to countless successful (and horribly failed) startups, our small, super-powered team has created some of the most influential logos, icons, campaigns and user interfaces on the web and beyond.</p>
+          <a href="#" class="btn btn-inline">Learn More</a>
         </div>
       </div>
     </div>
     <div class="row">
-      {% for i in (1..8) %}
-      <div class="col-md-3">
+      <div class="col-12">
         <div class="content">
-          <img src="{{ site.placeholders.aspect-1x1 }}" alt="" class="img-fluid">
+          <div class="logo-pile">
+            <img src="/assets/img/home/logopile-google.png" alt="Google Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-w3c.png" alt="W3C Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-harvardbusinessreview.png" alt="Harvard Business Review Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-sxsw.png" alt="South by SouthWest Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-facebook.png" alt="Facebook Logo" class="img-fluid">
+          </div>
+          <div class="logo-pile">
+            <img src="/assets/img/home/logopile-frontline.png" alt="Frontline Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-pbs.png" alt="PBS Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-burton.png" alt="Burton Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-mozilla.png" alt="Mozilla Logo" class="img-fluid">
+            <img src="/assets/img/home/logopile-internetsociety.png" alt="Internet Society Logo" class="img-fluid">
+          </div>
         </div>
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
@@ -140,22 +154,22 @@ title: Home
       <div class="col">
         <div class="content">
           <div class="row">
-            <div class="col-md-8">
-              <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
+            <div class="col-md-6">
+              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url(/assets/img/home/homepage-culture-01.jpg)"></div>
             </div>
-            <div class="col-md-4">
-              <div class="d-flex h-100 flex-column justify-content-between">
-                <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
-                <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-1x1 }})"></div>
-              </div>
+            <div class="col-md-6">
+              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url(/assets/img/home/homepage-culture-02.jpg)"></div>
             </div>
           </div>
-          <div class="row mt-4">
-            <div class="col-md-6">
-              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-4x3 }})"></div>
+          <div class="row mt-5">  
+            <div class="col-md-4">
+              <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url(/assets/img/home/homepage-culture-03.jpg)"></div>
             </div>
-            <div class="col-md-6">
-              <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-4x3 }})"></div>
+            <div class="col-md-4">
+              <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url(/assets/img/home/homepage-culture-04.jpg)"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="bg-image aspect-1x1 mt-md-0 mt-5" style="background-image: url(/assets/img/home/homepage-culture-05.jpg)"></div>
             </div>
           </div>
         </div>
