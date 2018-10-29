@@ -6,12 +6,11 @@
   left: 0;
   overflow: auto;
   z-index: 999;
-  @include animation(slideOutUp, .5s, 5s);
+  @include animation(slideOutUp, .5s, 7s);
   #logo-block {
     position: absolute;
-    @include animation(bounceOutUp, 1.2s, 2s);
+    @include animation(zoomInUp, 1.2s, 0s);
     svg {
-      @include animation(zoomInUp, 1.2s, 0s);
       max-height: 100%;
       #ocupop-wordmark {
         opacity: 0;
@@ -20,14 +19,14 @@
     }
   }
   #quote-block {
-    @include animation(bounceInUp, 1.2s, 2.3s);
+    @include animation(bounceInUp, 1.2s, 5s);
   }
 }
 
 #home-copy {
-  @include animation(fadeIn, 1.2s, 6s);
+  @include animation(fadeIn, 1.2s, 8s);
 }
 
 #photo-grid {
-  @include animation(sectionSlideDown, 1.2s, 5.5s);
+  @include animation(sectionSlideDown, 1.2s, 7.5s);
 }
