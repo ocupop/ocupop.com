@@ -4,10 +4,11 @@
   <body class="{{ page.layout }} loading">
     {% include header.html %}
     <main id="page-content">
-      {{ content }}
+      <div id="barba-wrapper">
+        <div class="barba-container">{{ content }}</div>
+      </div>
     </main>
-    {% include testimonials.html %}
-    {% include footer.html %}
-    {% include scripts.html %}
+    {% include testimonials.html %} {% include footer-bar.html %} {% include
+    footer.html %} {% include scripts.html %}
   </body>
 </html>

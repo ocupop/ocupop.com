@@ -2,30 +2,28 @@
 @import "custom_settings";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
-@import 'mixins';
-@import 'utilities';
-@import 'fonts';
-@import 'animations';
+@import "mixins";
+@import "utilities";
+@import "fonts";
+@import "animations";
 
-@import 'base/global';
-@import 'base/typography';
+@import "base/global";
+@import "base/typography";
 
-@import 'layout/page_header';
-@import 'layout/page_content';
-@import 'layout/page_footer';
-
+@import "layout/page_header";
+@import "layout/page_content";
+@import "layout/page_footer";
 
 // Import element specific styles
-@import 'elements/buttons';
-@import 'elements/cta_contact';
-@import 'elements/quote';
-@import 'elements/testimonials';
+@import "elements/buttons";
+@import "elements/cta_contact";
+@import "elements/footer_bar";
+@import "elements/quote";
+@import "elements/testimonials";
 
 // Import view specific styles
-@import 'views/home';
-@import 'views/home_animation';
-@import 'views/project';
+@import "views/home";
+@import "views/home_animation";
+@import "views/project";
 
-
-
-@import 'elements/transitions';
+@import "elements/transitions";
