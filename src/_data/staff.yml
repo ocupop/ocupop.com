@@ -1,9 +1,9 @@
 - name: Michael Nieling
-  role: Founder, Creative Director
+  role: 'Founder, Creative Director'
   preferred_title: Chief Mathlete
   spirit_animal: Wolf
   what_you_want_to_be_when_you_grow_up: Soccer coach and artisanal dog walker
-  catch_phrase: "Fuck No. Shit Yeah!"
+  catch_phrase: Fuck No. Shit Yeah!
   image: /uploads/ocupop-about-michael.jpg
 - name: Tom Beck
   role: Technical Director
@@ -16,15 +16,15 @@
   role: Developer
   preferred_title: Hypertext Markup Linguist
   spirit_animal: Peacock
-  what_you_want_to_be_when_you_grow_up: Sneaker pimp
+  what_you_want_to_be_when_you_grow_up: Beastie Boy
   catch_phrase:
   image: /uploads/ocupop-about-jeff.jpg
 - name: Jason Reimer
-  role: Design Director
-  preferred_title:
-  spirit_animal:
-  what_you_want_to_be_when_you_grow_up:
-  catch_phrase:
+  role: Director of Design
+  preferred_title: One helluva guy
+  spirit_animal: Blue Jay
+  what_you_want_to_be_when_you_grow_up: Cyclocross Champ
+  catch_phrase: No shortcuts
   image: /uploads/ocupop-about-jason.jpg
 - name: Jon Burr
   role: Developer
@@ -34,21 +34,21 @@
   catch_phrase: Deesh!
   image: /uploads/ocupop-about-jon.jpg
 - name: Abby Lindstrom
-  role: Art Director, Designer
+  role: 'Art Director, Designer'
   preferred_title: Snack Sorceress
   spirit_animal: Otter
   what_you_want_to_be_when_you_grow_up: Farmer or nail art influencer
   catch_phrase: Byeeeee
   image: /uploads/ocupop-about-abby.jpg
 - name: Chris Walker
-  role: Art Director, Designer
+  role: 'Art Director, Designer'
   preferred_title:
   spirit_animal:
   what_you_want_to_be_when_you_grow_up:
   catch_phrase:
   image: /uploads/ocupop-about-chris.jpg
 - name: Jenny Vanderheiden
-  role: Art Director, Designer
+  role: 'Art Director, Designer'
   preferred_title: Office Shaman
   spirit_animal: Hummingbird
   what_you_want_to_be_when_you_grow_up: Traveling Artist or the fairy from Ferngully
@@ -59,7 +59,7 @@
   preferred_title: Sport/Champ/Kiddo
   spirit_animal: Owl
   what_you_want_to_be_when_you_grow_up: Kanye West
-  catch_phrase: ":ocean::ocean::ocean:"
+  catch_phrase: ':ocean::ocean::ocean:'
   image: /uploads/ocupop-about-nate.jpg
 - name: Amy Liebrock
   role: Content Strategist
@@ -73,12 +73,12 @@
   preferred_title:
   spirit_animal:
   what_you_want_to_be_when_you_grow_up:
-  catch_phrase:  
+  catch_phrase:
   image:
 - name: Claire Lafontaine
-  role: 
+  role:
   preferred_title:
   spirit_animal:
   what_you_want_to_be_when_you_grow_up:
-  catch_phrase:  
+  catch_phrase:
   image:

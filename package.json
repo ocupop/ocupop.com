@@ -50,6 +50,7 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.1",
     "imagemin-pngquant": "^5.1.0",
+    "natives": "^1.1.6",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
     "react-hot-loader": "^4.3.5",
