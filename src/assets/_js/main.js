@@ -17,6 +17,37 @@ if (containerEl) {
 
 Barba.Pjax.start();
 
+var Homepage = Barba.BaseView.extend({
+  namespace: "page",
+  onEnter: function() {
+    // The new Container is ready and attached to the DOM.
+    window.console.log("onEnter");
+    setTimeout(function() {
+      window.console.log("moving on");
+    }, 2000);
+  },
+  onEnterCompleted: function() {
+    // The Transition has just finished.
+    window.console.log("EnterCompleted");
+  },
+  onLeave: function() {
+    // A new Transition toward a new page has just started.
+    window.console.log("OnLeave");
+  },
+  onLeaveCompleted: function() {
+    // The Container has just been removed from the DOM.
+    window.console.log("onLeaveCompleted");
+  }
+});
+
+Barba.Dispatcher.on("linkClicked", function() {
+  //your listener
+  window.console.log("linkClicked");
+});
+
+// Don't forget to init the view!
+Homepage.init();
+
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
     /**
