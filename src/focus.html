@@ -2,17 +2,28 @@
 layout: default
 title: Focus
 ---
+
 <section class="bg-light">
   <div class="container">
     <div class="row">
       <div class="col-12 col-md-8">
         <div class="content editable">
-          <p class="lead">Our smaller size affords us the agility to adapt to clients’ individual circumstances, while our experience, ingenuity, and unwillingness to sleep assures insightful, holistic, sustainable solutions in all variety of creative capacities.</p>
+          <p class="lead">
+            Our smaller size affords us the agility to adapt to clients’
+            individual circumstances, while our experience, ingenuity, and
+            unwillingness to sleep assures insightful, holistic, sustainable
+            solutions in all variety of creative capacities.
+          </p>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="content editable">
-          <p>For almost two decades, we have left a wake of satisfied customers and quality work in our path—so drop us a line, because we’re Ocupop, and that’s two O’s, two P’s and YOU! ...see that is the sort of shit we’re talking about, brilliant!</p>
+          <p>
+            For almost two decades, we have left a wake of satisfied customers
+            and quality work in our path—so drop us a line, because we’re
+            Ocupop, and that’s two O’s, two P’s and YOU! ...see that is the sort
+            of shit we’re talking about, brilliant!
+          </p>
         </div>
       </div>
     </div>
@@ -21,17 +32,26 @@ title: Focus
 <section class="bg-dark text-white">
   <div class="container">
     <div class="row">
-        {% for focus in site.focuses %}
-        {% assign project = site.projects | where: "slug", focus.project | first %}
-          <div class="col-md-6">
-            <div class="content">
-              <div class="bg-image aspect-4x3 bg-none mt-5" style="background-image:url({{ focus.featured_image }})"></div>
-              <h3 class="mt-5">{{ focus.title }}</h3>
-              <p>{{ focus.label }}</p>
-              <a class="btn btn-inline text-primary" href="{{ focus.url }}" title="{{ focus.title }}">Learn more...</a>
-            </div>
-          </div>
-        {% endfor %}
+      {% for focus in site.focuses %} {% assign project = site.projects | where:
+      "slug", focus.project | first %}
+      <div class="col-md-6">
+        <div class="content">
+          <div
+            class="bg-image aspect-4x3 bg-none mt-5"
+            style="background-image:url({{ focus.featured_image }})"
+          ></div>
+          <h3 class="mt-5">{{ focus.title }}</h3>
+          <p>{{ focus.label }}</p>
+          <a
+            class="btn btn-inline text-primary"
+            href="{{ focus.url }}"
+            title="{{ focus.title }}"
+            data-transition="SecondTransition"
+            >Learn more...</a
+          >
+        </div>
+      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

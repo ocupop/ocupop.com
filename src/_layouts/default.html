@@ -5,7 +5,12 @@
     {% include header.html %}
     <main id="page-content">
       <div id="barba-wrapper">
-        <div class="barba-container" data-namespace="page">{{ content }}</div>
+        <div
+          class="barba-container"
+          data-namespace="{{ page.title | slugify }}"
+        >
+          {{ content }}
+        </div>
       </div>
     </main>
     {% include testimonials.html %} {% include footer-bar.html %} {% include
