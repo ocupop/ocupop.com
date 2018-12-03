@@ -1,0 +1,48 @@
+.cognito {
+  .c-forms-form {
+    font-family: $font-family-secondary !important;
+    .c-add-item,
+    .icon-remove-sign {
+      border-radius: 0 !important;
+    }
+    .c-label,
+    .c-editor {
+      font-family: $font-family-secondary !important;
+      padding-left: 0;
+      font-weight: normal !important;
+    }
+    .c-title {
+      padding: 0;
+    }
+    .c-button-section {
+      button {
+        margin: 20px auto;
+        border-radius: 0;
+        border: 0;
+      }
+    }
+    .c-action {
+      width: 100%;
+      text-align: center;
+    }
+    input[type="text"],
+    textarea {
+      background: transparent;
+      border: 1px solid $dark;
+      padding: 8px;
+    }
+    .c-validation {
+      border-radius: 0;
+      margin: 0 8px 0 0;
+      background-color: $secondary !important;
+    }
+  }
+  #c-submit-button {
+    float: none;
+    border: 1px solid $black;
+    color: $black;
+    background-color: transparent;
+    font-family: $font-family-secondary;
+    // font-family: $font-family-bold-condensed;
+  }
+}
