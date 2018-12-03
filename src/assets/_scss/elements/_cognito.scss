@@ -1,9 +1,8 @@
 .cognito {
   .c-forms-form {
     font-family: $font-family-secondary !important;
-    .c-add-item,
-    .icon-remove-sign {
-      border-radius: 0 !important;
+    .c-field {
+      padding: 10px 0;
     }
     .c-label,
     .c-editor {
@@ -38,6 +37,21 @@
       margin: 0 8px 0 0;
       background-color: $secondary !important;
     }
+    .c-forms-confirmation {
+      text-align: center;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $dark;
+      min-height: 0;
+      padding: 30px;
+    }
+    .c-forms-confirmation-message {
+      color: $dark !important;
+      font-family: $font-family-base-bold !important;
+      font-size: 25px !important;
+    }
   }
   #c-submit-button {
     float: none;
@@ -45,6 +59,12 @@
     color: $black;
     background-color: transparent;
     font-family: $font-family-secondary;
+    text-transform: uppercase;
+    @include transition(0.5s);
+    &:hover {
+      background-color: $dark;
+      color: $white;
+    }
     // font-family: $font-family-bold-condensed;
   }
 }
