@@ -1,18 +1,24 @@
 import Barba from "barba.js/dist/barba.js";
 
-const SecondTransition = Barba.BaseTransition.extend({
+const FocusTransition = Barba.BaseTransition.extend({
   start: function() {
-    console.log("SecondTransition");
+    console.log("FocusTransition");
     Promise.all([this.newContainerLoading, this.transitionOut()]).then(
       this.transitionIn.bind(this)
     );
   },
   transitionOut: function() {
+    //Illustration lifts off placement
+    //Gray background fills screen
+    //Illustration centers on screen
+    //Potential illustration animation
     return $(this.oldContainer)
       .animate({ opacity: 0 })
       .promise();
   },
   transitionIn: function() {
+    //Illustration moves to final position on new page
+    //Gray background fades out to reveal new page content
     var _this = this;
     var $el = $(this.newContainer);
 
@@ -44,4 +50,4 @@ const SecondTransition = Barba.BaseTransition.extend({
   }
 });
 
-export default SecondTransition;
+export default FocusTransition;

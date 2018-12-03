@@ -73,6 +73,7 @@
     "jquery": "^3.2.1",
     "mixitup": "^3.3.0",
     "popper.js": "^1.14.4",
+    "scrollmagic": "^2.0.6",
     "webfontloader": "^1.6.28"
   }
 }

@@ -3,16 +3,25 @@ layout: default
 title: About
 ---
 
-<section class="bg-light">
+<section id="page-intro" class="bg-light">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="content editable">
-          <p class="lead">We’re in this game to make our clients’ brands perform and we will fight and scrap and claw and beg until we’re satisfied that the result is nothing short of exemplary.</p>
-          <p class="mt-5">So, if you are looking for switchboards, hold music, synergy, ideation, and enough buzz-words to fill a conference
-            room, we’re probably not the ONE. But, if you love what you do and are proud of your company, your product and your
-            employees, chances are we might fit right in. We thrive on relationships of mutual respect, commitment and enjoyment
-            – WITH our clients, our collaborators and each other; we’re all in this together right?</p>
+          <p class="lead">
+            We’re in this game to make our clients’ brands perform and we will
+            fight and scrap and claw and beg until we’re satisfied that the
+            result is nothing short of exemplary.
+          </p>
+          <p class="mt-5">
+            So, if you are looking for switchboards, hold music, synergy,
+            ideation, and enough buzz-words to fill a conference room, we’re
+            probably not the ONE. But, if you love what you do and are proud of
+            your company, your product and your employees, chances are we might
+            fit right in. We thrive on relationships of mutual respect,
+            commitment and enjoyment – WITH our clients, our collaborators and
+            each other; we’re all in this together right?
+          </p>
         </div>
       </div>
     </div>
@@ -23,7 +32,10 @@ title: About
     <div class="row">
       <div class="col-12">
         <div class="content">
-          <div class="bg-image aspect-4x3" style="background-image: url('/uploads/ocupop-about-fucknoshityeah.jpg')"></div>
+          <div
+            class="bg-image aspect-4x3"
+            style="background-image: url('/uploads/ocupop-about-fucknoshityeah.jpg')"
+          ></div>
         </div>
       </div>
     </div>
@@ -31,15 +43,36 @@ title: About
       <div class="col-md-6">
         <div class="content editable">
           <h2 class="mt-5">Fuck No!</h2>
-          <p>Ocupop fights the good fight, battling a sneaky culture of amateurism that too often poisons design and design relationships. We leverage the power of design thinking and take our role as a trusted expert VERY seriously. We work directly and openly with our clients, carefully sharing our process, researching and defending every decision, and earning and maintaining trust while we blow their fucking minds.</p>
-          <a href="#">Listen to Michael's 'How to say Fuck No and still have them love you! SXSW Talk</a>
+          <p>
+            Ocupop fights the good fight, battling a sneaky culture of
+            amateurism that too often poisons design and design relationships.
+            We leverage the power of design thinking and take our role as a
+            trusted expert VERY seriously. We work directly and openly with our
+            clients, carefully sharing our process, researching and defending
+            every decision, and earning and maintaining trust while we blow
+            their fucking minds.
+          </p>
+          <a href="#"
+            >Listen to Michael's 'How to say Fuck No and still have them love
+            you! SXSW Talk</a
+          >
         </div>
       </div>
       <div class="col-md-6">
         <div class="content editable">
           <h2 class="mt-5">Shit Yeah!</h2>
-          <p>‘Nothing comes from no.’ Though we aren’t afraid to say no when the circumstances demand it, we are equally passionate about charging ahead when an opening presents itself and building the experience and expertise vital to unleashing the full power of saying no...and yes. This energy and optimizism is core to how we’ve managed to design some of the most influential logos, campaigns, and user interfaces on the web over the last twenty years.</p>
-          <a href="#">Listen to Michael's 'Screw Fuck No, Say Shit Yeah! SXSW Talk</a>
+          <p>
+            ‘Nothing comes from no.’ Though we aren’t afraid to say no when the
+            circumstances demand it, we are equally passionate about charging
+            ahead when an opening presents itself and building the experience
+            and expertise vital to unleashing the full power of saying no...and
+            yes. This energy and optimizism is core to how we’ve managed to
+            design some of the most influential logos, campaigns, and user
+            interfaces on the web over the last twenty years.
+          </p>
+          <a href="#"
+            >Listen to Michael's 'Screw Fuck No, Say Shit Yeah! SXSW Talk</a
+          >
         </div>
       </div>
     </div>
@@ -51,15 +84,17 @@ title: About
       {% for member in site.data.staff %}
       <div class="col-md-6">
         <div class="content editable">
-          <div class="bg-image aspect-4x3" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})">
-          </div>
+          <div
+            class="bg-image aspect-4x3"
+            style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})"
+          ></div>
           <h3 class="mt-3">{{ member.name }}</h3>
           <h4>{{ member.role }}</h4>
           <dl class="mt-4">
             <dt>Title you prefer</dt>
             <dd>{{ member.preferred_title }}</dd>
             <dt>Spirit Animal</dt>
-            <dd>{{ member.spirit_animal}}</dd>
+            <dd>{{ member.spirit_animal }}</dd>
             <dt>What you want to be when you grow up</dt>
             <dd>{{ member.what_you_want_to_be_when_you_grow_up }}</dd>
             <dt>Catch Phrase</dt>
@@ -68,7 +103,6 @@ title: About
         </div>
       </div>
       {% endfor %}
-      
     </div>
   </div>
 </section>

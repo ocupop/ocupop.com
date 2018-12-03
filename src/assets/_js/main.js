@@ -7,9 +7,13 @@ import "bootstrap";
 // import App from './App';
 // import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
 import mixitup from "mixitup";
+import ScrollMagic from "ScrollMagic";
+import TimelineMax from "TimelineMax";
+import "animation.gsap";
 import Barba from "barba.js/dist/barba.js";
-import FirstTransition from "./transitions/FirstTransition";
-import SecondTransition from "./transitions/SecondTransition";
+import PageTransition from "./transitions/PageTransition";
+import ProjectTransition from "./transitions/ProjectTransition";
+import FocusTransition from "./transitions/FocusTransition";
 
 Barba.Pjax.start();
 
@@ -23,19 +27,19 @@ Barba.Pjax.getTransition = function() {
     lastClickEl.dataset.transition !== undefined
   ) {
     switch (lastClickEl.dataset.transition) {
-      case "FirstTransition":
-        return FirstTransition;
+      case "ProjectTransition":
+        return ProjectTransition;
         break;
-      case "SecondTransition":
-        return SecondTransition;
+      case "FocusTransition":
+        return FocusTransition;
         break;
       default:
-        return FirstTransition;
+        return PageTransition;
     }
   }
 
   // if (FirstTransition.valid()) {
-  return FirstTransition;
+  return PageTransition;
   // }
 };
 

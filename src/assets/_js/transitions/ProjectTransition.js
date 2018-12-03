@@ -1,18 +1,22 @@
 import Barba from "barba.js/dist/barba.js";
 
-const FirstTransition = Barba.BaseTransition.extend({
+const ProjectTransition = Barba.BaseTransition.extend({
   start: function() {
-    console.log("FirstTransition");
+    console.log("ProjectTransition");
     Promise.all([this.newContainerLoading, this.transitionOut()]).then(
       this.transitionIn.bind(this)
     );
   },
   transitionOut: function() {
+    //Image expands to full browser window
     return $(this.oldContainer)
       .animate({ opacity: 0 })
       .promise();
   },
   transitionIn: function() {
+    //Image fades to new featured image
+    //Page content slides in from bottom
+    //Text transition (fades in ??)
     var _this = this;
     var $el = $(this.newContainer);
 
@@ -44,4 +48,4 @@ const FirstTransition = Barba.BaseTransition.extend({
   }
 });
 
-export default FirstTransition;
+export default ProjectTransition;

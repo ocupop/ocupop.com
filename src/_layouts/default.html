@@ -2,17 +2,12 @@
 <html>
   {% include head.html %}
   <body class="{{ page.layout }} loading">
-    {% include header.html %}
-    <main id="page-content">
-      <div id="barba-wrapper">
-        <div
-          class="barba-container"
-          data-namespace="{{ page.title | slugify }}"
-        >
-          {{ content }}
-        </div>
+    <div id="barba-wrapper">
+      <div class="barba-container" data-namespace="{{ page.title | slugify }}">
+        {% include header.html %}
+        <main id="page-content">{{ content }}</main>
       </div>
-    </main>
+    </div>
     {% include testimonials.html %} {% include footer-bar.html %} {% include
     footer.html %} {% include scripts.html %}
   </body>
