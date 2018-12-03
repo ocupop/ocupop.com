@@ -1,4 +1,4 @@
-import 'bootstrap';
+import "bootstrap";
 // Alternatively we can import features individually.
 // Also make sure to update the project.config.js if you are going to take this approach
 // import 'bootstrap/js/dist/util';
@@ -6,9 +6,49 @@ import 'bootstrap';
 
 // import App from './App';
 // import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
-import mixitup from 'mixitup';
+import mixitup from "mixitup";
+import ScrollMagic from "ScrollMagic";
+import TimelineMax from "TimelineMax";
+import "animation.gsap";
+import Barba from "barba.js/dist/barba.js";
+import PageTransition from "./transitions/PageTransition";
+import ProjectTransition from "./transitions/ProjectTransition";
+import FocusTransition from "./transitions/FocusTransition";
 
-const containerEl = document.getElementById('projectList')
+Barba.Pjax.start();
+
+Barba.Pjax.getTransition = function() {
+  /**
+   * Here you can use your own logic!
+   * For example you can use different Transition based on the current page or link...
+   */
+  if (
+    lastClickEl !== undefined &&
+    lastClickEl.dataset.transition !== undefined
+  ) {
+    switch (lastClickEl.dataset.transition) {
+      case "ProjectTransition":
+        return ProjectTransition;
+        break;
+      case "FocusTransition":
+        return FocusTransition;
+        break;
+      default:
+        return PageTransition;
+    }
+  }
+
+  // if (FirstTransition.valid()) {
+  return PageTransition;
+  // }
+};
+
+let lastClickEl;
+Barba.Dispatcher.on("linkClicked", el => {
+  lastClickEl = el;
+});
+
+const containerEl = document.getElementById("projectList");
 
 if (containerEl) {
   var mixer = mixitup(containerEl);

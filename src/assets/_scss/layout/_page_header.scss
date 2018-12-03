@@ -1,5 +1,11 @@
 #page-header {
   border-top: 5px solid $blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+  z-index: 998;
 }
 
 #mainnav {
@@ -19,7 +25,7 @@
       font-family: $font-family-secondary;
       font-size: 15px;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         bottom: 0;
@@ -27,10 +33,10 @@
         width: 100%;
         height: 2px;
         background-color: $orange;
-        @include transition(.5s);
+        @include transition(0.5s);
       }
       &:hover,
-        &.active {
+      &.active {
         &::after {
           left: 0;
         }
@@ -75,7 +81,7 @@
     margin: 5px 0;
     width: 20px;
     height: 1px;
-    @include transition(.5s);
+    @include transition(0.5s);
     &.close-one {
       transform: rotate(-45deg);
       margin-top: 10px;
@@ -91,7 +97,8 @@
 }
 
 // Small devices (landscape phones, 576px and up)
-@media (min-width: $screen-sm-min) {}
+@media (min-width: $screen-sm-min) {
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: $screen-md-min) {
@@ -108,4 +115,5 @@
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: $screen-xl-min) {}
+@media (min-width: $screen-xl-min) {
+}
