@@ -1,0 +1,56 @@
+.mosaic {
+  display: grid;
+  height: 100vw;
+  padding: 1rem;
+  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  background-color: $dark;
+  .mosaic-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    color: $light;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-indent: -999rem;
+  }
+  &.default {
+    .mosaic-item {
+      grid-row: span 1;
+      grid-column: span 1;
+      &:nth-child(1) {
+        // Medium
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+      &:nth-child(2) {
+        // Large
+        grid-row: span 3;
+        grid-column: span 3;
+      }
+      &:nth-child(3) {
+        // Medium
+        grid-row: span 2;
+        grid-column: span 2;
+      }
+      &:nth-child(4) {
+        // Small
+        grid-row: span 1;
+        grid-column: span 1;
+      }
+      &:nth-child(5) {
+        // Wide
+        grid-row: span 2;
+        grid-column: span 3;
+      }
+      &:nth-child(6) {
+        // Tall
+        grid-row: 4 / span 3;
+        grid-column: 4 / span 2;
+      }
+    }
+  }
+}

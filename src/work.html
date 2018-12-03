@@ -6,6 +6,26 @@ testimonial:
   quote: I get complimented on our website and materials constantly. In fact, I always joke that if Ocupop hadn’t done such a great job with our design I wouldn’t be so busy all the time!
   author: Alyssa Fox
   title: Founder, Fox Tax Service
+
+mosaic:
+  - image: /assets/img/768x768.png
+    link:
+    title: Bittercube
+  - image: /assets/img/768x768.png
+    link:
+    title: Bittercube
+  - image: /assets/img/768x768.png
+    link:
+    title: Bittercube
+  - image: /assets/img/768x768.png
+    link:
+    title: Bittercube
+  - image: /assets/img/768x768.png
+    link:
+    title: Bittercube
+  - image: /assets/img/768x768.png
+    link:
+    title: Bittercube
 ---
 <section class="bg-light">
   <div class="container">
@@ -22,6 +42,16 @@ testimonial:
       </div>
     </div>
   </div>
+</section>
+
+{% include mosaic.html style="default" %}
+
+<section class="mosaic default d-none">
+  {% assign active_projects = site.projects | where: status, 'active' %}
+  {% for project in active_projects limit: 6 %}
+  <a href="{{ project.url | default: '#' }}" class="mosaic-item" style="background-image: url({{ project.featured_image }})"
+    data-transition="mosaicTransition">{{ project.title }}</a>
+  {% endfor %}
 </section>
 
 <section class="bg-dark text-white">
