@@ -1,0 +1,73 @@
+.cognito {
+  .c-forms-form {
+    font-family: $font-family-secondary !important;
+    .c-field {
+      padding: 10px 0;
+    }
+    .c-label,
+    .c-editor {
+      font-family: $font-family-secondary !important;
+      padding-left: 0;
+      color: $dark !important;
+      font-size: 14px !important;
+      text-transform: uppercase;
+    }
+    .c-title {
+      padding: 0;
+    }
+    .c-button-section {
+      button {
+        margin: 20px auto;
+        border-radius: 0;
+        border: 0;
+      }
+    }
+    .c-action {
+      width: 100%;
+      text-align: center;
+    }
+    input[type="text"],
+    textarea {
+      background: transparent;
+      border: 1px solid $dark;
+      padding: 8px;
+    }
+    .c-dropdown {
+      select {
+        border: 1px solid $dark;
+        padding: 8px;
+      }
+    }
+    .c-validation {
+      border-radius: 0;
+      margin: 0 8px 0 0;
+      background-color: $secondary !important;
+    }
+    .c-forms-confirmation {
+      text-align: center;
+      background-color: transparent;
+      min-height: 0;
+    }
+    .c-forms-confirmation-message {
+      color: $dark !important;
+      font-family: $font-family-base-bold !important;
+      font-size: 25px !important;
+      border: 1px solid $dark;
+      width: 100%;
+    }
+  }
+  #c-submit-button {
+    float: none;
+    border: 1px solid $black;
+    color: $black;
+    background-color: transparent;
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    @include transition(0.5s);
+    &:hover {
+      background-color: $dark;
+      color: $white;
+    }
+    // font-family: $font-family-bold-condensed;
+  }
+}

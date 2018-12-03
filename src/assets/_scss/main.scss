@@ -17,6 +17,7 @@
 // Import element specific styles
 @import "elements/buttons";
 @import "elements/cta_contact";
+@import "elements/cognito";
 @import "elements/footer_bar";
 @import "elements/quote";
 @import "elements/testimonials";
@@ -27,6 +28,7 @@
 // Import view specific styles
 @import "views/home";
 @import "views/home_animation";
+@import "views/message_strategy";
 @import "views/project";
 
 // @import "elements/transitions";
