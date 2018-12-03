@@ -2,8 +2,12 @@
 <html>
   {% include head.html %}
   <body class="{{ page.layout }}">
-    {% include message-strategy/header.html %}
-    <main id="page-content">{{ content }}</main>
-    {% include message-strategy/footer.html %} {% include scripts.html %}
+    <div id="barba-wrapper">
+      <div class="barba-container" data-namespace="{{ page.title | slugify }}">
+        {% include message-strategy/header.html %}
+        <main id="page-content">{{ content }}</main>
+        {% include message-strategy/footer.html %} {% include scripts.html %}
+      </div>
+    </div>
   </body>
 </html>
