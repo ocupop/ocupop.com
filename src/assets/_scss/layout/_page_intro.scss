@@ -1,0 +1,6 @@
+#page-intro {
+  @include animation(slideOpen, 1s, 1.25s);
+  .content {
+    @include animation(fadeIn, 1s, 1.75s);
+  }
+}

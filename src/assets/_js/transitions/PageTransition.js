@@ -26,42 +26,9 @@ const PageTransition = Barba.BaseTransition.extend({
 
     $(this.oldContainer).hide();
 
-    $el
-      .find("#page-content")
-      .css({
-        visibility: "visible",
-        opacity: 0
-      })
-      .end()
-      .find("#page-intro")
-      .css({
-        height: 0,
-        paddingTop: 0,
-        paddingBottom: 0,
-        visibility: "visible"
-      })
-      .end()
-      .find("#page-intro .content")
-      .css({
-        opacity: 0
-      });
+    $el.addClass("loading");
 
-    $el
-      .find("#page-content")
-      .animate({ opacity: 1 }, 500, function() {
-        /**
-         * Do not forget to call .done() as soon your transition is finished!
-         * .done() will automatically remove from the DOM the old Container
-         */
-      })
-      .end()
-      .find("#page-intro")
-      .delay(500)
-      .animate({ height: 530, paddingTop: 75, paddingBottom: 75 }, 1000)
-      .end()
-      .find("#page-intro .content")
-      .delay(1800)
-      .animate({ opacity: 1 }, 500);
+    $el.removeClass("loading");
     _this.done();
   },
 
