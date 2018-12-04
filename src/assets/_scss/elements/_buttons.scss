@@ -1,10 +1,18 @@
 .btn {
   font-family: $font-family-secondary;
   letter-spacing: 1px;
+  border-radius: 0;
   &.btn-inline {
     padding-left: 0;
     padding-right: 0;
     color: $gray-500;
     text-transform: uppercase;
+  }
+  &.btn-outline-light {
+    @include transition(.4s);
+    &:hover {
+      background-color: $white;
+      color: $orange;
+    }
   }
 }

@@ -8,3 +8,11 @@
   min-height: 4px;
   background-color: $orange;
 }
+
+.consent {
+  text-align: center;
+  font-size: 16px;
+  .btn {
+    font-size: 14px;
+  }
+}
