@@ -23,6 +23,9 @@
 @import "elements/quote";
 @import "elements/testimonials";
 
+// Components
+@import "components/mosaic";
+
 // Import view specific styles
 @import "views/home";
 @import "views/home_animation";
