@@ -1,4 +1,4 @@
-import "bootstrap";
+import 'bootstrap'
 // Alternatively we can import features individually.
 // Also make sure to update the project.config.js if you are going to take this approach
 // import 'bootstrap/js/dist/util';
@@ -6,16 +6,16 @@ import "bootstrap";
 
 // import App from './App';
 // import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
-import mixitup from "mixitup";
-import ScrollMagic from "ScrollMagic";
-import TimelineMax from "TimelineMax";
-import "animation.gsap";
-import Barba from "barba.js/dist/barba.js";
-import PageTransition from "./transitions/PageTransition";
-import ProjectTransition from "./transitions/ProjectTransition";
-import FocusTransition from "./transitions/FocusTransition";
+import mixitup from 'mixitup'
+import ScrollMagic from 'ScrollMagic'
+import TimelineMax from 'TimelineMax'
+import 'animation.gsap'
+import Barba from 'barba.js/dist/barba.js'
+import PageTransition from './transitions/PageTransition'
+import ProjectTransition from './transitions/ProjectTransition'
+import FocusTransition from './transitions/FocusTransition'
 
-Barba.Pjax.start();
+Barba.Pjax.start()
 
 Barba.Pjax.getTransition = function() {
   /**
@@ -27,29 +27,30 @@ Barba.Pjax.getTransition = function() {
     lastClickEl.dataset.transition !== undefined
   ) {
     switch (lastClickEl.dataset.transition) {
-      case "ProjectTransition":
-        return ProjectTransition;
-        break;
-      case "FocusTransition":
-        return FocusTransition;
-        break;
+      case 'ProjectTransition':
+        lastClickEl.classList.add('active')
+        return ProjectTransition
+        break
+      case 'FocusTransition':
+        return FocusTransition
+        break
       default:
-        return PageTransition;
+        return PageTransition
     }
   }
 
   // if (FirstTransition.valid()) {
-  return PageTransition;
+  return PageTransition
   // }
-};
+}
 
-let lastClickEl;
-Barba.Dispatcher.on("linkClicked", el => {
-  lastClickEl = el;
-});
+let lastClickEl
+Barba.Dispatcher.on('linkClicked', el => {
+  lastClickEl = el
+})
 
-const containerEl = document.getElementById("projectList");
+const containerEl = document.getElementById('projectList')
 
 if (containerEl) {
-  var mixer = mixitup(containerEl);
+  var mixer = mixitup(containerEl)
 }
