@@ -26,7 +26,7 @@ const ProjectTransition = Barba.BaseTransition.extend({
       .width(width)
       .css('background-image', 'url(' + image + ')')
       .css('height', width)
-      .animate({ top: 0, left: 0, width: '100%', height: '100%' }, 2000)
+      .animate({ top: 0, left: 0, width: '100%', height: '100%' }, 750)
       .promise()
   },
   transitionIn: function() {
@@ -36,21 +36,52 @@ const ProjectTransition = Barba.BaseTransition.extend({
     var _this = this
     var $el = $(this.newContainer)
 
+    var image = $(this.oldContainer)
+      .find('.full-screen-image')
+      .css('background-image')
+
     $(this.oldContainer).hide()
 
-    $el.css({
-      visibility: 'visible',
+    var hero = $el.find('#project-hero')
+    var offset = hero.offset()
+    var left = offset.left
+    var top = offset.top
+    var width = $el.width()
+    var height = $el.height()
+
+    $el.find('#project').css({
       opacity: 0,
+      paddingTop: '100px',
     })
 
-    $el.animate({ opacity: 1 }, 2000, function() {
-      /**
-       * Do not forget to call .done() as soon your transition is finished!
-       * .done() will automatically remove from the DOM the old Container
-       */
+    $el
+      .append("<div class='full-screen-image'></div>")
+      .find('.full-screen-image')
+      .css({
+        backgroundImage: image,
+        left: 0,
+        top: 0,
+        width: '100%',
+        paddingTop: '100%',
+      })
+      .css({ visibility: 'visible', opacity: 1 })
+      .animate(
+        { left: left, width: width, top: '77px', paddingTop: '42%' },
+        1250
+      )
+      .css({ top: 'auto' })
+      .animate({ opacity: 0 })
+      .end()
+      .find('#project')
+      .delay(1600)
+      .animate({ opacity: 1 }, 1000)
 
-      _this.done()
-    })
+    _this.done()
+    console.log(hero, offset, left, top, image, width, height)
+
+    // $el.find('#page-content').animate({ opacity: 1 }, 2000, function() {
+
+    // })
   },
 
   valid: function() {
