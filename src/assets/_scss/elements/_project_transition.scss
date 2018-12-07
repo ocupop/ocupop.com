@@ -11,3 +11,53 @@
 //     animation-delay: 2.2s;
 //   }
 // }
+
+// @keyframes projectHero {
+//   0% {
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     position: fixed;
+//     z-index: 1001;
+//     opacity: 0;
+//   }
+//   25% {
+//     opacity: 1;
+//   }
+//   50% {
+//     top: 77px;
+//   }
+//   75% {
+//     height: 0;
+//   }
+//   99% {
+//     padding-top: 42%;
+//   }
+//   100% {
+//     position: relative;
+//   }
+// }
+
+// @keyframes projectContent {
+//   from {
+//     opacity: 0;
+//     padding-top: 100%;
+//   }
+//   to {
+//     opacity: 1;
+//     padding-top: 0;
+//   }
+// }
+
+// #project-hero {
+//   &.loading {
+//     @include animation(projectHero, 3s, .5s);
+//   }
+// }
+
+// #project {
+//   &.loading {
+//     @include animation(projectContent, 1s, 2.25s);
+//   }
+// }

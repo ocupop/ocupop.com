@@ -1,19 +1,19 @@
-import Barba from "barba.js/dist/barba.js";
+import Barba from 'barba.js/dist/barba.js'
 
 const PageTransition = Barba.BaseTransition.extend({
   start: function() {
-    console.log("PageTransition");
+    console.log('PageTransition')
     Promise.all([this.newContainerLoading, this.transitionOut()]).then(
       this.transitionIn.bind(this)
-    );
+    )
   },
   transitionOut: function() {
     //Page-content fades to white
 
     return $(this.oldContainer)
-      .find("#page-content")
+      .find('#page-content')
       .animate({ opacity: 0 }, 500)
-      .promise();
+      .promise()
   },
   transitionIn: function() {
     //Link translates to center and zooms on page
@@ -21,26 +21,28 @@ const PageTransition = Barba.BaseTransition.extend({
     //Link fades back into position in primarynav
     //Above the fold section slides in from top
     //content / copy fades in when height is set
-    var _this = this;
-    var $el = $(this.newContainer);
+    var _this = this
+    var $el = $(this.newContainer)
 
-    $(this.oldContainer).hide();
+    //make sure page is at top to show animation
+    window.scrollTo(0, 0)
+    $(this.oldContainer).hide()
 
-    $el.addClass("loading");
+    $el.addClass('loading')
 
-    $el.removeClass("loading");
-    _this.done();
+    $el.removeClass('loading')
+    _this.done()
   },
 
   valid: function() {
-    var prev = Barba.HistoryManager.prevStatus();
-    var next = Barba.HistoryManager.currentStatus();
+    var prev = Barba.HistoryManager.prevStatus()
+    var next = Barba.HistoryManager.currentStatus()
 
-    console.log(prev.namespace + " to " + JSON.stringify(next));
+    console.log(prev.namespace + ' to ' + JSON.stringify(next))
 
     //return prev.namespace === "home" && next.namespace === "page";
-    return true;
-  }
-});
+    return true
+  },
+})
 
-export default PageTransition;
+export default PageTransition

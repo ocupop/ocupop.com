@@ -75,10 +75,12 @@ mosaic:
       {% for project in site.projects %}
         {% if project.status == "active" %}
           <div class="mix col-12 {% for tag in project.tags %} {{ tag }}{% endfor %}">
-            <div class="bg-image aspect-16x9 bg-black my-5" style="background-image: url({{ project.featured_image }})"></div>
-            <h3 class="mt-4">{{ project.title }}</h3>
-            <p>{{ project.summary }}</p>
-            <a href="{{ project.url }}" class="btn btn-inline">Learn more...</a>
+            <a href="{{ project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ project.featured_image }}">
+              <div class="bg-image aspect-16x9 bg-black my-5" style="background-image: url({{ project.featured_image }})"></div>
+              <h3 class="mt-4">{{ project.title }}</h3>
+              <p>{{ project.summary }}</p>
+              <p class="btn btn-inline mb-0">Learn more...</p>
+            </a>
           </div>
         {% endif %}
       {% endfor %}
