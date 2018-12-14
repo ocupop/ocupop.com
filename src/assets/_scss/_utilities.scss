@@ -59,7 +59,6 @@
   }
 }
 
-
 // Color Utilities
 .bg-black {
   background-color: $black !important;
@@ -105,12 +104,10 @@
   height: 100vh;
 }
 
-
 // Text Utilities
 .text-sans-serif {
   font-family: $font-family-secondary;
 }
-
 
 .text-mega {
   font-size: calc(28px + (88 - 28) * ((100vw - 300px) / (1440 - 300)));

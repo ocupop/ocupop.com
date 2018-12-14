@@ -8,6 +8,7 @@
     .c-editor {
       font-family: $font-family-secondary !important;
       padding-left: 0;
+      padding-right: 0;
       color: $dark !important;
       font-size: 14px !important;
       text-transform: uppercase;
@@ -25,6 +26,7 @@
     .c-action {
       width: 100%;
       text-align: center;
+      margin: 0;
     }
     input[type="text"],
     textarea {
@@ -59,6 +61,7 @@
   #c-submit-button {
     float: none;
     border: 1px solid $black;
+
     color: $black;
     background-color: transparent;
     font-family: $font-family-secondary;

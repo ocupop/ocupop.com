@@ -1,15 +1,18 @@
 .quote {
   font-family: $font-family-base-bold;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 800;
   line-height: 1.4;
   margin-bottom: 0;
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5rem;
+  }
 }
 
 .quote-author {
   font-family: $font-family-secondary;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1.7;
   letter-spacing: 1px;
   color: $gray-500;

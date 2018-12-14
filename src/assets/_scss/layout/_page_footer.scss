@@ -11,20 +11,27 @@
 }
 
 .logo-footer {
-  position: absolute;
-  left: 20px;
-  top: 20px;
-  width: 190px;
-}
+  display: block;
+  position: relative;
+  min-height: 42px;
 
-.logo-footer-hover {
-  width: 190px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  opacity: 0;
-  @include transition(0.5s);
-  &:hover {
-    opacity: 1;
+  img {
+    &:nth-of-type(1) {
+      position: absolute;
+      left: 20px;
+      top: 0;
+      width: 190px;
+    }
+    &:nth-of-type(2) {
+      width: 190px;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      opacity: 0;
+      @include transition(0.5s);
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
