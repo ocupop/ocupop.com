@@ -31,8 +31,6 @@ testimonial:
     <div class="mix project-card col-lg-6 {% for tag in project.tags %} {{ tag }}{% endfor %}">
       <a href="{{ project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ project.featured_image }}">
         <div class="bg-image aspect-16x9" style="background-image: url({{ project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
-        <!-- <h3 class="mt-4"></h3>
-         -->
         <div class="hover-overlay">
           <div class="overlay-content">
             <p class="project-title">{{ project.title }}</p>
