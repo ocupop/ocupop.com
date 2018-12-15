@@ -15,39 +15,39 @@ import PageTransition from './transitions/PageTransition'
 import ProjectTransition from './transitions/ProjectTransition'
 import FocusTransition from './transitions/FocusTransition'
 
-Barba.Pjax.start()
+// Barba.Pjax.start()
 
-Barba.Pjax.getTransition = function() {
-  /**
-   * Here you can use your own logic!
-   * For example you can use different Transition based on the current page or link...
-   */
-  if (
-    lastClickEl !== undefined &&
-    lastClickEl.dataset.transition !== undefined
-  ) {
-    switch (lastClickEl.dataset.transition) {
-      case 'ProjectTransition':
-        lastClickEl.classList.add('active')
-        return ProjectTransition
-        break
-      case 'FocusTransition':
-        return FocusTransition
-        break
-      default:
-        return PageTransition
-    }
-  }
+//Barba.Pjax.getTransition = function() {
+/**
+ * Here you can use your own logic!
+ * For example you can use different Transition based on the current page or link...
+ */
+// if (
+//   lastClickEl !== undefined &&
+//   lastClickEl.dataset.transition !== undefined
+// ) {
+//   switch (lastClickEl.dataset.transition) {
+//     case 'ProjectTransition':
+//       lastClickEl.classList.add('active')
+//       return ProjectTransition
+//       break
+//     case 'FocusTransition':
+//       return FocusTransition
+//       break
+//     default:
+//       return PageTransition
+//   }
+// }
 
-  // if (FirstTransition.valid()) {
-  return PageTransition
-  // }
-}
+// if (FirstTransition.valid()) {
+//return PageTransition
+// }
+// }
 
-let lastClickEl
-Barba.Dispatcher.on('linkClicked', el => {
-  lastClickEl = el
-})
+// let lastClickEl
+// Barba.Dispatcher.on('linkClicked', el => {
+//   lastClickEl = el
+// })
 
 const containerEl = document.getElementById('projectList')
 

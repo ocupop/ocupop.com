@@ -1,17 +1,38 @@
 .cognito {
   .c-forms-form {
-    font-family: $font-family-secondary !important;
     .c-field {
       padding: 10px 0;
+      @include media-breakpoint-up(md) {
+        display: flex;
+        align-items: center;
+      }
+      
     }
-    .c-label,
+    [data-field="Message"] {
+      @include media-breakpoint-up(md) {
+        align-items: flex-start;
+        label {
+          display: inline-block;
+          padding-top: 10px;
+        }
+      }
+    }
+    .c-label {
+      min-width: 85px;
+      font-family: $font-family-base-bold !important;
+      color: $dark !important;
+      padding: 0;
+    }
     .c-editor {
-      font-family: $font-family-secondary !important;
+      background-color: $light;
+      width: 100%;
+    }
+    .c-editor {
+      font-family: $font-family-base !important;
       padding-left: 0;
       padding-right: 0;
       color: $dark !important;
-      font-size: 14px !important;
-      text-transform: uppercase;
+      font-size: 0.95rem !important;
     }
     .c-title {
       padding: 0;
@@ -25,20 +46,16 @@
     }
     .c-action {
       width: 100%;
-      text-align: center;
       margin: 0;
+      @include media-breakpoint-up(md) {
+        padding-left: 85px;
+      }
     }
     input[type="text"],
     textarea {
       background: transparent;
-      border: 1px solid $dark;
       padding: 8px;
-    }
-    .c-dropdown {
-      select {
-        border: 1px solid $dark;
-        padding: 8px;
-      }
+      border: 0 !important;
     }
     .c-validation {
       border-radius: 0;
@@ -61,7 +78,6 @@
   #c-submit-button {
     float: none;
     border: 1px solid $black;
-
     color: $black;
     background-color: transparent;
     font-family: $font-family-secondary;
@@ -71,6 +87,5 @@
       background-color: $dark;
       color: $white;
     }
-    // font-family: $font-family-bold-condensed;
   }
 }

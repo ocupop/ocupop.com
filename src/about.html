@@ -8,34 +8,29 @@ title: About
     <div class="row">
       <div class="col-12">
         <div class="content editable">
-          <p class="lead">
-            We’re in this game to make our clients’ brands perform and we will
+          <h1>About us</h1>
+          <p>We’re in this game to make our clients’ brands perform and we will
             fight and scrap and claw and beg until we’re satisfied that the
-            result is nothing short of exemplary.
-          </p>
-          <p class="mt-5">
-            So, if you are looking for switchboards, hold music, synergy,
+            result is nothing short of exemplary.</p>
+          <p>So, if you are looking for switchboards, hold music, synergy,
             ideation, and enough buzz-words to fill a conference room, we’re
             probably not the ONE. But, if you love what you do and are proud of
             your company, your product and your employees, chances are we might
             fit right in. We thrive on relationships of mutual respect,
             commitment and enjoyment – WITH our clients, our collaborators and
-            each other; we’re all in this together right?
-          </p>
+            each other; we’re all in this together right?</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+<div class="row no-gutters">
+  <div class="col-12">
+    <div class="bg-image aspect-4x3" style="background-image: url('/uploads/ocupop-about-fucknoshityeah.jpg')"></div>
+  </div>
+</div>
 <section class="bg-dark text-white">
   <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="content">
-          <div class="bg-image aspect-4x3" style="background-image: url('/uploads/ocupop-about-fucknoshityeah.jpg')"></div>
-        </div>
-      </div>
-    </div>
     <div class="row">
       <div class="col-md-6">
         <div class="content editable">
@@ -49,8 +44,7 @@ title: About
             every decision, and earning and maintaining trust while we blow
             their fucking minds.
           </p>
-          <a href="#">Listen to Michael's 'How to say Fuck No and still have them love
-            you! SXSW Talk</a>
+          <a href="#" class="btn btn-inline">Watch the Talk</a>
         </div>
       </div>
       <div class="col-md-6">
@@ -65,7 +59,7 @@ title: About
             design some of the most influential logos, campaigns, and user
             interfaces on the web over the last twenty years.
           </p>
-          <a href="#">Listen to Michael's 'Screw Fuck No, Say Shit Yeah! SXSW Talk</a>
+          <a href="#" class="btn btn-inline">Watch the Talk</a>
         </div>
       </div>
     </div>
@@ -75,25 +69,13 @@ title: About
   <div class="container">
     <div class="row">
       {% for member in site.data.staff %}
-      <div class="col-md-6">
+      <div class="col-md-4">
         <div class="content editable">
-          <div
-            class="bg-image aspect-4x3" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})"></div>
-          <h3 class="mt-3">{{ member.name }}</h3>
-          <h4>{{ member.role }}</h4>
-          <dl class="mt-4">
-            <dt>Title you prefer</dt>
-            <dd>{{ member.preferred_title }}</dd>
-            <dt>Spirit Animal</dt>
-            <dd>{{ member.spirit_animal }}</dd>
-            <dt>What you want to be when you grow up</dt>
-            <dd>{{ member.what_you_want_to_be_when_you_grow_up }}</dd>
-            <dt>Catch Phrase</dt>
-            <dd>{{ member.catch_phrase }}</dd>
-          </dl>
+          <a href="{{ member.url }}" class="bg-image aspect-1x1" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})"></a>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
+{% include good-work.html %}

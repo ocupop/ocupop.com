@@ -45,6 +45,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  &.aspect-5x7 {
+    padding-top: 120%;
+  }
   &.aspect-1x1 {
     padding-top: 100%;
   }

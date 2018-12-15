@@ -6,55 +6,47 @@ testimonial:
   quote: I get complimented on our website and materials constantly. In fact, I always joke that if Ocupop hadn’t done such a great job with our design I wouldn’t be so busy all the time!
   author: Alyssa Fox
   title: Founder, Fox Tax Service
-
-mosaic:
-  - image: /assets/img/768x768.png
-    link:
-    title: Bittercube
-  - image: /assets/img/768x768.png
-    link:
-    title: Bittercube
-  - image: /assets/img/768x768.png
-    link:
-    title: Bittercube
-  - image: /assets/img/768x768.png
-    link:
-    title: Bittercube
-  - image: /assets/img/768x768.png
-    link:
-    title: Bittercube
-  - image: /assets/img/768x768.png
-    link:
-    title: Bittercube
 ---
-<section id="page-intro" class="bg-light">
+<section id="page-intro">
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-12">
         <div class="content editable">
-          <p class="lead">We have worked with clients of every imaginable size, with budgets from meager to massive, but above all else, we try to provide insightful, powerful, and sustainable design and marketing solutions that resonate with our clients and their customers.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="content editable">
-          <p>Below are a few examples that we hope illustrate the scale and scope of our aptitude and experience. Ultimately, lots of work paired with lots of words, but we hope the breadth and depth of this case study content impresses and reassures. While certainly not our entire body of work, these pages highlight some of our favorite and most enlightening results.</p>
+          <h1>Our Work</h1>
+          <p>We have worked with clients of every imaginable size, with budgets from meager to massive, but above all else, we try to provide insightful, powerful, and sustainable design and marketing solutions that resonate with our clients and their customers.</p>
+          <p>Below are a few examples that we hope illustrate the scale and scope of our aptitude and experience. Ultimately,
+            lots of work paired with lots of words, but we hope the breadth and depth of this case study content impresses and
+            reassures. While certainly not our entire body of work, these pages highlight some of our favorite and most
+            enlightening results.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-{% include mosaic.html style="default" %}
-
-<section class="mosaic default d-none">
-  {% assign active_projects = site.projects | where: status, 'active' %}
-  {% for project in active_projects limit: 6 %}
-  <a href="{{ project.url | default: '#' }}" class="mosaic-item" style="background-image: url({{ project.featured_image }})"
-    data-transition="mosaicTransition">{{ project.title }}</a>
-  {% endfor %}
+<section class="py-0">
+  <div id="projectList" class="row no-gutters">
+    {% for project in site.projects %}
+    {% if project.status == "active" %}
+    <div class="mix project-card col-lg-6 {% for tag in project.tags %} {{ tag }}{% endfor %}">
+      <a href="{{ project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ project.featured_image }}">
+        <div class="bg-image aspect-16x9" style="background-image: url({{ project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
+        <!-- <h3 class="mt-4"></h3>
+         -->
+        <div class="hover-overlay">
+          <div class="overlay-content">
+            <p class="project-title">{{ project.title }}</p>
+            <p class="project-client">{{ project.client }}</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
 </section>
 
-<section class="bg-dark text-white">
+<!-- <section class="bg-dark text-white">
   <div class="container">
     <div class="row d-none">
       <div class="col-12">
@@ -71,19 +63,6 @@ mosaic:
       </div>
     </div>
 
-    <div id="projectList" class="row">
-      {% for project in site.projects %}
-        {% if project.status == "active" %}
-          <div class="mix col-12 {% for tag in project.tags %} {{ tag }}{% endfor %}">
-            <a href="{{ project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ project.featured_image }}">
-              <div class="bg-image aspect-16x9 bg-black my-5" style="background-image: url({{ project.featured_image }})"></div>
-              <h3 class="mt-4">{{ project.title }}</h3>
-              <p>{{ project.summary }}</p>
-              <p class="btn btn-inline mb-0">Learn more...</p>
-            </a>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
+    
   </div>
-</section>
+</section> -->

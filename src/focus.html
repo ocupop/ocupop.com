@@ -3,51 +3,54 @@ layout: default
 title: Focus
 ---
 
-<section id="page-intro" class="bg-light">
+<section id="page-intro">
   <div class="container">
     <div class="row">
-      <div class="col-12 col-md-8">
+      <div class="col-12">
         <div class="content editable">
-          <p class="lead">
-            Our smaller size affords us the agility to adapt to clients’
+          <h1>Focus</h1>
+          <p>Our smaller size affords us the agility to adapt to clients’
             individual circumstances, while our experience, ingenuity, and
             unwillingness to sleep assures insightful, holistic, sustainable
-            solutions in all variety of creative capacities.
-          </p>
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <div class="content editable">
-          <p>
-            For almost two decades, we have left a wake of satisfied customers
+            solutions in all variety of creative capacities.</p>
+          <p>For almost two decades, we have left a wake of satisfied customers
             and quality work in our path—so drop us a line, because we’re
             Ocupop, and that’s two O’s, two P’s and YOU! ...see that is the sort
-            of shit we’re talking about, brilliant!
-          </p>
+            of shit we’re talking about, brilliant!</p>
+        </div>
+        <div class="content text-center">
+          <a href="/contact" class="btn btn-outline-dark">Let's Talk</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="bg-dark text-white">
+<section>
   <div class="container">
     <div class="row">
       {% for focus in site.focuses %} {% assign project = site.projects | where:
       "slug", focus.project | first %}
-      <div class="col-md-6">
-        <div class="content">
-          <div class="bg-image aspect-4x3 bg-none mt-5" style="background-image:url({{ focus.featured_image }})"
-          ></div>
-          <h3 class="mt-5">{{ focus.title }}</h3>
-          <p>{{ focus.label }}</p>
-          <a
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="content text-center">
+          <div class="focus-card">
+            <img src="{{ site.placeholders.aspect-1x1 }}" class="img-fluid " alt="">
+            <i class="icon icon-{{ focus-title | slugify }}"></i>
+            <h3>{{ focus.title }}</h3>
+            <p>{{ focus.label }}</p>
+          </div>
+          <!-- <a
             class="btn btn-inline text-primary"
             href="{{ focus.url }}"
             title="{{ focus.title }}"
-            data-transition="FocusTransition">Learn more...</a>
+            data-transition="FocusTransition">Learn more...</a> -->
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
+</section>
+<section class="text-center">
+  <a id="to-top" href="#page-intro">
+    <i class="icon icon-rocket"></i>
+    Back to Top</a>
 </section>

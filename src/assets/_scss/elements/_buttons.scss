@@ -1,14 +1,33 @@
 .btn {
   font-family: $font-family-secondary;
-  letter-spacing: 1px;
   border-radius: 0;
+  font-size: 1rem;
   &.btn-inline {
     padding-left: 0;
     padding-right: 0;
-    color: $gray-500;
+    color: $white;
     text-transform: uppercase;
+    text-decoration: underline solid $primary;
+  }
+  &.btn-outline-dark {
+    color: $dark;
+    text-transform: uppercase;
+    border: 1px solid $dark;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include transition(.4s);
+    
+    letter-spacing: 0;
+    &:hover {
+      background-color: $dark;
+      color: $light;
+    }
   }
   &.btn-outline-light {
+    padding-left: 20px;
+    padding-right: 20px;
+    letter-spacing: 0;
+    text-transform: uppercase;
     @include transition(.4s);
     &:hover {
       background-color: $white;

@@ -20,6 +20,7 @@
 @import "elements/cta_contact";
 @import "elements/cognito";
 @import "elements/footer_bar";
+@import "elements/joke_station";
 @import "elements/project_transition";
 @import "elements/quote";
 @import "elements/testimonials";
@@ -28,6 +29,7 @@
 @import "components/mosaic";
 
 // Import view specific styles
+@import 'views/focus';
 @import "views/home";
 @import "views/home_animation";
 @import "views/message_strategy";

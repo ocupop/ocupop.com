@@ -1,20 +1,26 @@
-<section id="testimonial" class="bg-secondary text-white">
+<section id="testimonial" class="bg-secondary text-dark">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-12">
+      <div class="col-lg-6">
+        <div class="content">
+          <p class="h3">What the cool kids say</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
         <div class="content">
           {% if page.testimonial %}
-            <p class="quote">&quot;{{ page.testimonial.quote }}&quot; <a href="/testimonials/" class="">Read more</a></p>
-            <p>
-              <span class="author">{{ page.testimonial.author }}</small><br>
+          <p class="quote">&quot;{{ page.testimonial.quote }}&quot;</p>
+          <p>
+            <span class="author">{{ page.testimonial.author }}</small><br>
               <span class="title">{{ page.testimonial.title }}</small>
-            </p>
+          </p>
           {% else %}
-            <p class="quote">&quot;I get complimented on our website and materials constantly. In fact, I always joke that if Ocupop hadn’t done such a great job with our design I wouldn’t be so busy all the time!&quot; <a href="/testimonials/" class="">Read more</a></p>
-            <p>
-              <span class="author">Alyssa Fox</small><br>
+          <p class="quote">&quot;I get complimented on our website and materials constantly. In fact, I always joke that if
+            Ocupop hadn’t done such a great job with our design I wouldn’t be so busy all the time!&quot;</p>
+          <p>
+            <span class="author">Alyssa Fox</small><br>
               <span class="title">Founder, Fox Tax Service</small>
-            </p>
+          </p>
           {% endif %}
         </div>
       </div>
