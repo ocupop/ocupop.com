@@ -74,6 +74,7 @@
     "js-cookie": "^2.2.0",
     "mixitup": "^3.3.0",
     "popper.js": "^1.14.4",
+    "rellax": "^1.7.1",
     "scrollmagic": "^2.0.6",
     "webfontloader": "^1.6.28"
   }

@@ -1,0 +1,35 @@
+
+.hover-overlay {
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }  
+}
+
+.hover-overlay {
+  @include transition(0.5s);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(103,220,229, 0.9);
+  text-align: center;
+  padding: 40px;
+  .hover-primary-text {
+    font-family: $font-family-base-bold;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+  }
+  .hover-secondary-text {
+    font-family: $font-family-secondary;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+
+}

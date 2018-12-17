@@ -70,8 +70,16 @@ title: About
     <div class="row">
       {% for member in site.data.staff %}
       <div class="col-md-4">
-        <div class="content editable">
-          <a href="{{ member.url }}" class="bg-image aspect-1x1" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})"></a>
+        <div class="content">
+          <div class="position-relative">
+            <a href="{{ member.url }}" class="bg-image aspect-1x1" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})"></a>
+            <div class="hover-overlay text-white">
+              <div class="hover-content">
+                <p class="hover-primary-text">{{ member.name }}</p>
+                <p class="hover-secondary-text"><small>{{ member.role }}</small></p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       {% endfor %}

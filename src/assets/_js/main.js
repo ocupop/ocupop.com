@@ -14,6 +14,8 @@ import Barba from 'barba.js/dist/barba.js'
 import PageTransition from './transitions/PageTransition'
 import ProjectTransition from './transitions/ProjectTransition'
 import FocusTransition from './transitions/FocusTransition'
+import Cookies from 'js-cookie'
+import Rellax from 'rellax'
 
 // Barba.Pjax.start()
 
@@ -54,3 +56,20 @@ const containerEl = document.getElementById('projectList')
 if (containerEl) {
   var mixer = mixitup(containerEl)
 }
+
+//cookie management
+let cookiePolicy = Cookies.get('cookie-policy')
+if (!cookiePolicy) {
+  console.log('no cookie')
+  $('.cookie-policy').addClass('active')
+} else {
+  console.log('yes cookie')
+  $('.cookie-policy').removeClass('active')
+}
+
+$('#confirm-cookie-consent').on('click', function() {
+  Cookies.set('cookie-policy', true)
+  $('.cookie-policy').removeClass('active')
+})
+
+Cookies.remove('cookie-policy')

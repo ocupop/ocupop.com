@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Home
+projects: 
+ - google-developer-days
+ - mapbox-locate
+ - kunoa
 ---
 
 <!-- {% include transition.html %} -->
@@ -36,28 +40,41 @@ title: Home
     </div>
   </div>
 </section>
-<section class="pt-0">
-  <div id="photo-grid" class="row no-gutters">
+<section id="photo-grid" class="pt-0">
+  {% for project in page.projects %}
+    {% if forloop.index == 1 %}
+      {% assign project1 = site.projects | where: "slug", project | first %}
+    {% endif %}
+    {% if forloop.index == 2 %}
+      {% assign project2 = site.projects | where: "slug", project | first %}
+    {% endif %}
+    {% if forloop.index == 3 %}
+      {% assign project3 = site.projects | where: "slug", project | first %}
+    {% endif %}
+
+  {% endfor %}
+
+  <div class="row no-gutters">
     <div class="col-12">
-      <a class="expand-full-screen" data-image="/assets/img/home/ocupop-workgrid-01.jpg" data-transition="ProjectTransition"
-        href="/work/google-developer-days/">
-        <div class="bg-image aspect-16x9 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-01.jpg)">
+      <a class="expand-full-screen" data-image="{{ project1.featured_image | default: site.placeholders.aspect-4x3 }}" data-transition="ProjectTransition"
+        href="{{ project1.url }}">
+        <div class="bg-image aspect-16x9 mt-md-0 mt-5" style="background-image: url({{ project1.featured_image | default: site.placeholders.aspect-4x3 }})">
         </div>
       </a>
     </div>
   </div>
   <div class="row no-gutters">
     <div class="col-lg-6">
-      <a class="expand-full-screen" data-image="/assets/img/home/ocupop-workgrid-04.jpg" data-transition="ProjectTransition"
-        href="/work/mapbox-locate/">
-        <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url(/assets/img/home/ocupop-workgrid-04.jpg)">
+      <a class="expand-full-screen" data-image="{{ project2.featured_image | default: site.placeholders.aspect-4x3 }}" data-transition="ProjectTransition"
+        href="{{ project2.url }}">
+        <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ project2.featured_image | default: site.placeholders.aspect-4x3 }})">
         </div>
       </a>
     </div>
     <div class="col-lg-6">
-      <a class="expand-full-screen" data-image="/assets/img/home/ocupop-workgrid-04.jpg" data-transition="ProjectTransition"
-        href="/work/kunoa/">
-        <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ site.placeholders.aspect-4x3 }})">
+      <a class="expand-full-screen" data-image="{{ project3.featured_image | default: site.placeholders.aspect-4x3 }}" data-transition="ProjectTransition"
+        href="{{ project3.url }}">
+        <div class="bg-image aspect-4x3 mt-md-0 mt-5" style="background-image: url({{ project3.featured_image | default: site.placeholders.aspect-4x3 }})">
         </div>
       </a>
     </div>
