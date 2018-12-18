@@ -99,3 +99,32 @@
     }
   }
 }
+
+
+.navbar-collapse {
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 250px;
+    height: 100%;
+    background-color: $white;
+  }
+}
+.navbar-collapse.collapsing {
+  @include media-breakpoint-down(md) {
+    height: 100%;
+    @include transition(0.4s);
+    right: -100%;
+  }
+}
+.navbar-collapse.show {
+  @include media-breakpoint-down(md) {
+    right: 0;
+    @include transition(.4s);
+  }
+}
+
