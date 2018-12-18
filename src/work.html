@@ -26,7 +26,8 @@ testimonial:
 
 <section class="py-0">
   <div id="projectList" class="row no-gutters">
-    {% for project in site.projects %}
+    {% for object in site.data.project_order.projects %}
+    {% assign project =  site.projects | where: "slug", object | first %}
     {% if project.status == "active" %}
     <div class="mix position-relative col-lg-6 {% for tag in project.tags %} {{ tag }}{% endfor %}">
       <a href="{{ project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ project.featured_image }}">
@@ -43,24 +44,3 @@ testimonial:
     {% endfor %}
   </div>
 </section>
-
-<!-- <section class="bg-dark text-white">
-  <div class="container">
-    <div class="row d-none">
-      <div class="col-12">
-        <ul class="nav justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link active" data-filter="all" href="#">all</a>
-          </li>
-          {% for focus in site.focuses %}
-          <li class="nav-item">
-            <a class="nav-link" data-filter=".{{ focus.title | downcase }}" href="#">{{ focus.title | downcase }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-
-    
-  </div>
-</section> -->

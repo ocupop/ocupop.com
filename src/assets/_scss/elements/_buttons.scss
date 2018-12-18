@@ -2,12 +2,14 @@
   font-family: $font-family-secondary;
   border-radius: 0;
   font-size: 1rem;
+  z-index: 1;
   &.btn-inline {
     padding-left: 0;
     padding-right: 0;
     color: $white;
     text-transform: uppercase;
     text-decoration: underline solid $primary;
+    @include inlineLinkHoverAnimation();
   }
   &.btn-outline-dark {
     color: $dark;
@@ -15,11 +17,26 @@
     border: 1px solid $dark;
     padding-left: 20px;
     padding-right: 20px;
-    @include transition(.4s);
     letter-spacing: 0;
+    background: none;
+    overflow: hidden;
+    position: relative;
+    &::after {
+      background: $dark;
+      height: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      @include transition(.3s);
+    }
     &:hover {
-      background-color: $dark;
       color: $light !important;
+      &::after {
+        height: 100%;
+      }
     }
   }
   &.btn-outline-light {
@@ -27,10 +44,50 @@
     padding-right: 20px;
     letter-spacing: 0;
     text-transform: uppercase;
-    @include transition(.4s);
+    background: none;
+    overflow: hidden;
+    position: relative;
+    &::before {
+      background: $light;
+      height: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      content: '';
+      position: absolute;
+      z-index: -1;
+      @include transition(.3s);
+    }
     &:hover {
-      background-color: $white;
-      color: $orange;
+      color: $dark !important;
+      &::before {
+        height: 100%;
+      }
     }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
