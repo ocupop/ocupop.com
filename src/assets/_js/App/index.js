@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ContactCTA from './components/ContactCTA';
 
-const APPS = {}
+const APPS = {
+  ContactCTA
+}
 
 function renderAppInElement(el) {
   var App = APPS[el.dataset.component];
