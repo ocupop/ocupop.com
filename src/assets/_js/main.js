@@ -4,7 +4,7 @@ import 'bootstrap'
 // import 'bootstrap/js/dist/util';
 // import 'bootstrap/js/dist/dropdown';
 
-import App from './App';
+import App from './App'
 // import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
 import mixitup from 'mixitup'
 import ScrollMagic from 'ScrollMagic'
@@ -67,9 +67,9 @@ if (!cookiePolicy) {
   $('.cookie-policy').removeClass('active')
 }
 
-$('#confirm-cookie-consent').on('click', function () {
+$('#confirm-cookie-consent').on('click', function() {
   Cookies.set('cookie-policy', true)
   $('.cookie-policy').removeClass('active')
 })
 
-Cookies.remove('cookie-policy')
+// Cookies.remove('cookie-policy')
