@@ -15,3 +15,18 @@
     }
   }
 }
+
+#photo-grid {
+  .bg-image {
+    &.aspect-16x9 {
+      @include media-breakpoint-down(md) {
+        padding-top: 60%;
+      }
+    }
+    &.aspect-4x3 {
+      @include media-breakpoint-down(md) {
+        padding-top: 60%;
+      }
+    }
+  }
+}

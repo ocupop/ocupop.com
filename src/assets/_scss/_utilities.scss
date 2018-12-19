@@ -123,3 +123,7 @@
   font-size: calc(28px + (88 - 28) * ((100vw - 300px) / (1440 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1440 - 300)));
 }
+
+.text-large {
+  font-size: 1.5rem;
+}
