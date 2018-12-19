@@ -59,7 +59,10 @@
     padding-top: 56.25%;
   }
   &.aspect-hero {
-    padding-top: 42%;
+    padding-top: 30%;
+  }
+  &.bg-fixed {
+    background-attachment: fixed;
   }
 }
 

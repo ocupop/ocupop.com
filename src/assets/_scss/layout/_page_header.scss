@@ -102,7 +102,7 @@
 
 
 .navbar-collapse {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     position: fixed;
     top: 70px;
     right: 0;
@@ -115,14 +115,14 @@
   }
 }
 .navbar-collapse.collapsing {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     height: 100%;
     @include transition(0.4s);
     right: -100%;
   }
 }
 .navbar-collapse.show {
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     right: 0;
     @include transition(.4s);
   }
