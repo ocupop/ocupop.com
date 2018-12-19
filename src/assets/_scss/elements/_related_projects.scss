@@ -19,4 +19,7 @@
   font-family: $font-family-base-bold;
   font-size: 2rem;
   color: $white;
+  p {
+    margin-bottom: 0;
+  }
 }

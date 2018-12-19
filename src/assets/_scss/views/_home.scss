@@ -9,8 +9,8 @@
   }
   @include media-breakpoint-down(md) {
     flex-wrap: wrap;
-    img {
-      padding: 20px;
+    .logo-item {
+      padding: 10px 0;
       max-width: 50%;
     }
   }
