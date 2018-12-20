@@ -1,5 +1,5 @@
 @charset 'utf-8';
-@import "custom_settings";
+@import "settings";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
 @import "mixins";
@@ -9,6 +9,7 @@
 
 @import "base/global";
 @import "base/typography";
+@import "base/forms";
 
 @import "layout/page_header";
 @import "layout/page_content";
@@ -18,7 +19,6 @@
 // Import element specific styles
 @import "elements/buttons";
 @import "elements/cta_contact";
-@import "elements/cognito";
 @import "elements/cookie_policy";
 @import "elements/hover_overlay";
 @import "elements/joke_station";
@@ -34,7 +34,6 @@
 @import 'views/focus';
 @import "views/home";
 @import "views/home_animation";
-@import "views/message_strategy";
 @import "views/project";
 @import "views/team_member";
 @import "views/work";

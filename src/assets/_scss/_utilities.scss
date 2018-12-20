@@ -59,8 +59,23 @@
     padding-top: 56.25%;
   }
   &.aspect-hero {
-    padding-top: 42%;
+    padding-top: 32%;
+    @include media-breakpoint-down(sm) {
+      padding-top: 42%;
+    }
+    &.rellax {
+      padding-top: 37%;
+    }
   }
+  &.bg-fixed {
+    background-attachment: fixed;
+    
+  }
+}
+
+.parallax-window {
+    min-height: 800px;
+    background: transparent;
 }
 
 // Color Utilities
@@ -116,4 +131,8 @@
 .text-mega {
   font-size: calc(28px + (88 - 28) * ((100vw - 300px) / (1440 - 300)));
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px)/(1440 - 300)));
+}
+
+.text-large {
+  font-size: 1.5rem;
 }

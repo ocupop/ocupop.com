@@ -9,9 +9,24 @@
   }
   @include media-breakpoint-down(md) {
     flex-wrap: wrap;
-    img {
-      padding: 20px;
+    .logo-item {
+      padding: 10px 0;
       max-width: 50%;
+    }
+  }
+}
+
+#photo-grid {
+  .bg-image {
+    &.aspect-16x9 {
+      @include media-breakpoint-down(md) {
+        padding-top: 60%;
+      }
+    }
+    &.aspect-4x3 {
+      @include media-breakpoint-down(md) {
+        padding-top: 60%;
+      }
     }
   }
 }
