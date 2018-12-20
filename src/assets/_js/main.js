@@ -16,7 +16,6 @@ import PageTransition from './transitions/PageTransition'
 import ProjectTransition from './transitions/ProjectTransition'
 import FocusTransition from './transitions/FocusTransition'
 import Cookies from 'js-cookie'
-import Rellax from 'rellax'
 
 // Barba.Pjax.start()
 

@@ -74,8 +74,11 @@
 }
 
 .parallax-window {
+  background: transparent;
+  min-height: 400px;
+  @include media-breakpoint-up(lg) {
     min-height: 800px;
-    background: transparent;
+  }
 }
 
 // Color Utilities
