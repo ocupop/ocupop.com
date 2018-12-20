@@ -53,33 +53,33 @@
     }
   }
   &.default5 {
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     .mosaic-item {
       &:nth-child(1) {
         // Wide
         grid-row: span 2;
-        grid-column: span 3;
+        grid-column: span 6;
       }
       &:nth-child(2) {
         // Wide
         grid-row: span 2;
-        grid-column: span 3;
+        grid-column: span 6;
       }
       &:nth-child(3) {
         // Small
         grid-row: span 2;
-        grid-column: span 2;
+        grid-column: span 4;
       }
       &:nth-child(4) {
         // Small
         grid-row: span 2;
-        grid-column: span 2;
+        grid-column: span 4;
       }
       &:nth-child(5) {
         // Small
         grid-row: span 2;
-        grid-column: span 2;
+        grid-column: span 4;
       }
     }
   }
