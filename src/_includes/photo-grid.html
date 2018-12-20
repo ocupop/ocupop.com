@@ -1,0 +1,37 @@
+{% for project in page.projects %}
+  {% if forloop.index == 1 %}
+    {% assign project1 = site.projects | where: "slug", project | first %}
+  {% endif %}
+  {% if forloop.index == 2 %}
+    {% assign project2 = site.projects | where: "slug", project | first %}
+  {% endif %}
+  {% if forloop.index == 3 %}
+    {% assign project3 = site.projects | where: "slug", project | first %}
+  {% endif %}
+{% endfor %}
+
+<div class="row no-gutters">
+  <div class="col-12">
+    <a href="{{ project1.url }}"
+       data-image="{{ project1.featured_image | default: site.placeholders.aspect-4x3 }}"
+       data-transition="ProjectTransition">
+        <div class="bg-image aspect-16x9" style="background-image: url({{ project1.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
+    </a>
+  </div>
+</div>
+<div class="row no-gutters">
+  <div class="col-lg-6">
+    <a href="{{ project2.url }}"
+       data-image="{{ project2.featured_image | default: site.placeholders.aspect-4x3 }}"
+       data-transition="ProjectTransition">
+        <div class="bg-image aspect-16x9" style="background-image: url({{ project2.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
+    </a>
+  </div>
+  <div class="col-lg-6">
+    <a href="{{ project3.url }}"
+       data-image="{{ project3.featured_image | default: site.placeholders.aspect-4x3 }}"
+       data-transition="ProjectTransition">
+        <div class="bg-image aspect-16x9" style="background-image: url({{ project3.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
+    </a>
+  </div>
+</div>

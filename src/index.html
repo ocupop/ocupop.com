@@ -5,22 +5,28 @@ projects:
  - google-developer-days
  - mapbox-locate
  - kunoa
----
 
-<!-- {% include transition.html %} -->
+mosaic:
+  - image: /assets/img/home/homepage-culture-01.jpg
+  - image: /assets/img/home/homepage-culture-02.jpg
+  - image: /assets/img/home/homepage-culture-03.jpg
+  - image: /assets/img/home/homepage-culture-04.jpg
+  - image: /assets/img/home/homepage-culture-05.jpg
+
+---
 
 <section id="page-intro">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="content editable">
+        <div class="content">
           <p class="quote">"I have never felt more alive!"</p>
         </div>
       </div>
     </div>
     <div id="home-copy" class="row">
       <div class="col-12">
-        <div class="content editable">
+        <div class="content">
           <p>
             Yeah. No. That’s complete bullshit. Though we have tons of
             testimonials exalting the breadth of our awesomeness (from Jeff’s
@@ -40,45 +46,9 @@ projects:
     </div>
   </div>
 </section>
+
 <section id="photo-grid" class="pt-0">
-  {% for project in page.projects %}
-    {% if forloop.index == 1 %}
-      {% assign project1 = site.projects | where: "slug", project | first %}
-    {% endif %}
-    {% if forloop.index == 2 %}
-      {% assign project2 = site.projects | where: "slug", project | first %}
-    {% endif %}
-    {% if forloop.index == 3 %}
-      {% assign project3 = site.projects | where: "slug", project | first %}
-    {% endif %}
-
-  {% endfor %}
-
-  <div class="row no-gutters">
-    <div class="col-12">
-      <a class="expand-full-screen" data-image="{{ project1.featured_image | default: site.placeholders.aspect-4x3 }}" data-transition="ProjectTransition"
-        href="{{ project1.url }}">
-        <div class="bg-image aspect-16x9" style="background-image: url({{ project1.featured_image | default: site.placeholders.aspect-4x3 }})">
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="row no-gutters">
-    <div class="col-lg-6">
-      <a class="expand-full-screen" data-image="{{ project2.featured_image | default: site.placeholders.aspect-4x3 }}" data-transition="ProjectTransition"
-        href="{{ project2.url }}">
-        <div class="bg-image aspect-16x9" style="background-image: url({{ project2.featured_image | default: site.placeholders.aspect-4x3 }})">
-        </div>
-      </a>
-    </div>
-    <div class="col-lg-6">
-      <a class="expand-full-screen" data-image="{{ project3.featured_image | default: site.placeholders.aspect-4x3 }}" data-transition="ProjectTransition"
-        href="{{ project3.url }}">
-        <div class="bg-image aspect-16x9" style="background-image: url({{ project3.featured_image | default: site.placeholders.aspect-4x3 }})">
-        </div>
-      </a>
-    </div>
-  </div>
+ {% include photo-grid.html %}
 </section>
 
 <section>
@@ -117,12 +87,10 @@ projects:
       <div class="col-md-6">
         <div class="content editable">
           <p class="quote">
-            “If you guys are such hot shit, who have you worked with? Anything I
-            have ever seen?”
+            “If you guys are such hot shit, who have you worked with? Anything I have ever seen?”
           </p>
           <p class="quote-author">
-            <strong>You (being a little grumpy, honestly)</strong
-            ><br />Potential Ocupop Client
+            <strong>You (being a little grumpy, honestly)</strong><br />Potential Ocupop Client
           </p>
         </div>
       </div>
@@ -183,6 +151,7 @@ projects:
     </div>
   </div>
 </section>
+
 <section>
   <div class="container">
     <div class="row">
@@ -210,46 +179,37 @@ projects:
     </div>
   </div>
 </section>
+
+<section class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {% include mosaic.html style="default5" %}
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <section>
   <div class="container">
     <div class="row">
-      <div class="col">
-        <div class="content">
-          <div class="row">
-            <div class="col-md-6">
-              <div
-                class="bg-image aspect-4x3 mt-4 mt-md-0"
-                style="background-image: url(/assets/img/home/homepage-culture-01.jpg)"
-              ></div>
-            </div>
-            <div class="col-md-6">
-              <div
-                class="bg-image aspect-4x3 mt-4 mt-md-0"
-                style="background-image: url(/assets/img/home/homepage-culture-02.jpg)"
-              ></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-4">
-              <div
-                class="bg-image aspect-1x1 mt-4"
-                style="background-image: url(/assets/img/home/homepage-culture-03.jpg)"
-              ></div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="bg-image aspect-1x1 mt-4"
-                style="background-image: url(/assets/img/home/homepage-culture-04.jpg)"
-              ></div>
-            </div>
-            <div class="col-md-4">
-              <div
-                class="bg-image aspect-1x1 mt-4"
-                style="background-image: url(/assets/img/home/homepage-culture-05.jpg)"
-              ></div>
-            </div>
-          </div>
-        </div>
+      <div class="col-md-6">
+        <div class="animated-asset bg-image aspect-4x3 mt-4 mt-md-0" style="background-image: url(/assets/img/home/homepage-culture-01.jpg)"></div>
+      </div>
+      <div class="col-md-6">
+        <div class="animated-asset bg-image aspect-4x3 mt-4 mt-md-0" style="background-image: url(/assets/img/home/homepage-culture-02.jpg)"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="animated-asset bg-image aspect-1x1 mt-4" style="background-image: url(/assets/img/home/homepage-culture-03.jpg)"></div>
+      </div>
+      <div class="col-md-4">
+        <div class="animated-asset bg-image aspect-1x1 mt-4" style="background-image: url(/assets/img/home/homepage-culture-04.jpg)"></div>
+      </div>
+      <div class="col-md-4">
+        <div class="animated-asset bg-image aspect-1x1 mt-4" style="background-image: url(/assets/img/home/homepage-culture-05.jpg)"></div>
       </div>
     </div>
   </div>
