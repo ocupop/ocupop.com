@@ -7,6 +7,7 @@ import 'bootstrap'
 import App from './App'
 // import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
 import mixitup from 'mixitup'
+import parallax from 'jquery-parallax.js'
 import ScrollMagic from 'ScrollMagic'
 import TimelineMax from 'TimelineMax'
 import 'animation.gsap'
@@ -74,6 +75,6 @@ $('#confirm-cookie-consent').on('click', function() {
 
 // Cookies.remove('cookie-policy')
 
-if (document.getElementsByClassName('rellax').length) {
-  var rellax = new Rellax('.rellax', { center: true, speed: 0.25 })
-}
+// if (document.getElementsByClassName('rellax').length) {
+//   var rellax = new Rellax('.rellax', { center: true, speed: 2 })
+// }
