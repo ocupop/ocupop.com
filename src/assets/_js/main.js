@@ -75,7 +75,5 @@ $('#confirm-cookie-consent').on('click', function() {
 // Cookies.remove('cookie-policy')
 
 if (document.getElementsByClassName('rellax').length) {
-  var rellax = new Rellax('.rellax', {
-    center: true,
-  })
+  var rellax = new Rellax('.rellax', { center: true, speed: 0.25 })
 }
