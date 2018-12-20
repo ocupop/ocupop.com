@@ -25,6 +25,7 @@
         align-items: center;
       }
       
+      
     }
     [data-field="Message"] {
       @include media-breakpoint-up(md) {
@@ -42,15 +43,13 @@
       padding: 0;
     }
     .c-editor {
-      background-color: $light;
-      width: 100%;
-    }
-    .c-editor {
       font-family: $font-family-base !important;
       padding-left: 0;
       padding-right: 0;
       color: $dark !important;
       font-size: 0.95rem !important;
+      background-color: transparent;
+      width: 100%;
     }
     .c-title {
       padding: 0;
@@ -107,3 +106,45 @@
     }
   }
 }
+
+//form page styles (message strategy and testimonials)
+.form {
+  .cognito {
+    .c-forms-form {
+      .c-field {
+        padding: 10px 0;
+        display: block;
+        @include media-breakpoint-up(md) {
+          display: block;
+        }
+      }
+      .c-label {
+        min-width: 0;
+      }
+      .c-editor {
+        padding-left: 0;
+        padding-right: 8px;
+        input,
+        textarea {
+          background-color: $light;
+        }
+      }
+      // .c-title {
+      //   padding: 0;
+      // }
+      // .c-button-section {
+      //   button {
+      //     margin: 20px auto;
+      //     border-radius: 0;
+      //     border: 0;
+      //   }
+      // }
+      .c-action {
+        @include media-breakpoint-up(md) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
+
