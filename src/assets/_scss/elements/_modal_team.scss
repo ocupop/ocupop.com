@@ -1,0 +1,25 @@
+[data-toggle="modal"] {
+  pointer-events: all;  
+}
+
+.modal-team {
+  background: $light;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  section {
+    height: 100%;
+  }
+  .close {
+    font-family: $font-family-secondary;
+    font-size: 30px;
+    color: $dark;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    text-shadow: none;
+    border: 0;
+    font-weight: 200;
+  }
+}

@@ -1,12 +1,5 @@
 
 .hover-overlay {
-  &:hover {
-    opacity: 1;
-    cursor: pointer;
-  }  
-}
-
-.hover-overlay {
   @include transition(0.5s);
   display: flex;
   align-items: center;
@@ -20,6 +13,8 @@
   background-color: rgba(103,220,229, 0.9);
   text-align: center;
   padding: 40px;
+  cursor: pointer;
+  pointer-events: none;
   .hover-primary-text {
     font-family: $font-family-base-bold;
     font-size: 1.8rem;
@@ -31,5 +26,8 @@
     font-size: 0.9rem;
     margin-bottom: 0;
   }
-
+  &:hover {
+    opacity: 1;
+    
+  } 
 }
