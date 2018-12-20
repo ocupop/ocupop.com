@@ -1,11 +1,8 @@
 .mosaic {
   display: grid;
-  height: 100vw;
+  height: 50vw;
   padding: 1rem;
-  grid-template-rows: repeat(6, 1fr);
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 1rem;
-  background-color: $dark;
+  grid-gap: 1.5rem;
   .mosaic-item {
     display: flex;
     justify-content: center;
@@ -17,7 +14,9 @@
     background-size: cover;
     text-indent: -999rem;
   }
-  &.default {
+  &.default6 {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     .mosaic-item {
       grid-row: span 1;
       grid-column: span 1;
@@ -50,6 +49,37 @@
         // Tall
         grid-row: 4 / span 3;
         grid-column: 4 / span 2;
+      }
+    }
+  }
+  &.default5 {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(12, 1fr);
+    .mosaic-item {
+      &:nth-child(1) {
+        // Wide
+        grid-row: span 2;
+        grid-column: span 6;
+      }
+      &:nth-child(2) {
+        // Wide
+        grid-row: span 2;
+        grid-column: span 6;
+      }
+      &:nth-child(3) {
+        // Small
+        grid-row: span 2;
+        grid-column: span 4;
+      }
+      &:nth-child(4) {
+        // Small
+        grid-row: span 2;
+        grid-column: span 4;
+      }
+      &:nth-child(5) {
+        // Small
+        grid-row: span 2;
+        grid-column: span 4;
       }
     }
   }
