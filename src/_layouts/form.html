@@ -4,9 +4,9 @@
   <body class="{{ page.layout }}">
     <div id="barba-wrapper">
       <div class="barba-container" data-namespace="{{ page.title | slugify }}">
-        {% include message-strategy/header.html %}
+        {% include forms/header.html %}
         <main id="page-content">{{ content }}</main>
-        {% include message-strategy/footer.html %}
+        {% include forms/footer.html %}
         {% include scripts.html %}
       </div>
     </div>
