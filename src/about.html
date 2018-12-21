@@ -73,13 +73,14 @@ testimonial: true
       <div class="col-md-4">
         <div class="content">
           <div class="position-relative">
-            <button class="bg-image aspect-1x1 border-0" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}"></button>
-            <div class="hover-overlay text-white">
-              <div class="hover-content">
-                <p class="hover-primary-text">{{ member.name }}</p>
-                <p class="hover-secondary-text"><small>{{ member.role }}</small></p>
+            <a href="#" class="bg-image aspect-1x1 border-0" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
+              <div class="hover-overlay text-white">
+                <div class="hover-content">
+                  <p class="hover-primary-text">{{ member.name }}</p>
+                  <p class="hover-secondary-text"><small>{{ member.role }}</small></p>
+                </div>
               </div>
-            </div>
+            </a>
             {% include modal-team.html %}
           </div>
         </div>

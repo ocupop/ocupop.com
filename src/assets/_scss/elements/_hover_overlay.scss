@@ -14,7 +14,7 @@
   text-align: center;
   padding: 40px;
   cursor: pointer;
-  pointer-events: none;
+  // pointer-events: auto;
   .hover-primary-text {
     font-family: $font-family-base-bold;
     font-size: 1.8rem;
