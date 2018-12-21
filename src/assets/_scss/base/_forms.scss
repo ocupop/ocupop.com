@@ -48,7 +48,7 @@
       padding-right: 0;
       color: $dark !important;
       font-size: 0.95rem !important;
-      background-color: transparent;
+      background-color: $light;
       width: 100%;
     }
     .c-title {
@@ -124,6 +124,7 @@
       .c-editor {
         padding-left: 0;
         padding-right: 8px;
+        background-color: transparent;
         input,
         textarea {
           background-color: $light;
