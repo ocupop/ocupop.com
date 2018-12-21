@@ -77,3 +77,93 @@ $('#confirm-cookie-consent').on('click', function() {
 // if (document.getElementsByClassName('rellax').length) {
 //   var rellax = new Rellax('.rellax', { center: true, speed: 2 })
 // }
+
+// init controller
+var controller = new ScrollMagic.Controller({
+  globalSceneOptions: { duration: 100 },
+})
+
+var controller = new ScrollMagic.Controller()
+
+$('.slide-up').each(function() {
+  var currentAnimation = this
+
+  var slideUpAnimation = new TimelineMax()
+    .from(currentAnimation, 0.2, { opacity: 0 })
+    .from(currentAnimation, 0.2, { y: 100 })
+    .to(currentAnimation, 0.3, { opacity: 1 }, 0.2)
+    .to(currentAnimation, 0.3, { y: 0 }, 0.3)
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: currentAnimation,
+    offset: -250,
+  })
+    .setTween(slideUpAnimation)
+    .addTo(controller)
+})
+
+$('.slide-down').each(function() {
+  var currentAnimation = this
+
+  var slideDownAnimation = new TimelineMax()
+    .from(currentAnimation, 0.2, { opacity: 0 })
+    .from(currentAnimation, 0.2, { y: -100 })
+    .to(currentAnimation, 0.3, { opacity: 1 }, 0.2)
+    .to(currentAnimation, 0.3, { y: 0 }, 0.3)
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: currentAnimation,
+    offset: -250,
+  })
+    .setTween(slideDownAnimation)
+    .addTo(controller)
+})
+
+$('.slide-left').each(function() {
+  var currentAnimation = this
+
+  var slideLeftAnimation = new TimelineMax()
+    .from(currentAnimation, 0.2, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.2, { x: 100 }, 0.5)
+    .to(currentAnimation, 0.5, { opacity: 1 })
+    .to(currentAnimation, 0.5, { x: 0 })
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: currentAnimation,
+    offset: -250,
+  })
+    .setTween(slideLeftAnimation)
+    .addTo(controller)
+})
+
+$('.slide-right').each(function() {
+  var currentAnimation = this
+
+  var slideRightAnimation = new TimelineMax()
+    .from(currentAnimation, 0.2, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.2, { x: -100 }, 0.5)
+    .to(currentAnimation, 0.5, { opacity: 1 })
+    .to(currentAnimation, 0.5, { x: 0 })
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: currentAnimation,
+    offset: -250,
+  })
+    .setTween(slideRightAnimation)
+    .addTo(controller)
+})
+
+$('.fade-in').each(function() {
+  var currentAnimation = this
+
+  var fadeInAnimation = new TimelineMax()
+    .from(currentAnimation, 0.2, { opacity: 0 }, 0.5)
+    .to(currentAnimation, 0.5, { opacity: 1 })
+
+  var scene = new ScrollMagic.Scene({
+    triggerElement: currentAnimation,
+    offset: -250,
+  })
+    .setTween(fadeInAnimation)
+    .addTo(controller)
+})
