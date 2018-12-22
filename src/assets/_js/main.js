@@ -108,8 +108,8 @@ $('.slide-down').each(function() {
   var slideDownAnimation = new TimelineMax()
     .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
     .from(currentAnimation, 0.4, { y: -100 }, 0.5)
-    .to(currentAnimation, 0.4, { opacity: 1 })
-    .to(currentAnimation, 0.4, { y: 0 })
+    .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
+    .to(currentAnimation, 0.4, { y: 0 }, 0.2)
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
@@ -125,8 +125,8 @@ $('.slide-left').each(function() {
   var slideLeftAnimation = new TimelineMax()
     .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
     .from(currentAnimation, 0.4, { x: 100 }, 0.5)
-    .to(currentAnimation, 0.4, { opacity: 1 })
-    .to(currentAnimation, 0.4, { x: 0 })
+    .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
+    .to(currentAnimation, 0.4, { x: 0 }, 0.2)
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
@@ -142,8 +142,8 @@ $('.slide-right').each(function() {
   var slideRightAnimation = new TimelineMax()
     .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
     .from(currentAnimation, 0.4, { x: -100 }, 0.5)
-    .to(currentAnimation, 0.4, { opacity: 1 })
-    .to(currentAnimation, 0.4, { x: 0 })
+    .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
+    .to(currentAnimation, 0.4, { x: 0 }, 0.2)
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
