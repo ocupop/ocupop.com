@@ -25,7 +25,7 @@
 {% endfor %}
 <section id="related-projects" class="py-0">
   <div class="row no-gutters">
-    <div class="col-md-6">
+    <div class="col-md-6 slide-right">
       <a href="{{ prev_project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ prev_project.featured_image }}">
         <div class="bg-image aspect-16x9" style="background-image: url({{ prev_project.featured_image | site.placeholders.aspect-4x3 }})"></div>
         <div class="overlay">
@@ -33,7 +33,7 @@
         </div>
       </a>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 slide-left">
       <a href="{{ next_project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ next_project.featured_image }}">
         <div class="bg-image aspect-16x9" style="background-image: url({{ next_project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
         <div class="overlay">

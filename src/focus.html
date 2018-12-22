@@ -4,7 +4,7 @@ title: Focus
 testimonial: true
 ---
 
-<section id="page-intro">
+<section id="page-intro" class="fade-in">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -31,7 +31,7 @@ testimonial: true
     <div class="row">
       {% for focus in site.focuses %} {% assign project = site.projects | where:
       "slug", focus.project | first %}
-      <div class="col-12 col-md-6 col-lg-4">
+      <div class="col-12 col-md-6 col-lg-4 {% cycle 'slide-left', 'slide-down', 'slide-right' %}">
         <div class="content text-center">
           <div class="focus-card">
             <img src="{{ site.placeholders.aspect-1x1 }}" class="img-fluid " alt="">

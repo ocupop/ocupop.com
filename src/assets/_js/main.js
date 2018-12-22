@@ -17,9 +17,9 @@ import ProjectTransition from './transitions/ProjectTransition'
 import FocusTransition from './transitions/FocusTransition'
 import Cookies from 'js-cookie'
 
-// Barba.Pjax.start()
+//Barba.Pjax.start()
 
-//Barba.Pjax.getTransition = function() {
+// Barba.Pjax.getTransition = function() {
 /**
  * Here you can use your own logic!
  * For example you can use different Transition based on the current page or link...
@@ -42,8 +42,8 @@ import Cookies from 'js-cookie'
 // }
 
 // if (FirstTransition.valid()) {
-//return PageTransition
-// }
+// return PageTransition
+//}
 // }
 
 // let lastClickEl
@@ -89,14 +89,14 @@ $('.slide-up').each(function() {
   var currentAnimation = this
 
   var slideUpAnimation = new TimelineMax()
-    .from(currentAnimation, 0.2, { opacity: 0 })
-    .from(currentAnimation, 0.2, { y: 100 })
-    .to(currentAnimation, 0.3, { opacity: 1 }, 0.2)
-    .to(currentAnimation, 0.3, { y: 0 }, 0.3)
+    .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.4, { y: 100 }, 0.5)
+    .to(currentAnimation, 0.4, { opacity: 1 })
+    .to(currentAnimation, 0.4, { y: 0 })
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
-    offset: -250,
+    offset: -300,
   })
     .setTween(slideUpAnimation)
     .addTo(controller)
@@ -106,10 +106,10 @@ $('.slide-down').each(function() {
   var currentAnimation = this
 
   var slideDownAnimation = new TimelineMax()
-    .from(currentAnimation, 0.2, { opacity: 0 })
-    .from(currentAnimation, 0.2, { y: -100 })
-    .to(currentAnimation, 0.3, { opacity: 1 }, 0.2)
-    .to(currentAnimation, 0.3, { y: 0 }, 0.3)
+    .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.4, { y: -100 }, 0.5)
+    .to(currentAnimation, 0.4, { opacity: 1 })
+    .to(currentAnimation, 0.4, { y: 0 })
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
@@ -123,10 +123,10 @@ $('.slide-left').each(function() {
   var currentAnimation = this
 
   var slideLeftAnimation = new TimelineMax()
-    .from(currentAnimation, 0.2, { opacity: 0 }, 0.5)
-    .from(currentAnimation, 0.2, { x: 100 }, 0.5)
-    .to(currentAnimation, 0.5, { opacity: 1 })
-    .to(currentAnimation, 0.5, { x: 0 })
+    .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.4, { x: 100 }, 0.5)
+    .to(currentAnimation, 0.4, { opacity: 1 })
+    .to(currentAnimation, 0.4, { x: 0 })
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
@@ -140,10 +140,10 @@ $('.slide-right').each(function() {
   var currentAnimation = this
 
   var slideRightAnimation = new TimelineMax()
-    .from(currentAnimation, 0.2, { opacity: 0 }, 0.5)
-    .from(currentAnimation, 0.2, { x: -100 }, 0.5)
-    .to(currentAnimation, 0.5, { opacity: 1 })
-    .to(currentAnimation, 0.5, { x: 0 })
+    .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.4, { x: -100 }, 0.5)
+    .to(currentAnimation, 0.4, { opacity: 1 })
+    .to(currentAnimation, 0.4, { x: 0 })
 
   var scene = new ScrollMagic.Scene({
     triggerElement: currentAnimation,
@@ -157,7 +157,7 @@ $('.fade-in').each(function() {
   var currentAnimation = this
 
   var fadeInAnimation = new TimelineMax()
-    .from(currentAnimation, 0.2, { opacity: 0 }, 0.5)
+    .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
     .to(currentAnimation, 0.5, { opacity: 1 })
 
   var scene = new ScrollMagic.Scene({

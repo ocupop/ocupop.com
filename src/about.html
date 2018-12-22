@@ -4,7 +4,7 @@ title: About
 testimonial: true
 ---
 
-<section id="page-intro" class="bg-light">
+<section id="page-intro" class="bg-light fade-in">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -25,15 +25,17 @@ testimonial: true
     </div>
   </div>
 </section>
-<div class="row no-gutters">
+<!-- <div class="row no-gutters">
   <div class="col-12">
     <div class="bg-image aspect-4x3" style="background-image: url('/uploads/ocupop-about-fucknoshityeah.jpg')"></div>
   </div>
-</div>
+</div> -->
+<div class="parallax-window" data-parallax="scroll" data-image-src="/uploads/ocupop-about-fucknoshityeah.jpg"
+  data-speed="0.8"></div>
 <section class="bg-dark text-white">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 slide-right">
         <div class="content editable">
           <h2 class="mt-5">Fuck No!</h2>
           <p>
@@ -48,7 +50,7 @@ testimonial: true
           <a href="#" class="btn btn-inline">Watch the Talk</a>
         </div>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 slide-left">
         <div class="content editable">
           <h2 class="mt-5">Shit Yeah!</h2>
           <p>
@@ -73,7 +75,7 @@ testimonial: true
       <div class="col-md-4">
         <div class="content">
           <div class="position-relative">
-            <a href="#" class="bg-image aspect-1x1 border-0" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
+            <a href="#" class="bg-image aspect-1x1 border-0 {% cycle 'slide-right', 'slide-up', 'slide-left' %}" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
               <div class="hover-overlay text-white">
                 <div class="hover-content">
                   <p class="hover-primary-text">{{ member.name }}</p>
