@@ -19,3 +19,13 @@
     font-size: 1.3rem;
   }
 }
+
+.parallax-parent {
+  height: 500px;
+  overflow: hidden;
+}
+
+.parallaxParent > * {
+  position: relative;
+  top: -100%;
+}

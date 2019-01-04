@@ -89,6 +89,10 @@ const ProjectTransition = Barba.BaseTransition.extend({
         )
       })
     _this.done()
+
+    jQuery(window)
+      .trigger('resize')
+      .trigger('scroll')
     // .animate(
     //   { left: left, width: width, top: '77px', paddingTop: '42%' },
     //   1250

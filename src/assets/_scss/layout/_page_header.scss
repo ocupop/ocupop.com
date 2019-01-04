@@ -1,6 +1,7 @@
 #page-header {
   border-top: 5px solid $blue;
   position: fixed;
+  -webkit-transform: translateZ(0); //fix for jitter in chrome
   top: 0;
   left: 0;
   width: 100%;
