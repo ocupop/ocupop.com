@@ -2,21 +2,19 @@
 @import "settings";
 @import "./node_modules/bootstrap/scss/bootstrap";
 
-@import "mixins";
-@import "utilities";
-@import "fonts";
-@import "animations";
-
+@import "base/mixins";
+@import "base/utilities";
+@import "base/fonts";
+@import "base/animations";
 @import "base/global";
 @import "base/typography";
 @import "base/forms";
-
-@import "layout/page_header";
-@import "layout/page_content";
-@import "layout/page_intro";
-@import "layout/page_footer";
+@import "base/page_header";
+@import "base/page_content";
+@import "base/page_footer";
 
 // Import element specific styles
+// TODO - Move to components or into base partials
 @import "elements/buttons";
 @import "elements/carousel_web_showcase";
 @import "elements/cta_contact";
@@ -28,17 +26,17 @@
 @import "elements/quote";
 @import "elements/related_projects";
 @import "elements/testimonials";
+// @import "elements/transitions";
+// @import "elements/page_intro";
+@import "elements/page_transition";
 
 // Components
 @import "components/mosaic";
 
 // Import view specific styles
-@import 'views/focus';
-@import "views/home";
-@import "views/home_animation";
-@import "views/project";
-@import "views/team_member";
-@import "views/work";
-
-// @import "elements/transitions";
-@import "elements/page_transition";
+@import "pages/focus";
+@import "pages/home";
+@import "pages/home_animation";
+@import "pages/project";
+@import "pages/team_member";
+@import "pages/work";

@@ -1,5 +1,3 @@
-
-
 .cookie-policy {
   position: fixed;
   bottom: -100%;
@@ -9,10 +7,10 @@
   height: auto;
   background-color: $white;
   z-index: 998;
-  box-shadow: 0 2px 9px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 9px rgba($black, 0.2);
   padding: 20px 30px;
   opacity: 0;
-  @include transition(.4s);
+  @include transition(0.4s);
   &.active {
     opacity: 1;
     bottom: 50px;
