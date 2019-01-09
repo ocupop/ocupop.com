@@ -3,6 +3,9 @@
     width: 150px;
   }
 }
+#form-content {
+  min-height: calc(100vh - 220px);
+}
 #form-footer {
   background-color: $dark;
   display: flex;
