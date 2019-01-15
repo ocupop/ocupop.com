@@ -21,6 +21,8 @@ const PageTransition = Barba.BaseTransition.extend({
     //Link fades back into position in primarynav
     //Above the fold section slides in from top
     //content / copy fades in when height is set
+    $('.parallax-mirror').remove()
+    $('.parallax-window').remove()
     var _this = this
     var $el = $(this.newContainer)
 

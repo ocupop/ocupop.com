@@ -7,7 +7,6 @@ import 'bootstrap'
 import App from './App'
 // import { TimelineMax, CSSPlugin, ScrollToPlugin, Draggable } from "gsap/all";
 import mixitup from 'mixitup'
-import parallax from 'jquery-parallax.js'
 import ScrollMagic from 'ScrollMagic'
 import TimelineMax from 'TimelineMax'
 import 'animation.gsap'
@@ -59,7 +58,7 @@ Barba.Dispatcher.on('newPageReady', function() {
   animSlideLeft()
   animSlideRight()
   animFadeIn()
-  // initParallax()
+  parallax()
 })
 
 const containerEl = document.getElementById('projectList')
@@ -200,19 +199,15 @@ function animFadeIn() {
 
 animFadeIn()
 
-//parallax windows
-
-function initParallax() {
+//parallax effect
+function parallax() {
   if ($('.parallax-window').length) {
-    $('.parallax-mirror').remove()
-    // var parallaxImage = $('.parallax-window').data('image-src')
-    // console.log(parallaxImage)
-    $('.parallax-window').parallax({
-      speed: '0.8',
-      // mirrorContainer: '#barba-wrapper',
-      naturalWidth: '100%',
+    console.log('parallax present')
+    $(document).scroll(function() {
+      var scroll = $(window).scrollTop()
+      $('.parallax-window .bg-image').css('top', '0' - scroll / 5 + 'px')
     })
   }
 }
 
-initParallax()
+parallax()
