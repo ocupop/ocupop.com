@@ -1,0 +1,38 @@
+.weather-icon {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.clear-day {
+    background-image: url('https://via.placeholder.com/100x100?text=Clear+Day');
+  }
+  &.clear-night {
+    background-image: url('https://via.placeholder.com/100x100?text=Clear+Night');
+  }
+  &.rain {
+    background-image: url('https://via.placeholder.com/100x100?text=Rain');
+  } 
+  &.snow {
+    background-image: url('https://via.placeholder.com/100x100?text=Snow');
+  } 
+  &.sleet {
+    background-image: url('https://via.placeholder.com/100x100?text=Sleet');
+  }
+  &.wind {
+    background-image: url('https://via.placeholder.com/100x100?text=Wind');
+  }
+  &.fog {
+    background-image: url('https://via.placeholder.com/100x100?text=Fog');
+  }
+  &.cloudy {
+    background-image: url('https://via.placeholder.com/100x100?text=Cloudy');
+  }
+  &.partly-cloudy-day {
+    background-image: url('https://via.placeholder.com/100x100?text=Partly+Cloudy+Day');
+  }
+  &.partly-cloudy-night {
+    background-image: url('https://via.placeholder.com/100x100?text=Partly+Cloudy+Night');
+  }
+}
