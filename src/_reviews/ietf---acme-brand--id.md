@@ -1,10 +1,15 @@
 ---
-client:
+client: IETF
 project:
   name: ACME Brand and Identity
   start_date: 2018-08-21 00:00:00
   end_date: 2018-10-12 00:00:00
 operators:
+  - first_name: Jason
+    last_name: Reimer
+    email: jason@ocupop.com
+    role: Lead
+    description:
   - first_name:
     last_name:
     email:
