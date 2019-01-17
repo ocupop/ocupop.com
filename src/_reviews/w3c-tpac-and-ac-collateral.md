@@ -1,8 +1,8 @@
 ---
-client:
+client: W3C
 project:
-  name:
-  start_date:
+  name: TPAC and AC Collateral
+  start_date: 2019-01-17 11:50:05
   end_date:
 operators:
   - first_name:
@@ -29,3 +29,4 @@ developers:
     role:
     description:
 ---
+
