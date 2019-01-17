@@ -93,31 +93,14 @@ const ProjectTransition = Barba.BaseTransition.extend({
     jQuery(window)
       .trigger('resize')
       .trigger('scroll')
-    // .animate(
-    //   { left: left, width: width, top: '77px', paddingTop: '42%' },
-    //   1250
-    // )
-    // .css({ position: 'relative', top: '0' })
-    //.animate({ opacity: 0 })
-    //.end()
-    //.find('#project')
-    //.delay(1600)
-    // .animate({ opacity: 1, paddingTop: 0 }, 1000)
 
-    console.log(hero, offset, left, top, image, width, height)
-
-    // $el.find('#page-content').animate({ opacity: 1 }, 2000, function() {
-
-    // })
+    //console.log(hero, offset, left, top, image, width, height)
   },
 
   valid: function() {
     var prev = Barba.HistoryManager.prevStatus()
     var next = Barba.HistoryManager.currentStatus()
-
-    console.log(prev.namespace + ' to ' + JSON.stringify(next))
-
-    //return prev.namespace === "home" && next.namespace === "page";
+    //console.log(prev.namespace + ' to ' + JSON.stringify(next))
     return true
   },
 })

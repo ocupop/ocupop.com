@@ -29,9 +29,11 @@
 // @import "elements/transitions";
 // @import "elements/page_intro";
 @import "elements/page_transition";
+@import "elements/parallax";
 
 // Components
 @import "components/mosaic";
+@import "components/weather_icons";
 
 // Import view specific styles
 @import "pages/focus";
