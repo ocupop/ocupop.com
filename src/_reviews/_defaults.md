@@ -5,35 +5,27 @@ project:
   start_date:
   end_date:
 operators:
-  - name:
-      first:
-      last:
+  - first_name:
+    last_name:
     email:
     role:
-      title:
-      description:
+    description:
 strategists:
-  - name:
-      first:
-      last:
+  - first_name:
+    last_name:
     email:
     role:
-      title:
-      description:
+    description:
 designers:
-  - name:
-      first:
-      last:
+  - first_name:
+    last_name:
     email:
     role:
-      title:
-      description:
+    description:
 developers:
-  - name:
-      first:
-      last:
+  - first_name:
+    last_name:
     email:
     role:
-      title:
-      description:
+    description:
 ---
