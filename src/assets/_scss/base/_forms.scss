@@ -181,19 +181,22 @@
       .c-repeating-section-item {
         margin: 0;
       }
-      .c-label {
-        padding: 0;
-        font-weight: 600;
-      }
-      .c-editor {
-        padding-left: 0;
-        padding-right: 0;
-        background-color: transparent;
-        input,
-        textarea {
-          padding: 10px;
-          background-color: $light;
-        }
+    }
+    .c-label {
+      margin-top: 1rem;
+      padding: 0;
+      font-weight: 600;
+    }
+    .c-editor {
+      padding-left: 0;
+      padding-right: 0;
+      background-color: transparent;
+      input,
+      textarea {
+        appearance: none;
+        padding: 10px;
+        background-color: $light;
+        border: 1px solid $gray-300;
       }
     }
     // .c-field {
