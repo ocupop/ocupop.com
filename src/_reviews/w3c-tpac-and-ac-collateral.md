@@ -1,9 +1,9 @@
 ---
 client: W3C
 project:
-  name: TPAC and AC Collateral
-  start_date: Invalid date
-  end_date:
+  name: 2018 TPAC and AC Collateral Designs
+  start_date: 2017-11-03 00:00:00
+  end_date: 2018-10-12 00:00:00
 operators:
   - first_name: Jason
     last_name: Reimer
