@@ -16,8 +16,11 @@ operators:
   - first_name: Tom
     last_name: Beck
     email: tom@ocupop.com
-    role: Technical Director
-    description:
+    role: Technical Lead
+    description: >-
+      It is the responsibility of the technical lead to accurately and
+      efficiently communicate technical considerations both internally and with
+      the client.
   - first_name:
     last_name:
     email:
