@@ -1,9 +1,9 @@
 ---
-client:
+client: Bittercube
 project:
-  name:
-  start_date:
-  end_date:
+  name: Bar and Bazaar
+  start_date: 2018-09-20 00:00:00
+  end_date: 2018-12-21 00:00:00
 operators:
   - first_name:
     last_name:
@@ -29,3 +29,4 @@ developers:
     role:
     description:
 ---
+
