@@ -1,9 +1,9 @@
 ---
 client:
 project:
-  name:
-  start_date:
-  end_date:
+  name: ACME Brand and Identity
+  start_date: 2018-08-21 00:00:00
+  end_date: 2018-10-12 00:00:00
 operators:
   - first_name:
     last_name:
@@ -29,3 +29,4 @@ developers:
     role:
     description:
 ---
+
