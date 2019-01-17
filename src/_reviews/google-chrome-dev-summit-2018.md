@@ -5,6 +5,16 @@ project:
   start_date: 2018-07-03 00:00:00
   end_date: 2018-10-26 00:00:00
 operators:
+  - first_name: Jason
+    last_name: Reimer
+    email: jason@ocupop.com
+    role: Lead Designer
+    description:
+  - first_name: Tom
+    last_name: Beck
+    email: tom@ocupop.com
+    role: Technical Director
+    description:
   - first_name:
     last_name:
     email:
