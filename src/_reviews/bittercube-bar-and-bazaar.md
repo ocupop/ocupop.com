@@ -27,6 +27,16 @@ strategists:
     role:
     description:
 designers:
+  - first_name: Chris
+    last_name: Walker
+    email: chris@ocupop.com
+    role: Designer
+    description:
+  - first_name: Nate
+    last_name: Perry
+    email: nate@ocupop.com
+    role: Designer
+    description:
   - first_name:
     last_name:
     email:
