@@ -1,9 +1,9 @@
 ---
-client:
+client: Google
 project:
-  name:
-  start_date:
-  end_date:
+  name: Chrome Dev Summit 2018
+  start_date: 2018-07-03 00:00:00
+  end_date: 2018-10-26 00:00:00
 operators:
   - first_name:
     last_name:
@@ -29,3 +29,4 @@ developers:
     role:
     description:
 ---
+
