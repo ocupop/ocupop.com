@@ -33,6 +33,16 @@ strategists:
     role:
     description:
 designers:
+  - first_name: Chris
+    last_name: Walker
+    email: chris@ocupop.com
+    role: Designer
+    description:
+  - first_name: Jenny
+    last_name: Vanderheiden
+    email: jenny@ocupop.com
+    role: Designer
+    description:
   - first_name:
     last_name:
     email:
