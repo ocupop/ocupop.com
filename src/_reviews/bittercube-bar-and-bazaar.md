@@ -43,6 +43,11 @@ designers:
     role:
     description:
 developers:
+  - first_name: Jon
+    last_name: Burr
+    email: jon@ocupop.com
+    role: Developer
+    description:
   - first_name:
     last_name:
     email:
