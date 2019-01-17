@@ -2,7 +2,7 @@
 client: W3C
 project:
   name: TPAC and AC Collateral
-  start_date: 2019-01-17 11:51:18
+  start_date: 2019-01-17 11:52:29
   end_date:
 operators:
   - first_name: Jason
@@ -27,6 +27,11 @@ strategists:
     role:
     description:
 designers:
+  - first_name: Nate
+    last_name: Perry
+    email: nate@ocupop.com
+    role: Designer
+    description:
   - first_name:
     last_name:
     email:
