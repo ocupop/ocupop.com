@@ -20,72 +20,73 @@ layout: form
                 }
                 return result;
               }
-              const reviewer = findGetParameter("user");
+              var entry = findGetParameter("reviewer");
+              console.log(entry);
               Cognito.load("forms", {
                 id: "33",
                 entry: {
                   "Client": "{{ review.client }}",
                   "Project": "{{ review.project.name }}",
-                  "StartDate": "{{ review.project.start_date }}",
-                  "EndDate": "{{ review.project.start_date }}",
-                  "Reviewer": reviewer,
+                  "StartDate": "{{ review.project.start_date | date: '%F' }}",
+                  "EndDate": "{{ review.project.start_date | date: '%F' }}",
+                  "Reviewer": entry,
                   "Operators": [
                   {% for person in review.operators %}
                     {
                       "Name": {
-                        "First": "{{ person.name.first }}",
-                        "Last": "{{ person.name.last }}"
+                        "First": "{{ person.first_name }}",
+                        "Last": "{{ person.last_name }}"
                       },
                       "Role": {
-                        "Title": "{{ person.role.title }}",
-                        "Description": "{{ person.role.description }}"
+                        "Title": "{{ person.role }}",
+                        "Description": "{{ person.description }}"
                       },
                       "Email": "{{ person.email }}"
                     }{% unless forloop.last %},{% endunless %}
                   {% endfor %}
                   ],
                   "Strategists": [
-                  {% for person in review.operators %}
+                  {% for person in review.strategists %}
                     {
                       "Name": {
-                        "First": "{{ person.name.first }}",
-                          "Last": "{{ person.name.last }}"
+                        "First": "{{ person.first_name }}",
+                          "Last": "{{ person.last_name }}"
                       },
                       "Role": {
-                        "Title": "{{ person.role.title }}",
-                          "Description": "{{ person.role.description }}"
+                        "Title": "{{ person.role }}",
+                          "Description": "{{ person.description }}"
                       },
                       "Email": "{{ person.email }}"
                     } {% unless forloop.last %}, {% endunless %}
                   {% endfor %}
                   ],
                   "Designers": [
-                  {% for person in review.operators %}
+                  {% for person in review.designers %}
                     {
                       "Name": {
-                        "First": "{{ person.name.first }}",
-                        "Last": "{{ person.name.last }}"
+                        "First": "{{ person.first_name }}",
+                          "Last": "{{ person.last_name }}"
                       },
                       "Role": {
-                        "Title": "{{ person.role.title }}",
-                        "Description": "{{ person.role.description }}"
+                        "Title": "{{ person.role }}",
+                          "Description": "{{ person.description }}"
                       },
                       "Email": "{{ person.email }}"
                     }{% unless forloop.last %}, {% endunless %}
                   {% endfor %}
                   ],
                   "Developers": [
-                  {% for person in review.operators %}
+                  {% for person in review.developers %}
                     {
                       "Name": {
-                        "First": "{{ person.name.first }}",
-                          "Last": "{{ person.name.last }}"
+                        "First":"{{ person.first_name }}",
+                        "Last":"{{ person.last_name }}"
                       },
                       "Role": {
-                        "Title": "{{ person.role.title }}",
-                          "Description": "{{ person.role.description }}"
+                        "Title":"{{ person.role }}",
+                        "Description":"{{ person.description }}"
                       },
-                      "Email": "{{ person.email }}"
+                      "Email":"{{ person.email }}"
                     }{% unless forloop.last %}, {% endunless %}
                   {% endfor %}
                   ]

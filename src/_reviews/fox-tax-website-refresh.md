@@ -1,4 +1,5 @@
 ---
+layout: review
 client: Fox Tax Service
 project:
   name: Website Refresh
@@ -21,11 +22,6 @@ operators:
       It is the responsibility of the technical lead to accurately and
       efficiently communicate technical considerations both internally and with
       the client.
-  - first_name:
-    last_name:
-    email:
-    role:
-    description:
 strategists:
   - first_name: Abby
     last_name: Lindstrom
