@@ -8,8 +8,11 @@ operators:
   - first_name: Jason
     last_name: Reimer
     email: jason@ocupop.com
-    role: Lead
-    description:
+    role: Project Lead
+    description: >-
+      It is the responsibility of the creative lead to accurately and
+      efficiently communicate messaging and design considerations both
+      internally and with the client.
   - first_name:
     last_name:
     email:
