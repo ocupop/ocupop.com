@@ -1,0 +1,100 @@
+---
+layout: form
+---
+{% assign review = page %}
+<section id="page-intro" class="pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="content">
+          <div class="cognito">
+            <script src="https://services.cognitoforms.com/s/bbN8iw1MJUqjPe6aHn-_rw"></script>
+            <script>
+              function findGetParameter(parameterName) {
+                var result = null,
+                  tmp = [];
+                var items = location.search.substr(1).split("&");
+                for (var index = 0; index < items.length; index++) {
+                  tmp = items[index].split("=");
+                  if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+                }
+                return result;
+              }
+              const reviewer = findGetParameter("user");
+              Cognito.load("forms", {
+                id: "33",
+                entry: {
+                  "Client": "{{ review.client }}",
+                  "Project": "{{ review.project.name }}",
+                  "StartDate": "{{ review.project.start_date }}",
+                  "EndDate": "{{ review.project.start_date }}",
+                  "Reviewer": reviewer,
+                  "Operators": [
+                  {% for person in review.operators %}
+                    {
+                      "Name": {
+                        "First": "{{ person.name.first }}",
+                        "Last": "{{ person.name.last }}"
+                      },
+                      "Role": {
+                        "Title": "{{ person.role.title }}",
+                        "Description": "{{ person.role.description }}"
+                      },
+                      "Email": "{{ person.email }}"
+                    }{% unless forloop.last %},{% endunless %}
+                  {% endfor %}
+                  ],
+                  "Strategists": [
+                  {% for person in review.operators %}
+                    {
+                      "Name": {
+                        "First": "{{ person.name.first }}",
+                          "Last": "{{ person.name.last }}"
+                      },
+                      "Role": {
+                        "Title": "{{ person.role.title }}",
+                          "Description": "{{ person.role.description }}"
+                      },
+                      "Email": "{{ person.email }}"
+                    } {% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                  ],
+                  "Designers": [
+                  {% for person in review.operators %}
+                    {
+                      "Name": {
+                        "First": "{{ person.name.first }}",
+                        "Last": "{{ person.name.last }}"
+                      },
+                      "Role": {
+                        "Title": "{{ person.role.title }}",
+                        "Description": "{{ person.role.description }}"
+                      },
+                      "Email": "{{ person.email }}"
+                    }{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                  ],
+                  "Developers": [
+                  {% for person in review.operators %}
+                    {
+                      "Name": {
+                        "First": "{{ person.name.first }}",
+                          "Last": "{{ person.name.last }}"
+                      },
+                      "Role": {
+                        "Title": "{{ person.role.title }}",
+                          "Description": "{{ person.role.description }}"
+                      },
+                      "Email": "{{ person.email }}"
+                    }{% unless forloop.last %}, {% endunless %}
+                  {% endfor %}
+                  ]
+                }
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

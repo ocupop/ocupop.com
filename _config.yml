@@ -21,9 +21,13 @@ collections:
     output: true
     layout: focus
     permalink: /focus/:title/
+  reviews:
+    output: true
+    layout: review
+    permalink: /reviews/:path/
 
 # defaults:
-#   - 
+#   -
 #     scope:
 #       type: 'examples'
 #     values:
@@ -53,7 +57,7 @@ tags:
   - presentation
   - illustration
   - animation
-  
+
 project_statuses:
   - active
   - draft
