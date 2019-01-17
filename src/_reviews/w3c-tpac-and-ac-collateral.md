@@ -2,7 +2,7 @@
 client: W3C
 project:
   name: TPAC and AC Collateral
-  start_date: 2019-01-17 11:52:29
+  start_date: Invalid date
   end_date:
 operators:
   - first_name: Jason
