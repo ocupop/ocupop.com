@@ -49,6 +49,11 @@ designers:
     role:
     description:
 developers:
+  - first_name: Jeff
+    last_name: Hamlett
+    email: jeff@ocupop.com
+    role: Developer
+    description:
   - first_name:
     last_name:
     email:
