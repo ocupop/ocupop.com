@@ -21,10 +21,6 @@ collections:
     output: true
     layout: focus
     permalink: /focus/:title/
-  reviews:
-    output: true
-    layout: review
-    permalink: /reviews/:path/
 
 # defaults:
 #   -
