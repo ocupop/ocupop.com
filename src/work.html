@@ -7,13 +7,15 @@ testimonial:
   author: Alyssa Fox
   title: Founder, Fox Tax Service
 ---
-<section id="page-intro" class="fade-in">
+<section id="page-intro">
   <div class="container">
     <div class="row">
       <div class="col-12">
         <div class="content editable">
           <h1>Our Work</h1>
-          <p>We have worked with clients of every imaginable size, with budgets from meager to massive, but above all else, we try to provide insightful, powerful, and sustainable design and marketing solutions that resonate with our clients and their customers.</p>
+          <p>We have worked with clients of every imaginable size, with budgets from meager to massive, but above all else, we
+            try to provide insightful, powerful, and sustainable design and marketing solutions that resonate with our clients
+            and their customers.</p>
           <p>Below are a few examples that we hope illustrate the scale and scope of our aptitude and experience. Ultimately,
             lots of work paired with lots of words, but we hope the breadth and depth of this case study content impresses and
             reassures. While certainly not our entire body of work, these pages highlight some of our favorite and most
@@ -29,7 +31,7 @@ testimonial:
     {% for object in site.data.project_order.projects %}
     {% assign project =  site.projects | where: "slug", object | first %}
     {% if project.status == "active" %}
-    <div class="mix position-relative col-lg-6 {% cycle 'slide-right', 'slide-left' %} {% for tag in project.tags %} {{ tag }}{% endfor %}">
+    <div class="mix position-relative col-lg-6 {% cycle 'slide-up-1', 'slide-up-2' %} {% for tag in project.tags %} {{ tag }}{% endfor %}">
       <a href="{{ project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ project.featured_image }}">
         <div class="bg-image aspect-16x9" style="background-image: url({{ project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
         <div class="hover-overlay">

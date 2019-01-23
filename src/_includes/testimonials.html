@@ -2,14 +2,14 @@
 <section id="testimonial" class="bg-secondary text-dark">
   <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 fade-in">
+      <div class="col-lg-6">
         <div class="content">
           <p class="h3">What the cool kids say <i class="icon-quote"></i></p>
         </div>
       </div>
-      <div class="col-lg-6 fade-in">
+      <div class="col-lg-6">
         {% if page.testimonial.quote %}
-        <div class="content">
+        <div class="content ">
           <p class="quote">&quot;{{ page.testimonial.quote }}&quot;</p>
           <p>
             <span class="author">{{ page.testimonial.author }}</small><br>
@@ -17,11 +17,13 @@
           </p>
         </div>
         {% else %}
+        <div class="content">
           <p class="quote">&quot;I get complimented on our website and materials constantly. In fact, I always joke that if Ocupop hadn’t done such a great job with our design I wouldn’t be so busy all the time!&quot;</p>
           <p>
             <span class="author">Alyssa Fox</small><br>
             <span class="title">Founder, Fox Tax Service</small>
           </p>
+        </div>  
         {% endif %}
       </div>
     </div>

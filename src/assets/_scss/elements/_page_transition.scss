@@ -1,6 +1,8 @@
 //PageTransition
 .loading {
+  background-color: $primary;
   #page-content {
     opacity: 0;
+    @include transition(.5s);
   }
 }

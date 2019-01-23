@@ -53,11 +53,9 @@ Barba.Dispatcher.on('linkClicked', el => {
 
 Barba.Dispatcher.on('newPageReady', function() {
   console.log('new page ready')
-  animSlideUp()
-  animSlideDown()
-  animSlideLeft()
-  animSlideRight()
-  animFadeIn()
+  animSlideUp1()
+  animSlideUp2()
+  animSlideUp3()
   parallax()
 })
 
@@ -91,113 +89,157 @@ var controller = new ScrollMagic.Controller({
 
 var controller = new ScrollMagic.Controller()
 
-function animSlideUp() {
-  $('.slide-up').each(function() {
+function animSlideUp1() {
+  $('.slide-up-1').each(function() {
     var currentAnimation = this
 
-    var slideUpAnimation = new TimelineMax()
-      .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-      .from(currentAnimation, 0.4, { y: 100 }, 0.5)
-      .to(currentAnimation, 0.4, { opacity: 1 })
-      .to(currentAnimation, 0.4, { y: 0 })
+    var slideUpAnimation1 = new TimelineMax()
+      .from(currentAnimation, 1, { opacity: 0 }, 0)
+      .from(currentAnimation, 1, { y: 100 }, 0)
+      .to(currentAnimation, 1, { opacity: 1 })
+      .to(currentAnimation, 1, { y: 0 })
 
     var scene = new ScrollMagic.Scene({
       triggerElement: currentAnimation,
       offset: -300,
     })
-      .setTween(slideUpAnimation)
+      .setTween(slideUpAnimation1)
       //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
       .addTo(controller)
   })
 }
 
-animSlideUp()
+animSlideUp1()
 
-function animSlideDown() {
-  $('.slide-down').each(function() {
+function animSlideUp2() {
+  $('.slide-up-2').each(function() {
     var currentAnimation = this
 
-    var slideDownAnimation = new TimelineMax()
-      .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-      .from(currentAnimation, 0.4, { y: -100 }, 0.5)
-      .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
-      .to(currentAnimation, 0.4, { y: 0 }, 0.2)
+    var slideUpAnimation2 = new TimelineMax()
+      .from(currentAnimation, 1, { opacity: 0 }, 0.5)
+      .from(currentAnimation, 1, { y: 100 }, 0.5)
+      .to(currentAnimation, 1, { opacity: 1 })
+      .to(currentAnimation, 1, { y: 0 })
 
     var scene = new ScrollMagic.Scene({
       triggerElement: currentAnimation,
-      offset: -250,
+      offset: -300,
     })
-      .setTween(slideDownAnimation)
-      //.addIndicators({ name: 'slide down', colorEnd: 'ff1000' })
+      .setTween(slideUpAnimation2)
+      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
       .addTo(controller)
   })
 }
 
-animSlideDown()
+animSlideUp2()
 
-function animSlideLeft() {
-  $('.slide-left').each(function() {
+function animSlideUp3() {
+  $('.slide-up-3').each(function() {
     var currentAnimation = this
 
-    var slideLeftAnimation = new TimelineMax()
-      .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-      .from(currentAnimation, 0.4, { x: 100 }, 0.5)
-      .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
-      .to(currentAnimation, 0.4, { x: 0 }, 0.2)
+    var slideUpAnimation3 = new TimelineMax()
+      .from(currentAnimation, 0.75, { opacity: 0 }, 1)
+      .from(currentAnimation, 0.75, { y: 100 }, 1)
+      .to(currentAnimation, 0.75, { opacity: 1 })
+      .to(currentAnimation, 0.75, { y: 0 })
 
     var scene = new ScrollMagic.Scene({
       triggerElement: currentAnimation,
-      offset: -250,
+      offset: -300,
     })
-      .setTween(slideLeftAnimation)
-      //.addIndicators({ name: 'slide left', colorEnd: '000fff' })
+      .setTween(slideUpAnimation3)
+      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
       .addTo(controller)
   })
 }
 
-animSlideLeft()
+animSlideUp3()
 
-function animSlideRight() {
-  $('.slide-right').each(function() {
-    var currentAnimation = this
+// function animSlideDown() {
+//   $('.slide-down').each(function() {
+//     var currentAnimation = this
 
-    var slideRightAnimation = new TimelineMax()
-      .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-      .from(currentAnimation, 0.4, { x: -100 }, 0.5)
-      .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
-      .to(currentAnimation, 0.4, { x: 0 }, 0.2)
+//     var slideDownAnimation = new TimelineMax()
+//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+//       .from(currentAnimation, 0.4, { y: -100 }, 0.5)
+//       .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
+//       .to(currentAnimation, 0.4, { y: 0 }, 0.2)
 
-    var scene = new ScrollMagic.Scene({
-      triggerElement: currentAnimation,
-      offset: -250,
-    })
-      .setTween(slideRightAnimation)
-      //.addIndicators({ name: 'slide right', colorEnd: '#FFF000' })
-      .addTo(controller)
-  })
-}
+//     var scene = new ScrollMagic.Scene({
+//       triggerElement: currentAnimation,
+//       offset: -250,
+//     })
+//       .setTween(slideDownAnimation)
+//       //.addIndicators({ name: 'slide down', colorEnd: 'ff1000' })
+//       .addTo(controller)
+//   })
+// }
 
-animSlideRight()
+// animSlideDown()
 
-function animFadeIn() {
-  $('.fade-in').each(function() {
-    var currentAnimation = this
+// function animSlideLeft() {
+//   $('.slide-left').each(function() {
+//     var currentAnimation = this
 
-    var fadeInAnimation = new TimelineMax()
-      .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-      .to(currentAnimation, 0.5, { opacity: 1 })
+//     var slideLeftAnimation = new TimelineMax()
+//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+//       .from(currentAnimation, 0.4, { x: 100 }, 0.5)
+//       .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
+//       .to(currentAnimation, 0.4, { x: 0 }, 0.2)
 
-    var scene = new ScrollMagic.Scene({
-      triggerElement: currentAnimation,
-      offset: -250,
-    })
-      .setTween(fadeInAnimation)
-      //.addIndicators({ name: 'fade in', colorEnd: '#000' })
-      .addTo(controller)
-  })
-}
+//     var scene = new ScrollMagic.Scene({
+//       triggerElement: currentAnimation,
+//       offset: -250,
+//     })
+//       .setTween(slideLeftAnimation)
+//       //.addIndicators({ name: 'slide left', colorEnd: '000fff' })
+//       .addTo(controller)
+//   })
+// }
 
-animFadeIn()
+// animSlideLeft()
+
+// function animSlideRight() {
+//   $('.slide-right').each(function() {
+//     var currentAnimation = this
+
+//     var slideRightAnimation = new TimelineMax()
+//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+//       .from(currentAnimation, 0.4, { x: -100 }, 0.5)
+//       .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
+//       .to(currentAnimation, 0.4, { x: 0 }, 0.2)
+
+//     var scene = new ScrollMagic.Scene({
+//       triggerElement: currentAnimation,
+//       offset: -250,
+//     })
+//       .setTween(slideRightAnimation)
+//       //.addIndicators({ name: 'slide right', colorEnd: '#FFF000' })
+//       .addTo(controller)
+//   })
+// }
+
+// animSlideRight()
+
+// function animFadeIn() {
+//   $('.fade-in').each(function() {
+//     var currentAnimation = this
+
+//     var fadeInAnimation = new TimelineMax()
+//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
+//       .to(currentAnimation, 0.5, { opacity: 1 })
+
+//     var scene = new ScrollMagic.Scene({
+//       triggerElement: currentAnimation,
+//       offset: -250,
+//     })
+//       .setTween(fadeInAnimation)
+//       //.addIndicators({ name: 'fade in', colorEnd: '#000' })
+//       .addTo(controller)
+//   })
+// }
+
+// animFadeIn()
 
 //parallax effect
 function parallax() {
