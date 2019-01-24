@@ -73,7 +73,7 @@ const ProjectTransition = Barba.BaseTransition.extend({
       .animate({ opacity: 1 }, 1000)
       .animate({ top: '77px' }, 1000)
       .animate({ height: '0' }, 1000)
-      .animate({ paddingTop: '32%' }, 750, function() {
+      .animate({ paddingTop: '42%' }, 750, function() {
         // alert('done')
         $('#project-hero').css({
           position: 'relative',
