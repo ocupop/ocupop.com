@@ -63,22 +63,22 @@
   image: /uploads/ocupop-about-nate.jpg
 - name: Amy Liebrock
   role: Content Strategist
-  preferred_title:
-  spirit_animal:
-  what_you_want_to_be_when_you_grow_up:
-  catch_phrase:
-  image:
+  preferred_title: Word Wrangler
+  spirit_animal: Owl
+  what_you_want_to_be_when_you_grow_up: An urban sheep farmer
+  catch_phrase: I'd rather be knitting.
+  image: /uploads/amy.jpg
 - name: Blythe Jewell
   role:
-  preferred_title:
+  preferred_title: 
   spirit_animal:
   what_you_want_to_be_when_you_grow_up:
   catch_phrase:
-  image:
+  image: /uploads/blythe.jpg
 - name: Claire Lafontaine
-  role:
-  preferred_title:
-  spirit_animal:
-  what_you_want_to_be_when_you_grow_up:
-  catch_phrase:
-  image:
+  role: Studio Manager
+  preferred_title: Naturalist, Explorer
+  spirit_animal: Dolphin
+  what_you_want_to_be_when_you_grow_up: A sheep farmer and herbalist
+  catch_phrase: Look! A tiny flower!
+  image: /uploads/Claire_Headshot_OcupopWeb.jpg
