@@ -12,7 +12,7 @@ const PageTransition = Barba.BaseTransition.extend({
 
     return $(this.oldContainer)
       .find('#page-content')
-      .animate({ opacity: 0 }, 750)
+      .animate({ opacity: 0 }, 250)
       .promise()
   },
   transitionIn: function() {
