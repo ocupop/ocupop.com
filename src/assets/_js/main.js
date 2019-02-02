@@ -31,7 +31,7 @@ Barba.Pjax.getTransition = function() {
     switch (lastClickEl.dataset.transition) {
       case 'ProjectTransition':
         lastClickEl.classList.add('active')
-        return ProjectTransition
+        return PageTransition
         break
       case 'FocusTransition':
         return FocusTransition
@@ -94,10 +94,10 @@ function animSlideUp1() {
     var currentAnimation = this
 
     var slideUpAnimation1 = new TimelineMax()
-      .from(currentAnimation, 1, { opacity: 0 }, 0)
-      .from(currentAnimation, 1, { y: 100 }, 0)
-      .to(currentAnimation, 1, { opacity: 1 })
-      .to(currentAnimation, 1, { y: 0 })
+      .from(currentAnimation, 0.6, { opacity: 0 }, 0)
+      .from(currentAnimation, 0.6, { y: 100 }, 0)
+      .to(currentAnimation, 0.6, { opacity: 1 })
+      .to(currentAnimation, 0.6, { y: 0 })
 
     var scene = new ScrollMagic.Scene({
       triggerElement: currentAnimation,

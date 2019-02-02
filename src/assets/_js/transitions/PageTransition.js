@@ -20,11 +20,12 @@ const PageTransition = Barba.BaseTransition.extend({
     var $el = $(this.newContainer)
 
     //make sure page is at top to show animation
-    window.scrollTo(0, 0)
+
     $el
       .find('#page-content')
       .css('opacity', 0)
       .animate({ opacity: 1 }, 750)
+    window.scrollTo(0, 0)
     $(this.oldContainer).fadeOut('slow')
     $el.addClass('loading')
 

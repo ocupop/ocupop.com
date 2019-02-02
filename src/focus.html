@@ -28,10 +28,10 @@ testimonial: true
 </section>
 <section>
   <div class="container">
-    <div class="row">
+    <div class="row slide-up-1">
       {% for focus in site.focuses %} {% assign project = site.projects | where:
       "slug", focus.project | first %}
-      <div class="col-12 col-md-6 col-lg-4 {% cycle 'slide-up-1', 'slide-up-2', 'slide-up-3' %}">
+      <div class="col-12 col-md-6 col-lg-4">
         <div class="content text-center">
           <div class="focus-card">
             <img src="{{ site.placeholders.aspect-1x1 }}" class="img-fluid " alt="">
