@@ -94,9 +94,9 @@ function animSlideUp1() {
     var currentAnimation = this
 
     var slideUpAnimation1 = new TimelineMax()
-      .from(currentAnimation, 0.6, { opacity: 0 }, 0)
+      .from(currentAnimation, 1, { opacity: 0 }, 0)
       .from(currentAnimation, 0.6, { y: 100 }, 0)
-      .to(currentAnimation, 0.6, { opacity: 1 })
+      .to(currentAnimation, 1, { opacity: 1 })
       .to(currentAnimation, 0.6, { y: 0 })
 
     var scene = new ScrollMagic.Scene({

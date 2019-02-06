@@ -10,10 +10,12 @@ const PageTransition = Barba.BaseTransition.extend({
   transitionOut: function() {
     //Page-content fades to white
 
-    return $(this.oldContainer)
-      .find('#page-content')
-      .animate({ opacity: 0 }, 250)
-      .promise()
+    return (
+      $(this.oldContainer)
+        //.find('#page-content')
+        .animate({ opacity: 0 }, 250)
+        .promise()
+    )
   },
   transitionIn: function() {
     var _this = this
@@ -22,7 +24,7 @@ const PageTransition = Barba.BaseTransition.extend({
     //make sure page is at top to show animation
 
     $el
-      .find('#page-content')
+      // .find('#page-content')
       .css('opacity', 0)
       .animate({ opacity: 1 }, 750)
     window.scrollTo(0, 0)

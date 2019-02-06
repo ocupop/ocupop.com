@@ -1,14 +1,13 @@
 ---
 layout: default
 ---
-<div class="mirror-container"></div>
 {% assign project = page %}
 <div id="project-hero" class="bg-image aspect-hero" style="background-image:url({{ page.hero_image | default: site.placeholders.hero }})"></div>
 <section id="project" class="pb-0 project-content">
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="content">
+        <div class="content slide-up-1">
           <h2>{{ project.quote }}</h2>
           <h3>{{ project.client }}</h3>
           <div class="project-tags">
