@@ -56,6 +56,7 @@ Barba.Dispatcher.on('newPageReady', function() {
   // animSlideUp2()
   // animSlideUp3()
   parallax()
+  lazyLoad()
 })
 
 // const containerEl = document.getElementById('projectList')
@@ -168,7 +169,6 @@ function lazyLoad() {
       reverse: false,
     })
       .on('enter', function(e) {
-        console.log('enter')
         el.css('background-image', 'url(' + imgSrc + ')')
       })
       .setTween(lazyAnimation)
