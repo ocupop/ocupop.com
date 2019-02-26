@@ -46,11 +46,11 @@ Barba.Dispatcher.on('newPageReady', function() {
   parallax()
 })
 
-const containerEl = document.getElementById('projectList')
+// const containerEl = document.getElementById('projectList')
 
-if (containerEl) {
-  var mixer = mixitup(containerEl)
-}
+// if (containerEl) {
+//   var mixer = mixitup(containerEl)
+// }
 
 //cookie management
 let cookiePolicy = Cookies.get('cookie-policy')
