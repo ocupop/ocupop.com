@@ -144,9 +144,8 @@ animSlideUp3()
 
 function lazyLoad() {
   $('.lazy-load').each(function() {
-    var imgSrc = $(this).data('image')
-    $(this).css('background-image', 'url(' + imgSrc + ')')
-    console.log(imgSrc)
+    var el = $(this)
+    var imgSrc = el.data('image')
     var currentAnimation = this
 
     var lazyAnimation = new TimelineMax()
@@ -156,10 +155,15 @@ function lazyLoad() {
     var scene = new ScrollMagic.Scene({
       triggerElement: currentAnimation,
       offset: -300,
+      reverse: false,
     })
       .setTween(lazyAnimation)
       //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
       .addTo(controller)
+      .on('enter', function(e) {
+        console.log('enter')
+        el.css('background-image', 'url(' + imgSrc + ')')
+      })
   })
 }
 
