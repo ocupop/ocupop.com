@@ -1,8 +1,10 @@
 import App from './App'
 
+import Barba from 'barba.js/dist/barba.js'
 import PageTransition from './transitions/PageTransition'
 import ProjectTransition from './transitions/ProjectTransition'
 import FocusTransition from './transitions/FocusTransition'
+import Cookies from 'js-cookie'
 
 Barba.Pjax.start()
 
