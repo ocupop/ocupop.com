@@ -1,12 +1,12 @@
-import 'bootstrap'
+//import 'bootstrap'
 import App from './App'
 
-import ScrollMagic from 'ScrollMagic'
-import TimelineMax from 'TimelineMax'
-import 'animation.gsap'
+// import ScrollMagic from 'ScrollMagic'
+// import TimelineMax from 'TimelineMax'
+// import 'animation.gsap'
 // import 'debug.addIndicators'
 import Barba from 'barba.js/dist/barba.js'
-import PageTransition from './transitions/PageTransition'
+// import PageTransition from './transitions/PageTransition'
 //import ProjectTransition from './transitions/ProjectTransition'
 //import FocusTransition from './transitions/FocusTransition'
 import Cookies from 'js-cookie'
@@ -53,8 +53,8 @@ Barba.Pjax.getTransition = function() {
 Barba.Dispatcher.on('newPageReady', function() {
   console.log('new page ready')
   animSlideUp1()
-  animSlideUp2()
-  animSlideUp3()
+  // animSlideUp2()
+  // animSlideUp3()
   parallax()
 })
 
@@ -110,49 +110,47 @@ function animSlideUp1() {
 
 animSlideUp1()
 
-function animSlideUp2() {
-  $('.slide-up-2').each(function() {
-    var currentAnimation = this
+// function animSlideUp2() {
+//   $('.slide-up-2').each(function() {
+//     var currentAnimation = this
 
-    var slideUpAnimation2 = new TimelineMax()
-      .from(currentAnimation, 1, { opacity: 0 }, 0.5)
-      .from(currentAnimation, 1, { y: 100 }, 0.5)
-      .to(currentAnimation, 1, { opacity: 1 })
-      .to(currentAnimation, 1, { y: 0 })
+//     var slideUpAnimation2 = new TimelineMax()
+//       .from(currentAnimation, 1, { opacity: 0 }, 0.5)
+//       .from(currentAnimation, 1, { y: 100 }, 0.5)
+//       .to(currentAnimation, 1, { opacity: 1 })
+//       .to(currentAnimation, 1, { y: 0 })
 
-    var scene = new ScrollMagic.Scene({
-      triggerElement: currentAnimation,
-      offset: -300,
-    })
-      .setTween(slideUpAnimation2)
-      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
-      .addTo(controller)
-  })
-}
+//     var scene = new ScrollMagic.Scene({
+//       triggerElement: currentAnimation,
+//       offset: -300,
+//     })
+//       .setTween(slideUpAnimation2)
+//       .addTo(controller)
+//   })
+// }
 
-animSlideUp2()
+// animSlideUp2()
 
-function animSlideUp3() {
-  $('.slide-up-3').each(function() {
-    var currentAnimation = this
+// function animSlideUp3() {
+//   $('.slide-up-3').each(function() {
+//     var currentAnimation = this
 
-    var slideUpAnimation3 = new TimelineMax()
-      .from(currentAnimation, 0.75, { opacity: 0 }, 1)
-      .from(currentAnimation, 0.75, { y: 100 }, 1)
-      .to(currentAnimation, 0.75, { opacity: 1 })
-      .to(currentAnimation, 0.75, { y: 0 })
+//     var slideUpAnimation3 = new TimelineMax()
+//       .from(currentAnimation, 0.75, { opacity: 0 }, 1)
+//       .from(currentAnimation, 0.75, { y: 100 }, 1)
+//       .to(currentAnimation, 0.75, { opacity: 1 })
+//       .to(currentAnimation, 0.75, { y: 0 })
 
-    var scene = new ScrollMagic.Scene({
-      triggerElement: currentAnimation,
-      offset: -300,
-    })
-      .setTween(slideUpAnimation3)
-      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
-      .addTo(controller)
-  })
-}
+//     var scene = new ScrollMagic.Scene({
+//       triggerElement: currentAnimation,
+//       offset: -300,
+//     })
+//       .setTween(slideUpAnimation3)
+//       .addTo(controller)
+//   })
+// }
 
-animSlideUp3()
+// animSlideUp3()
 
 function lazyLoad() {
   $('.lazy-load').each(function() {
