@@ -142,6 +142,29 @@ function animSlideUp3() {
 
 animSlideUp3()
 
+function lazyLoad() {
+  $('.lazy-load').each(function() {
+    var imgSrc = $(this).data('image')
+    $(this).css('background-image', 'url(' + imgSrc + ')')
+    console.log(imgSrc)
+    var currentAnimation = this
+
+    var lazyAnimation = new TimelineMax()
+      .from(currentAnimation, 1, { opacity: 0 }, 0)
+      .to(currentAnimation, 1, { opacity: 1 })
+
+    var scene = new ScrollMagic.Scene({
+      triggerElement: currentAnimation,
+      offset: -300,
+    })
+      .setTween(lazyAnimation)
+      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
+      .addTo(controller)
+  })
+}
+
+lazyLoad()
+
 // function animSlideDown() {
 //   $('.slide-down').each(function() {
 //     var currentAnimation = this
