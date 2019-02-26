@@ -1,5 +1,5 @@
 import 'bootstrap'
-import App from './App'
+//import App from './App'
 
 import ScrollMagic from 'ScrollMagic'
 import TimelineMax from 'TimelineMax'
