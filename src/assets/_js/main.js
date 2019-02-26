@@ -167,13 +167,13 @@ function lazyLoad() {
       offset: -300,
       reverse: false,
     })
-      .setTween(lazyAnimation)
-      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
-      .addTo(controller)
       .on('enter', function(e) {
         console.log('enter')
         el.css('background-image', 'url(' + imgSrc + ')')
       })
+      .setTween(lazyAnimation)
+      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
+      .addTo(controller)
   })
 }
 
