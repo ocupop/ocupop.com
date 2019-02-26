@@ -1,5 +1,9 @@
 import App from './App'
 
+import ScrollMagic from 'ScrollMagic'
+import TimelineMax from 'TimelineMax'
+import 'animation.gsap'
+import 'debug.addIndicators'
 import Barba from 'barba.js/dist/barba.js'
 import PageTransition from './transitions/PageTransition'
 import ProjectTransition from './transitions/ProjectTransition'
