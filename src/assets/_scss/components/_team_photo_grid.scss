@@ -1,10 +1,19 @@
 #team-photo-grid {
   display: flex;
   height: 290px;
+  @include media-breakpoint-down(lg) {
+    flex-wrap: wrap;
+    height: auto;
+  }
   .team-photo {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 25%;
+    width: 50%;
+    padding-top: 50%;
+    @include media-breakpoint-up(lg) {
+      width: 25%;
+      padding-top: 0;
+    }
   }
 }

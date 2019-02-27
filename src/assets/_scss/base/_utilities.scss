@@ -80,6 +80,11 @@
   }
 }
 
+.sticky-top {
+  top: 50px;
+  z-index: 997;
+}
+
 // Color Utilities
 .bg-black {
   background-color: $black !important;

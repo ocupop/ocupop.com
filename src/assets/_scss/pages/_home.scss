@@ -4,8 +4,20 @@
   justify-content: space-between;
   margin-top: 30px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
   .logo-item {
     padding: 20px;
+    flex: 1 0 21%;
+    &:nth-of-type(1),
+    &:nth-of-type(6) {
+      padding-left: 0;
+      text-align: left;
+    }
+    &:nth-of-type(5),
+    &:nth-of-type(10) {
+      padding-right: 0;
+      text-align: right;
+    }
   }
   @include media-breakpoint-down(md) {
     flex-wrap: wrap;

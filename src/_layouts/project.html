@@ -2,8 +2,8 @@
 layout: default
 ---
 {% assign project = page %}
-<div id="project-hero" class="bg-image aspect-hero" style="background-image:url({{ page.hero_image | default: site.placeholders.hero }})"></div>
-<section id="project" class="pb-0 project-content">
+
+<section id="project" class="project-content">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -13,12 +13,16 @@ layout: default
           <div class="project-tags">
             <p>{% for tag in page.tags %}<span {% unless forloop.last %}class="dotted"{% endunless %}>{{ tag  | capitalize }}</span>{% endfor %}</p>
           </div>
+          {{ project.description_html }}
         </div>
       </div>
     </div>
   </div>
 </section>
-
+<div class="parallax-window">
+  <div class="bg-image"
+    style="background-image: url({{ project.hero_image | default: site.placeholders.hero }});"></div>
+</div>
 <div class="project-content">
   {{ page.content }}
 </div>

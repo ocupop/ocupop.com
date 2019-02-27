@@ -65,4 +65,34 @@
       }
     }
   }
+  &.btn-border {
+    font-family: $font-family-secondary;
+    color: $dark;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    text-transform: uppercase;
+    @include media-breakpoint-up(lg) {
+      &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      bottom: 0;
+      left: -80%;
+      width: 100%;
+      height: 2px;
+      background-color: $orange;
+        @include transition(0.5s);
+      }
+      &:hover,
+      &.active {
+        &::after {
+          left: 0;
+        }
+      }
+    }
+    &.btn-border-white {
+      color: $white;
+    }
+  }
 }

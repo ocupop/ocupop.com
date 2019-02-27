@@ -1,6 +1,16 @@
 #project-nav {
   display: flex;
   height: 150px;
+  @include media-breakpoint-down(lg) {
+    height: auto;
+    flex-wrap: wrap;
+    .project-nav-item {
+      width: 33.33%;
+      height: 175px;
+      border-top: 1px solid $white;
+      border-bottom: 1px solid $white;
+    }
+  }
   .project-nav-item {
     position: relative;
     display: flex;

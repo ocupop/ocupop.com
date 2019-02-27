@@ -6,6 +6,7 @@
     overflow: hidden;
     .bg-image {
       position: absolute;
+      padding-top: 70%;
     }
   }
   @include media-breakpoint-up(lg) {

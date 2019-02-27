@@ -1,4 +1,8 @@
 #page-content {
   padding-top: 45px;
   background-color: $white;
+  @include transition(padding-top, .25s);
+  &.navbar-open {
+    padding-top: 90px;
+  }
 }

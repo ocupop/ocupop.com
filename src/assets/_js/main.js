@@ -89,70 +89,6 @@ var controller = new ScrollMagic.Controller({
 
 var controller = new ScrollMagic.Controller()
 
-function animSlideUp1() {
-  $('.slide-up-1').each(function() {
-    var currentAnimation = this
-
-    var slideUpAnimation1 = new TimelineMax()
-      .from(currentAnimation, 1, { opacity: 0 }, 0)
-      .from(currentAnimation, 0.6, { y: 100 }, 0)
-      .to(currentAnimation, 1, { opacity: 1 })
-      .to(currentAnimation, 0.6, { y: 0 })
-
-    var scene = new ScrollMagic.Scene({
-      triggerElement: currentAnimation,
-      offset: -300,
-    })
-      .setTween(slideUpAnimation1)
-      //.addIndicators({ name: 'slide up', colorEnd: '#0070ff' })
-      .addTo(controller)
-  })
-}
-
-animSlideUp1()
-
-// function animSlideUp2() {
-//   $('.slide-up-2').each(function() {
-//     var currentAnimation = this
-
-//     var slideUpAnimation2 = new TimelineMax()
-//       .from(currentAnimation, 1, { opacity: 0 }, 0.5)
-//       .from(currentAnimation, 1, { y: 100 }, 0.5)
-//       .to(currentAnimation, 1, { opacity: 1 })
-//       .to(currentAnimation, 1, { y: 0 })
-
-//     var scene = new ScrollMagic.Scene({
-//       triggerElement: currentAnimation,
-//       offset: -300,
-//     })
-//       .setTween(slideUpAnimation2)
-//       .addTo(controller)
-//   })
-// }
-
-// animSlideUp2()
-
-// function animSlideUp3() {
-//   $('.slide-up-3').each(function() {
-//     var currentAnimation = this
-
-//     var slideUpAnimation3 = new TimelineMax()
-//       .from(currentAnimation, 0.75, { opacity: 0 }, 1)
-//       .from(currentAnimation, 0.75, { y: 100 }, 1)
-//       .to(currentAnimation, 0.75, { opacity: 1 })
-//       .to(currentAnimation, 0.75, { y: 0 })
-
-//     var scene = new ScrollMagic.Scene({
-//       triggerElement: currentAnimation,
-//       offset: -300,
-//     })
-//       .setTween(slideUpAnimation3)
-//       .addTo(controller)
-//   })
-// }
-
-// animSlideUp3()
-
 function lazyLoad() {
   $('.lazy-load').each(function() {
     var el = $(this)
@@ -178,72 +114,6 @@ function lazyLoad() {
 }
 
 lazyLoad()
-
-// function animSlideDown() {
-//   $('.slide-down').each(function() {
-//     var currentAnimation = this
-
-//     var slideDownAnimation = new TimelineMax()
-//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-//       .from(currentAnimation, 0.4, { y: -100 }, 0.5)
-//       .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
-//       .to(currentAnimation, 0.4, { y: 0 }, 0.2)
-
-//     var scene = new ScrollMagic.Scene({
-//       triggerElement: currentAnimation,
-//       offset: -250,
-//     })
-//       .setTween(slideDownAnimation)
-//       //.addIndicators({ name: 'slide down', colorEnd: 'ff1000' })
-//       .addTo(controller)
-//   })
-// }
-
-// animSlideDown()
-
-// function animSlideLeft() {
-//   $('.slide-left').each(function() {
-//     var currentAnimation = this
-
-//     var slideLeftAnimation = new TimelineMax()
-//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-//       .from(currentAnimation, 0.4, { x: 100 }, 0.5)
-//       .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
-//       .to(currentAnimation, 0.4, { x: 0 }, 0.2)
-
-//     var scene = new ScrollMagic.Scene({
-//       triggerElement: currentAnimation,
-//       offset: -250,
-//     })
-//       .setTween(slideLeftAnimation)
-//       //.addIndicators({ name: 'slide left', colorEnd: '000fff' })
-//       .addTo(controller)
-//   })
-// }
-
-// animSlideLeft()
-
-// function animSlideRight() {
-//   $('.slide-right').each(function() {
-//     var currentAnimation = this
-
-//     var slideRightAnimation = new TimelineMax()
-//       .from(currentAnimation, 0.4, { opacity: 0 }, 0.5)
-//       .from(currentAnimation, 0.4, { x: -100 }, 0.5)
-//       .to(currentAnimation, 0.4, { opacity: 1 }, 0.2)
-//       .to(currentAnimation, 0.4, { x: 0 }, 0.2)
-
-//     var scene = new ScrollMagic.Scene({
-//       triggerElement: currentAnimation,
-//       offset: -250,
-//     })
-//       .setTween(slideRightAnimation)
-//       //.addIndicators({ name: 'slide right', colorEnd: '#FFF000' })
-//       .addTo(controller)
-//   })
-// }
-
-// animSlideRight()
 
 // function animFadeIn() {
 //   $('.fade-in').each(function() {
@@ -271,14 +141,9 @@ function parallax() {
     console.log('parallax present')
     $(document).scroll(function() {
       var scroll = $(window).scrollTop()
-      $('.parallax-window .bg-image').css('top', '0' - scroll / 5 + 'px')
+      $('.parallax-window .bg-image').css('top', '0' - scroll / 10 + 'px')
     })
   }
 }
 
 parallax()
-
-$('.navbar-collapse').on('show.bs.collapse', function() {
-  console.log('opened')
-  $('#page-content').addClass('primary-nav-active')
-})
