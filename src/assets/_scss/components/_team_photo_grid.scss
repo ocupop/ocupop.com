@@ -1,0 +1,10 @@
+#team-photo-grid {
+  display: flex;
+  height: 290px;
+  .team-photo {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 25%;
+  }
+}

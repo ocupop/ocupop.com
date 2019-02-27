@@ -277,3 +277,8 @@ function parallax() {
 }
 
 parallax()
+
+$('.navbar-collapse').on('show.bs.collapse', function() {
+  console.log('opened')
+  $('#page-content').addClass('primary-nav-active')
+})

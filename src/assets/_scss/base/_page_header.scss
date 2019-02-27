@@ -1,21 +1,30 @@
 #page-header {
-  border-top: 5px solid $blue;
   position: fixed;
   transform: translateZ(0); //fix for jitter in chrome
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $white;
+  background-color: $dark;
   z-index: 998;
 }
 
 #mainnav {
+  padding: 0 1rem;
   .navbar-brand {
-    width: 190px;
+    width: 120px;
   }
 }
 
 #primarynav {
+  .navbar-nav {
+    padding: 20px 0;
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 0;
+    }
+  }
   .nav-item {
     padding-left: 20px;
     padding-right: 20px;
@@ -24,26 +33,30 @@
       padding-left: 40px;
     }
     .nav-link {
-      color: $dark;
+      color: $white;
       position: relative;
       overflow: hidden;
-      font-family: $font-family-secondary;
-      font-size: 15px;
-      &::after {
+      font-family: $font-family-base;
+      font-size: 20px;
+      font-weight: 600;
+      @include media-breakpoint-up(lg) {
+        &::after {
         content: "";
         position: absolute;
         display: block;
         bottom: 0;
-        left: -100%;
+        left: -80%;
         width: 100%;
         height: 2px;
-        background-color: $orange;
-        @include transition(0.5s);
-      }
-      &:hover,
-      &.active {
-        &::after {
-          left: 0;
+        background-color: $black;
+          @include transition(0.5s);
+        }
+        &:hover,
+        &.active {
+          &::after {
+            background-color: $orange;
+            left: 0;
+          }
         }
       }
     }
@@ -68,7 +81,7 @@
     .bar {
       &.close-one {
         transform: rotate(0);
-        margin-top: 10px;
+        margin-top: 5px;
         margin-bottom: 0;
       }
       &.close-two {
@@ -80,7 +93,7 @@
     }
   }
   .bar {
-    background: $gray-700;
+    background: $white;
     border-radius: 0;
     display: block;
     margin: 5px 0;
@@ -99,39 +112,4 @@
       opacity: 0;
     }
   }
-}
-
-.navbar-collapse {
-  @include media-breakpoint-down(sm) {
-    position: fixed;
-    top: 77px;
-    right: -250px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
-    width: 250px;
-    height: 100%;
-    background-color: $white;
-    box-shadow: 0 4px 4px rgba($black, 0.5);
-    @include transition(0.4s);
-    .navbar-nav {
-      padding-top: 15px;
-    }
-  }
-}
-.navbar-collapse.collapsing {
-  @include media-breakpoint-down(sm) {
-    height: 100%;
-    right: -250px;
-  }
-}
-.navbar-collapse.show {
-  @include media-breakpoint-down(sm) {
-    height: 100%;
-    right: 0;
-  }
-}
-
-.collapse:not(.show) {
-  display: block;
 }

@@ -58,6 +58,9 @@
   &.aspect-16x9 {
     padding-top: 56.25%;
   }
+  &.aspect-2x1 {
+    padding-top: 50%;
+  }
   &.aspect-hero {
     padding-top: 42%;
     @include media-breakpoint-down(sm) {

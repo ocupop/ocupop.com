@@ -78,34 +78,26 @@ class ContactCTA extends Component {
     getWeatherDataMilwaukee()
 
     return (
-      <div className="row align-items-center">
-        <div className="col-4 col-md-2">
-          <div className="content">
-            <p>Honolulu</p>
-            <div id="weather-icon-honolulu" className="weather-icon" />
-            <p id="weather-temperature-honolulu" />
-          </div>
+      <div>
+        <div className="content">
+          <a href="/contact" className="quote">
+            It's time to say hello. <i className="icon-envelope" />
+          </a>
         </div>
-        <div className="col-4 col-md-2">
-          <div className="content">
-            <p>Whistler</p>
-            <div id="weather-icon-whistler" className="weather-icon" />
-            <p id="weather-temperature-whistler" />
-          </div>
+        <div className="content d-flex align-items-center justify-content-between">
+          <p>Honolulu</p>
+          <div id="weather-icon-honolulu" className="weather-icon" />
+          <p id="weather-temperature-honolulu" />
         </div>
-        <div className="col-4 col-md-2">
-          <div className="content">
-            <p>Milwaukee</p>
-            <div id="weather-icon-milwaukee" className="weather-icon" />
-            <p id="weather-temperature-milwaukee" />
-          </div>
+        <div className="content d-flex align-items-center justify-content-between">
+          <p>Whistler</p>
+          <div id="weather-icon-whistler" className="weather-icon" />
+          <p id="weather-temperature-whistler" />
         </div>
-        <div className="col-12 col-md-6">
-          <div className="content">
-            <a href="/contact" className="quote">
-              It's time to say hello. <i className="icon-envelope" />
-            </a>
-          </div>
+        <div className="content d-flex align-items-center justify-content-between">
+          <p>Milwaukee</p>
+          <div id="weather-icon-milwaukee" className="weather-icon" />
+          <p id="weather-temperature-milwaukee" />
         </div>
       </div>
     )

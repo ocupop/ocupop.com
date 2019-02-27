@@ -1,9 +1,9 @@
 #testimonial {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   .quote {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin-bottom: 2.3rem;
     font-family: $font-family-base-bold;
     line-height: 1.8;
@@ -22,7 +22,6 @@
   }
   .title {
     font-family: $font-family-secondary;
-    font-weight: 400;
-    text-transform: uppercase;
+    font-weight: 300;
   }
 }
