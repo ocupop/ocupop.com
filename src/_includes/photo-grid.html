@@ -24,10 +24,10 @@
   <div class="col-lg-6">
     <a href="{{ project1.url }}" class="position-relative d-block">
         <div class="bg-image aspect-1x1 lazy-load" data-image="{{ project1.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-        <div class="hover-overlay">
+        <div class="hover-overlay overlay-purple">
           <div class="overlay-content">
-            <p class="hover-primary-text">{{ project1.quote }}</p>
-            <p class="hover-secondary-text">{{ project1.client }}</p>
+            <p class="hover-primary-text">{{ project1.client }}</p>
+            <p class="hover-secondary-text">{% for tag in project1.tags %}{{ tag }}{% unless forloop.last %}, {% endunless %}{% endfor %}</p>
           </div>
         </div>
     </a>
@@ -36,20 +36,22 @@
     <a href="{{ project2.url }}" class="position-relative d-block">
       <div class="bg-image aspect-2x1 lazy-load"
         data-image="{{ project2.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-      <div class="hover-overlay">
+      <div class="hover-overlay overlay-green-dark">
         <div class="overlay-content">
-          <p class="hover-primary-text">{{ project2.quote }}</p>
-          <p class="hover-secondary-text">{{ project2.client }}</p>
+          <p class="hover-primary-text">{{ project2.client }}</p>
+          <p class="hover-secondary-text">{% for tag in project2.tags %}{{ tag }}{% unless forloop.last %},
+            {% endunless %}{% endfor %}</p>
         </div>
       </div>
     </a>
     <a href="{{ project3.url }}" class="position-relative d-block">
       <div class="bg-image aspect-2x1 lazy-load"
         data-image="{{ project3.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-      <div class="hover-overlay">
+      <div class="hover-overlay overlay-orange">
         <div class="overlay-content">
-          <p class="hover-primary-text">{{ project3.quote }}</p>
-          <p class="hover-secondary-text">{{ project3.client }}</p>
+          <p class="hover-primary-text">{{ project3.client }}</p>
+          <p class="hover-secondary-text">{% for tag in project3.tags %}{{ tag }}{% unless forloop.last %},
+            {% endunless %}{% endfor %}</p>
         </div>
       </div>
     </a>
@@ -62,18 +64,20 @@
         data-image="{{ project4.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
       <div class="hover-overlay">
         <div class="overlay-content">
-          <p class="hover-primary-text">{{ project4.quote }}</p>
-          <p class="hover-secondary-text">{{ project4.client }}</p>
+          <p class="hover-primary-text">{{ project4.client }}</p>
+          <p class="hover-secondary-text">{% for tag in project4.tags %}{{ tag }}{% unless forloop.last %},
+            {% endunless %}{% endfor %}</p>
         </div>
       </div>
     </a>
     <a href="{{ project5.url }}" class="position-relative d-block">
       <div class="bg-image aspect-2x1 lazy-load"
         data-image="{{ project5.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-      <div class="hover-overlay">
+      <div class="hover-overlay overlay-blue-dark">
         <div class="overlay-content">
-          <p class="hover-primary-text">{{ project5.quote }}</p>
-          <p class="hover-secondary-text">{{ project5.client }}</p>
+          <p class="hover-primary-text">{{ project5.client }}</p>
+          <p class="hover-secondary-text">{% for tag in project5.tags %}{{ tag }}{% unless forloop.last %},
+            {% endunless %}{% endfor %}</p>
         </div>
       </div>
     </a>
@@ -82,10 +86,11 @@
     <a href="{{ project6.url }}" class="position-relative d-block">
       <div class="bg-image aspect-1x1 lazy-load"
         data-image="{{ project6.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-      <div class="hover-overlay">
+      <div class="hover-overlay overlay-khaki">
         <div class="overlay-content">
-          <p class="hover-primary-text">{{ project6.quote }}</p>
-          <p class="hover-secondary-text">{{ project6.client }}</p>
+          <p class="hover-primary-text">{{ project6.client }}</p>
+          <p class="hover-secondary-text">{% for tag in project6.tags %}{{ tag }}{% unless forloop.last %},
+            {% endunless %}{% endfor %}</p>
         </div>
       </div>
     </a>

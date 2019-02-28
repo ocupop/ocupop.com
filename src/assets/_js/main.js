@@ -52,7 +52,7 @@ Barba.Pjax.getTransition = function() {
 
 Barba.Dispatcher.on('newPageReady', function() {
   console.log('new page ready')
-  animSlideUp1()
+  // animSlideUp1()
   // animSlideUp2()
   // animSlideUp3()
   parallax()

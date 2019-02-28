@@ -19,6 +19,11 @@
     background-color: $gray-100;
     border-left: 1px solid $white;
     border-right: 1px solid $white;
+    .hover-overlay {
+      .hover-primary-text {
+        font-size: 1rem;
+      }
+    }
     img {
       width: 25%;
     }

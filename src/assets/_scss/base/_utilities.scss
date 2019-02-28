@@ -72,14 +72,6 @@
   }
 }
 
-.parallax-window {
-  background: transparent;
-  min-height: 400px;
-  @include media-breakpoint-up(lg) {
-    min-height: 800px;
-  }
-}
-
 .sticky-top {
   top: 50px;
   z-index: 997;
@@ -116,7 +108,7 @@
     margin-top: -2px;
     right: 10px;
     display: block;
-    background-color: $dark;
+    background-color: $gray-400;
     width: 3px;
     height: 3px;
     border-radius: 50%;
