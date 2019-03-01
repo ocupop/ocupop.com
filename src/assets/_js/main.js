@@ -182,3 +182,24 @@ $(function() {
     $next.fadeIn()
   }
 })
+
+if ($('#contact-page-form').length) {
+  var scene = new ScrollMagic.Scene({
+    triggerElement: '#contact-page-form',
+    duration: 200,
+    reverse: false,
+  })
+    .addTo(controller)
+    .on('enter', function(e) {
+      $.ajax({
+        url: 'https://services.cognitoforms.com/s/bbN8iw1MJUqjPe6aHn-_rw',
+        dataType: 'script',
+        cache: true,
+        success: function() {
+          // Callback
+          console.log('script ready')
+          Cognito.load('forms', { id: '25' })
+        },
+      })
+    })
+}
