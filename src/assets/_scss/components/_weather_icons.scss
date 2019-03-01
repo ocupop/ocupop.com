@@ -1,38 +1,39 @@
 .weather-icon {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0 20px;
   &.clear-day {
-    background-image: url('https://via.placeholder.com/100x100?text=Clear+Day');
+    background-image: url('https://via.placeholder.com/50x50?text=Clear+Day');
   }
   &.clear-night {
-    background-image: url('https://via.placeholder.com/100x100?text=Clear+Night');
+    background-image: url('https://via.placeholder.com/50x50?text=Clear+Night');
   }
   &.rain {
-    background-image: url('https://via.placeholder.com/100x100?text=Rain');
+    background-image: url('https://via.placeholder.com/50x50?text=Rain');
   } 
   &.snow {
-    background-image: url('https://via.placeholder.com/100x100?text=Snow');
+    background-image: url('https://via.placeholder.com/50x50?text=Snow');
   } 
   &.sleet {
-    background-image: url('https://via.placeholder.com/100x100?text=Sleet');
+    background-image: url('https://via.placeholder.com/50x50?text=Sleet');
   }
   &.wind {
-    background-image: url('https://via.placeholder.com/100x100?text=Wind');
+    background-image: url('https://via.placeholder.com/50x50?text=Wind');
   }
   &.fog {
-    background-image: url('https://via.placeholder.com/100x100?text=Fog');
+    background-image: url('https://via.placeholder.com/50x50?text=Fog');
   }
   &.cloudy {
-    background-image: url('https://via.placeholder.com/100x100?text=Cloudy');
+    background-image: url('https://via.placeholder.com/50x50?text=Cloudy');
   }
   &.partly-cloudy-day {
-    background-image: url('https://via.placeholder.com/100x100?text=Partly+Cloudy+Day');
+    background-image: url('https://via.placeholder.com/50x50?text=Partly+Cloudy+Day');
   }
   &.partly-cloudy-night {
-    background-image: url('https://via.placeholder.com/100x100?text=Partly+Cloudy+Night');
+    background-image: url('https://via.placeholder.com/50x50?text=Partly+Cloudy+Night');
   }
 }

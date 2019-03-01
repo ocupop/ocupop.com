@@ -5,13 +5,12 @@
   justify-content: center;
   opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
   background-color: rgba($blue, 0.9);
   padding: 40px;
-  cursor: pointer;
   // pointer-events: auto;
   .hover-primary-text {
     font-family: $font-family-secondary;
@@ -24,7 +23,7 @@
   }
   .hover-secondary-text {
     font-family: $font-family-base;
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 0;
     color: $white;
   }
@@ -43,13 +42,5 @@
   &.overlay-blue-dark {
     background-color: rgba($blue-dark, 0.9);
   }
-  &:hover {
-    @include animation(expand, 0.5s);
-    .hover-primary-text {
-      @include animation(slideLeft, 0.5s, 0.5s);
-    }
-    .hover-secondary-text {
-      @include animation(slideLeft, 0.5s, 0.8s);
-    }
-  }
+  
 }

@@ -147,3 +147,38 @@ function parallax() {
 }
 
 parallax()
+
+$(function() {
+  // time between image rotate
+  var delay = 3500
+
+  // for each list item in
+  // the rotator ul,
+  // show a random image
+  $('#rotator > li').each(function() {
+    // save images in an array
+    var $imgArr = $(this).children()
+    // show a random image
+    $imgArr.eq(Math.floor(Math.random() * $imgArr.length)).show()
+  })
+  // run the changeImage function after every (delay) miliseconds
+  setInterval(function() {
+    changeImage()
+  }, delay)
+
+  function changeImage() {
+    // save list items in an array
+    var $liArr = $('#rotator > li')
+    // select a random list item
+    var $currLi = $liArr.eq(Math.floor(Math.random() * $liArr.length))
+    // get the currently visible image
+    var $currImg = $('.rotator-image:visible', $currLi)
+    if ($currImg.next().length == 1) {
+      var $next = $currImg.next()
+    } else {
+      var $next = $('.rotator-image:first', $currLi)
+    }
+    $currImg.fadeOut()
+    $next.fadeIn()
+  }
+})

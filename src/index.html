@@ -206,14 +206,7 @@ mosaic:
   </div>
 </section> -->
 
-<section class="py-0">
-  <div id="team-photo-grid">
-    {% for i in (1..4) %}
-      <div class="team-photo" style="background-image: url({{ site.placeholders.aspect-1x1 }})">
-      </div>
-    {% endfor %}
-  </div>
-</section>
+{% include team-photo-grid.html %}
 
 <section>
   <div class="container">

@@ -19,6 +19,17 @@
     background-color: $gray-100;
     border-left: 1px solid $white;
     border-right: 1px solid $white;
+    &:hover {
+      .hover-overlay {
+        @include animation(expand, 0.5s);
+        .hover-primary-text {
+          @include animation(slideLeft, 0.5s, 0.5s);
+        }
+        .hover-secondary-text {
+          @include animation(slideLeft, 0.5s, 0.8s);
+        }
+      }
+    }
     .hover-overlay {
       .hover-primary-text {
         font-size: 1rem;

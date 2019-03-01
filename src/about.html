@@ -43,7 +43,7 @@ testimonial: true
             every decision, and earning and maintaining trust while we blow
             their fucking minds.
           </p>
-          <a href="#" class="btn btn-inline">Watch the Talk</a>
+          <a href="#" class="btn btn-border btn-border-white">Watch the Talk</a>
         </div>
       </div>
       <div class="col-md-6">
@@ -58,33 +58,29 @@ testimonial: true
             design some of the most influential logos, campaigns, and user
             interfaces on the web over the last twenty years.
           </p>
-          <a href="https://vimeo.com/134270678/39f6957127" target="_blank" class="btn btn-inline">Watch the Talk</a>
+          <a href="https://vimeo.com/134270678/39f6957127" target="_blank" class="btn btn-border btn-border-white">Watch the Talk</a>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section>
-  <div class="container">
-    <div class="row">
-      {% for member in site.data.staff %}
-      <div class="col-md-4">
-        <div class="content">
-          <div class="position-relative">
-            <a href="#" class="bg-image aspect-1x1 border-0 slide-up-1" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
-              <div class="hover-overlay text-white">
-                <div class="hover-content">
-                  <p class="hover-primary-text">{{ member.name }}</p>
-                  <p class="hover-secondary-text"><small>{{ member.role }}</small></p>
-                </div>
-              </div>
-            </a>
-            {% include modal-team.html %}
+<section id="team" class="py-0">
+  <div class="row no-gutters">
+    {% for member in site.data.staff %}
+    <div class="col-md-4">
+      <div class="position-relative">
+        <a href="#" class="bg-image aspect-1x1 border-0" style="background-image: url({{ member.image | default: site.placeholders.aspect-4x3 }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
+          <div class="hover-overlay text-white">
+            <div class="hover-content">
+              <p class="hover-primary-text">{{ member.name }}</p>
+              <p class="hover-secondary-text"><small>{{ member.role }}</small></p>
+            </div>
           </div>
-        </div>
+        </a>
+        {% include modal-team.html %}
       </div>
-      {% endfor %}
     </div>
+    {% endfor %}
   </div>
 </section>
 {% include good-work.html %}
