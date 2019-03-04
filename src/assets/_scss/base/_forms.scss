@@ -293,6 +293,9 @@
   &.cognito {
     .c-forms-form {
       .c-label {
+        &::after {
+          display: none;
+        }
         label {
           position: absolute;
           width: 1px;
@@ -319,11 +322,11 @@
       }
 
       font-family: $font-family-secondary;
-    color: $dark;
-    position: relative;
-    overflow: hidden;
-    padding: 0;
-    text-transform: uppercase;
+      color: $dark;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+      text-transform: uppercase;
     #c-submit-button {
       padding: 10px 0;
       border: 0;
