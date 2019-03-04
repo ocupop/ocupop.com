@@ -336,7 +336,7 @@
           background-color: transparent;
           color: $dark;
         }
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(md) {
           &::after {
           content: "";
           position: absolute;
@@ -360,8 +360,8 @@
       .c-validation {
         margin-left: 0;
         border-radius: 0;
+        margin-right: 7px;
       }
-    
     }
   }
 }
