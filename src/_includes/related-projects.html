@@ -23,23 +23,20 @@
     {% assign next_project = site.projects | where: "slug", project | first %}
   {% endif %}
 {% endfor %}
-<section id="related-projects" class="py-0">
-  <div class="row no-gutters">
-    <div class="col-md-6 slide-right">
-      <a href="{{ prev_project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ prev_project.featured_image }}">
-        <div class="bg-image aspect-16x9" style="background-image: url({{ prev_project.featured_image | site.placeholders.aspect-4x3 }})"></div>
-        <div class="overlay">
-          <p class="project-title">{{ prev_project.title }}</p>
+<section id="related-projects" class="bg-orange">
+  <div class="row align-items-center">
+    <div class="col-12">
+      <div class="content text-align-center">
+        <div class="d-flex align-items-center justify-content-center">
+          <a href="{{ prev_project.url }}" class="mx-2 text-white">
+            Previous
+          </a>
+          /
+          <a href="{{ next_project.url }}" class="mx-2 text-white">
+            Next
+          </a>
         </div>
-      </a>
-    </div>
-    <div class="col-md-6 slide-left">
-      <a href="{{ next_project.url }}" class="expand-full-screen" data-transition="ProjectTransition" data-image="{{ next_project.featured_image }}">
-        <div class="bg-image aspect-16x9" style="background-image: url({{ next_project.featured_image | default: site.placeholders.aspect-4x3 }})"></div>
-        <div class="overlay">
-          <p class="project-title">{{ next_project.title }}</p>
-        </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>

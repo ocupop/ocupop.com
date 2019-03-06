@@ -82,20 +82,23 @@ class ContactCTA extends Component {
         <div className="content">
           <a href="/contact">Time to say hi!</a>
         </div>
-        <div className="content d-flex align-items-center">
-          <p>Honolulu</p>
-          <div id="weather-icon-honolulu" className="weather-icon" />
-          <p id="weather-temperature-honolulu" />
+        <div className="content">
+          <div className="d-flex align-items-center justify-content-between">
+            <p>Honolulu</p>
+            <div id="weather-icon-honolulu" className="weather-icon" />
+          </div>
         </div>
-        <div className="content d-flex align-items-center">
-          <p>Whistler</p>
-          <div id="weather-icon-whistler" className="weather-icon" />
-          <p id="weather-temperature-whistler" />
+        <div className="content">
+          <div className="d-flex align-items-center justify-content-between">
+            <p>Whistler</p>
+            <div id="weather-icon-whistler" className="weather-icon" />
+          </div>
         </div>
-        <div className="content d-flex align-items-center">
-          <p>Milwaukee</p>
-          <div id="weather-icon-milwaukee" className="weather-icon" />
-          <p id="weather-temperature-milwaukee" />
+        <div className="content">
+          <div className="d-flex align-items-center justify-content-between">
+            <p>Milwaukee</p>
+            <div id="weather-icon-milwaukee" className="weather-icon" />
+          </div>
         </div>
       </div>
     )

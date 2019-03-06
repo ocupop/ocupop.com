@@ -33,3 +33,14 @@
   position: relative;
   top: -100%;
 }
+
+.project-icons {
+  div {
+    width: 14.29%;
+    padding: 10px;
+    img {
+      width: 100%;
+      max-height: 50px;
+    }
+  }
+}
