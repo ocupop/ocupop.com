@@ -102,7 +102,7 @@ function lazyLoad() {
 
     var scene = new ScrollMagic.Scene({
       triggerElement: currentAnimation,
-      offset: -300,
+      offset: -500,
       reverse: false,
     })
       .on('enter', function(e) {
