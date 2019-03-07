@@ -7,7 +7,7 @@
           <p class="quote">{{ page.testimonial.quote }}</p>
           <p>
             <span class="author">{{ page.testimonial.author }}</small><br>
-              <span class="title">{{ page.testimonial.title }}</small>
+            <span class="title">{% if page.testimonial.title %}{{ page.testimonial.title }}{% endif %}{% if page.testimonial.title and page.testimonial.company %}, {% endif %}{% if page.testimonial.company %}{{ page.testimonial.company }}{% endif %}</small>
           </p>
         </div>
         {% else %}
@@ -19,7 +19,7 @@
               <span class="title">Founder, Fox Tax Service</span>
             </small>
           </p>
-        </div>  
+        </div>
         {% endif %}
       </div>
     </div>
