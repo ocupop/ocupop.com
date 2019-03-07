@@ -7,33 +7,33 @@
   background-size: cover;
   margin: 0 20px;
   &.clear-day {
-    background-image: url('https://via.placeholder.com/50x50?text=Clear+Day');
+    background-image: url('/assets/img/weather-icons/clear-day.svg');
   }
   &.clear-night {
-    background-image: url('https://via.placeholder.com/50x50?text=Clear+Night');
+    background-image: url('/assets/img/weather-icons/clear-night.svg');
   }
   &.rain {
-    background-image: url('https://via.placeholder.com/50x50?text=Rain');
+    background-image: url('/assets/img/weather-icons/rain.svg');
   } 
   &.snow {
-    background-image: url('https://via.placeholder.com/50x50?text=Snow');
+    background-image: url('/assets/img/weather-icons/snow.svg');
   } 
   &.sleet {
-    background-image: url('https://via.placeholder.com/50x50?text=Sleet');
+    background-image: url('/assets/img/weather-icons/sleet.svg');
   }
   &.wind {
-    background-image: url('https://via.placeholder.com/50x50?text=Wind');
+    background-image: url('/assets/img/weather-icons/wind.svg');
   }
   &.fog {
-    background-image: url('https://via.placeholder.com/50x50?text=Fog');
+    background-image: url('/assets/img/weather-icons/fog.svg');
   }
   &.cloudy {
-    background-image: url('https://via.placeholder.com/50x50?text=Cloudy');
+    background-image: url('/assets/img/weather-icons/cloudy.svg');
   }
   &.partly-cloudy-day {
-    background-image: url('https://via.placeholder.com/50x50?text=Partly+Cloudy+Day');
+    background-image: url('/assets/img/weather-icons/partly-cloudy-day.svg');
   }
   &.partly-cloudy-night {
-    background-image: url('https://via.placeholder.com/50x50?text=Partly+Cloudy+Night');
+    background-image: url('/assets/img/weather-icons/partly-cloudy-night.svg');
   }
 }

@@ -25,7 +25,7 @@
   display: flex;
   padding-left: 0;
   margin-bottom: 0;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     height: auto;
     flex-wrap: wrap;
   }
@@ -35,7 +35,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-down(sm) {
       width: 50%;
       height: 225px;
     }
@@ -70,7 +70,7 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(sm) {
     height: 225px;
   }
 }

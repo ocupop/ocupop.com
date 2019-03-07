@@ -1,7 +1,8 @@
 #project-nav {
   display: flex;
   height: 150px;
-  @include media-breakpoint-down(lg) {
+  margin: 0 auto;
+  @include media-breakpoint-down(md) {
     height: auto;
     flex-wrap: wrap;
     .project-nav-item {
@@ -19,6 +20,7 @@
     background-color: $gray-100;
     border-left: 1px solid $white;
     border-right: 1px solid $white;
+    flex-grow: 1;
     &:hover {
       .hover-overlay {
         @include animation(expand, 0.5s);
@@ -36,7 +38,10 @@
       }
     }
     img {
-      width: 25%;
+      width: 50%;
+      @include media-breakpoint-up(lg) {
+        width: 75%;
+      }
     }
   }
 }

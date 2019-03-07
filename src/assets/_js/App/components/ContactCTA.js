@@ -79,26 +79,26 @@ class ContactCTA extends Component {
 
     return (
       <div>
-        <div className="content">
-          <a href="/contact">Time to say hi!</a>
+        <div className="weather-zone">
+          <p>
+            Honolulu: <span id="weather-temperature-honolulu" />
+            &deg;
+          </p>
+          <div id="weather-icon-honolulu" className="weather-icon" />
         </div>
-        <div className="content">
-          <div className="d-flex align-items-center justify-content-between">
-            <p>Honolulu</p>
-            <div id="weather-icon-honolulu" className="weather-icon" />
-          </div>
+        <div className="weather-zone">
+          <p>
+            Whistler: <span id="weather-temperature-whistler" />
+            &deg;
+          </p>
+          <div id="weather-icon-whistler" className="weather-icon" />
         </div>
-        <div className="content">
-          <div className="d-flex align-items-center justify-content-between">
-            <p>Whistler</p>
-            <div id="weather-icon-whistler" className="weather-icon" />
-          </div>
-        </div>
-        <div className="content">
-          <div className="d-flex align-items-center justify-content-between">
-            <p>Milwaukee</p>
-            <div id="weather-icon-milwaukee" className="weather-icon" />
-          </div>
+        <div className="weather-zone">
+          <p>
+            Milwaukee: <span id="weather-temperature-milwaukee" />
+            &deg;
+          </p>
+          <div id="weather-icon-milwaukee" className="weather-icon" />
         </div>
       </div>
     )

@@ -2,7 +2,7 @@
 title: Ocupop
 email: dev@ocupop.com
 description: 'A small super-powered creative agency with zero awards'
-url: "https://chartreuse-echidna.cloudvent.net/"
+url: "https://ocupop.com/"
 permalink: pretty
 analytics_code:
 
@@ -10,6 +10,12 @@ placeholders:
   hero: /assets/img/1800x800.png
   aspect-4x3: /assets/img/768x500.png
   aspect-1x1: /assets/img/768x768.png
+
+socialshare:
+  featured_image: assets/img/socialshare.png
+  twitter:
+    username: '@Ocupop'
+    image:
 
 # Collections
 collections:
