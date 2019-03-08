@@ -4,7 +4,7 @@ email: dev@ocupop.com
 description: 'A small super-powered creative agency with zero awards'
 url: "https://ocupop.com/"
 permalink: pretty
-analytics_code:
+analytics_code: UA-20780270-1
 
 placeholders:
   hero: /assets/img/1800x800.png
