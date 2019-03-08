@@ -27,7 +27,7 @@
 .weather-zone {
   display: flex;
   align-items: center;
-  justify-content: between;
+  justify-content: space-between;
   padding: 25px 0;
   border-top: 1px solid $white;
   &:last-of-type {
