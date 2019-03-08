@@ -12,4 +12,7 @@
   @include media-breakpoint-up(lg) {
     height: 600px;
   }
+  @include media-breakpoint-up(xl) {
+    height: 800px;
+  }
 }
