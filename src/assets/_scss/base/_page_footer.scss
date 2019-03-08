@@ -1,7 +1,16 @@
 #page-footer {
-  padding: 50px 0;
+  padding: 80px 0;
   background-color: $dark;
-
+  .social-icon {
+    #mail-icon {
+      width: 52px;
+      height: 52px;
+    }
+    #instagram-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
   .nav-link {
     color: $white;
     font-weight: 100;
@@ -16,28 +25,14 @@
   }
 }
 
+#logo-wrapper {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  bottom: 0;
+}
 .logo-footer {
   display: block;
   position: relative;
-  max-width: 190px;
-
-  // img {
-  //   &:nth-of-type(1) {
-  //     position: absolute;
-  //     left: 20px;
-  //     top: 0;
-  //     width: 190px;
-  //   }
-  //   &:nth-of-type(2) {
-  //     width: 190px;
-  //     position: absolute;
-  //     top: 0;
-  //     left: 20px;
-  //     opacity: 0;
-  //     @include transition(opacity, 0.4s);
-  //     &:hover {
-  //       opacity: 1;
-  //     }
-  //   }
-  // }
+  max-width: 65px;
 }
