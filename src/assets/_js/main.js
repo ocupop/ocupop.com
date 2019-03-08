@@ -208,3 +208,25 @@ function contactForm() {
 }
 
 contactForm()
+
+if ($('.video-btn').length) {
+  console.log('video modal present')
+  var videoSrc
+  $('.video-btn').click(function() {
+    // console.log(videoSrc)
+  })
+
+  // when the modal is opened autoplay it
+  $('#video-modal').on('shown.bs.modal', function(e) {
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    videoSrc = $('.video-btn').data('src')
+    $('#video').attr('src', videoSrc + '?autoplay=1')
+    console.log(videoSrc)
+  })
+
+  // stop playing the youtube video when I close the modal
+  $('#video-modal').on('hide.bs.modal', function(e) {
+    // a poor man's stop video
+    $('#video').attr('src', videoSrc)
+  })
+}
