@@ -43,7 +43,6 @@ source: src
 
 plugins:
   - jekyll-sitemap
-  - jekyll-feed
 
 # feed:
 #   title: Client Name
