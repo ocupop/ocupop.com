@@ -45,7 +45,7 @@
     <a href="{{ project2.url }}" class="project-item">
       <div class="bg-image aspect-2x1 lazy-load"
         data-image="{{ project2.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-      <div class="hover-overlay overlay-green-dark">
+      <div class="hover-overlay overlay-yellow-dark">
         <div class="overlay-content">
           <p class="hover-primary-text">{{ project2.client }}</p>
           <p class="hover-secondary-text">{% for tag in project2.tags %}{{ tag }}{% unless forloop.last %},
@@ -82,7 +82,7 @@
     <a href="{{ project5.url }}" class="project-item">
       <div class="bg-image aspect-2x1 lazy-load"
         data-image="{{ project5.featured_image | default: site.placeholders.aspect-4x3 }}"></div>
-      <div class="hover-overlay overlay-blue-dark">
+      <div class="hover-overlay overlay-green-dark">
         <div class="overlay-content">
           <p class="hover-primary-text">{{ project5.client }}</p>
           <p class="hover-secondary-text">{% for tag in project5.tags %}{{ tag }}{% unless forloop.last %},
