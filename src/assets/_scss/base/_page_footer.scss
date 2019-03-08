@@ -7,13 +7,19 @@
     font-weight: 100;
     font-family: $font-family-secondary;
     font-size: 15px;
+    &:first-child {
+      padding-left: 0;
+    }
+    &.active {
+      background: $dark;
+    }
   }
 }
 
 .logo-footer {
   display: block;
   position: relative;
-  width: 65px;
+  max-width: 200px;
 
   // img {
   //   &:nth-of-type(1) {

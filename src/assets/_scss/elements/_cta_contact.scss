@@ -10,14 +10,14 @@
       padding-right: 75px;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 75px;
         height: 25px;
         position: absolute;
         right: 0;
         bottom: 12px;
-        background-image: url('/assets/img/arrow-right.png');
+        background-image: url("/assets/img/arrow-right.png");
         background-size: cover;
       }
     }
@@ -31,6 +31,6 @@
   padding: 25px 0;
   border-top: 1px solid $white;
   &:last-of-type {
-    border-bottom: 1px solid $white;
+    border-bottom: 0;
   }
 }
