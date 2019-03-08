@@ -153,6 +153,10 @@
   line-height: calc(1.3em + (1.5 - 1.2) * ((100vw - 300px) / (1440 - 300)));
 }
 
+.text-nocase {
+  text-transform: none !important;
+}
+
 .text-large {
   font-size: 1.5rem;
 }
