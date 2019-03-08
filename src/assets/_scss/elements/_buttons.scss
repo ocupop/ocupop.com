@@ -93,6 +93,9 @@
     }
     &.btn-border-white {
       color: $white;
+      &:hover {
+        color: $white;
+      }
     }
   }
 }
