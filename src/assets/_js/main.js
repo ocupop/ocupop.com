@@ -13,7 +13,7 @@ import PageTransition from './transitions/PageTransition'
 
 Barba.Pjax.start()
 
-Barba.Pjax.getTransition = function () {
+Barba.Pjax.getTransition = function() {
   /**
    * Here you can use your own logic!
    * For example you can use different Transition based on the current page or link...
@@ -50,7 +50,7 @@ Barba.Pjax.getTransition = function () {
 //   lastClickEl = el
 // })
 
-Barba.Dispatcher.on('newPageReady', function () {
+Barba.Dispatcher.on('newPageReady', function() {
   console.log('new page ready')
   // animSlideUp1()
   // animSlideUp2()
@@ -76,7 +76,7 @@ if (!cookiePolicy) {
   $('.cookie-policy').removeClass('active')
 }
 
-$('#confirm-cookie-consent').on('click', function () {
+$('#confirm-cookie-consent').on('click', function() {
   Cookies.set('ocu-cookie', true)
   $('.cookie-policy').removeClass('active')
 })
@@ -91,7 +91,7 @@ var controller = new ScrollMagic.Controller({
 var controller = new ScrollMagic.Controller()
 
 function lazyLoad() {
-  $('.lazy-load').each(function () {
+  $('.lazy-load').each(function() {
     var el = $(this)
     var imgSrc = el.data('image')
     var currentAnimation = this
@@ -105,7 +105,7 @@ function lazyLoad() {
       offset: -500,
       reverse: false,
     })
-      .on('enter', function (e) {
+      .on('enter', function(e) {
         el.css('background-image', 'url(' + imgSrc + ')')
       })
       .setTween(lazyAnimation)
@@ -140,7 +140,7 @@ lazyLoad()
 function parallax() {
   if ($('.parallax-window').length) {
     console.log('parallax present')
-    $(document).scroll(function () {
+    $(document).scroll(function() {
       var scroll = $(window).scrollTop()
       $('.parallax-window .bg-image').css('top', '0' - scroll / 10 + 'px')
     })
@@ -149,21 +149,21 @@ function parallax() {
 
 parallax()
 
-$(function () {
+$(function() {
   // time between image rotate
   var delay = 3500
 
   // for each list item in
   // the rotator ul,
   // show a random image
-  $('#rotator > li').each(function () {
+  $('#rotator > li').each(function() {
     // save images in an array
     var $imgArr = $(this).children()
     // show a random image
     $imgArr.eq(Math.floor(Math.random() * $imgArr.length)).show()
   })
   // run the changeImage function after every (delay) miliseconds
-  setInterval(function () {
+  setInterval(function() {
     changeImage()
   }, delay)
 
@@ -192,12 +192,12 @@ function contactForm() {
       offset: -300,
     })
       .addTo(controller)
-      .on('enter', function (e) {
+      .on('enter', function(e) {
         $.ajax({
           url: 'https://services.cognitoforms.com/s/bbN8iw1MJUqjPe6aHn-_rw',
           dataType: 'script',
           cache: true,
-          success: function () {
+          success: function() {
             // Callback
             console.log('script ready')
             Cognito.load('forms', { id: '25' })
@@ -209,24 +209,24 @@ function contactForm() {
 
 contactForm()
 
-if ($('.video-btn').length) {
-  console.log('video modal present')
-  var videoSrc
-  $('.video-btn').click(function () {
-    // console.log(videoSrc)
-  })
-
-  // when the modal is opened autoplay it
-  $('#video-modal').on('shown.bs.modal', function (e) {
-    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-    videoSrc = $('.video-btn').data('src')
-    $('#video').attr('src', videoSrc + '?autoplay=1')
-    console.log(videoSrc)
-  })
-
+// $('.video-btn').click(function() {
+//   var videoSrc = $(this).data('src')
+//   console.log(videoSrc)
+//   $('#video').attr('src', videoSrc + '?autoplay=1')
+//   $('#video-modal').modal('show')
+// })
+var videoSrc
+$('#video-modal').on('show.bs.modal', function() {
+  // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+  videoSrc = $('.video-btn').data('src')
+  $('#video').attr('src', videoSrc + '?autoplay=1')
+  console.log(videoSrc)
+})
+$('#video-modal').on('hide.bs.modal', function(e) {
+  // a poor man's stop video
+  $('#video').attr('src', videoSrc)
+})
+$(document).on('ready', function() {
+  //when the modal is opened autoplay it
   // stop playing the youtube video when I close the modal
-  $('#video-modal').on('hide.bs.modal', function (e) {
-    // a poor man's stop video
-    $('#video').attr('src', videoSrc)
-  })
-}
+})
