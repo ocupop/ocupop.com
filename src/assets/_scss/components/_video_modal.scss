@@ -14,4 +14,10 @@
       opacity: 1;
     }
   }
+  iframe {
+    min-height: 350px;
+    @include media-breakpoint-up(md) {
+      min-height: 500px;
+    }
+  }
 }
