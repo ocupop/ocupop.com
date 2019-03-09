@@ -8,8 +8,14 @@
   max-width: 100%;
   margin: 0 auto;
   height: 100%;
+  @include media-breakpoint-down(sm) {
+    height: auto;
+  }
   section {
     height: 100%;
+    @include media-breakpoint-down(sm) {
+      height: auto;
+    }
   }
   .close {
     font-family: $font-family-secondary;
@@ -19,7 +25,12 @@
     top: 5px;
     right: 15px;
     text-shadow: none;
+    opacity: 1;
     border: 0;
     font-weight: 200;
+    z-index: 2000;
+    @include media-breakpoint-down(sm) {
+      color: $white;
+    }
   }
 }
