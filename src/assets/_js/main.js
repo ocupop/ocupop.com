@@ -219,7 +219,7 @@ var videoSrc
 $('#video-modal').on('show.bs.modal', function() {
   // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
   videoSrc = $('.video-btn').data('src')
-  $('#video').attr('src', videoSrc + '?autoplay=1')
+  $('#video').attr('src', videoSrc)
   console.log(videoSrc)
 })
 $('#video-modal').on('hide.bs.modal', function(e) {
