@@ -12,6 +12,18 @@
       border-bottom: 1px solid $white;
     }
   }
+  @include media-breakpoint-down(sm) {
+    .project-nav-item {
+      height: auto;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      .hover-overlay {
+        .hover-primary-text {
+          
+        }
+      }
+    }
+  }
   .project-nav-item {
     position: relative;
     display: flex;
@@ -35,6 +47,10 @@
     .hover-overlay {
       .hover-primary-text {
         font-size: 1rem;
+        @include media-breakpoint-down(sm) {
+          padding: 5px;
+          font-size: 12px;
+        }
       }
     }
     img {

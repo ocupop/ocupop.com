@@ -1,6 +1,11 @@
 #page-footer {
   padding: 80px 0;
   background-color: $dark;
+  h1 {
+    @include media-breakpoint-down(md) {
+      margin-top: 40px;
+    }
+  }
   .social-icon {
     #mail-icon {
       width: 52px;
@@ -30,6 +35,9 @@
   height: 80px;
   width: 80px;
   bottom: 0;
+  @include media-breakpoint-down(lg) {
+    position: relative;
+  }
 }
 .logo-footer {
   display: block;
