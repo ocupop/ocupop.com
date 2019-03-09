@@ -226,7 +226,3 @@ $('#video-modal').on('hide.bs.modal', function(e) {
   // a poor man's stop video
   $('#video').attr('src', videoSrc)
 })
-$(document).on('ready', function() {
-  //when the modal is opened autoplay it
-  // stop playing the youtube video when I close the modal
-})
