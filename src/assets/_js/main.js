@@ -76,7 +76,7 @@ if (!cookiePolicy) {
   $('.cookie-policy').removeClass('active')
 }
 
-$('#confirm-cookie-consent').on('click', function() {
+$('#confirm-cookie-consent').on('click touchstart', function() {
   Cookies.set('ocu-cookie', true)
   $('.cookie-policy').removeClass('active')
 })
