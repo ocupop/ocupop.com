@@ -1,13 +1,10 @@
 .parallax-window {
-  @include media-breakpoint-up(md) {
-    position: relative;
-    height: 400px;
-    width: 100%;
-    overflow: hidden;
-    .bg-image {
-      position: absolute;
-      padding-top: 70%;
-    }
+  height: 400px;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  .bg-image {
+    padding-top: 70%;
   }
   @include media-breakpoint-up(lg) {
     height: 600px;
