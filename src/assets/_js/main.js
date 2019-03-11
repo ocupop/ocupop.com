@@ -58,6 +58,7 @@ Barba.Dispatcher.on('newPageReady', function() {
   parallax()
   lazyLoad()
   contactForm()
+  videoModal()
 })
 
 // const containerEl = document.getElementById('projectList')
@@ -222,14 +223,18 @@ $('.video-btn').on('click', function() {
   $('#video').attr('src', videoSrc)
 })
 
-var videoSrc
-$('#video-modal').on('show.bs.modal', function() {
-  // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-  videoSrc = $('.video-btn').data('src')
-  $('#video').attr('src', videoSrc)
-  console.log(videoSrc)
-})
-$('#video-modal').on('hide.bs.modal', function(e) {
-  // a poor man's stop video
-  $('#video').attr('src', videoSrc)
-})
+function videoModal() {
+  var videoSrc
+  $('#video-modal').on('show.bs.modal', function() {
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    videoSrc = $('.video-btn').data('src')
+    $('#video').attr('src', videoSrc)
+    console.log(videoSrc)
+  })
+  $('#video-modal').on('hide.bs.modal', function(e) {
+    // a poor man's stop video
+    $('#video').attr('src', videoSrc)
+  })
+}
+
+videoModal()
