@@ -22,8 +22,10 @@
                   <dd>{{ member.spirit_animal }}</dd>
                   <dt>What you want to be when you grow up</dt>
                   <dd>{{ member.what_you_want_to_be_when_you_grow_up }}</dd>
-                  <dt>Catch Phrase</dt>
-                  <dd>{{ member.catch_phrase }}</dd>
+                  {% if member.catch_phrase %}
+                    <dt>Catch Phrase</dt>
+                    <dd>{{ member.catch_phrase }}</dd>
+                  {% endif %}  
                 </dl>
               </div>
             </div>
