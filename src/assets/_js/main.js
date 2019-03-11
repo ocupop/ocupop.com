@@ -215,6 +215,13 @@ contactForm()
 //   $('#video').attr('src', videoSrc + '?autoplay=1')
 //   $('#video-modal').modal('show')
 // })
+
+$('.video-btn').on('click', function() {
+  videoSrc = $('.video-btn').data('src')
+  $('#video-modal').modal('show')
+  $('#video').attr('src', videoSrc)
+})
+
 var videoSrc
 $('#video-modal').on('show.bs.modal', function() {
   // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
