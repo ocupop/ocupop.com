@@ -15,11 +15,4 @@
       }
     }
   }
-  @include media-breakpoint-down(md) {
-    .bg-image {
-      &.aspect-2x1 {
-        padding-top: 55%;
-      }
-    }
-  }
 }

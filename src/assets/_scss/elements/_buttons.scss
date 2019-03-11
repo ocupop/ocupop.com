@@ -32,10 +32,12 @@
       z-index: -1;
       @include transition(0.3s);
     }
-    &:hover {
-      color: $light !important;
-      &::after {
-        height: 100%;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        color: $light !important;
+        &::after {
+          height: 100%;
+        }
       }
     }
   }
