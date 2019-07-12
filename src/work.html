@@ -33,7 +33,7 @@ testimonial:
     {% assign project =  site.projects | where: "slug", object | first %}
     {% if project.status == "active" %}
     <div class="mix position-relative col-lg-6 {% for tag in project.tags %} {{ tag }}{% endfor %}">
-      <a href="{{ project.url }}" class="project-item">
+      <a href="{{ project.url }}" class="project-item slide-up">
         <div class="bg-image aspect-2x1" style="background-image: url({{ project.featured_image }})"></div>
         <div class="hover-overlay">
           <div class="overlay-content">
