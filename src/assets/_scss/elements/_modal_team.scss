@@ -20,7 +20,10 @@
   .close {
     font-family: $font-family-secondary;
     font-size: 30px;
-    color: $dark;
+    color: $white;
+    background: $dark;
+    padding-left: 5px;
+    padding-right: 5px;
     position: absolute;
     top: 5px;
     right: 15px;
@@ -29,8 +32,8 @@
     border: 0;
     font-weight: 200;
     z-index: 2000;
-    @include media-breakpoint-down(sm) {
-      color: $white;
+    &:hover {
+      cursor: pointer;
     }
   }
 }

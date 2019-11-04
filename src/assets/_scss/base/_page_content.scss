@@ -2,7 +2,9 @@
   padding-top: 80px;
   background-color: $white;
   @include transition(padding-top, .25s);
-  overflow: hidden;
+  @include media-breakpoint-down(md) {
+    overflow: hidden;
+  }
   &.navbar-open {
     padding-top: 90px;
   }
