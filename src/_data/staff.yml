@@ -68,13 +68,6 @@
   what_you_want_to_be_when_you_grow_up: LEGO Minifigure
   catch_phrase: Alrighty!
   image: /uploads/ocupop-about-alex.jpg
-- name: Blythe Jewell
-  role: Content Strategist
-  preferred_title: Oxford Comma Activist
-  spirit_animal:
-  what_you_want_to_be_when_you_grow_up: Someone with really great hair
-  catch_phrase: It's such a fine line between stupid and clever.
-  image: /uploads/blythe-3.jpg
 - name: Claire Lafontaine
   role: Studio Manager
   preferred_title: 'Naturalist, Explorer'
@@ -103,3 +96,10 @@
   what_you_want_to_be_when_you_grow_up: Botanist on Mars
   catch_phrase: 'This is fine, everything is fine'
   image: /uploads/ocupop-about-cody.jpg
+- name: Jess Smith
+  role: Junior Designer
+  preferred_title: Professional Goofball
+  spirit_animal:
+  what_you_want_to_be_when_you_grow_up: Happy!
+  catch_phrase: Remember to wear sunscreen
+  image: /uploads/jess-headshot.jpeg
