@@ -1,1 +1,1 @@
-/forms/questionaire/ /forms/questionnaire
+/message-strategy/questionaire/ /message-strategy/questionnaire
