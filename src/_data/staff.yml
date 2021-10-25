@@ -1,5 +1,5 @@
 - name: Michael Nieling
-  role: 'Founder, Creative Director'
+  role: Founder, Creative Director
   preferred_title: Chief Mathlete
   spirit_animal: Wolf
   what_you_want_to_be_when_you_grow_up: Soccer coach and artisanal dog walker
@@ -41,14 +41,14 @@
   catch_phrase: Byeeeee
   image: /uploads/ocupop-about-abby.jpg
 - name: Chris Walker
-  role: 'Art Director, Designer'
+  role: Art Director, Designer
   preferred_title: Wire Manager
   spirit_animal: Fox
   what_you_want_to_be_when_you_grow_up: Quieter
   catch_phrase: One more?
   image: /uploads/ocupop-about-chris.jpg
 - name: Jenny Vanderheiden
-  role: 'Art Director, Designer'
+  role: Art Director, Designer
   preferred_title: Office Shaman
   spirit_animal: Hummingbird
   what_you_want_to_be_when_you_grow_up: Traveling Artist
@@ -59,7 +59,7 @@
   preferred_title: Sport/Champ/Kiddo
   spirit_animal: Owl
   what_you_want_to_be_when_you_grow_up: Kanye West
-  catch_phrase: "\U0001F30A\U0001F30A\U0001F30A"
+  catch_phrase: 🌊🌊🌊
   image: /uploads/ocupop-about-nate.jpg
 - name: Alex Lahr
   role: Lead Strategist & Writer
@@ -70,7 +70,7 @@
   image: /uploads/ocupop-about-alex.jpg
 - name: Claire Lafontaine
   role: Studio Manager
-  preferred_title: 'Naturalist, Explorer'
+  preferred_title: Naturalist, Explorer
   spirit_animal: Dolphin
   what_you_want_to_be_when_you_grow_up: A sheep farmer and herbalist
   catch_phrase: Look! A tiny flower!
@@ -94,7 +94,7 @@
   preferred_title: Coder
   spirit_animal:
   what_you_want_to_be_when_you_grow_up: Botanist on Mars
-  catch_phrase: 'This is fine, everything is fine'
+  catch_phrase: This is fine, everything is fine
   image: /uploads/ocupop-about-cody.jpg
 - name: Jess Smith
   role: Junior Designer
@@ -103,3 +103,10 @@
   what_you_want_to_be_when_you_grow_up: Happy!
   catch_phrase: Remember to wear sunscreen
   image: /uploads/jess-headshot.jpeg
+- name: Maggie Laughner
+  role: Designer
+  preferred_title: Chief Lunch Officer
+  spirit_animal:
+  what_you_want_to_be_when_you_grow_up: Long-haul truck driver
+  catch_phrase: Cool. Cool cool cool cool cool.
+  image: /uploads/img-6610.jpeg
