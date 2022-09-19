@@ -89,13 +89,6 @@
   what_you_want_to_be_when_you_grow_up: Botanist on Mars
   catch_phrase: This is fine, everything is fine
   image: /uploads/ocupop-about-cody.jpg
-- name: Jess Smith
-  role: Junior Designer
-  preferred_title: Professional Goofball
-  spirit_animal:
-  what_you_want_to_be_when_you_grow_up: Happy!
-  catch_phrase: Remember to wear sunscreen
-  image: /uploads/jess-headshot.jpeg
 - name: Maggie Laughner
   role: Designer
   preferred_title: Chief Lunch Officer
@@ -103,3 +96,10 @@
   what_you_want_to_be_when_you_grow_up: Long-haul truck driver
   catch_phrase: Cool. Cool cool cool cool cool.
   image: /uploads/img-6610.jpeg
+- name: Adam Rosenbaum
+  role: Motion Designer
+  preferred_title: Walt Disney
+  spirit_animal:
+  what_you_want_to_be_when_you_grow_up: Risograph Print Specialist
+  catch_phrase: Alright, later guys.
+  image: /uploads/adam.jpg
