@@ -20,7 +20,7 @@
   catch_phrase:
   image: /uploads/ocupop-about-jeff.jpg
 - name: Nick Krusick
-  role: Senior Art Director
+  role: Associate Creative Director
   preferred_title: Kickflip Subject-Matter-Expert
   spirit_animal: Blue Jay
   what_you_want_to_be_when_you_grow_up: Craigslist PowerSeller
@@ -34,7 +34,7 @@
   catch_phrase: Deesh!
   image: /uploads/jon-profile.jpg
 - name: Abby Ruminski
-  role: Senior Art Director - Design
+  role: Associate Creative Director
   preferred_title: Snack Sorceress
   spirit_animal: Otter
   what_you_want_to_be_when_you_grow_up: Farmer or nail art influencer
@@ -62,7 +62,7 @@
   catch_phrase: 🌊🌊🌊
   image: /uploads/ocupop-about-nate.jpg
 - name: Alex Lahr
-  role: Lead Strategist & Writer
+  role: Associate Creative Director
   preferred_title: Colonel Mustard
   spirit_animal: Owl
   what_you_want_to_be_when_you_grow_up: LEGO Minifigure
@@ -89,13 +89,6 @@
   what_you_want_to_be_when_you_grow_up: Botanist on Mars
   catch_phrase: This is fine, everything is fine
   image: /uploads/ocupop-about-cody.jpg
-- name: Maggie Laughner
-  role: Designer
-  preferred_title: Chief Lunch Officer
-  spirit_animal:
-  what_you_want_to_be_when_you_grow_up: Long-haul truck driver
-  catch_phrase: Cool. Cool cool cool cool cool.
-  image: /uploads/img-6610.jpeg
 - name: Adam Rosenbaum
   role: Motion Designer
   preferred_title: Walt Disney
