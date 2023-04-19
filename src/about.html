@@ -97,7 +97,7 @@ testimonial:
     {% for member in site.data.staff %}
     <div class="col-md-4">
       <div class="position-relative">
-        <a href="#" class="bg-image aspect-1x1 border-0" style="background-image: url({{ member.image | default: 'https://placehold.co/600x600/494949/FFFFFF/?text=' }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
+        <a href="#" class="bg-image aspect-1x1 border-0" style="background-image: url({{ member.image | default: 'https://placehold.co/600x600/494949/494949/?text=' }})" data-toggle="modal" data-target=".team-modal-{{ forloop.index }}">
           <div class="hover-overlay text-white">
             <div class="hover-content">
               <p class="hover-primary-text">{{ member.name }}</p>
