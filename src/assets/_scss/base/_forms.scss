@@ -277,7 +277,7 @@
     float: none;
     border: 1px solid $black;
     color: $black;
-    background-color: transparent;
+    background-color: transparent !important;
     font-family: $font-family-secondary;
     text-transform: uppercase;
     margin: 0;
