@@ -106,7 +106,7 @@
     }
   }
 
-  .c-button {
+  .cog-button--primary {
     padding: 0.375rem 1.25rem;
     margin: 1rem 8px;
     background-color: $dark;
@@ -131,7 +131,7 @@
     }
   }
 
-  .c-forms-form {
+  .cog-form__container {
     &:focus {
       outline: none;
     }
@@ -188,7 +188,7 @@
       padding: 0;
       font-weight: 600;
     }
-    .c-editor {
+    .cog-input {
       padding-left: 0;
       // padding-right: 0;
       background-color: transparent;
@@ -272,7 +272,7 @@
     //   width: 100%;
     // }
   }
-  #c-submit-button {
+  .cog-button--primary {
     border-radius: 0;
     float: none;
     border: 1px solid $black;
