@@ -28,8 +28,11 @@
 
 .el-checkbox__label {
   padding-left: 27px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 #contact-form .cog-cognito .cog-input input {
   border-bottom: 1px solid #000;
 }
+
