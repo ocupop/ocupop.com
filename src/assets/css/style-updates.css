@@ -1,5 +1,5 @@
 
-.cog-cognito .cog-button--primary {
+.cog-cognito .cog-form__container .cog-button--primary {
   padding: 0.375rem 1.25rem !important;
   border-radius: 0 !important;
   float: none !important;
@@ -8,4 +8,8 @@
   background-color: transparent !important;
   text-transform: uppercase !important;
   margin: 0 !important;
+}
+
+.cog-cognito .cog-input {
+
 }
