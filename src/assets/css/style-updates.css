@@ -1,0 +1,11 @@
+/* jon was here */
+.cog-cognito .cog-button--primary {
+  padding: 0.375rem 1.25rem;
+  border-radius: 0;
+  float: none;
+  border: 1px solid #000;
+  color: #000;
+  background-color: transparent !important;
+  text-transform: uppercase;
+  margin: 0;
+}
