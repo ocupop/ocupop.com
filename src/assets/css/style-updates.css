@@ -11,6 +11,15 @@
   margin: 0 !important;
   height: 40px !important;
   line-height: 1 !important;
+  font-family: "roboto-condensed", Helvetica, Arial, sans-serif !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
+}
+
+.cog-cognito .cog-button--secondary {
+  border-radius: 0 !important;
+  text-transform: uppercase !important;
+  font-weight: 800 !important;
 }
 
 .cog-cognito .cog-label {
@@ -24,4 +33,3 @@
 #contact-form .cog-cognito .cog-input input {
   border-bottom: 1px solid #000;
 }
-
