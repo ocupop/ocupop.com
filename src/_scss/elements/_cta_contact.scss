@@ -1,0 +1,36 @@
+#cta-contact {
+  p {
+    font-family: $font-family-secondary;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  a {
+    color: $white;
+    &.arrow-right {
+      padding-right: 75px;
+      position: relative;
+      &::after {
+        content: "";
+        display: block;
+        width: 75px;
+        height: 25px;
+        position: absolute;
+        right: 0;
+        bottom: 12px;
+        background-image: url("/img/arrow-right.png");
+        background-size: cover;
+      }
+    }
+  }
+}
+
+.weather-zone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  border-top: 1px solid $white;
+  &:last-of-type {
+    border-bottom: 1px solid $white;
+  }
+}
