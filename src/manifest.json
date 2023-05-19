@@ -3,12 +3,12 @@
   "name": "Ocupop",
   "icons": [
     {
-      "src": "/assets/img/manifest-192x192.png",
+      "src": "/img/manifest-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/assets/img/manifest-512x512.png",
+      "src": "/img/manifest-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
