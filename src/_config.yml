@@ -13,7 +13,7 @@ placeholders:
   aspect-1x1: /img/768x768.png
 
 socialshare:
-  featured_image: assets/img/socialshare.png
+  featured_image: /img/socialshare.png
   twitter:
     username: '@Ocupop'
     image:
