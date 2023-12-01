@@ -1,1 +1,2 @@
 /message-strategy/questionaire/ /message-strategy/questionnaire
+/ocubits/ https://main--656781b542818268e49a34e7.chromatic.com/
