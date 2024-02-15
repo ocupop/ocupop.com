@@ -1,7 +1,7 @@
 ---
 layout: none
 title: Team
-permalink: api/staff.json
+permalink: api/team.json
 ---
 [
 {% for member in site.data.staff %}
@@ -13,7 +13,7 @@ permalink: api/staff.json
     "what_you_want_to_be_when_you_grow_up": {{ member['what_you_want_to_be_when_you_grow_up'] | jsonify }},
     "catch_phrase": {{ member['catch_phrase'] | jsonify }},
     "image": {{ member['image'] | prepend: site.baseurl | jsonify }},
-    "bio": {{ member['bio_html'] | jsonify }}"
+    "bio": {{ member['bio_html'] | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]
