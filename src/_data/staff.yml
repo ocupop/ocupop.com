@@ -1,133 +1,151 @@
 - name: Michael Nieling
+  email:
   role: Founder, Creative Director
   preferred_title: Chief Mathlete
-  spirit_animal: Wolf
   what_you_want_to_be_when_you_grow_up: Soccer coach and artisanal dog walker
   catch_phrase: Fuck No. Shit Yeah!
   image: /uploads/ocupop-about-michael.jpg
+  bio_html:
 - name: Tom Beck
+  email:
   role: Technical Director
   preferred_title: Hey You!
-  spirit_animal: Tiger
   what_you_want_to_be_when_you_grow_up: Older
   catch_phrase:
   image: /uploads/ocupop-about-tom.jpg
+  bio_html:
 - name: Jeff Hamlett
+  email:
   role: Developer
   preferred_title: Hypertext Markup Linguist
-  spirit_animal: Peacock
   what_you_want_to_be_when_you_grow_up: Beastie Boy
   catch_phrase:
   image: /uploads/ocupop-about-jeff.jpg
+  bio_html:
 - name: Nick Krusick
+  email:
   role: Associate Creative Director
   preferred_title: Kickflip Subject-Matter-Expert
-  spirit_animal: Blue Jay
   what_you_want_to_be_when_you_grow_up: Craigslist PowerSeller
   catch_phrase: Nah. Nahh.
   image: /uploads/nick-ocupop-headshot.jpg
+  bio_html:
 - name: Jon Burr
+  email:
   role: Developer
   preferred_title: Boardmaster
-  spirit_animal: Bear
   what_you_want_to_be_when_you_grow_up: Space Wizard
   catch_phrase: Deesh!
   image: /uploads/jon.jpg
+  bio_html:
 - name: Abby Ruminski
+  email:
   role: Associate Creative Director
   preferred_title: Snack Sorceress
-  spirit_animal: Otter
   what_you_want_to_be_when_you_grow_up: Farmer or nail art influencer
   catch_phrase: Byeeeee
   image: /uploads/img-1617.jpeg
+  bio_html:
 - name: Chris Walker
+  email:
   role: Art Director, Designer
   preferred_title: Wire Manager
-  spirit_animal: Fox
   what_you_want_to_be_when_you_grow_up: Quieter
   catch_phrase: One more?
   image: /uploads/ocupop-about-chris.jpg
+  bio_html:
 - name: Jenny Vanderheiden
+  email:
   role: Art Director, Designer
   preferred_title: Office Shaman
-  spirit_animal: Hummingbird
   what_you_want_to_be_when_you_grow_up: Traveling Artist
   catch_phrase: It's like magic!
   image: /uploads/ocupop-about-jenny.jpg
+  bio_html:
 - name: Nathaniel Fostan
+  email:
   role: Developer
   preferred_title: Sport/Champ/Kiddo
-  spirit_animal: Owl
   what_you_want_to_be_when_you_grow_up: Kanye West
   catch_phrase: 🌊🌊🌊
   image: /uploads/ocupop-about-nate.jpg
+  bio_html:
 - name: Alex Lahr
+  email:
   role: Associate Creative Director
   preferred_title: Colonel Mustard
-  spirit_animal: Owl
   what_you_want_to_be_when_you_grow_up: LEGO Minifigure
   catch_phrase: Alrighty!
   image: /uploads/ocupop-about-alex.jpg
+  bio_html:
 - name: Claire Lafontaine
+  email:
   role: Studio Manager
   preferred_title: Naturalist, Explorer
-  spirit_animal: Dolphin
   what_you_want_to_be_when_you_grow_up: A sheep farmer and herbalist
   catch_phrase: Look! A tiny flower!
   image: /uploads/Claire_Headshot_OcupopWeb.jpg
+  bio_html:
 - name: Shelly Robertson
+  email:
   role: Designer
   preferred_title: Benevolent Mother of Cats
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Best dressed lady at the estate sale
   catch_phrase: It's all about mental boundaries
   image: /uploads/ocupop-about-shelly.jpg
+  bio_html:
 - name: Cody Nicoll
+  email:
   role: Developer
   preferred_title: Coder
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Botanist on Mars
   catch_phrase: This is fine, everything is fine
   image: /uploads/ocupop-about-cody.jpg
+  bio_html:
 - name: Adam Rosenbaum
+  email:
   role: Motion Designer
   preferred_title: Walt Disney
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Risograph Print Specialist
   catch_phrase: Alright, later guys.
   image: /uploads/adam.jpg
+  bio_html:
 - name: Morgan Schumacher
+  email:
   role: Project Manager
   preferred_title: Swiftie
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Reality TV contestant turned Reality TV Host
   catch_phrase: woooooooooow
   image: /uploads/16709464-2361-4181-85b8-3c12d5ac3aca-1-105-c.jpeg
+  bio_html:
 - name: Nicki Gamroth
+  email:
   role: Designer
   preferred_title: Renaissance Woman
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Silly
   catch_phrase: You good bro?
   image: /uploads/nicki-gamroth-headshot-1440x1080.jpg
+  bio_html:
 - name: Heather Kutzke
+  email:
   role: Project Manager
   preferred_title: Creative Wrangler
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Professional Thrift Shopper
   catch_phrase: Dude! (or Oh, Word?) - i cannot decide lol:)
   image: /uploads/headshot-2.jpg
+  bio_html:
 - name: Hannah Gilbertson
+  email:
   role: Project Coordinator
   preferred_title: Wyatt and Robby's Momma
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Professional Homesteader
   catch_phrase: Holy balls
   image: /uploads/acs-0414.jpg
+  bio_html:
 - name: Kaylee Bird
+  email:
   role: Junior Designer
   preferred_title: Puter Drawer
-  spirit_animal:
   what_you_want_to_be_when_you_grow_up: Big and strong
   catch_phrase: I don't fib or play
   image: /uploads/kaylee-headshot.jpeg
