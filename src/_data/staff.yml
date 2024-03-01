@@ -1,21 +1,83 @@
 - name: Michael Nieling
-  email:
+  email: m@ocupop.com
   role: Founder, Creative Director
   preferred_title: Chief Mathlete
   what_you_want_to_be_when_you_grow_up: Soccer coach and artisanal dog walker
   catch_phrase: Fuck No. Shit Yeah!
   image: /uploads/ocupop-about-michael.jpg
-  bio_html: ''
+  bio_html: >-
+    <p>Michael Nieling is a designer, educator, husband, father, and full time
+    spaz. Splitting time between studios in Hawaii, British Columbia,
+    California, and Wisconsin, if he's not on an airplane, he's likely somewhere
+    shouting about branding and design.</p><p>Michael has been helping to define
+    the visual language of our digital experience since 2000. As Creative
+    Director and founder of Ocupop, he has led projects for companies,
+    foundations, and non-profits at all ends of the spectrum - from Google,
+    Facebook and Mozilla to countless successful (and horribly failed) startups
+    to cause-driven work with ProPublica, FIRST, ReFED, and the IRC and W3C,
+    Michael has directed his small, super-powered team in creating some of the
+    most influential logos, campaigns, and user interfaces on the web and
+    beyond.</p><p>Prior to founding Ocupop, Michael received his Masters of
+    Science in Mechanical Engineering from the University of Wisconsin with a
+    focus on product design. His graduate studies centered around hybrid vehicle
+    powertrain research for the Environmental Protection Agency and Ford Motor
+    Company. Michael lives in Kahala on the island of Oahu and tries to surf,
+    skate, and snowboard as often as possible—working hard to keep up with his
+    daughter Izzy and son Håkan.</p>
+- name: Peter Lubbers
+  email: p@ocupop.com
+  role: Chief Operations Officer
+  preferred_title: ''
+  what_you_want_to_be_when_you_grow_up: ''
+  catch_phrase: ''
+  image: /uploads/peter.jpeg
+  bio_html: >-
+    <p>Peter Lubbers fuses operational expertise with a deep insight into
+    critical user journeys and business strategy. As a Developer Relations
+    Director at Google, Peter established himself as a trailblazer in impactful,
+    scalable developer content production, educating, informing, and inspiring
+    millions of developers globally.</p><p>Author of "Pro HTML5 Programming"
+    (Apress) and founder of the San Francisco HTML5 Developer Meetup (the
+    world’s largest web developer community), Peter's passion for technology
+    transcends the digital realm; and, yes, he's indeed the proud owner of that
+    HTML5 license plate!</p><p>As the Chief Operating Officer at Ocupop, Peter
+    ensures that strategic foresight underpins every project, always emphasizing
+    a balance between visionary ambitions and on-the-ground reality, all while
+    nurturing a robust 'Business Owner Thinking' ethos.&nbsp;</p><p>Away from
+    his desk, Peter is either spending quality time with his wife Vittoria and
+    two sons Sean and Rocky, running around the trails of the Tahoe National
+    Forest, or jumping out of a plane (with a parachute), capturing the essence
+    of every exhilarating moment.</p>
 - name: Tom Beck
-  email:
+  email: t@ocupop.com
   role: Technical Director
   preferred_title: Hey You!
   what_you_want_to_be_when_you_grow_up: Older
   catch_phrase:
   image: /uploads/ocupop-about-tom.jpg
-  bio_html:
+  bio_html: >-
+    <p>Tom Beck thrives in the uncommon space between. Between engineering and
+    design; between constant motion and careful consideration; between the
+    impossibly taxing and the insanely relaxing. Tom excels equally on both ends
+    of a unique duality and at every point in between. As the Chief Technical
+    Officer of Ocupop, Tom has led the firm’s tight team of designers,
+    developers and strategists to create revolutionary user experiences,
+    applications, and brand activations for clients large and small.</p><p>From
+    Google and Mozilla to IRC, Sustainable America, and the Mott Foundation, Tom
+    connects the inspiration and energy of Ocupop’s category-defining designs
+    with its groundbreaking engineering output. Just as comfortable defining
+    data models as he is in debating design details, Tom’s unique perspective
+    and unending enthusiasm for getting shit done makes every Ocupop employee,
+    client and colleague more productive, more successful, and just plain
+    happier to be alive.</p><p>Prior to joining Ocupop, Tom received his BS from
+    University of Colorado, Boulder before working extensively for Merrill Lynch
+    on global event concepting and production.&nbsp; Equally at home in the
+    mountains of British Columbia as in the barrel at Honolua Bay, the Beck’s
+    (Tom, Nicole, Evan and Leila) stay on the move, splitting time between
+    Whistler and Maui, making sure to make the most of both extremes…and each
+    and every minute in between.</p>
 - name: Jeff Hamlett
-  email:
+  email: j@ocupop.com
   role: Developer
   preferred_title: Hypertext Markup Linguist
   what_you_want_to_be_when_you_grow_up: Beastie Boy
@@ -23,7 +85,7 @@
   image: /uploads/ocupop-about-jeff.jpg
   bio_html:
 - name: Nick Krusick
-  email:
+  email: n@ocupop.com
   role: Associate Creative Director
   preferred_title: Kickflip Subject-Matter-Expert
   what_you_want_to_be_when_you_grow_up: Craigslist PowerSeller
@@ -31,7 +93,7 @@
   image: /uploads/nick-ocupop-headshot.jpg
   bio_html:
 - name: Jon Burr
-  email:
+  email: jon@ocupop.com
   role: Developer
   preferred_title: Boardmaster
   what_you_want_to_be_when_you_grow_up: Space Wizard
@@ -39,7 +101,7 @@
   image: /uploads/jon.jpg
   bio_html:
 - name: Abby Ruminski
-  email:
+  email: a@ocupop.com
   role: Associate Creative Director
   preferred_title: Snack Sorceress
   what_you_want_to_be_when_you_grow_up: Farmer or nail art influencer
@@ -47,7 +109,7 @@
   image: /uploads/img-1617.jpeg
   bio_html:
 - name: Chris Walker
-  email:
+  email: c@ocupop.com
   role: Art Director, Designer
   preferred_title: Wire Manager
   what_you_want_to_be_when_you_grow_up: Quieter
@@ -55,7 +117,7 @@
   image: /uploads/ocupop-about-chris.jpg
   bio_html:
 - name: Jenny Vanderheiden
-  email:
+  email: jenny@ocupop.com
   role: Art Director, Designer
   preferred_title: Office Shaman
   what_you_want_to_be_when_you_grow_up: Traveling Artist
@@ -63,7 +125,7 @@
   image: /uploads/ocupop-about-jenny.jpg
   bio_html:
 - name: Nathaniel Fostan
-  email:
+  email: nate@ocupop.com
   role: Developer
   preferred_title: Sport/Champ/Kiddo
   what_you_want_to_be_when_you_grow_up: Kanye West
@@ -71,7 +133,7 @@
   image: /uploads/ocupop-about-nate.jpg
   bio_html:
 - name: Alex Lahr
-  email:
+  email: alex@ocupop.com
   role: Associate Creative Director
   preferred_title: Colonel Mustard
   what_you_want_to_be_when_you_grow_up: LEGO Minifigure
@@ -79,7 +141,7 @@
   image: /uploads/ocupop-about-alex.jpg
   bio_html:
 - name: Claire Lafontaine
-  email:
+  email: claire@ocupop.com
   role: Studio Manager
   preferred_title: Naturalist, Explorer
   what_you_want_to_be_when_you_grow_up: A sheep farmer and herbalist
@@ -87,7 +149,7 @@
   image: /uploads/Claire_Headshot_OcupopWeb.jpg
   bio_html:
 - name: Shelly Robertson
-  email:
+  email: shelly@ocupop.com
   role: Designer
   preferred_title: Benevolent Mother of Cats
   what_you_want_to_be_when_you_grow_up: Best dressed lady at the estate sale
@@ -95,7 +157,7 @@
   image: /uploads/ocupop-about-shelly.jpg
   bio_html:
 - name: Cody Nicoll
-  email:
+  email: cody@ocupop.com
   role: Developer
   preferred_title: Coder
   what_you_want_to_be_when_you_grow_up: Botanist on Mars
@@ -103,7 +165,7 @@
   image: /uploads/ocupop-about-cody.jpg
   bio_html:
 - name: Adam Rosenbaum
-  email:
+  email: adam@ocupop.com
   role: Motion Designer
   preferred_title: Walt Disney
   what_you_want_to_be_when_you_grow_up: Risograph Print Specialist
@@ -111,7 +173,7 @@
   image: /uploads/adam.jpg
   bio_html:
 - name: Morgan Schumacher
-  email:
+  email: morgan@ocupop.com
   role: Project Manager
   preferred_title: Swiftie
   what_you_want_to_be_when_you_grow_up: Reality TV contestant turned Reality TV Host
@@ -119,7 +181,7 @@
   image: /uploads/16709464-2361-4181-85b8-3c12d5ac3aca-1-105-c.jpeg
   bio_html:
 - name: Nicki Gamroth
-  email:
+  email: nicki@ocupop.com
   role: Designer
   preferred_title: Renaissance Woman
   what_you_want_to_be_when_you_grow_up: Silly
@@ -127,7 +189,7 @@
   image: /uploads/nicki-gamroth-headshot-1440x1080.jpg
   bio_html:
 - name: Heather Kutzke
-  email:
+  email: heather@ocupop.com
   role: Project Manager
   preferred_title: Creative Wrangler
   what_you_want_to_be_when_you_grow_up: Professional Thrift Shopper
@@ -135,7 +197,7 @@
   image: /uploads/headshot-2.jpg
   bio_html:
 - name: Hannah Gilbertson
-  email:
+  email: hannah@ocupop.com
   role: Project Coordinator
   preferred_title: Wyatt and Robby's Momma
   what_you_want_to_be_when_you_grow_up: Professional Homesteader
@@ -143,7 +205,7 @@
   image: /uploads/acs-0414.jpg
   bio_html:
 - name: Kaylee Bird
-  email:
+  email: kaylee@ocupop.com
   role: Junior Designer
   preferred_title: Puter Drawer
   what_you_want_to_be_when_you_grow_up: Big and strong
