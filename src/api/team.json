@@ -12,7 +12,7 @@ permalink: api/team.json
     "preferred_title": {{ member['preferred_title'] | jsonify }},
     "what_you_want_to_be_when_you_grow_up": {{ member['what_you_want_to_be_when_you_grow_up'] | jsonify }},
     "catch_phrase": {{ member['catch_phrase'] | jsonify }},
-    "image": {{ member['image'] | prepend: site.baseurl | jsonify }},
+    "image": {{ member['image'] | prepend: site.url | jsonify }},
     "bio": {{ member['bio_html'] | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}
