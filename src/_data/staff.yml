@@ -27,9 +27,9 @@
 - name: Peter Lubbers
   email: p@ocupop.com
   role: Chief Operations Officer
-  preferred_title: ''
-  what_you_want_to_be_when_you_grow_up: ''
-  catch_phrase: ''
+  preferred_title: Chief Endurance Officer
+  what_you_want_to_be_when_you_grow_up: Real
+  catch_phrase: ' Let’s go! '
   image: /uploads/peter.jpg
   bio_html: >-
     <p>Peter Lubbers fuses operational expertise with a deep insight into
@@ -140,13 +140,13 @@
   catch_phrase: Alrighty!
   image: /uploads/ocupop-about-alex.jpg
   bio_html:
-- name: Claire Lafontaine
+- name: Claire LaFontaine
   email: claire@ocupop.com
   role: Studio Manager
   preferred_title: Naturalist, Explorer
   what_you_want_to_be_when_you_grow_up: A sheep farmer and herbalist
   catch_phrase: Look! A tiny flower!
-  image: /uploads/Claire_Headshot_OcupopWeb.jpg
+  image: /uploads/ocupop-team-claire-lafontaine.jpg
   bio_html:
 - name: Shelly Robertson
   email: shelly@ocupop.com
@@ -198,7 +198,7 @@
   bio_html:
 - name: Hannah Gilbertson
   email: hannah@ocupop.com
-  role: Project Coordinator
+  role: Project Manager
   preferred_title: Wyatt and Robby's Momma
   what_you_want_to_be_when_you_grow_up: Professional Homesteader
   catch_phrase: Holy balls
@@ -211,3 +211,24 @@
   what_you_want_to_be_when_you_grow_up: Big and strong
   catch_phrase: I don't fib or play
   image: /uploads/kaylee-headshot.jpeg
+- name: Sophia Serrano
+  email: sophia@ocupop.com
+  role: Junior Designer
+  preferred_title: Creative tinkerer & visionary
+  what_you_want_to_be_when_you_grow_up: Own a street taco food truck
+  catch_phrase: Sounds good to me!
+  image: /uploads/ocupop-team-sophia-serrano.jpg
+- name: Chelsea Graham
+  email: chelsea@ocupop.com
+  role: 'Senior Strategist '
+  preferred_title: Information Jedi
+  what_you_want_to_be_when_you_grow_up: Roller derby pro
+  catch_phrase: Thanks, it’s vintage!
+  image: /uploads/ocupop-team-chelsea-graham.jpg
+- name: Paul Stroot
+  email: p@ocupop.com
+  role: Front End Developer
+  preferred_title: JAMstack stuntman
+  what_you_want_to_be_when_you_grow_up: Endearingly inappropriate.
+  catch_phrase: I gots to do what I gots to do
+  image: /uploads/ocupop-team-paul-stroot.jpg
