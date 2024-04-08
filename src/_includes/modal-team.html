@@ -14,12 +14,18 @@
               <div class="content">
                 <h1>{{ member.name }}</h1>
                 <dl class="mt-4">
-                  <dt>Title</dt>
-                  <dd>{{ member.role}}</dd>
-                  <dt>Title you prefer</dt>
-                  <dd>{{ member.preferred_title }}</dd>
-                  <dt>What you want to be when you grow up</dt>
-                  <dd>{{ member.what_you_want_to_be_when_you_grow_up }}</dd>
+                  {% if member.role %}
+                    <dt>Title</dt>
+                    <dd>{{ member.role}}</dd>
+                  {% endif %}
+                  {% if member.preferred_title %}
+                    <dt>Title you prefer</dt>
+                    <dd>{{ member.preferred_title }}</dd>
+                  {% endif %}
+                  {% if member.what_you_want_to_be_when_you_grow_up %}
+                    <dt>What you want to be when you grow up</dt>
+                    <dd>{{ member.what_you_want_to_be_when_you_grow_up }}</dd>
+                  {% endif %}
                   {% if member.catch_phrase %}
                     <dt>Catch Phrase</dt>
                     <dd>{{ member.catch_phrase }}</dd>
