@@ -53,7 +53,7 @@
   role: Chief Technical Officer
   preferred_title: Hey You!
   what_you_want_to_be_when_you_grow_up: Older
-  catch_phrase:
+  catch_phrase: Right on!
   image: /uploads/ocupop-about-tom.jpg
   bio_html: >-
     <p>Tom Beck thrives in the uncommon space between. Between engineering and
@@ -81,7 +81,7 @@
   role: Developer
   preferred_title: Hypertext Markup Linguist
   what_you_want_to_be_when_you_grow_up: Beastie Boy
-  catch_phrase:
+  catch_phrase: Hummus
   image: /uploads/ocupop-about-jeff.jpg
   bio_html:
 - name: Nick Krusick
@@ -217,7 +217,7 @@
   preferred_title: Creative tinkerer & visionary
   what_you_want_to_be_when_you_grow_up: Own a street taco food truck
   catch_phrase: Sounds good to me!
-  image: /uploads/ocupop-team-sophia-serrano.jpg
+  image: /uploads/sophia-headshot.jpg
 - name: Chelsea Graham
   email: chelsea@ocupop.com
   role: 'Senior Strategist '
@@ -226,7 +226,7 @@
   catch_phrase: Thanks, it’s vintage!
   image: /uploads/ocupop-team-chelsea-graham.jpg
 - name: Paul Stroot
-  email: p@ocupop.com
+  email: paul@ocupop.com
   role: Front End Developer
   preferred_title: JAMstack stuntman
   what_you_want_to_be_when_you_grow_up: Endearingly inappropriate.
