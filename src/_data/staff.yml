@@ -124,12 +124,12 @@
   catch_phrase: It's like magic!
   image: /uploads/ocupop-about-jenny.jpg
   bio_html:
-- name: Nathaniel Fostan
+- name: Nate Perry
   email: nate@ocupop.com
   role: Developer
   preferred_title: Sport/Champ/Kiddo
-  what_you_want_to_be_when_you_grow_up: Kanye West
-  catch_phrase: 🌊🌊🌊
+  what_you_want_to_be_when_you_grow_up: Heavy weight champion
+  catch_phrase: Did you know this song is about his stepdad?
   image: /uploads/ocupop-about-nate.jpg
   bio_html:
 - name: Alex Lahr
@@ -206,7 +206,7 @@
   bio_html:
 - name: Kaylee Bird
   email: kaylee@ocupop.com
-  role: Designer
+  role: Junior Designer
   preferred_title: Puter Drawer
   what_you_want_to_be_when_you_grow_up: Big and strong
   catch_phrase: I don't fib or play
