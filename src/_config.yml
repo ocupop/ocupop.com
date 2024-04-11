@@ -69,6 +69,6 @@ project_statuses:
 defaults:
   -
     scope:
-      path: '/estimates/*'
+      path: estimates/**
     values:
       sitemap: false
