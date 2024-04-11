@@ -65,3 +65,10 @@ project_statuses:
   - draft
   - private
   - featured
+  
+defaults:
+  -
+    scope:
+      path: 'src/estimates/*'
+    values:
+      sitemap: false
