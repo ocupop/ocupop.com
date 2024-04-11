@@ -25,7 +25,7 @@ collections:
     layout: project
     permalink: /work/:path/
   focuses:
-    output: true
+    output: false
     layout: focus
     permalink: /focus/:title/
 
