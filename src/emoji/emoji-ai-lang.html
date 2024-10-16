@@ -1,0 +1,208 @@
+<!DOCTYPE html><html><head><base href="https://example.com/"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Human emoji to AI lang.</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  #game-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 100%;
+  }
+  #emoji-input, #guess-output {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  #emoji-input {
+    background-color: #f9f9f9;
+    cursor: default;
+  }
+  #emoji-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .category {
+    background-color: #e6f3ff;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .category:hover {
+    background-color: #b3d9ff;
+  }
+  #emoji-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 5px;
+    margin-top: 10px;
+  }
+  .emoji {
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .emoji:hover {
+    background-color: #e6f3ff;
+  }
+  h1 {
+    color: #4a4a4a;
+    text-align: center;
+  }
+  #clear-button {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  #clear-button:hover {
+    background-color: #ff4757;
+  }
+</style>
+</head>
+<body>
+  <div id="game-container">
+    <h1>Human emoji to AI  lang.</h1>
+    <input type="text" id="emoji-input" placeholder="Click emojis to build your sentence" readonly="">
+    <div id="guess-output">Your sentence will appear here...</div>
+    <button id="clear-button">Clear Sentence</button>
+    <div id="emoji-categories"></div>
+    <div id="emoji-list"></div>
+  </div>
+
+<script>
+const emojiCategories = {
+  "Smileys & People": ["😀", "😍", "🤔", "😎", "🤗", "😴", "👨", "👩", "👶"],
+  "Animals & Nature": ["🐶", "🐱", "🐼", "🦁", "🌳", "🌺", "🌙", "☀️", "❄️"],
+  "Food & Drink": ["🍎", "🍕", "🍔", "🍣", "🍵", "🍺", "🍩", "🥕", "🍓"],
+  "Activities": ["⚽️", "🏀", "🎸", "🎨", "🚴", "🏄", "🏋️", "🎮", "📚"],
+  "Travel & Places": ["🚗", "✈️", "🏠", "🏢", "🏔️", "🏖️", "🌆", "🚀", "🚲"],
+  "Objects": ["📱", "💻", "⌚️", "🎁", "🔑", "💡", "🔨", "✏️", "📷"]
+};
+
+const emojiToWord = {
+  "😀": "happy", "😍": "love", "🤔": "thinking", "😎": "cool", "🤗": "hug", "😴": "sleeping",
+  "👨": "man", "👩": "woman", "👶": "baby", "🐶": "dog", "🐱": "cat", "🐼": "panda",
+  "🦁": "lion", "🌳": "tree", "🌺": "flower", "🌙": "moon", "☀️": "sun", "❄️": "snow",
+  "🍎": "apple", "🍕": "pizza", "🍔": "burger", "🍣": "sushi", "🍵": "tea", "🍺": "beer",
+  "🍩": "donut", "🥕": "carrot", "🍓": "strawberry", "⚽️": "soccer", "🏀": "basketball",
+  "🎸": "guitar", "🎨": "art", "🚴": "cycling", "🏄": "surfing", "🏋️": "weightlifting",
+  "🎮": "gaming", "📚": "books", "🚗": "car", "✈️": "airplane", "🏠": "house", "🏢": "office",
+  "🏔️": "mountain", "🏖️": "beach", "🌆": "city", "🚀": "rocket", "🚲": "bicycle", "📱": "phone",
+  "💻": "computer", "⌚️": "watch", "🎁": "gift", "🔑": "key", "💡": "idea", "🔨": "hammer",
+  "✏️": "pencil", "📷": "camera"
+};
+
+function initializeGame() {
+  const categoriesContainer = document.getElementById('emoji-categories');
+  const emojiList = document.getElementById('emoji-list');
+  const emojiInput = document.getElementById('emoji-input');
+  const guessOutput = document.getElementById('guess-output');
+  const clearButton = document.getElementById('clear-button');
+
+  Object.keys(emojiCategories).forEach(category => {
+    const categoryElement = document.createElement('div');
+    categoryElement.textContent = category;
+    categoryElement.classList.add('category');
+    categoryElement.addEventListener('click', () => showEmojis(category));
+    categoriesContainer.appendChild(categoryElement);
+  });
+
+  function showEmojis(category) {
+    emojiList.innerHTML = '';
+    emojiCategories[category].forEach(emoji => {
+      const emojiElement = document.createElement('span');
+      emojiElement.textContent = emoji;
+      emojiElement.classList.add('emoji');
+      emojiElement.addEventListener('click', () => addEmoji(emoji));
+      emojiList.appendChild(emojiElement);
+    });
+  }
+
+  function addEmoji(emoji) {
+    emojiInput.value += emoji;
+    updateGuess();
+  }
+
+  function updateGuess() {
+    const emojis = Array.from(emojiInput.value);
+    const words = emojis.map(emoji => emojiToWord[emoji] || emoji);
+    const sentence = translateToSentence(words);
+    guessOutput.textContent = sentence;
+  }
+
+  function translateToSentence(words) {
+    if (words.length === 0) return 'Your sentence will appear here...';
+
+    const sentenceStructures = [
+      (s, v, o) => `The ${s} ${v} ${o}.`,
+      (s, v, o) => `${capitalize(s)} ${v} ${o}.`,
+      (s, v, o) => `There is a ${s} ${v} ${o}.`,
+      (s, v, o) => `I see a ${s} ${v} ${o}.`,
+    ];
+
+    let subject = words[0];
+    let verb = words.length > 1 ? getVerb(words[1]) : 'is';
+    let object = words.slice(2).join(' ');
+
+    if (words.length === 1) {
+      return `I see a ${subject}.`;
+    } else if (words.length === 2) {
+      return `The ${subject} is ${words[1]}.`;
+    }
+
+    const randomStructure = sentenceStructures[Math.floor(Math.random() * sentenceStructures.length)];
+    return randomStructure(subject, verb, object);
+  }
+
+  function getVerb(word) {
+    const verbMap = {
+      'happy': 'feels',
+      'love': 'loves',
+      'thinking': 'thinks about',
+      'cool': 'looks',
+      'hug': 'hugs',
+      'sleeping': 'sleeps on',
+      // Add more mappings as needed
+    };
+    return verbMap[word] || 'is';
+  }
+
+  function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  clearButton.addEventListener('click', () => {
+    emojiInput.value = '';
+    guessOutput.textContent = 'Your sentence will appear here...';
+  });
+
+  // Show the first category by default
+  showEmojis(Object.keys(emojiCategories)[0]);
+}
+
+document.addEventListener('DOMContentLoaded', initializeGame);
+</script>
+</body></html>

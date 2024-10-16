@@ -1,0 +1,162 @@
+<html><head><base href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Lang. to human emoji</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  #game-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  #prompt {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  #emoji-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .emoji {
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+  .emoji:hover {
+    transform: scale(1.2);
+  }
+  #selected-emojis {
+    font-size: 30px;
+    min-height: 40px;
+    margin-bottom: 20px;
+  }
+  #submit, #next {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #submit:hover, #next:hover {
+    background-color: #45a049;
+  }
+  #result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+  <div id="game-container">
+    <h1>Human Lang. to human emoji</h1>
+    <div id="prompt"></div>
+    <div id="emoji-options"></div>
+    <div id="selected-emojis"></div>
+    <button id="submit">Submit</button>
+    <button id="next" style="display: none;">Next Phrase</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const prompts = [
+      { phrase: "I love you to the moon and back", emojis: "❤️🌙🔙" },
+      { phrase: "Time flies like an arrow", emojis: "⏰✈️🏹" },
+      { phrase: "The early bird catches the worm", emojis: "🌅🐦🎣🐛" },
+      { phrase: "Actions speak louder than words", emojis: "🏃‍♂️🗣️📢" },
+      { phrase: "Every cloud has a silver lining", emojis: "☁️🥈➖" }
+    ];
+
+    const emojiOptions = [
+      "❤️", "🌙", "🔙", "⏰", "✈️", "🏹", "🌅", "🐦", "🎣", "🐛",
+      "🏃‍♂️", "🗣️", "📢", "☁️", "🥈", "➖", "🌞", "🌈", "🌊", "🍎"
+    ];
+
+    let currentPrompt;
+    let selectedEmojis = [];
+
+    const promptElement = document.getElementById("prompt");
+    const emojiOptionsElement = document.getElementById("emoji-options");
+    const selectedEmojisElement = document.getElementById("selected-emojis");
+    const submitButton = document.getElementById("submit");
+    const nextButton = document.getElementById("next");
+    const resultElement = document.getElementById("result");
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    function startNewRound() {
+      currentPrompt = prompts[Math.floor(Math.random() * prompts.length)];
+      promptElement.textContent = currentPrompt.phrase;
+      selectedEmojis = [];
+      selectedEmojisElement.textContent = "";
+      resultElement.textContent = "";
+      submitButton.style.display = "inline-block";
+      nextButton.style.display = "none";
+
+      shuffleArray(emojiOptions);
+      emojiOptionsElement.innerHTML = "";
+      emojiOptions.forEach(emoji => {
+        const emojiSpan = document.createElement("span");
+        emojiSpan.textContent = emoji;
+        emojiSpan.classList.add("emoji");
+        emojiSpan.onclick = () => selectEmoji(emoji);
+        emojiOptionsElement.appendChild(emojiSpan);
+      });
+    }
+
+    function selectEmoji(emoji) {
+      if (selectedEmojis.length < currentPrompt.emojis.length) {
+        selectedEmojis.push(emoji);
+        updateSelectedEmojis();
+      }
+    }
+
+    function updateSelectedEmojis() {
+      selectedEmojisElement.textContent = selectedEmojis.join("");
+    }
+
+    function submitAnswer() {
+      const correctEmojis = currentPrompt.emojis;
+      const isCorrect = selectedEmojis.join("") === correctEmojis;
+
+      if (isCorrect) {
+        resultElement.textContent = "Correct! Well done!";
+        resultElement.style.color = "green";
+      } else {
+        resultElement.textContent = `Incorrect. The correct answer was: ${correctEmojis}`;
+        resultElement.style.color = "red";
+      }
+
+      submitButton.style.display = "none";
+      nextButton.style.display = "inline-block";
+    }
+
+    submitButton.addEventListener("click", submitAnswer);
+    nextButton.addEventListener("click", startNewRound);
+
+    startNewRound();
+  </script>
+</body>
+</html>

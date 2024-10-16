@@ -1,0 +1,116 @@
+<html><head><base href="https://emoji-translator.com/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human emoji to human lang.</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .game-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  #emoji-display {
+    font-size: 72px;
+    margin: 20px 0;
+  }
+  #user-input {
+    font-size: 18px;
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  #submit-btn {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  #submit-btn:hover {
+    background-color: #45a049;
+  }
+  #result {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  #score {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Human emoji to human lang.</h1>
+    <p>Guess the meaning of the emoji sequence!</p>
+    <div id="emoji-display"></div>
+    <input type="text" id="user-input" placeholder="Enter your guess">
+    <button id="submit-btn">Submit</button>
+    <div id="result"></div>
+    <div id="score">Score: 0</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emoji-toolkit@7.0.0/lib/js/joypixels.min.js"></script>
+  <script>
+    const emojiPhrases = [
+      { emojis: "🌞🏖️🏄", phrase: "sunny beach surfing" },
+      { emojis: "🍕🎥🛋️", phrase: "pizza movie night" },
+      { emojis: "🚗💨⛰️", phrase: "road trip mountains" },
+      { emojis: "📚☕️🌙", phrase: "late night studying" },
+      { emojis: "🎭🎟️👏", phrase: "theater performance" },
+      { emojis: "🍳🥓🧇", phrase: "breakfast feast" },
+      { emojis: "🏋️‍♀️💪🥗", phrase: "fitness lifestyle" },
+      { emojis: "🎨🖌️🖼️", phrase: "painting artwork" },
+      { emojis: "🚀🌌👨‍🚀", phrase: "space exploration" },
+      { emojis: "🎸🥁🎤", phrase: "rock band concert" }
+    ];
+
+    let currentPhrase;
+    let score = 0;
+
+    function newGame() {
+      currentPhrase = emojiPhrases[Math.floor(Math.random() * emojiPhrases.length)];
+      document.getElementById('emoji-display').innerHTML = joypixels.shortnameToUnicode(currentPhrase.emojis);
+      document.getElementById('user-input').value = '';
+      document.getElementById('result').textContent = '';
+    }
+
+    function checkAnswer() {
+      const userGuess = document.getElementById('user-input').value.toLowerCase().trim();
+      const correctAnswer = currentPhrase.phrase.toLowerCase();
+
+      if (userGuess === correctAnswer) {
+        document.getElementById('result').textContent = "Correct! Well done!";
+        score++;
+      } else {
+        document.getElementById('result').textContent = `Sorry, the correct answer was: "${correctAnswer}"`;
+      }
+
+      document.getElementById('score').textContent = `Score: ${score}`;
+      setTimeout(newGame, 3000);
+    }
+
+    document.getElementById('submit-btn').addEventListener('click', checkAnswer);
+    document.getElementById('user-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        checkAnswer();
+      }
+    });
+
+    newGame();
+  </script>
+</body>
+</html>

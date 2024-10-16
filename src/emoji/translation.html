@@ -1,0 +1,157 @@
+<html><head><base href="https://emoji-translation-game.websim.io/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Translation ranking</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  }
+  .container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  h1 {
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  .prompt {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  .options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  .option {
+    font-size: 2rem;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  .option:hover {
+    background-color: #f0f0f0;
+  }
+  .selected {
+    border-color: #4CAF50;
+    background-color: #e8f5e9;
+  }
+  .feedback {
+    margin-top: 1rem;
+    font-weight: bold;
+  }
+  .next-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .next-button:hover {
+    background-color: #45a049;
+  }
+  .score {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Translation ranking</h1>
+  <div class="prompt" id="prompt"></div>
+  <div class="options">
+    <div class="option" id="option1"></div>
+    <div class="option" id="option2"></div>
+  </div>
+  <div class="feedback" id="feedback"></div>
+  <button class="next-button" id="nextButton">Next</button>
+  <div class="score" id="score">Score: 0</div>
+</div>
+
+<script>
+const prompts = [
+  { text: "I love you to the moon and back", correct: "🌙🚀❤️🔙", incorrect: "🌝🎑💘🔙" },
+  { text: "Time flies like an arrow", correct: "⏰✈️➡️🏹", incorrect: "🕰️🪰👍🏹" },
+  { text: "A picture is worth a thousand words", correct: "🖼️=💯0️⃣0️⃣💬", incorrect: "📸💰1️⃣0️⃣0️⃣0️⃣📚" },
+  { text: "The early bird catches the worm", correct: "🌅🐦🎣🐛", incorrect: "⏰🐤🏃‍♂️🍝" },
+  { text: "Actions speak louder than words", correct: "🏃‍♂️🗣️📢>💬", incorrect: "🎭🎤🔊>📚" }
+];
+
+let currentPromptIndex = 0;
+let score = 0;
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+function displayPrompt() {
+  const prompt = prompts[currentPromptIndex];
+  document.getElementById('prompt').textContent = prompt.text;
+
+  const options = [prompt.correct, prompt.incorrect];
+  shuffleArray(options);
+
+  document.getElementById('option1').textContent = options[0];
+  document.getElementById('option2').textContent = options[1];
+
+  document.getElementById('feedback').textContent = '';
+  document.querySelectorAll('.option').forEach(option => option.classList.remove('selected'));
+}
+
+function checkAnswer(selectedOption) {
+  const prompt = prompts[currentPromptIndex];
+  const isCorrect = selectedOption.textContent === prompt.correct;
+
+  selectedOption.classList.add('selected');
+
+  if (isCorrect) {
+    document.getElementById('feedback').textContent = 'Correct! 🎉';
+    score++;
+  } else {
+    document.getElementById('feedback').textContent = 'Incorrect. Try again! 😢';
+  }
+
+  document.getElementById('score').textContent = `Score: ${score}`;
+}
+
+document.querySelectorAll('.option').forEach(option => {
+  option.addEventListener('click', () => checkAnswer(option));
+});
+
+document.getElementById('nextButton').addEventListener('click', () => {
+  currentPromptIndex++;
+  if (currentPromptIndex < prompts.length) {
+    displayPrompt();
+  } else {
+    document.querySelector('.container').innerHTML = `
+      <h1>Game Over!</h1>
+      <p>Your final score is: ${score} out of ${prompts.length}</p>
+      <button class="next-button" onclick="location.reload()">Play Again</button>
+    `;
+  }
+});
+
+displayPrompt();
+</script>
+</body></html>
