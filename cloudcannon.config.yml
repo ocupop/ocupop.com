@@ -1,0 +1,9 @@
+source: /src/
+collections_config: {}
+paths:
+  static: ''
+  uploads: uploads
+timezone: America/Vancouver
+markdown:
+  engine: commonmark
+  options: {}
