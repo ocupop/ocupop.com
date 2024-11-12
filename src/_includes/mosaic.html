@@ -1,5 +1,0 @@
-<div class="mosaic {{ include.style }}">
-  {% for item in page.mosaic %}
-    <a href="{{ item.link | default: '#' }}" class="mosaic-item" style="background-image: url({{ item.image }})" data-transition="mosaicTransition">{{ item.title }}</a>
-  {% endfor %}
-</div>
