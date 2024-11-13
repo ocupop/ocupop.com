@@ -1,0 +1,6 @@
+npx next telemetry disable
+# Clean the nextjs folder for CI
+rm -rf .next
+
+pnpm i
+pnpm prebuild:fetch-theme-color
