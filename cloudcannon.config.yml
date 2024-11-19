@@ -23,7 +23,7 @@ collections_config:
         schema: default
     schemas:
       default:
-        path: schemas/page_schema.md
+        path: src/schemas/page_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -43,7 +43,7 @@ collections_config:
       schema: default
     schemas:
       default:
-        path: schemas/project_schema.md
+        path: src/schemas/project_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -58,7 +58,7 @@ collections_config:
     disable_url: true
     schemas:
       default:
-        path: schemas/service_schema.md
+        path: src/schemas/service_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -72,7 +72,7 @@ collections_config:
     disable_url: true
     schemas:
       default:
-        path: schemas/team_member_schema.md
+        path: src/schemas/team_member_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -95,6 +95,10 @@ _structures:
           image:
 
 _select_data:
+  service_category_tags:
+    - Think
+    - Design
+    - Build
   work_tags:
     - User Research
     - Market Strategy
@@ -105,6 +109,12 @@ _inputs:
     type: auto
     hidden: true
     cascade: true
+  headshot:
+    type: image
+  service_category:
+    type: select
+    options:
+      values: _select_data.service_category_tags
   service_tags:
     type: multiselect
     options:

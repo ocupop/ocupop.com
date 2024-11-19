@@ -8,6 +8,8 @@ _seo:
   author_twitter_handle:
   open_graph_type:
   no_index: false
+service_tags:
+services:
 content_blocks:
 # layout: "@layouts/PageLayout.astro"
 ---

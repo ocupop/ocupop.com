@@ -7,6 +7,10 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+			'sans': ["'Communters Sans'", 'system-ui', 'sans-serif'],
+      'serif': ["'Berlingski Serif'", 'serif']
+		},
     extend: {
       colors: {
         background: "var(--background)",
