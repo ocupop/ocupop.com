@@ -10,6 +10,27 @@ paths:
   uploads: uploads
 
 collections_config:
+  pages:
+    path: src/content/pages
+    name: Pages
+    icon: wysiwyg
+    url: '/[full_slug]/'
+    _enabled_editors:
+      - visual
+    add_options:
+      - name: Add New Page
+        icon: note_add
+        schema: default
+    schemas:
+      default:
+        path: src/schemas/page_schema.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Page
+        icon: notes
+        new_preview_url: /
   projects:
     path: src/content/projects
     name: Projects
@@ -22,29 +43,48 @@ collections_config:
       schema: default
     schemas:
       default:
-        path: src/schemas/project.md
+        path: src/schemas/project_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
         remove_extra_inputs: true
         name: New Case Study
         icon: notes
-        new_preview_url: /
+        # new_preview_url: /
   services:
     path: src/content/services
     name: Services
     icon: design_services
     disable_url: true
+    schemas:
+      default:
+        path: src/schemas/service_schema.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Service
+        icon: notes
   team_members:
     path: src/content/team_members
     name: Team Members
     icon: group
     disable_url: true
-
+    schemas:
+      default:
+        path: src/schemas/team_member_schema.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Team Member
+        icon: notes
   data:
     path: src/data
     name: Data
     icon: important_devices
+    disable_add: true
+    disable_add_folder: true
 
 _structures:
   example:
