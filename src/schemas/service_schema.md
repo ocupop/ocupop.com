@@ -1,5 +1,5 @@
 ---
-title: Project Name
+title: Service Name
 _seo:
   page_description:
   canonical_url:

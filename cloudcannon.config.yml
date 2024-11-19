@@ -5,13 +5,13 @@ markdown:
   options: {}
 
 paths:
-  data: src/data
+  data: data
   static: ''
   uploads: uploads
 
 collections_config:
   pages:
-    path: src/content/pages
+    path: content/pages
     name: Pages
     icon: wysiwyg
     url: '/[full_slug]/'
@@ -23,7 +23,7 @@ collections_config:
         schema: default
     schemas:
       default:
-        path: src/schemas/page_schema.md
+        path: schemas/page_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -32,7 +32,7 @@ collections_config:
         icon: notes
         new_preview_url: /
   projects:
-    path: src/content/projects
+    path: content/projects
     name: Projects
     icon: work
     _enabled_editors:
@@ -43,7 +43,7 @@ collections_config:
       schema: default
     schemas:
       default:
-        path: src/schemas/project_schema.md
+        path: schemas/project_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -52,13 +52,13 @@ collections_config:
         icon: notes
         # new_preview_url: /
   services:
-    path: src/content/services
+    path: content/services
     name: Services
     icon: design_services
     disable_url: true
     schemas:
       default:
-        path: src/schemas/service_schema.md
+        path: schemas/service_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -66,13 +66,13 @@ collections_config:
         name: New Service
         icon: notes
   team_members:
-    path: src/content/team_members
+    path: content/team_members
     name: Team Members
     icon: group
     disable_url: true
     schemas:
       default:
-        path: src/schemas/team_member_schema.md
+        path: schemas/team_member_schema.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -80,7 +80,7 @@ collections_config:
         name: New Team Member
         icon: notes
   data:
-    path: src/data
+    path: data
     name: Data
     icon: important_devices
     disable_add: true
