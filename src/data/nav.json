@@ -2,24 +2,16 @@
 	"logo": "/images/logo.svg",
 	"items": [
 		{
-			"link": "/",
-			"text": "Home"
+			"link": "/work/",
+			"text": "Work"
 		},
 		{
-			"link": "/features/",
-			"text": "Features"
-		},
-		{
-			"link": "/pricing/",
-			"text": "Pricing"
+			"link": "/services/",
+			"text": "Services"
 		},
 		{
 			"link": "/about/",
 			"text": "About"
-		},
-		{
-			"link": "/blog/",
-			"text": "Blog"
 		},
 		{
 			"link": "/contact/",
@@ -31,8 +23,8 @@
 		"text": "Get Started"
 	},
 	"_inputs": {
-	  "logo": {
-		"type": "image"
-	  }
+		"logo": {
+			"type": "image"
+		}
 	}
 }
