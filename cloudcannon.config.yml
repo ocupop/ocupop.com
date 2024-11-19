@@ -1,28 +1,28 @@
-source: /src/
+source: src
 timezone: America/Chicago
 markdown:
   engine: commonmark
   options: {}
 
 paths:
-  data: /src/data
+  data: src/data
   static: ''
   uploads: uploads
 
 collections_config:
   projects:
-    path: /src/content/projects/
-    name: projects
-    icon: briefcase
+    path: src/content/projects
+    name: Projects
+    icon: work
     _enabled_editors:
       - visual
     add_options:
-    - name: Add New Case Study
+    - name: Add New Project
       icon: note_add
       schema: default
     schemas:
       default:
-        path: /src/schemas/project.md
+        path: src/schemas/project.md
         reorder_inputs: true
         hide_extra_inputs: false
         remove_empty_inputs: false
@@ -31,19 +31,19 @@ collections_config:
         icon: notes
         new_preview_url: /
   services:
-    path: /src/content/services/
-    name: services
-    icon: list
+    path: src/content/services
+    name: Services
+    icon: design_services
     disable_url: true
   team_members:
-    path: /src/content/team_members/
-    name: team
+    path: src/content/team_members
+    name: Team Members
     icon: group
     disable_url: true
 
   data:
-    path: /src/data/
-    name: data
+    path: src/data
+    name: Data
     icon: important_devices
 
 _structures:
