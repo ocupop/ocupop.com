@@ -1,9 +1,71 @@
 source: /src/
-collections_config: {}
-paths:
-  static: ''
-  uploads: uploads
-timezone: America/Vancouver
+timezone: America/Chicago
 markdown:
   engine: commonmark
   options: {}
+
+paths:
+  data: /src/data
+  static: ''
+  uploads: uploads
+
+collections_config:
+  projects:
+    path: /src/content/projects/
+    name: projects
+    icon: briefcase
+    _enabled_editors:
+      - visual
+    add_options:
+    - name: Add New Case Study
+      icon: note_add
+      schema: default
+    schemas:
+      default:
+        path: /src/schemas/project.md
+        reorder_inputs: true
+        hide_extra_inputs: false
+        remove_empty_inputs: false
+        remove_extra_inputs: true
+        name: New Case Study
+        icon: notes
+        new_preview_url: /
+  services:
+    path: /src/content/services/
+    name: services
+    icon: list
+    disable_url: true
+  team_members:
+    path: /src/content/team_members/
+    name: team
+    icon: group
+    disable_url: true
+
+  data:
+    path: /src/data/
+    name: data
+    icon: important_devices
+
+_structures:
+  example:
+    values:
+      - value:
+          name:
+          description:
+          image:
+
+_select_data:
+  work_tags:
+    - User Research
+    - Market Strategy
+    - Brand Identity
+
+_inputs:
+  layout:
+    type: auto
+    hidden: true
+    cascade: true
+  service_tags:
+    type: multiselect
+    options:
+      values: _select_data.work_tags
