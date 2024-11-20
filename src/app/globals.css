@@ -1,6 +1,10 @@
+@import url("https://use.typekit.net/oyh6htk.css");
+@import url("https://webfonts.fontstand.com/WF-031559-2b8cdb5c18c2686f822711d4a431fccf.css");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 :root {
   --background: #ffffff;

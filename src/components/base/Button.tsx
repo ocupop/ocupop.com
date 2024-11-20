@@ -46,7 +46,7 @@ const Button = ({
   const getStyleClasses = () => {
     switch (button_style) {
       case 'primary':
-        return 'bg-primary text-white hover:bg-primary-dark';
+        return 'bg-red-500 text-white hover:bg-primary-dark';
       case 'secondary':
         return 'bg-secondary text-primary border-2 border-primary hover:bg-secondary-dark';
       case 'tertiary':

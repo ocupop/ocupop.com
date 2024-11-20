@@ -1,6 +1,7 @@
 import Section from "@/components/base/Section";
 // import Image from "@/components/base/Image"
 import Heading from "@/components/base/Heading";
+import Button from "@/components/base/Button";
 
 export default function WorkPage() {
   return (
@@ -8,7 +9,6 @@ export default function WorkPage() {
       title="Our Work"
       is_contained={true}
       background={{
-        theme: 'custom',
         bkg_image: '/background.jpg',
         bkg_size: 'cover',
         bkg_repeat: false,
@@ -24,6 +24,7 @@ export default function WorkPage() {
       }}
       inner_components={[
         <Heading key="1" title="im a title" tagline="ima tagline" />,
+        <Button key="2" button_text="button label" link="#" button_style="primary" button_size="md" />
       ]}
     />
   );

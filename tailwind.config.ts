@@ -8,8 +8,8 @@ export default {
   ],
   theme: {
     fontFamily: {
-			'sans': ["'Communters Sans'", 'system-ui', 'sans-serif'],
-      'serif': ["'Berlingski Serif'", 'serif']
+			'sans': ['commuters-sans', 'system-ui', 'sans-serif'],
+      'serif': ["'Berlingske Serif Regular'", 'serif']
 		},
     extend: {
       colors: {
