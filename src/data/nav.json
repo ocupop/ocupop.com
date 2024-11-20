@@ -18,10 +18,6 @@
 			"text": "Contact"
 		}
 	],
-	"button": {
-		"link": "/signup/",
-		"text": "Get Started"
-	},
 	"_inputs": {
 		"logo": {
 			"type": "image"
