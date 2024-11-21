@@ -1,14 +1,23 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
 import navData from '@/data/nav.json';
+import { useTransitionContext } from '../context/TransitionContext';
 
 export default function Navigation() {
+  const { startTransition } = useTransitionContext();
+
+  const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    startTransition(href);
+  };
+
   return (
     <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-black/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <a href="/" className="flex-shrink-0" onClick={(e) => handleNavigation(e, '/')}>
             <Image
               src={navData.logo}
               alt="Ocupop Logo"
@@ -16,19 +25,20 @@ export default function Navigation() {
               height={40}
               priority
             />
-          </Link>
+          </a>
 
           {/* Navigation Items */}
           <div className="hidden sm:block">
             <div className="flex space-x-8">
-              {navData.items.map((item) => (
-                <Link
-                  key={item.text}
+              {navData.items.map((item, index) => (
+                <a
+                  key={`${item.text}-${index}`}
                   href={item.link}
+                  onClick={(e) => handleNavigation(e, item.link)}
                   className="text-gray-900 hover:text-gray-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                 >
                   {item.text}
-                </Link>
+                </a>
               ))}
             </div>
           </div>

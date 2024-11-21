@@ -14,8 +14,7 @@ const Heading = ({
       </h1>
       {tagline && (
         <p className="text-5xl text-gray-200 font-serif">
-          {/* {tagline} */}
-          Yeah. No. That's complete bullshit.
+          {tagline}
         </p>
       )}
     </div>

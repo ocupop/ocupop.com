@@ -5,6 +5,7 @@ import Button from "@/components/base/Button";
 
 export default function WorkPage() {
   return (
+    <div className="bg-red-500">
     <Section
       title="Our Work"
       is_contained={true}
@@ -27,5 +28,6 @@ export default function WorkPage() {
         <Button key="2" button_text="button label" link="#" button_style="primary" button_size="md" />
       ]}
     />
+    </div>
   );
 }
