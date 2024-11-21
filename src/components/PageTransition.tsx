@@ -4,9 +4,13 @@ import { AnimatePresence, motion, cubicBezier  } from "framer-motion";
 import { useTransitionContext } from '@/context/TransitionContext';
 
 
-// const easing = cubicBezier(0.215, 0.610, 0.355, 1.000)
+
+
+// easeInCirc
 const easing = cubicBezier(0.600, 0.040, 0.980, 0.335)
 
+// customEase
+const greenEasing = cubicBezier(0.420, 0.000, 1.000, 1.000)
 
 const PageTransition = () => {
   const { isTransitioning } = useTransitionContext();
@@ -25,21 +29,21 @@ const PageTransition = () => {
           animate="visible"
           exit="exit"
           transition={{
-            delay: 0.25,
+            delay: 0.1,
             duration: 0.8,
             ease: easing
           }}
         >
           <motion.div
-            className="absolute -right-full top-0 w-screen h-screen bg-green-500 origin-center-left"
+            className="absolute right-0 top-0 w-[40vw] h-screen bg-green-500 origin-center-left"
             style={{ originX: 0 }}
             animate={{
-              scaleX: [0, 1, 0]
+              width: ["100vw", "0vw"]
             }}
             transition={{
-              duration: 2.5,
-              times: [0, 0.4, 1],
-              ease: easing
+              duration: 0.9,
+              times: [0, 1],
+              ease: greenEasing
             }}
           >
           </motion.div>
