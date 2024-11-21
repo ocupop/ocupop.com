@@ -29,8 +29,8 @@ const PageTransition = () => {
           animate="visible"
           exit="exit"
           transition={{
-            delay: 0.1,
-            duration: 0.8,
+            delay: 0,
+            duration: 1.2,
             ease: easing
           }}
         >
@@ -41,7 +41,7 @@ const PageTransition = () => {
               width: ["100vw", "0vw"]
             }}
             transition={{
-              duration: 0.9,
+              duration: 1.5,
               times: [0, 1],
               ease: greenEasing
             }}

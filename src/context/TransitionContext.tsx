@@ -25,7 +25,7 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
       setTimeout(() => {
         setIsTransitioning(false);
       }, 300); // Adjust timing as needed
-    }, 800); // Adjust timing as needed
+    }, 1000); // Adjust timing as needed
   };
 
   return (

@@ -67,14 +67,14 @@ export default function Navigation() {
                 transition={{ type: "spring", stiffness: 100 }}
                 className="fixed top-16 right-0 h-screen bg-white sm:bg-transparent sm:h-auto sm:relative sm:top-0"
               >
-                <ul className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:gap-x-8 p-8 sm:p-0 relative justify-end">
+                <ul className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end">
                   <motion.li
                     layoutId="bubble"
                     className="absolute -z-10 rounded-full"
                     transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                     animate={{
                       backgroundColor: hoveredIndex !== null ? colors[hoveredIndex % colors.length] : "white",
-                      x: hoveredIndex !== null ? `${hoveredIndex * -(100 + 32)}px` : "0",
+                      x: hoveredIndex !== null ? `${hoveredIndex * -100}px` : "0",
                       opacity: hoveredIndex !== null ? 1 : 0
                     }}
                     style={{
