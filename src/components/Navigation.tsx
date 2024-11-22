@@ -84,6 +84,8 @@ export default function Navigation() {
                       top: 0
                     }}
                   />
+
+                  {/* Navigation Items */}
                   {navData.items.map((item, index) => (
                     <motion.div
                       key={`${item.text}-${index}`}
@@ -100,6 +102,8 @@ export default function Navigation() {
                       </Link>
                     </motion.div>
                   ))}
+
+
                 </ul>
               </motion.nav>
             )}
@@ -125,9 +129,6 @@ export default function Navigation() {
               </motion.svg>
             </button>
           </div>
-
-
-{/* Navigation Items */}
 
         </div>
       </div>
