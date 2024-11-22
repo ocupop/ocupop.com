@@ -1,5 +1,5 @@
 
-import Navigation from "@/components/Navigation";
+import Navigation from "@/components/layout/navigation/Navigation";
 import { TransitionProvider } from '@/context/TransitionContext';
 import PageTransition from "@/components/PageTransition";
 import "./globals.css"
@@ -15,7 +15,9 @@ export default function RootLayout({
         <TransitionProvider>
           <Navigation />
           <PageTransition />
-          {children}
+          <main className="pt-20">
+            {children}
+          </main>
         </TransitionProvider>
       </body>
     </html>

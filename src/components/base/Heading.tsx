@@ -8,12 +8,12 @@ const Heading = ({
   tagline
 }: HeadingProps) => {
   return (
-    <div className="mb-8">
+    <div className="mb-8 text-center">
       <h1 className="text-4xl font-bold mb-2 font-sans">
         {title}
       </h1>
       {tagline && (
-        <p className="text-5xl text-gray-200 font-serif">
+        <p className="text-5xl font-serif">
           {tagline}
         </p>
       )}

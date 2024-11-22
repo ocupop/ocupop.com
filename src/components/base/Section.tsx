@@ -62,8 +62,9 @@ const Section = ({
   };
 
   return (
+    <>
     <section
-      id={title?.toLowerCase().replace(/[^a-z0-9]+/g, '-')}
+      id={title?.toLowerCase().replace(/[^a-z0-9]+/g, '-')} // Every section should have a targetable anchor
       className={`${containerClasses} ${getThemeClasses()}`}
       style={backgroundStyles}
     >
@@ -75,7 +76,6 @@ const Section = ({
       )}
 
       <div className={`relative ${is_contained ? `mx-auto px-4 ${margins_and_padding?.content_width || 'max-w-7xl'}` : ''}`}>
-        {/* Render inner components */}
         <div className="flex flex-col gap-8">
           {inner_components.map((component, index) => (
             <div key={index}>{component}</div>
@@ -83,6 +83,9 @@ const Section = ({
         </div>
       </div>
     </section>
+
+    <div className="hidden pt-16 py-16"></div>
+    </>
   );
 };
 
