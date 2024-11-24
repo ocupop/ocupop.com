@@ -1,10 +1,9 @@
-// import Image from "next/image";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Image from "@/components/base/Image";
 import Heading from "@/components/base/Heading";
 import LogoPile from "@/components/custom/LogoPile";
-
+import PortfolioCard from "@/components/custom/PortfolioCard";
 
 export default function Home() {
   return (
@@ -38,10 +37,23 @@ export default function Home() {
             lg_columns={2}
             xl_columns={2}
             inner_components={[
-              <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
-              <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
-            ]}/>
-
+              <PortfolioCard
+                key="1"
+                cols={2}
+                project_title="Example Project"
+                link="example-project"
+                tags={[
+                  { tag: 'Design' },
+                  { tag: 'Development' },
+                  { tag: 'Strategy' }
+                ]}
+                image={{
+                  image: "https://unsplash.it/640/425",
+                  alt: "Example Project Screenshot"
+                }}
+              />,
+            ]}
+          />
         ]}
       />
       <Section
