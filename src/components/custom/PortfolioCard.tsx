@@ -29,28 +29,33 @@ const PortfolioCard = ({
   return (
     <Link href={`/work/${link}`} className="group block">
       <div className="overflow-hidden rounded-lg">
-        <div className="relative aspect-video overflow-hidden">
+        <div className="relative overflow-hidden">
           <Image
             image={image.image}
             alt={image.alt}
+            max_width={image.max_width}
+            max_height={image.max_height}
+            className="object-cover"
             horiz_alignment="center"
           />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-        </div>
-
-        <div className="mt-4 space-y-2">
-          <h3 className="text-2xl font-serif">{project_title}</h3>
-          <div className="flex flex-wrap gap-2">
-            {tags?.map((tag, index) => (
-              <span
-                key={index}
-                className="inline-block px-3 py-1 text-sm bg-mid-100 rounded-full"
-              >
-                {tag.tag}
-              </span>
-            ))}
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
+            <div className="mt-4 space-y-2">
+              <h3 className="text-2xl font-serif">{project_title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {tags?.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="inline-block px-3 py-1 text-sm bg-mid-100 rounded-full"
+                  >
+                    {tag.tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
+
+
       </div>
     </Link>
   );

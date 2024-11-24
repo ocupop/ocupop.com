@@ -27,7 +27,7 @@ export default function Home() {
         }}
         margins_and_padding={{
           rounded: '2xl',
-          content_width: 'max-w-10xl'
+          content_width: 'max-w-7xl'
         }}
         inner_components={[
           <Grid
@@ -49,7 +49,43 @@ export default function Home() {
                 ]}
                 image={{
                   image: "https://unsplash.it/640/425",
-                  alt: "Example Project Screenshot"
+                  max_height: 450,
+                  alt: "Example Project Screenshot",
+
+                }}
+              />,
+              <PortfolioCard
+                key="2"
+                cols={1}
+                project_title="Example Project"
+                link="example-project"
+                tags={[
+                  { tag: 'Design' },
+                  { tag: 'Development' },
+                  { tag: 'Strategy' }
+                ]}
+                image={{
+                  image: "https://unsplash.it/640/425",
+                  max_height: 450,
+                  alt: "Example Project Screenshot",
+
+                }}
+              />,
+              <PortfolioCard
+                key="3"
+                cols={1}
+                project_title="Example Project"
+                link="example-project"
+                tags={[
+                  { tag: 'Design' },
+                  { tag: 'Development' },
+                  { tag: 'Strategy' }
+                ]}
+                image={{
+                  image: "https://unsplash.it/640/425",
+                  max_height: 450,
+                  alt: "Example Project Screenshot",
+
                 }}
               />,
             ]}

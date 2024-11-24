@@ -5,6 +5,7 @@ interface ImageProps {
   alt: string;
   max_width?: number;
   max_height?: number;
+  className?: string;
   horiz_alignment?: 'left' | 'center' | 'right';
 }
 
@@ -13,6 +14,7 @@ const Image = ({
   alt,
   max_width,
   max_height,
+  className,
   horiz_alignment = 'left'
 }: ImageProps) => {
   const containerStyle = {
@@ -22,8 +24,11 @@ const Image = ({
       : horiz_alignment === 'right'
         ? 'flex-end'
         : 'center',
-    width: '100%'
+    width: '100%',
+    height: max_height
   };
+
+console.log('max height', className)
 
   return (
     <div style={containerStyle}>
@@ -32,11 +37,12 @@ const Image = ({
         alt={alt}
         width={max_width || 0}
         height={max_height || 0}
+        className={className}
         style={{
           maxWidth: max_width ? `${max_width}px` : '100%',
           maxHeight: max_height ? `${max_height}px` : 'auto',
-          height: 'auto',
-          width: 'auto',
+          height: max_height ? `${max_height}px` : 'auto',
+          width: '100%',
         }}
       />
     </div>
