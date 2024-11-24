@@ -76,7 +76,7 @@ const Section = ({
       )}
 
       <div className={`relative ${is_contained ? `mx-auto px-4 ${margins_and_padding?.content_width || 'max-w-7xl'}` : ''}`}>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-12">
           {inner_components.map((component, index) => (
             <div key={index}>{component}</div>
           ))}

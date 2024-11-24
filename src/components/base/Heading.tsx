@@ -1,19 +1,28 @@
 interface HeadingProps {
-  title: string;
+  title?: string;
+  eyebrow?: string;
   tagline?: string;
 }
 
 const Heading = ({
   title,
+  eyebrow,
   tagline
 }: HeadingProps) => {
   return (
     <div className="mb-8 text-center">
-      <h1 className="text-4xl font-bold mb-2 font-sans">
+      {eyebrow && (
+        <p className="text-lg mb-4 font-sans">
+          {eyebrow}
+        </p>
+      )}
+      {title && (
+      <h1 className="text-4xl  mb-2 font-serif">
         {title}
       </h1>
+      )}
       {tagline && (
-        <p className="text-5xl font-serif">
+        <p className="text-xl font-serif">
           {tagline}
         </p>
       )}

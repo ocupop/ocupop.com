@@ -1,11 +1,21 @@
+'use client';
+import { useEffect } from 'react';
 import Section from "@/components/base/Section";
 // import Image from "@/components/base/Image"
 import Heading from "@/components/base/Heading";
 import Button from "@/components/base/Button";
+import { useTheme } from '@/context/ThemeContext';
 
 export default function WorkPage() {
+  const { setTheme } = useTheme();
+
+  useEffect(() => {
+    setTheme('dark');
+    return () => setTheme('light');
+  }, [setTheme]);
+
   return (
-    <div className="bg-red-500">
+    <div>
       <Section
         title="Our Work"
         is_contained={true}

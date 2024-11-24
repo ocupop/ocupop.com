@@ -32,6 +32,20 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        'dark': '#1F2528',
+				'mid': {
+					100: '#EFF3F7',
+					200: '#DCE1E6',
+					300: '#C3C7CB',
+					400: '#9DA0A4',
+					500: '#7B7E80',
+					600: '#67696B',
+					700: '#494949',
+					800: '#303132',
+					900: '#1D1D1F',
+					DEFAULT: '#F3F1EE'
+				},
+        'light': '#E8E1D8',
       },
     },
   },
