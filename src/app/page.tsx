@@ -1,5 +1,6 @@
 // import Image from "next/image";
 import Section from "@/components/base/Section";
+import Grid from "@/components/base/Grid";
 import Image from "@/components/base/Image";
 import Heading from "@/components/base/Heading";
 import LogoPile from "@/components/custom/LogoPile";
@@ -12,10 +13,6 @@ export default function Home() {
         title="Ocupop Hero"
         is_contained={true}
         margins_and_padding={{
-          margin_top: '8',
-          margin_bottom: '8',
-          padding_top: '16',
-          padding_bottom: '16',
           content_width: 'max-w-5xl'
         }}
         inner_components={[
@@ -30,26 +27,27 @@ export default function Home() {
           theme: 'dark'
         }}
         margins_and_padding={{
-          margin_top: '8',
-          margin_bottom: '8',
-          padding_top: '16',
-          padding_bottom: '16',
           rounded: '2xl',
           content_width: 'max-w-10xl'
         }}
         inner_components={[
-          <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
-          <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
+          <Grid
+            key="1"
+            sm_columns={1}
+            md_columns={2}
+            lg_columns={2}
+            xl_columns={2}
+            inner_components={[
+              <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
+              <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
+            ]}/>
+
         ]}
       />
       <Section
         title="Our Clients"
         is_contained={true}
         margins_and_padding={{
-          margin_top: '8',
-          margin_bottom: '8',
-          padding_top: '16',
-          padding_bottom: '16',
           content_width: 'max-w-11xl'
         }}
         inner_components={[
@@ -61,7 +59,7 @@ export default function Home() {
               content_width: 'max-w-md'
             }}
             inner_components={[
-                        <Heading key="1" eyebrow="Our Clients" tagline="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." />
+              <Heading key="1" eyebrow="Our Clients" tagline="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." />
             ]}
           />,
           <LogoPile key="2" />
@@ -74,8 +72,6 @@ export default function Home() {
           theme: 'light'
         }}
         margins_and_padding={{
-          padding_top: '16',
-          padding_bottom: '16',
           content_width: 'max-w-11xl'
         }}
         inner_components={[

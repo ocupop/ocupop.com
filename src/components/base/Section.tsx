@@ -34,8 +34,8 @@ const Section = ({
   margins_and_padding = {
     margin_top: '0',
     margin_bottom: '0',
-    padding_top: '16',
-    padding_bottom: '16',
+    padding_top: '20',
+    padding_bottom: '20',
     content_width: 'max-w-7xl'
   },
   inner_components
@@ -44,8 +44,8 @@ const Section = ({
     relative
     ${margins_and_padding?.margin_top ? `mt-${margins_and_padding.margin_top}` : ''}
     ${margins_and_padding?.margin_bottom ? `mb-${margins_and_padding.margin_bottom}` : ''}
-    ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : ''}
-    ${margins_and_padding?.padding_bottom ? `pb-${margins_and_padding.padding_bottom}` : ''}
+    ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : 'pt-20'}
+    ${margins_and_padding?.padding_bottom ? `pb-${margins_and_padding.padding_bottom}` : 'pb-20'}
     ${margins_and_padding?.rounded ? `rounded-${margins_and_padding.rounded}` : ''}
   `;
 
