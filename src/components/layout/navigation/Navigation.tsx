@@ -9,7 +9,7 @@ import { useTransitionContext } from '../../../context/TransitionContext';
 
 export default function Navigation() {
   const { startTransition } = useTransitionContext();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const colors = ['#FF69B4', '#98FB98', '#FFA500', '#87CEEB'];

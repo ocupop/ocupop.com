@@ -2,7 +2,7 @@ import NextImage from 'next/image';
 
 interface ImageProps {
   image: string;
-  alt_text: string;
+  alt: string;
   max_width?: number;
   max_height?: number;
   horiz_alignment?: 'left' | 'center' | 'right';
@@ -10,7 +10,7 @@ interface ImageProps {
 
 const Image = ({
   image,
-  alt_text,
+  alt,
   max_width,
   max_height,
   horiz_alignment = 'left'
@@ -29,7 +29,7 @@ const Image = ({
     <div style={containerStyle}>
       <NextImage
         src={image}
-        alt={alt_text}
+        alt={alt}
         width={max_width || 0}
         height={max_height || 0}
         style={{

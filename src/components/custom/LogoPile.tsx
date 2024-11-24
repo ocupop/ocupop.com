@@ -116,7 +116,7 @@ export default function LogoPile() {
             //   width={200}
             //   height={50}
             // />
-            <Image key={index} max_width={100} image="/assets/_home/header-wordmark.svg" alt_text="Ocupop"/>
+            <Image key={index} max_width={100} image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>
 
           ))}
         </motion.div>

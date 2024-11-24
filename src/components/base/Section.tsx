@@ -15,6 +15,7 @@ interface MarginsPaddingProps {
   margin_bottom?: string;
   padding_top?: string;
   padding_bottom?: string;
+  rounded?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full' | 'none';
   content_width?: string;
 }
 
@@ -45,6 +46,7 @@ const Section = ({
     ${margins_and_padding?.margin_bottom ? `mb-${margins_and_padding.margin_bottom}` : ''}
     ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : ''}
     ${margins_and_padding?.padding_bottom ? `pb-${margins_and_padding.padding_bottom}` : ''}
+    ${margins_and_padding?.rounded ? `rounded-${margins_and_padding.rounded}` : ''}
   `;
 
   const backgroundStyles = {
@@ -76,15 +78,13 @@ const Section = ({
       )}
 
       <div className={`relative ${is_contained ? `mx-auto px-4 ${margins_and_padding?.content_width || 'max-w-7xl'}` : ''}`}>
-        <div className="flex flex-col gap-12">
+        <div className="flex flex-col gap-1">
           {inner_components.map((component, index) => (
             <div key={index}>{component}</div>
           ))}
         </div>
       </div>
     </section>
-
-    <div className="hidden pt-16 py-16"></div>
     </>
   );
 };

@@ -19,7 +19,7 @@ export default function Home() {
           content_width: 'max-w-5xl'
         }}
         inner_components={[
-          <Image key="1" image="/assets/_home/header-wordmark.svg" alt_text="Ocupop"/>,
+          <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
           <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
         ]}
       />
@@ -34,10 +34,11 @@ export default function Home() {
           margin_bottom: '8',
           padding_top: '16',
           padding_bottom: '16',
+          rounded: '2xl',
           content_width: 'max-w-10xl'
         }}
         inner_components={[
-          <Image key="1" image="/assets/_home/header-wordmark.svg" alt_text="Ocupop"/>,
+          <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
           <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
         ]}
       />
@@ -49,13 +50,39 @@ export default function Home() {
           margin_bottom: '8',
           padding_top: '16',
           padding_bottom: '16',
-          content_width: 'max-w-md'
+          content_width: 'max-w-11xl'
         }}
         inner_components={[
-          <Heading key="1" eyebrow="Our Clients" tagline="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." />,
+           <Section
+            title="Our Clients"
+            key="1"
+            is_contained={true}
+            margins_and_padding={{
+              content_width: 'max-w-md'
+            }}
+            inner_components={[
+                        <Heading key="1" eyebrow="Our Clients" tagline="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." />
+            ]}
+          />,
           <LogoPile key="2" />
         ]}
       />
+      <Section
+        title="Our Clients"
+        is_contained={true}
+        background={{
+          theme: 'light'
+        }}
+        margins_and_padding={{
+          padding_top: '16',
+          padding_bottom: '16',
+          content_width: 'max-w-11xl'
+        }}
+        inner_components={[
+          <Heading key="1" eyebrow="Click to Speak to a Representative" tagline="An unfortunate inconvenience — our fax machines are down. Please contact us via the links below." />
+        ]}
+      />
+
     </>
   );
 }

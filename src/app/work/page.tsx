@@ -11,7 +11,7 @@ export default function WorkPage() {
 
   useEffect(() => {
     setTheme('dark');
-    return () => setTheme('light');
+    return () => setTheme('white');
   }, [setTheme]);
 
   return (
