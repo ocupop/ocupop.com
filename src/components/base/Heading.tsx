@@ -2,15 +2,17 @@ interface HeadingProps {
   title?: string;
   eyebrow?: string;
   tagline?: string;
+  alignment?: "left" | "center" | "right";
 }
 
 const Heading = ({
   title,
   eyebrow,
-  tagline
+  tagline,
+  alignment
 }: HeadingProps) => {
   return (
-    <div className="mb-8 text-center">
+    <div className={`mb-8 text-${alignment? alignment : 'center'}`}>
       {eyebrow && (
         <p className="text-lg mb-4 font-sans">
           {eyebrow}

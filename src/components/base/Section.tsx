@@ -11,6 +11,7 @@ interface BackgroundProps {
 }
 
 interface MarginsPaddingProps {
+  padding_x?: string;
   margin_top?: string;
   margin_bottom?: string;
   padding_top?: string;
@@ -32,6 +33,7 @@ const Section = ({
   is_contained = true,
   background,
   margins_and_padding = {
+    padding_x: '0',
     margin_top: '0',
     margin_bottom: '0',
     padding_top: '20',
@@ -46,6 +48,7 @@ const Section = ({
     ${margins_and_padding?.margin_bottom ? `mb-${margins_and_padding.margin_bottom}` : ''}
     ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : 'pt-20'}
     ${margins_and_padding?.padding_bottom ? `pb-${margins_and_padding.padding_bottom}` : 'pb-20'}
+    ${margins_and_padding?.padding_x ? `px-${margins_and_padding.padding_x}` : ''}
     ${margins_and_padding?.rounded ? `rounded-${margins_and_padding.rounded}` : ''}
   `;
 

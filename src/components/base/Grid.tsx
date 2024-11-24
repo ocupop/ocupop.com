@@ -23,7 +23,7 @@ const Grid = ({
 }: GridProps) => {
   const gridClasses = `
     grid
-    gap-8
+    gap-6
     grid-cols-${sm_columns}
     md:grid-cols-${md_columns}
     lg:grid-cols-${lg_columns}

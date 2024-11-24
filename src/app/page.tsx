@@ -123,7 +123,17 @@ export default function Home() {
           content_width: 'max-w-11xl'
         }}
         inner_components={[
-          <Heading key="1" eyebrow="Click to Speak to a Representative" tagline="An unfortunate inconvenience — our fax machines are down. Please contact us via the links below." />
+          <Grid
+            key="1"
+            sm_columns={1}
+            md_columns={2}
+            lg_columns={2}
+            xl_columns={2}
+            inner_components={[
+              <Heading key="1" cols={1} alignment="left" eyebrow="Click to Speak to a Representative" tagline="An unfortunate inconvenience — our fax machines are down. Please contact us via the links below." />
+            ]}
+          />
+
         ]}
       />
 
