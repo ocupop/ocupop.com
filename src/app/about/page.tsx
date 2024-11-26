@@ -1,7 +1,29 @@
+import Section from "@/components/base/Section";
+import Grid from "@/components/base/Grid";
+import Heading from "@/components/base/Heading";
+import Image from "@/components/base/Image";
+
 export default function AboutPage() {
   return (
-    <main className="min-h-screen p-8">
-      <h1>About</h1>
-    </main>
+    <Section
+      title="About Hero"
+      // is_contained={true}
+      margins_and_padding={{
+        padding_x: '4',
+        content_width: 'max-w-11xl'
+      }}
+      inner_components={[
+          <Section
+            key="1"
+            is_contained={true}
+            margins_and_padding={{
+              content_width: 'max-w-4xl !mx-0'
+            }}
+            inner_components={[
+              <Heading key="1" alignment="left" title="We’re in this game to make our clients’ brands perform and we will fight and scrap and claw and beg until we’re satisfied that the result is nothing short of exemplary." />,
+            ]}
+          />
+      ]}
+    />
   );
 }

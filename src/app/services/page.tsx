@@ -18,10 +18,10 @@ export default function ServicesPage() {
           key="1"
           is_contained={true}
           margins_and_padding={{
-            content_width: 'max-w-3xl !mx-0'
+            content_width: 'max-w-4xl !mx-0'
           }}
           inner_components={[
-            <Heading key="1" alignment="left" tagline="We are a strategy-focused design and development agency, creating silly little designs for people who are doing great things (and are inspiring to work with)." />,
+            <Heading key="1" alignment="left" title="We are a strategy-focused design and development agency, creating silly little designs for people who are doing great things (and are inspiring to work with)." />,
           ]}
           />
       ]}
@@ -29,6 +29,7 @@ export default function ServicesPage() {
     <Section
       title="think"
       margins_and_padding={{
+        padding_top: 'none',
         content_width: 'max-w-8xl'
       }}
       inner_components={[

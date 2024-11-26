@@ -9,33 +9,22 @@ import { useTheme } from '@/context/ThemeContext';
 export default function WorkPage() {
   const { setTheme } = useTheme();
 
-  useEffect(() => {
-    setTheme('dark');
-    return () => setTheme('white');
-  }, [setTheme]);
+  // useEffect(() => {
+  //   setTheme('dark');
+  //   return () => setTheme('white');
+  // }, [setTheme]);
 
   return (
     <div>
       <Section
         title="Our Work"
         is_contained={true}
-        background={{
-          bkg_image: '/background.jpg',
-          bkg_size: 'cover',
-          bkg_repeat: false,
-          bkg_position: 'center',
-          overlay_opacity: 50
-        }}
         margins_and_padding={{
-          margin_top: '8',
-          margin_bottom: '8',
-          padding_top: '16',
-          padding_bottom: '16',
-          content_width: 'max-w-5xl'
+          content_width: 'max-w-4xl ml-0'
         }}
         inner_components={[
-          <Heading key="1" title="im a title" tagline="ima tagline" />,
-          <Button key="2" button_text="button label" link="#" button_style="primary" button_size="md" />
+          <Heading key="1" alignment="left" title="If you don’t see what you’re looking for, please contact us. *Operators are standing by. *Some exclusions apply," />,
+          // <Button key="2" button_text="button label" link="#" button_style="primary" button_size="md" />
         ]}
       />
     </div>
