@@ -4,6 +4,8 @@ import Image from "@/components/base/Image";
 import Heading from "@/components/base/Heading";
 import LogoPile from "@/components/custom/LogoPile";
 import PortfolioCard from "@/components/custom/PortfolioCard";
+import PortfolioLogoPile from "@/components/custom/PortfolioLogoPile";
+import Button from "@/components/base/Button";
 
 export default function Home() {
   return (
@@ -88,6 +90,7 @@ export default function Home() {
 
                 }}
               />,
+              <PortfolioLogoPile key="4" cols={2} />
             ]}
           />
         ]}
@@ -130,7 +133,9 @@ export default function Home() {
             lg_columns={2}
             xl_columns={2}
             inner_components={[
-              <Heading key="1" cols={1} alignment="left" eyebrow="Click to Speak to a Representative" tagline="An unfortunate inconvenience — our fax machines are down. Please contact us via the links below." />
+              <Heading key="1" cols={2} alignment="left" eyebrow="Click to Speak to a Representative" tagline="An unfortunate inconvenience — our fax machines are down. Please contact us via the links below." />,
+              <Button key="2" cols={1} button_text="Start a Project" link="/start-a-project/" button_style="primary" button_size="md" />,
+              <Button key="3"cols={1} button_text="View Open Positions" link="/about/careers/" button_style="primary" button_size="md" />
             ]}
           />
 

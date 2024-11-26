@@ -13,7 +13,7 @@ const logos = [
   '/assets/_home/header-wordmark.svg',
 ];
 
-export default function LogoPile() {
+export default function PortfolioLogoPile() {
   return (
     <div className="relative overflow-hidden w-full">
       <div className="flex relative h-[100px] before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-10 before:bg-gradient-to-r before:from-white before:to-transparent before:content-[''] after:absolute after:right-0 after:top-0 after:h-full after:w-10 after:bg-gradient-to-l after:from-white after:to-transparent after:content-['']">

@@ -46,7 +46,7 @@ const Button = ({
   const getStyleClasses = () => {
     switch (button_style) {
       case 'primary':
-        return 'bg-red-500 text-white hover:bg-primary-dark';
+        return 'bg-white text-dark hover:bg-primary-dark';
       case 'secondary':
         return 'bg-secondary text-primary border-2 border-primary hover:bg-secondary-dark';
       case 'tertiary':
@@ -59,7 +59,7 @@ const Button = ({
   };
 
   const buttonClasses = `
-    inline-flex items-center gap-2 rounded-md transition-colors
+    inline-flex items-center gap-2 rounded-xl transition-colors w-full font-sans
     ${getSizeClasses()}
     ${getStyleClasses()}
   `;
