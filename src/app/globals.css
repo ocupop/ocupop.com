@@ -27,3 +27,14 @@ body {
 .theme-transition {
   transition: background-color 0.3s ease;
 }
+
+.nav-item {
+  @apply block px-4 font-sans py-2 text-gray-900  rounded-full text-lg font-medium transition-colors text-center;
+}
+
+.bg-dark{
+  @apply text-white;
+  .nav-item{
+    @apply text-white;
+  }
+}

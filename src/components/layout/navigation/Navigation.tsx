@@ -11,30 +11,49 @@ export default function Navigation() {
   const { startTransition } = useTransitionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const isScrollingDown = currentScrollPos > prevScrollPos;
+
+      // Only update visibility if scroll difference is more than 10px
+      if (Math.abs(currentScrollPos - prevScrollPos) > 10) {
+        setIsVisible(!isScrollingDown);
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos]);
 
   const colors = ['#FF69B4', '#98FB98', '#FFA500', '#87CEEB'];
 
-  useEffect(() => {
-    // Check if this is a new navigation or page load
-    const isNewNavigation = !document.referrer.includes(window.location.hostname);
+  // useEffect(() => {
+  //   // Check if this is a new navigation or page load
+  //   const isNewNavigation = !document.referrer.includes(window.location.hostname);
 
-    if (isNewNavigation) {
-      setIsMenuOpen(true);
+  //   if (isNewNavigation) {
+  //     setIsMenuOpen(true);
 
-      // Wait a bit for the menu to slide in before starting pill animation
-      setTimeout(() => {
-        let i = 0;
-        const interval = setInterval(() => {
-          setHoveredIndex(i);
-          i = (i + 1) % navData.items.length;
-          if (i === 0) {
-            clearInterval(interval);
-            setHoveredIndex(null);
-          }
-        }, 500);
-      }, 500); // Delay to allow menu to slide in
-    }
-  }, []);
+  //     // Wait a bit for the menu to slide in before starting pill animation
+  //     setTimeout(() => {
+  //       let i = 0;
+  //       const interval = setInterval(() => {
+  //         setHoveredIndex(i);
+  //         i = (i + 1) % navData.items.length;
+  //         if (i === 0) {
+  //           clearInterval(interval);
+  //           setHoveredIndex(null);
+  //         }
+  //       }, 500);
+  //     }, 500); // Delay to allow menu to slide in
+  //   }
+  // }, []);
 
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -42,8 +61,19 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-black/5">
-      <div className="max-w-12xl mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.nav
+      className="fixed top-0 w-full z-50"
+      id="primary-nav"
+      animate={{
+        opacity: isVisible ? 1 : 0,
+        pointerEvents: isVisible ? "auto" : "none"
+      }}
+      transition={{
+        duration: 0.3,
+        ease: "easeInOut"
+      }}
+    >
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center gap-4 h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0" onClick={(e) => handleNavigation(e, '/')}>
@@ -96,7 +126,7 @@ export default function Navigation() {
                         <Link
                           href={item.link}
                           onClick={(e) => handleNavigation(e, item.link)}
-                          className="block px-4 font-sans py-2 text-gray-900  rounded-full text-lg font-medium transition-colors text-center"
+                          className="nav-item "
                         >
                           {item.text}
                         </Link>
@@ -162,6 +192,6 @@ export default function Navigation() {
 
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 }
