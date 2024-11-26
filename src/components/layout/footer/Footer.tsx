@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from '@/components/base/Image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import footerData from '@/data/footer.json';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

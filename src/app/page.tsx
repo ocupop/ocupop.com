@@ -14,6 +14,8 @@ export default function Home() {
         title="Ocupop Hero"
         is_contained={true}
         margins_and_padding={{
+          padding_top: '28',
+          padding_bottom: '28',
           content_width: 'max-w-5xl'
         }}
         inner_components={[
@@ -29,7 +31,7 @@ export default function Home() {
         }}
         margins_and_padding={{
           rounded: '2xl',
-          content_width: 'max-w-7xl'
+          content_width: 'max-w-9xl'
         }}
         inner_components={[
           <Grid
@@ -41,9 +43,9 @@ export default function Home() {
             inner_components={[
               <PortfolioCard
                 key="1"
-                cols={2}
-                project_title="Example Project"
-                link="example-project"
+                cols={1}
+                project_title="Radio Milwaukee"
+                link="radio-milwaukee"
                 tags={[
                   { tag: 'Design' },
                   { tag: 'Development' },
@@ -59,8 +61,8 @@ export default function Home() {
               <PortfolioCard
                 key="2"
                 cols={1}
-                project_title="Example Project"
-                link="example-project"
+                project_title="Bittercube"
+                link="/work/bittercube"
                 tags={[
                   { tag: 'Design' },
                   { tag: 'Development' },
@@ -75,9 +77,9 @@ export default function Home() {
               />,
               <PortfolioCard
                 key="3"
-                cols={1}
-                project_title="Example Project"
-                link="example-project"
+                cols={2}
+                project_title="Upsie"
+                link="/upsie/"
                 tags={[
                   { tag: 'Design' },
                   { tag: 'Development' },
