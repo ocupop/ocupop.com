@@ -19,10 +19,10 @@ export default function AboutPage() {
   return (
     <Section
       title="About Hero"
-      // is_contained={true}
+      is_contained={true}
       margins_and_padding={{
         padding_x: '4',
-        content_width: 'max-w-11xl'
+        content_width: 'max-w-9xl'
       }}
       inner_components={[
           <Section
@@ -35,6 +35,7 @@ export default function AboutPage() {
               <Heading key="1" alignment="left" title="We’re in this game to make our clients’ brands perform and we will fight and scrap and claw and beg until we’re satisfied that the result is nothing short of exemplary." />,
             ]}
           />
+
       ]}
     />
   );

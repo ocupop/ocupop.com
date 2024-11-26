@@ -12,7 +12,7 @@ export default function ServicesPage() {
       // is_contained={true}
       margins_and_padding={{
         padding_x: '4',
-        content_width: 'max-w-11xl'
+        content_width: 'max-w-9xl'
       }}
       inner_components={[
           <Section
@@ -31,7 +31,7 @@ export default function ServicesPage() {
       title="think"
       margins_and_padding={{
         padding_top: 'none',
-        content_width: 'max-w-8xl'
+        content_width: 'max-w-9xl'
       }}
       inner_components={[
         <Grid

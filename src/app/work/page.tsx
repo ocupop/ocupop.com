@@ -19,10 +19,20 @@ export default function WorkPage() {
         title="Our Work"
         is_contained={true}
         margins_and_padding={{
-          content_width: 'max-w-4xl ml-0'
+          content_width: 'max-w-9xl'
         }}
         inner_components={[
-          <Heading key="1" alignment="left" title="If you don’t see what you’re looking for, please contact us. *Operators are standing by. *Some exclusions apply," />,
+          <Section
+            key="1"
+            is_contained={true}
+            margins_and_padding={{
+              content_width: 'max-w-4xl !mx-0'
+            }}
+            inner_components={[
+              <Heading key="1" alignment="left" title="If you don’t see what you’re looking for, please contact us. *Operators are standing by. *Some exclusions apply," />,
+            ]}
+            />
+
         ]}
       />
     </div>
