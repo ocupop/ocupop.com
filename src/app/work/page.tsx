@@ -3,7 +3,6 @@
 import { useEffect } from 'react';
 import Section from "@/components/base/Section";
 import Heading from "@/components/base/Heading";
-import Button from "@/components/base/Button";
 import { useTheme } from '@/context/ThemeContext';
 
 export default function WorkPage() {
@@ -24,7 +23,6 @@ export default function WorkPage() {
         }}
         inner_components={[
           <Heading key="1" alignment="left" title="If you don’t see what you’re looking for, please contact us. *Operators are standing by. *Some exclusions apply," />,
-          // <Button key="2" button_text="button label" link="#" button_style="primary" button_size="md" />
         ]}
       />
     </div>

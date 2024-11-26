@@ -33,28 +33,6 @@ export default function Navigation() {
 
   const colors = ['#FF69B4', '#98FB98', '#FFA500', '#87CEEB'];
 
-  // useEffect(() => {
-  //   // Check if this is a new navigation or page load
-  //   const isNewNavigation = !document.referrer.includes(window.location.hostname);
-
-  //   if (isNewNavigation) {
-  //     setIsMenuOpen(true);
-
-  //     // Wait a bit for the menu to slide in before starting pill animation
-  //     setTimeout(() => {
-  //       let i = 0;
-  //       const interval = setInterval(() => {
-  //         setHoveredIndex(i);
-  //         i = (i + 1) % navData.items.length;
-  //         if (i === 0) {
-  //           clearInterval(interval);
-  //           setHoveredIndex(null);
-  //         }
-  //       }, 500);
-  //     }, 500); // Delay to allow menu to slide in
-  //   }
-  // }, []);
-
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     startTransition(href);
@@ -95,43 +73,35 @@ export default function Navigation() {
                   animate={{ x: 0 }}
                   exit={{ x: "100%" }}
                   transition={{ type: "spring", stiffness: 100 }}
-                  className="fixed top-16 right-0 h-screen bg-white sm:bg-transparent sm:h-auto sm:relative sm:top-0"
+                  className="fixed top-16 right-0 h-screen sm:bg-transparent sm:h-auto sm:relative sm:top-0"
                 >
                   <ul className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end">
-                    <motion.li
-                      layoutId="bubble"
-                      className="absolute -z-10 rounded-full"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
-                      animate={{
-                        backgroundColor: hoveredIndex !== null ? colors[hoveredIndex % colors.length] : "white",
-                        x: hoveredIndex !== null ? `${hoveredIndex * -100}px` : "0",
-                        opacity: hoveredIndex !== null ? 1 : 0
-                      }}
-                      style={{
-                        width: "100px",
-                        height: "100%",
-                        position: "absolute",
-                        top: 0
-                      }}
-                    />
 
-                    {/* Navigation Items */}
-                    {navData.items.map((item, index) => (
-                      <motion.div
-                        key={`${item.text}-${index}`}
-                        onHoverStart={() => setHoveredIndex(index)}
-                        onHoverEnd={() => setHoveredIndex(null)}
-                        className="relative w-[100px]"
-                      >
-                        <Link
-                          href={item.link}
-                          onClick={(e) => handleNavigation(e, item.link)}
-                          className="nav-item "
+
+                      {/* Navigation Items */}
+                      {navData.items.map((item, index) => (
+                        <motion.li
+                          key={`${item.text}-${index}`}
+                          className="relative w-[125px] rounded-full"
                         >
-                          {item.text}
-                        </Link>
-                      </motion.div>
-                    ))}
+                          <Link
+                            href={item.link}
+                            onClick={(e) => handleNavigation(e, item.link)}
+                            className="nav-item"
+                            onMouseEnter={() => setHoveredIndex(index)}
+                          >
+                            {item.text}
+                          </Link>
+                          {index === hoveredIndex ? (
+                          <motion.div
+                            className={`w-[125px] h-10 -z-10 absolute top-0.5 rounded-full`}
+                            layoutId="underline"
+                            style={{ backgroundColor: colors[index] }}
+                          />
+                          ) : null}
+                        </motion.li>
+                      ))}
+
 
 
                   </ul>

@@ -1,7 +1,5 @@
 import Section from "@/components/base/Section";
-import Grid from "@/components/base/Grid";
 import Heading from "@/components/base/Heading";
-import Image from "@/components/base/Image";
 
 export default function ContactPage() {
   return (
