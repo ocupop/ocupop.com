@@ -109,6 +109,7 @@ export default function Home() {
             key="1"
             is_contained={true}
             margins_and_padding={{
+              padding_top: '0',
               content_width: 'max-w-md'
             }}
             inner_components={[
@@ -125,7 +126,7 @@ export default function Home() {
           theme: 'light'
         }}
         margins_and_padding={{
-          content_width: 'max-w-11xl'
+          content_width: 'max-w-9xl'
         }}
         inner_components={[
           <Grid

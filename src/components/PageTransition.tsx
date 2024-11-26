@@ -1,10 +1,9 @@
 'use client';
 
+import Image from 'next/image';
 import { AnimatePresence, motion, cubicBezier  } from "framer-motion";
 import { useTransitionContext } from '@/context/TransitionContext';
-
-
-
+import navData from '@/data/nav.json';
 
 // easeInCirc
 const easing = cubicBezier(0.600, 0.040, 0.980, 0.335)
@@ -47,7 +46,14 @@ const PageTransition = () => {
             }}
           >
           </motion.div>
-          <h1 className="text-white text-7xl">ocupop</h1>
+          {/* <h1 className="text-white text-7xl">ocupop</h1> */}
+          <Image
+              src={navData.logo}
+              alt="Ocupop Logo"
+              width={175}
+              height={175}
+              priority
+            />
         </motion.div>
       )}
     </AnimatePresence>

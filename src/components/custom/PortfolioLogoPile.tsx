@@ -1,7 +1,3 @@
-"use client"
-
-import React from 'react'
-import { motion } from 'framer-motion'
 import Image from "@/components/base/Image"
 
 const logos = [
@@ -25,7 +21,7 @@ const logos = [
 
 export default function PortfolioLogoPile() {
   return (
-    <div className="grid grid-cols-8 p-16 gap-12 bg-mid-700 rounded-xl">
+    <div className="grid grid-cols-4 lg:grid-cols-8 p-8 md:p-12 lg:p-16 gap-12 bg-mid-700 rounded-xl">
         {logos.map((logo, index) => (
           <div key={`logo-${index}`} className="h-full flex items-center">
             <Image
