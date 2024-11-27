@@ -24,8 +24,8 @@ export function TransitionProvider({ children }: { children: React.ReactNode }) 
       // Wait for page load and start exit animation
       setTimeout(() => {
         setIsTransitioning(false);
-      }, 300); // Adjust timing as needed
-    }, 1000); // Adjust timing as needed
+      }, 700); // Adjust timing as needed
+    }, 1100); // Adjust timing as needed
   };
 
   return (

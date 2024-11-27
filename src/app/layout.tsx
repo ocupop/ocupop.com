@@ -18,11 +18,10 @@ export default function RootLayout({
         <TransitionProvider>
           <Navigation />
           <PageTransition />
-          <main className="pt-20">
+          <main className="pt-20 relative">
             {children}
           </main>
           <Footer />
-
         </TransitionProvider>
       </body>
       </ThemeProvider>

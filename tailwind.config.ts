@@ -50,6 +50,7 @@ export default {
     },
   },
   safelist: [
+    'bg-[#F7F1DB]',
     'bg-dark',
     'bg-light',
     'bg-white',

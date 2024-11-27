@@ -19,7 +19,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (theme != null) {
       const primaryNav = document.getElementById('primary-nav');
       if (primaryNav) {
-        primaryNav.className = `fixed top-0 w-full z-50 bg-${theme}`;
+        primaryNav.className = `fixed top-0 w-full z-50 bg-${theme}/0`;
       }
     }
   }, [theme]);

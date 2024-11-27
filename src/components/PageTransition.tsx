@@ -5,11 +5,8 @@ import { AnimatePresence, motion, cubicBezier  } from "framer-motion";
 import { useTransitionContext } from '@/context/TransitionContext';
 import navData from '@/data/nav.json';
 
-// easeInCirc
-const easing = cubicBezier(0.600, 0.040, 0.980, 0.335)
-
 // customEase
-const greenEasing = cubicBezier(0.420, 0.000, 1.000, 1.000)
+const customEasing = cubicBezier(0.835, 0.070, 0.840, 0.110)
 
 const PageTransition = () => {
   const { isTransitioning } = useTransitionContext();
@@ -29,8 +26,9 @@ const PageTransition = () => {
           exit="exit"
           transition={{
             delay: 0,
-            duration: 1.2,
-            ease: easing
+            duration: 1,
+            ease: customEasing
+            // ease: easing
           }}
         >
           <motion.div
@@ -40,9 +38,10 @@ const PageTransition = () => {
               width: ["100vw", "0vw"]
             }}
             transition={{
-              duration: 1.5,
+              duration: 1.25,
               times: [0, 1],
-              ease: greenEasing
+              ease: customEasing
+              // ease: greenEasing
             }}
           >
           </motion.div>

@@ -1,17 +1,20 @@
-import Section from "@/components/base/Section";
-import Heading from "@/components/base/Heading";
+import PortfolioHeader from "@/components/custom/PortfolioHeader";
 
 export default function RadioMilwaukeePage() {
   return (
     <div>
-      <Section
-        title="Radio Milwaukee"
-        is_contained={true}
-        margins_and_padding={{
-          content_width: 'max-w-4xl ml-0'
+      <PortfolioHeader
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        client="Radio Milwaukee"
+        hero={{
+          foreground_image: "/assets/radio-milwaukee/portfolio_header_radio-milwaukee.svg",
+          background_color: "#F7F1DB"
         }}
-        inner_components={[
-          <Heading key="1" alignment="left" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />,
+        tags={[
+          { tag: "Strategy" },
+          { tag: "Identity" },
+          { tag: "illustration" },
+          { tag: "Type Design" },
         ]}
       />
     </div>
