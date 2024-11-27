@@ -19,7 +19,7 @@ const Heading = ({
         </p>
       )}
       {title && (
-      <h1 className="text-4xl  mb-2 font-serif">
+      <h1 className="text-4xl mb-2 font-serif">
         {title}
       </h1>
       )}
