@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useRef } from 'react';
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Image from "@/components/base/Image";
@@ -9,132 +11,155 @@ import Button from "@/components/base/Button";
 import GridItem from "@/components/base/GridItem";
 
 export default function Home() {
+  const topSectionRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!topSectionRef.current) return;
+
+      if (window.scrollY < 800) { // Adjust this threshold as needed
+        topSectionRef.current.style.zIndex = '10';
+      } else {
+        topSectionRef.current.style.zIndex = '-20';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
-      <Section
-        title="Ocupop Hero"
-        is_contained={true}
-        position="sticky"
-        margins_and_padding={{
-          padding_top: '28',
-          padding_bottom: '28',
-          content_width: 'max-w-5xl'
-        }}
-        inner_components={[
-          <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
-          <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
-        ]}
-      />
-      <Section
-        title="Featured Work"
-        is_contained={true}
-        background={{
-          theme: 'dark'
-        }}
-        margins_and_padding={{
-          padding_top: '28',
-          padding_bottom: '28',
-          // margin_top: '[400px]',
-          padding_x: '16',
-          rounded: '2xl',
-          content_width: 'max-w-8xl'
-        }}
-        inner_components={[
-          <Grid
-            key="1"
-            sm_columns={1}
-            md_columns={2}
-            lg_columns={2}
-            xl_columns={2}
-            inner_components={[
-              <GridItem key="1" cols={1}>
-                <PortfolioCard
-                  key="1"
-                  project_title="Radio Milwaukee"
-                  link="radio-milwaukee"
-                  tags={[
-                    { tag: 'Design' },
-                    { tag: 'Development' },
-                    { tag: 'Strategy' }
-                  ]}
-                  image={{
-                    image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
-                    max_height: 450,
-                    alt: "Example Project Screenshot",
+      <div ref={topSectionRef} className="sticky top-0 bg-white transition-[z-index]" style={{ zIndex: 10 }}>
+        <Section
+          title="Ocupop Hero"
+          is_contained={true}
+          // position="sticky"
+          margins_and_padding={{
+            padding_top: '28',
+            padding_bottom: '28',
+            content_width: 'max-w-5xl'
+          }}
+          inner_components={[
+            <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
+            <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
+          ]}
+        />
+      </div>
+      <div className="relative z-20">
+        <Section
+          title="Featured Work"
+          is_contained={true}
+          background={{
+            theme: 'dark'
+          }}
+          margins_and_padding={{
+            padding_top: '28',
+            padding_bottom: '28',
+            // margin_top: '[400px]',
+            padding_x: '16',
+            rounded: '2xl',
+            content_width: 'max-w-8xl'
+          }}
+          inner_components={[
+            <Grid
+              key="1"
+              sm_columns={1}
+              md_columns={2}
+              lg_columns={2}
+              xl_columns={2}
+              inner_components={[
+                <GridItem key="1" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Radio Milwaukee"
+                    link="radio-milwaukee"
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Development' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
+                      max_height: 450,
+                      alt: "Example Project Screenshot",
 
-                  }}
-                />
-              </GridItem>,
-              <GridItem key="2" cols={1}>
-                <PortfolioCard
-                  key="1"
-                  project_title="Bittercube"
-                  link="/work/bittercube"
-                  tags={[
-                    { tag: 'Design' },
-                    { tag: 'Development' },
-                    { tag: 'Strategy' }
-                  ]}
-                  image={{
-                    image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
-                    max_height: 450,
-                    alt: "Example Project Screenshot",
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="2" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Bittercube"
+                    link="/work/bittercube"
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Development' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: 450,
+                      alt: "Example Project Screenshot",
 
-                  }}
-                />
-              </GridItem>,
-              <GridItem key="3" cols={2}>
-                <PortfolioCard
-                  key="1"
-                  project_title="Upsie"
-                  link="/upsie/"
-                  tags={[
-                    { tag: 'Design' },
-                    { tag: 'Development' },
-                    { tag: 'Strategy' }
-                  ]}
-                  image={{
-                    image: "/assets/_home/portfolio_projects/upsie-photo.jpg",
-                    max_height: 450,
-                    alt: "Example Project Screenshot",
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="3" cols={2}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Upsie"
+                    link="/upsie/"
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Development' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/upsie-photo.jpg",
+                      max_height: 450,
+                      alt: "Example Project Screenshot",
 
-                  }}
-                />
-              </GridItem>,
-              <GridItem key="4" cols={2}>
-                <PortfolioLogoPile key="4" />
-              </GridItem>
-            ]}
-          />
-        ]}
-      />
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="4" cols={2}>
+                  <PortfolioLogoPile key="4" />
+                </GridItem>
+              ]}
+            />
+          ]}
+        />
+      </div>
+      <div className="sticky bottom-0 z-0 ">
+        <Section
+          title="Our Clients"
+          is_contained={true}
+          margins_and_padding={{
+            content_width: 'max-w-11xl'
+          }}
+          background={{
+            theme: 'white'
+          }}
+          inner_components={[
+            <Section
+              title="Our Clients"
+              key="1"
+              is_contained={true}
+              margins_and_padding={{
+                padding_top: '0',
+                content_width: 'max-w-md'
+              }}
+              inner_components={[
+                <Heading key="1" eyebrow="Our Clients" tagline="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." />
+              ]}
+            />,
+            <LogoPile key="2" />
+          ]}
+        />
+      </div>
       <Section
-        title="Our Clients"
-        is_contained={true}
-        margins_and_padding={{
-          content_width: 'max-w-11xl'
-        }}
-        background={{
-          theme: 'white'
-        }}
-        inner_components={[
-           <Section
-            title="Our Clients"
-            key="1"
-            is_contained={true}
-            margins_and_padding={{
-              padding_top: '0',
-              content_width: 'max-w-md'
-            }}
-            inner_components={[
-              <Heading key="1" eyebrow="Our Clients" tagline="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor." />
-            ]}
-          />,
-          <LogoPile key="2" />
-        ]}
-      />
-      <Section
-        title="Our Clients"
+        title="Contact"
         is_contained={true}
         background={{
           theme: 'light'
