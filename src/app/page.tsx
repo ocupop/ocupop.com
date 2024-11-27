@@ -9,15 +9,35 @@ import PortfolioCard from "@/components/custom/PortfolioCard";
 import PortfolioLogoPile from "@/components/custom/PortfolioLogoPile";
 import Button from "@/components/base/Button";
 import GridItem from "@/components/base/GridItem";
+import { motion, Variants } from "framer-motion";
+
 
 export default function Home() {
   const topSectionRef = useRef<HTMLDivElement>(null);
+
+  const scrollVariants: Variants = {
+    offscreen: {
+      y: 25,
+      opacity: 0.15
+    },
+    onscreen: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        type: "linear",
+        staggerChildren: 0.07,
+        delayChildren: 0.,
+        bounce: 0.6,
+        duration: 0.5
+      }
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       if (!topSectionRef.current) return;
 
-      if (window.scrollY < 800) { // Adjust this threshold as needed
+      if (window.scrollY < 800) {
         topSectionRef.current.style.zIndex = '10';
       } else {
         topSectionRef.current.style.zIndex = '-20';
@@ -30,23 +50,44 @@ export default function Home() {
 
   return (
     <>
-      <div ref={topSectionRef} className="sticky top-0 bg-white transition-[z-index]" style={{ zIndex: 10 }}>
-        <Section
-          title="Ocupop Hero"
-          is_contained={true}
-          // position="sticky"
-          margins_and_padding={{
-            padding_top: '28',
-            padding_bottom: '28',
-            content_width: 'max-w-5xl'
-          }}
-          inner_components={[
-            <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
-            <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
-          ]}
-        />
+      <div
+        ref={topSectionRef}
+        className="sticky top-0 bg-white transition-[z-index]"
+        style={{ zIndex: 10 }}
+      >
+        <motion.div
+          variants={scrollVariants}
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <Section
+            title="Ocupop Hero"
+            is_contained={true}
+            // position="sticky"
+            margins_and_padding={{
+              padding_top: '28',
+              padding_bottom: '28',
+              content_width: 'max-w-5xl'
+            }}
+            inner_components={[
+              <motion.div variants={scrollVariants} key="1">
+                <Image image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>
+              </motion.div>,
+              <motion.div variants={scrollVariants} key="2">
+                <Heading eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
+              </motion.div>,
+                // <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
+                // <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
+            ]}
+          />
+        </motion.div>
       </div>
-      <div className="relative z-20">
+
+      <motion.div
+
+        className="relative z-20"
+      >
         <Section
           title="Featured Work"
           is_contained={true}
@@ -130,13 +171,17 @@ export default function Home() {
             />
           ]}
         />
-      </div>
+      </motion.div>
+
+
       <div className="sticky bottom-0 z-0 ">
         <Section
           title="Our Clients"
           is_contained={true}
           margins_and_padding={{
-            content_width: 'max-w-11xl'
+            content_width: 'max-w-11xl',
+            padding_top: '28',
+            padding_bottom: '36',
           }}
           background={{
             theme: 'white'
@@ -148,6 +193,7 @@ export default function Home() {
               is_contained={true}
               margins_and_padding={{
                 padding_top: '0',
+                padding_bottom: '0',
                 content_width: 'max-w-md'
               }}
               inner_components={[
