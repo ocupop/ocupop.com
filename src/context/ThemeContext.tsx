@@ -16,8 +16,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.body.className = `bg-${theme}`;
-    const primaryNav = document.getElementById('primary-nav');
-    theme != null && {
+    if (theme != null) {
+      const primaryNav = document.getElementById('primary-nav');
       if (primaryNav) {
         primaryNav.className = `fixed top-0 w-full z-50 bg-${theme}`;
       }

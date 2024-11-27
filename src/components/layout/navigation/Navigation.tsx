@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import { useTransitionContext } from '../../../context/TransitionContext';
 import navData from '@/data/nav.json';
@@ -32,8 +32,6 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos]);
-
-  const colors = ['#FF69B4', '#98FB98', '#FFA500', '#87CEEB'];
 
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();

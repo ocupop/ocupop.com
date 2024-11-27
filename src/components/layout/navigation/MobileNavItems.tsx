@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion  } from 'framer-motion';
 import navData from '@/data/nav.json';
 import { useTransitionContext } from '../../../context/TransitionContext';
 import HamburgerMenu from './HamburgerMenu';
@@ -9,11 +9,6 @@ import HamburgerMenu from './HamburgerMenu';
 export default function MobileNavItems() {
   const { startTransition } = useTransitionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
-
-
-  const colors = ['#FF69B4', '#98FB98', '#FFA500', '#87CEEB'];
 
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();

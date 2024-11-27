@@ -16,7 +16,7 @@ export default function Footer() {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [locations.length]);
 
   return (
     <footer className="bg-dark text-white py-16">
