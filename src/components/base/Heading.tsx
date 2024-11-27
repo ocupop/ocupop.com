@@ -12,7 +12,7 @@ const Heading = ({
   alignment
 }: HeadingProps) => {
   return (
-    <div className={`mb-8 text-${alignment? alignment : 'center'}`}>
+    <div className={`my-16 text-${alignment? alignment : 'center'}`}>
       {eyebrow && (
         <p className="text-lg mb-4 font-sans">
           {eyebrow}

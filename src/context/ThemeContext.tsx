@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useState, useEffect } from 'react';
 
-type Theme = 'white' | 'light' | 'dark';
+type Theme = 'white' | 'light' | 'dark' | null ;
 
 interface ThemeContextType {
   theme: Theme;
@@ -16,9 +16,11 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.body.className = `bg-${theme}`;
-    const primaryNav = document.getElementById('primary-nav');
-    if (primaryNav) {
-      primaryNav.className = `fixed top-0 w-full z-50 bg-${theme}`;
+    if (theme != null) {
+      const primaryNav = document.getElementById('primary-nav');
+      if (primaryNav) {
+        primaryNav.className = `fixed top-0 w-full z-50 bg-${theme}`;
+      }
     }
   }, [theme]);
 

@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from '@/components/base/Image';
+import { useTransitionContext } from '@/context/TransitionContext';
 
 interface Tag {
   tag: string;
@@ -26,8 +29,20 @@ const PortfolioCard = ({
   image,
   link
 }: PortfolioCardProps) => {
+
+  const { startTransition } = useTransitionContext();
+
+  const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    startTransition(href);
+  };
+
   return (
-    <Link href={`/work/${link}`} className="group block">
+    <Link
+      href={`/work/${link}`}
+      onClick={(e) => handleNavigation(e, '/work/' + link)}
+      className="group block"
+    >
       <div className="overflow-hidden rounded-lg">
         <div className="relative overflow-hidden">
           <Image
@@ -38,14 +53,14 @@ const PortfolioCard = ({
             className="object-cover"
             horiz_alignment="center"
           />
-          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300">
-            <div className="mt-4 space-y-2">
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300">
+            <div className="h-full flex justify-center items-center flex-col gap-2 opacity-0 group-hover:opacity-100">
               <h3 className="text-2xl font-serif">{project_title}</h3>
-              <div className="flex flex-wrap gap-2">
+              <div>
                 {tags?.map((tag, index) => (
                   <span
                     key={index}
-                    className="inline-block px-3 py-1 text-sm bg-mid-100 rounded-full"
+                    className="inline-block px-3 py-1 text-sm text-white font-sans rounded-full "
                   >
                     {tag.tag}
                   </span>
@@ -54,8 +69,6 @@ const PortfolioCard = ({
             </div>
           </div>
         </div>
-
-
       </div>
     </Link>
   );

@@ -8,12 +8,6 @@ interface GridProps {
   inner_components: ReactNode[];
 }
 
-interface GridItemProps extends ReactNode {
-  props: {
-    cols?: number;
-  }
-}
-
 const Grid = ({
   sm_columns = 1,
   md_columns = 2,
@@ -32,14 +26,7 @@ const Grid = ({
 
   return (
     <div className={gridClasses}>
-      {inner_components.map((component: GridItemProps, index) => {
-        const colSpan = component.props?.cols || 1;
-        return (
-          <div key={index} className={`col-span-1 md:col-span-${colSpan}`}>
-            {component}
-          </div>
-        );
-      })}
+      {inner_components}
     </div>
   );
 };
