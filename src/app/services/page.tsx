@@ -3,6 +3,7 @@ import Grid from "@/components/base/Grid";
 import Heading from "@/components/base/Heading";
 import Image from "@/components/base/Image";
 import Accordion from "@/components/custom/Accordion";
+import GridItem from "@/components/base/GridItem";
 
 export default function ServicesPage() {
   return (
@@ -41,21 +42,25 @@ export default function ServicesPage() {
           lg_columns={3}
           xl_columns={3}
           inner_components={[
-            <Image key="1" cols={1} image="#" alt="" />,
-            <Heading key="2" cols={1} alignment="left" title="think" tagline="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />,
-            <Grid
-              key="3"
-              cols={1}
-              sm_columns={1}
-              md_columns={1}
-              lg_columns={1}
-              xl_columns={1}
-              inner_components={[
-                <Accordion key="1" label="Research" description="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />,
-                <Accordion key="2" label="Market Strategy" description="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />,
-                <Accordion key="3" label="User Experience" description="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />
-              ]}
-            />
+            <GridItem key="1" cols={1}><Image key="1" image="#" alt="" /></GridItem>,
+            <GridItem key="2" cols={1}><Heading key="2"alignment="left" title="think" tagline="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." /></GridItem>,
+            <GridItem key="3" cols={1}>
+              <Grid
+                key="3"
+                sm_columns={1}
+                md_columns={1}
+                lg_columns={1}
+                xl_columns={1}
+                inner_components={[
+                  <Accordion key="1" label="Research" description="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />,
+                  <Accordion key="2" label="Market Strategy" description="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />,
+                  <Accordion key="3" label="User Experience" description="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works." />
+                ]}
+              />
+            </GridItem>
+
+
+
           ]}
         />
       ]}

@@ -28,8 +28,6 @@ const Image = ({
     height: max_height
   };
 
-console.log('max height', className)
-
   return (
     <div style={containerStyle}>
       <NextImage

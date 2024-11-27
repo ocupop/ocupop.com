@@ -6,6 +6,7 @@ import Heading from "@/components/base/Heading";
 import Grid from '@/components/base/Grid';
 import { useTheme } from '@/context/ThemeContext';
 import PortfolioCard from '@/components/custom/PortfolioCard';
+import GridItem from '@/components/base/GridItem';
 
 export default function WorkPage() {
   const { setTheme } = useTheme();
@@ -41,57 +42,63 @@ export default function WorkPage() {
             lg_columns={2}
             xl_columns={2}
             inner_components={[
-              <PortfolioCard
-                key="1"
-                cols={1}
-                project_title="Radio Milwaukee"
-                link="radio-milwaukee"
-                tags={[
-                  { tag: 'Design' },
-                  { tag: 'Development' },
-                  { tag: 'Strategy' }
-                ]}
-                image={{
-                  image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
-                  max_height: 450,
-                  alt: "Example Project Screenshot",
+              <GridItem key="1" cols={1}>
+                <PortfolioCard
+                  key="1"
+                  project_title="Radio Milwaukee"
+                  link="radio-milwaukee"
+                  tags={[
+                    { tag: 'Design' },
+                    { tag: 'Development' },
+                    { tag: 'Strategy' }
+                  ]}
+                  image={{
+                    image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
+                    max_height: 450,
+                    alt: "Example Project Screenshot",
 
-                }}
-              />,
-              <PortfolioCard
-                key="2"
-                cols={1}
-                project_title="Bittercube"
-                link="/work/bittercube"
-                tags={[
-                  { tag: 'Design' },
-                  { tag: 'Development' },
-                  { tag: 'Strategy' }
-                ]}
-                image={{
-                  image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
-                  max_height: 450,
-                  alt: "Example Project Screenshot",
+                  }}
+                />
+              </GridItem>,
+              <GridItem key="2" cols={1}>
+                <PortfolioCard
+                  key="1"
+                  project_title="Bittercube"
+                  link="/work/bittercube"
+                  tags={[
+                    { tag: 'Design' },
+                    { tag: 'Development' },
+                    { tag: 'Strategy' }
+                  ]}
+                  image={{
+                    image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                    max_height: 450,
+                    alt: "Example Project Screenshot",
 
-                }}
-              />,
-              <PortfolioCard
-                key="3"
-                cols={1}
-                project_title="Upsie"
-                link="/upsie/"
-                tags={[
-                  { tag: 'Design' },
-                  { tag: 'Development' },
-                  { tag: 'Strategy' }
-                ]}
-                image={{
-                  image: "/assets/_home/portfolio_projects/upsie-photo.jpg",
-                  max_height: 450,
-                  alt: "Example Project Screenshot",
+                  }}
+                />
+              </GridItem>,
+              <GridItem key="3" cols={2}>
+                <PortfolioCard
+                  key="1"
+                  project_title="Upsie"
+                  link="/upsie/"
+                  tags={[
+                    { tag: 'Design' },
+                    { tag: 'Development' },
+                    { tag: 'Strategy' }
+                  ]}
+                  image={{
+                    image: "/assets/_home/portfolio_projects/upsie-photo.jpg",
+                    max_height: 450,
+                    alt: "Example Project Screenshot",
 
-                }}
-              />
+                  }}
+                />
+              </GridItem>
+
+
+
             ]}
           />
 

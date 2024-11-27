@@ -74,7 +74,7 @@ export default function MobileNavItems() {
           <button
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
-            console.log(isMenuOpen);
+            // console.log(isMenuOpen);
           }}
           className="z-50 p-2 rounded-md text-gray-900 hover:text-gray-600"
         >
