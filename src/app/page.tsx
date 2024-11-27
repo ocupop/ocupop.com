@@ -14,6 +14,7 @@ export default function Home() {
       <Section
         title="Ocupop Hero"
         is_contained={true}
+        position="sticky"
         margins_and_padding={{
           padding_top: '28',
           padding_bottom: '28',
@@ -33,6 +34,7 @@ export default function Home() {
         margins_and_padding={{
           padding_top: '28',
           padding_bottom: '28',
+          // margin_top: '[400px]',
           padding_x: '16',
           rounded: '2xl',
           content_width: 'max-w-8xl'
@@ -111,6 +113,9 @@ export default function Home() {
         is_contained={true}
         margins_and_padding={{
           content_width: 'max-w-11xl'
+        }}
+        background={{
+          theme: 'white'
         }}
         inner_components={[
            <Section

@@ -5,12 +5,6 @@ import { AnimatePresence, motion, cubicBezier  } from "framer-motion";
 import { useTransitionContext } from '@/context/TransitionContext';
 import navData from '@/data/nav.json';
 
-// easeInCirc
-const easing = cubicBezier(0.600, 0.040, 0.980, 0.335)
-
-// customEase
-const greenEasing = cubicBezier(0.420, 0.000, 1.000, 1.000)
-
 // customEase
 const customEasing = cubicBezier(0.835, 0.070, 0.840, 0.110)
 

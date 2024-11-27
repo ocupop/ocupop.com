@@ -26,6 +26,7 @@ interface SectionProps {
   background?: BackgroundProps;
   margins_and_padding?: MarginsPaddingProps;
   inner_components: ReactNode[];
+  position?: 'relative' | 'sticky' | 'absolute';
 }
 
 const Section = ({
@@ -40,10 +41,12 @@ const Section = ({
     padding_bottom: '20',
     content_width: 'max-w-7xl'
   },
-  inner_components
+  inner_components,
+  position
 }: SectionProps) => {
   const containerClasses = `
-    relative
+    ${position ? position : ''}
+    ${position === 'sticky' || position === 'absolute' ? 'top-0 w-full' : 'relative'}
     ${margins_and_padding?.margin_top ? `mt-${margins_and_padding.margin_top}` : ''}
     ${margins_and_padding?.margin_bottom ? `mb-${margins_and_padding.margin_bottom}` : ''}
     ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : 'pt-20'}

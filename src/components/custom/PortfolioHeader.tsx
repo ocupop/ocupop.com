@@ -2,7 +2,7 @@ import Image from "../base/Image";
 
 interface HeroProps {
   background_image?: string;
-  midground_elements?: any;
+  midground_elements?: string;
   foreground_image?: string;
   background_color?: string;
 }

@@ -1,10 +1,4 @@
-import Section from "@/components/base/Section";
-import Heading from "@/components/base/Heading";
 import PortfolioHeader from "@/components/custom/PortfolioHeader";
-
-
-
-
 
 export default function RadioMilwaukeePage() {
   return (
