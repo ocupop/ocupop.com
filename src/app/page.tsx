@@ -30,8 +30,11 @@ export default function Home() {
           theme: 'dark'
         }}
         margins_and_padding={{
+          padding_top: '28',
+          padding_bottom: '28',
+          padding_x: '16',
           rounded: '2xl',
-          content_width: 'max-w-9xl'
+          content_width: 'max-w-8xl'
         }}
         inner_components={[
           <Grid
@@ -52,7 +55,7 @@ export default function Home() {
                   { tag: 'Strategy' }
                 ]}
                 image={{
-                  image: "https://unsplash.it/640/425",
+                  image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
                   max_height: 450,
                   alt: "Example Project Screenshot",
 
@@ -69,7 +72,7 @@ export default function Home() {
                   { tag: 'Strategy' }
                 ]}
                 image={{
-                  image: "https://unsplash.it/640/425",
+                  image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
                   max_height: 450,
                   alt: "Example Project Screenshot",
 
@@ -86,7 +89,7 @@ export default function Home() {
                   { tag: 'Strategy' }
                 ]}
                 image={{
-                  image: "https://unsplash.it/640/425",
+                  image: "/assets/_home/portfolio_projects/upsie-photo.jpg",
                   max_height: 450,
                   alt: "Example Project Screenshot",
 

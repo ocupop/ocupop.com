@@ -23,13 +23,13 @@ export default function LogoPile() {
           className="flex gap-8 shrink-0 h-full lg:gap-16"
           animate={{ translateX: '-50%' }}
           transition={{
-            duration: 20,
+            duration: 60,
             ease: 'linear',
             repeat: Infinity,
           }}
         >
-          {/* Duplicate the logos array to create seamless loop */}
-          {[...logos, ...logos].map((logo, index) => (
+          {/* duplicate the logos to create an infiniteloop */}
+          {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
             <div key={`logo-${index}`} className="h-full flex items-center">
               <Image
                 max_width={100}

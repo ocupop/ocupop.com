@@ -50,7 +50,7 @@ export default function Testimonials({
       className="py-16"
       style={{ backgroundColor: background_color }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {title && <h2 className="text-3xl font-bold text-center mb-8">{title}</h2>}
 
         <div className="relative my-8">
