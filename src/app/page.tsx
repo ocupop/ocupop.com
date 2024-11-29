@@ -132,7 +132,7 @@ export default function Home() {
                   <PortfolioCard
                     key="1"
                     project_title="Bittercube"
-                    link="/work/bittercube"
+                    link="/bittercube/"
                     tags={[
                       { tag: 'Design' },
                       { tag: 'Development' },

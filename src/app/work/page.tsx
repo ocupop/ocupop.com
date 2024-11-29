@@ -64,7 +64,7 @@ export default function WorkPage() {
                 <PortfolioCard
                   key="1"
                   project_title="Bittercube"
-                  link="/work/bittercube"
+                  link="/bittercube/"
                   tags={[
                     { tag: 'Design' },
                     { tag: 'Development' },

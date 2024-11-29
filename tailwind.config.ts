@@ -46,10 +46,13 @@ export default {
 					DEFAULT: '#F3F1EE'
 				},
         'light': '#E8E1D8',
+        'bittercube': '#17384B',
+
       },
     },
   },
   safelist: [
+    'bg-bittercube',
     'bg-[#F7F1DB]',
     'bg-dark',
     'bg-light',
