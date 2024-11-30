@@ -5,6 +5,7 @@ interface GridProps {
   md_columns?: number;
   lg_columns?: number;
   xl_columns?: number;
+  gap?: number;
   inner_components: ReactNode[];
 }
 
@@ -13,11 +14,12 @@ const Grid = ({
   md_columns = 2,
   lg_columns = 3,
   xl_columns = 4,
+  gap = 6,
   inner_components
 }: GridProps) => {
   const gridClasses = `
     grid
-    gap-6
+    gap-${gap}
     grid-cols-${sm_columns}
     md:grid-cols-${md_columns}
     lg:grid-cols-${lg_columns}

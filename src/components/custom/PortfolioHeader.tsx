@@ -34,7 +34,7 @@ const PortfolioHeader = ({
               <Image
                 image={hero.background_image}
                 alt={`${client} portfolio boreground`}
-                className="object-cover w-full h-full"
+                className="object-cover"
               />
             </div>
           )}

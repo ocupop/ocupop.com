@@ -165,7 +165,17 @@ export default {
     'xl:col-span-4',
     'xl:col-span-5',
     'xl:col-span-6',
-
+    'gap-0',
+    'gap-2',
+    'gap-3',
+    'gap-4',
+    'gap-6',
+    'gap-8',
+    'gap-10',
+    'gap-12',
+    'gap-14',
+    'gap-16',
+    'gap-20',
   ],
   plugins: [],
 } satisfies Config;
