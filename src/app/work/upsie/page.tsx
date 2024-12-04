@@ -1,8 +1,19 @@
+import { Metadata } from 'next';
 import PortfolioHeader from "@/components/custom/PortfolioHeader";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import GridItem from "@/components/base/GridItem";
 import Image from "@/components/base/Image";
+
+export const metadata: Metadata = {
+  title: 'Upsie | Ocupop',
+  description: 'Case study Upsie',
+  openGraph: {
+    title: 'Upsie | Ocupop',
+    description: 'Case study Upsie',
+    images: ['/assets/upsie/portfolio_header-upsie.jpg'],
+  },
+};
 
 export default function UpsiePage() {
   return (

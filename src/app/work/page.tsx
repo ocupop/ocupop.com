@@ -7,6 +7,17 @@ import Grid from '@/components/base/Grid';
 import { useTheme } from '@/context/ThemeContext';
 import PortfolioCard from '@/components/custom/PortfolioCard';
 import GridItem from '@/components/base/GridItem';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Our Work | Ocupop',
+  description: 'Explore our projects',
+  openGraph: {
+    title: 'Our Work | Ocupop',
+    description: 'Explore our projects',
+    images: ['/assets/work/og-image.jpg'],
+  },
+};
 
 export default function WorkPage() {
   const { setTheme } = useTheme();
