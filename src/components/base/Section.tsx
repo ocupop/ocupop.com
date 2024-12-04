@@ -51,7 +51,7 @@ const Section = ({
     ${margins_and_padding?.margin_bottom ? `mb-${margins_and_padding.margin_bottom}` : ''}
     ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : 'pt-20'}
     ${margins_and_padding?.padding_bottom ? `pb-${margins_and_padding.padding_bottom}` : 'pb-20'}
-    ${margins_and_padding?.padding_x ? `px-${margins_and_padding.padding_x}` : ''}
+    ${margins_and_padding?.padding_x ? `px-2 md:px-${margins_and_padding.padding_x}` : ''}
     ${margins_and_padding?.rounded ? `rounded-${margins_and_padding.rounded}` : ''}
   `;
 

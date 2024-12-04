@@ -12,7 +12,7 @@ interface ImageProps {
   image: string;
   alt: string;
   max_width?: number;
-  max_height?: number;
+  max_height?: number | string
   horiz_alignment?: 'left' | 'center' | 'right';
 }
 
@@ -21,13 +21,15 @@ interface PortfolioCardProps {
   tags?: Tag[];
   image: ImageProps;
   link: string;
+  aspectRatio?: 'video' | 'square' | 'portrait' | 'wide' | 'ultrawide';
 }
 
 const PortfolioCard = ({
   project_title,
   tags,
   image,
-  link
+  link,
+  aspectRatio = 'video'
 }: PortfolioCardProps) => {
 
   const { startTransition } = useTransitionContext();
@@ -43,14 +45,14 @@ const PortfolioCard = ({
       onClick={(e) => handleNavigation(e, '/work/' + link)}
       className="group block"
     >
-      <div className="overflow-hidden rounded-lg">
-        <div className="relative overflow-hidden">
+      <div className={`overflow-hidden rounded-lg aspect-video md:aspect-${aspectRatio}`}>
+        <div className="relative h-full w-full bg-red-300">
           <Image
             image={image.image}
             alt={image.alt}
             max_width={image.max_width}
             max_height={image.max_height}
-            className="object-cover"
+            className="object-cover w-full h-full"
             horiz_alignment="center"
           />
           <div className="absolute inset-0 bg-black/0 group-hover:bg-black/70 transition-colors duration-300">

@@ -98,7 +98,7 @@ export default function Home() {
             padding_top: '28',
             padding_bottom: '28',
             // margin_top: '[400px]',
-            padding_x: '16',
+            padding_x: '12',
             rounded: '2xl',
             content_width: 'max-w-8xl'
           }}
@@ -122,7 +122,7 @@ export default function Home() {
                     ]}
                     image={{
                       image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
-                      max_height: 450,
+                      max_height: '100%',
                       alt: "Example Project Screenshot",
 
                     }}
@@ -140,7 +140,7 @@ export default function Home() {
                     ]}
                     image={{
                       image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
-                      max_height: 450,
+                      max_height: '100%',
                       alt: "Example Project Screenshot",
 
                     }}
@@ -151,6 +151,7 @@ export default function Home() {
                     key="1"
                     project_title="Upsie"
                     link="/upsie/"
+                    aspectRatio='wide'
                     tags={[
                       { tag: 'Design' },
                       { tag: 'Development' },
@@ -158,15 +159,165 @@ export default function Home() {
                     ]}
                     image={{
                       image: "/assets/_home/portfolio_projects/upsie-photo.jpg",
-                      max_height: 450,
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+                    }}
+                  />
+                </GridItem>,
+
+                <GridItem key="4" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Piko Provisions"
+                    link="piko-provisions"
+                    aspectRatio='portrait'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Development' },
+                      { tag: 'Packaging' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
+                      max_height: '100%',
                       alt: "Example Project Screenshot",
 
                     }}
                   />
                 </GridItem>,
-                <GridItem key="4" cols={2}>
-                  <PortfolioLogoPile key="4" />
-                </GridItem>
+                <GridItem key="5" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="I/O Connect"
+                    link="/io-connect/"
+                    aspectRatio='portrait'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Animation' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="6" cols={2}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="ConsumerReports :: New Baby Experience"
+                    link="/cr-new-baby-experience/"
+                    aspectRatio='ultrawide'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Animation' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="7" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="IETF Meeting Design"
+                    link="/ietf-meetings/"
+                    aspectRatio='video'
+                    tags={[
+                      { tag: 'Design' },
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="8" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Google Gemini"
+                    link="/google-gemini/"
+                    aspectRatio='video'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Animation' },
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="9" cols={2}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Google Chrome Dev Summit"
+                    link="/google-chrome-dev-summit/"
+                    aspectRatio='wide'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Animation' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="10" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="Refed Food Waste Summit"
+                    link="/refed-food-waste-summit/"
+                    aspectRatio='portrait'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Development' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="11" cols={1}>
+                  <PortfolioCard
+                    key="1"
+                    project_title="NFC Forum"
+                    link="/nfc-forum/"
+                    aspectRatio='portrait'
+                    tags={[
+                      { tag: 'Design' },
+                      { tag: 'Development' },
+                      { tag: 'Strategy' }
+                    ]}
+                    image={{
+                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      max_height: '100%',
+                      alt: "Example Project Screenshot",
+
+                    }}
+                  />
+                </GridItem>,
+                <GridItem key="12" cols={2}>
+                  <PortfolioLogoPile key="1" />
+                </GridItem>,
               ]}
             />
           ]}
