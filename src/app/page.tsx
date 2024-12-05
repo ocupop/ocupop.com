@@ -25,8 +25,8 @@ export default function Home() {
       opacity: 1,
       transition: {
         type: "linear",
-        staggerChildren: 0.07,
-        delayChildren: 0.,
+        staggerChildren: 0.1,
+        delayChildren: 0,
         bounce: 0.6,
         duration: 0.5
       }
@@ -37,10 +37,24 @@ export default function Home() {
     const handleScroll = () => {
       if (!topSectionRef.current) return;
 
-      if (window.scrollY < 800) {
-        topSectionRef.current.style.zIndex = '10';
+      // Get viewport height
+      const vh = window.innerHeight;
+
+      // Start fading after 1vh of scroll
+      if (window.scrollY > vh) {
+        // Calculate opacity based on scroll position
+        const opacity = Math.max(0, 1 - (window.scrollY - vh) / 300); // 300px fade distance
+        topSectionRef.current.style.opacity = opacity.toString();
+        // When fully transparent, move to back
+        if (opacity === 0) {
+          topSectionRef.current.style.zIndex = '-20';
+        } else {
+          topSectionRef.current.style.zIndex = '10';
+        }
       } else {
-        topSectionRef.current.style.zIndex = '-20';
+        // Reset when at top
+        topSectionRef.current.style.opacity = '1';
+        topSectionRef.current.style.zIndex = '10';
       }
     };
 
@@ -64,21 +78,20 @@ export default function Home() {
           <Section
             title="Ocupop Hero"
             is_contained={true}
-            // position="sticky"
             margins_and_padding={{
               padding_top: '28',
               padding_bottom: '28',
-              content_width: 'max-w-5xl'
+              content_width: 'max-w-7xl'
             }}
+            className="bg-[#ffffff] bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:24px_48px]"
             inner_components={[
+
               <motion.div variants={scrollVariants} key="1">
-                <Image image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>
+                <Image image="/assets/_home/header-wordmark-beveled.svg" alt="Ocupop"/>
               </motion.div>,
               <motion.div variants={scrollVariants} key="2">
-                <Heading eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
-              </motion.div>,
-                // <Image key="1" image="/assets/_home/header-wordmark.svg" alt="Ocupop"/>,
-                // <Heading key="2" eyebrow="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />,
+                <Heading tagline="Let's Make Something Together" title="We are a boutique strategy, design, and dev firm." />
+              </motion.div>
             ]}
           />
         </motion.div>
@@ -88,6 +101,7 @@ export default function Home() {
 
         className="relative z-20"
       >
+
         <Section
           title="Featured Work"
           is_contained={true}
@@ -95,7 +109,7 @@ export default function Home() {
             theme: 'dark'
           }}
           margins_and_padding={{
-            padding_top: '28',
+            padding_top: '12',
             padding_bottom: '28',
             // margin_top: '[400px]',
             padding_x: '12',
@@ -103,6 +117,7 @@ export default function Home() {
             content_width: 'max-w-8xl'
           }}
           inner_components={[
+            <Heading key="a" title="A super powered creative agency with zero awards."/>,
             <Grid
               key="1"
               sm_columns={1}
