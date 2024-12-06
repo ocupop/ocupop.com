@@ -6,6 +6,8 @@ import Footer from '@/components/layout/footer/Footer';
 import { TransitionProvider } from '@/context/TransitionContext';
 import PageTransition from "@/components/PageTransition";
 import "./globals.css"
+import { GoogleAnalytics } from '@next/third-parties/google'
+ 
 
 export const metadata: Metadata = {
   ...defaultSEO,
@@ -62,6 +64,7 @@ export default function RootLayout({
         </TransitionProvider>
       </body>
       </ThemeProvider>
+      <GoogleAnalytics gaId="G-TBTWG6ZXWZ" />
     </html>
   );
 }
