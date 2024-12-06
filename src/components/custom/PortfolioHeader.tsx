@@ -34,7 +34,7 @@ const PortfolioHeader = ({
               <Image
                 image={hero.background_image}
                 alt={`${client} portfolio boreground`}
-                className="object-cover w-full h-full"
+                className="object-cover"
               />
             </div>
           )}
@@ -50,7 +50,8 @@ const PortfolioHeader = ({
               <Image
                 image={hero.foreground_image}
                 alt={`${client} portfolio foreground`}
-                className="!w-4/5 max-h-[400px] mx-auto"
+                className="object-cover"
+                // className="!w-4/5 max-h-[400px] mx-auto"
               />
             </div>
           )}

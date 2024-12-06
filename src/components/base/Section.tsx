@@ -27,6 +27,7 @@ interface SectionProps {
   margins_and_padding?: MarginsPaddingProps;
   inner_components: ReactNode[];
   position?: 'relative' | 'sticky' | 'absolute';
+  className?: string;
 }
 
 const Section = ({
@@ -42,7 +43,8 @@ const Section = ({
     content_width: 'max-w-7xl'
   },
   inner_components,
-  position
+  position,
+  className
 }: SectionProps) => {
   const containerClasses = `
     ${position ? position : ''}
@@ -51,8 +53,9 @@ const Section = ({
     ${margins_and_padding?.margin_bottom ? `mb-${margins_and_padding.margin_bottom}` : ''}
     ${margins_and_padding?.padding_top ? `pt-${margins_and_padding.padding_top}` : 'pt-20'}
     ${margins_and_padding?.padding_bottom ? `pb-${margins_and_padding.padding_bottom}` : 'pb-20'}
-    ${margins_and_padding?.padding_x ? `px-${margins_and_padding.padding_x}` : ''}
+    ${margins_and_padding?.padding_x ? `px-2 md:px-${margins_and_padding.padding_x}` : ''}
     ${margins_and_padding?.rounded ? `rounded-${margins_and_padding.rounded}` : ''}
+    ${className ? `${className}` : ''}
   `;
 
   const backgroundStyles = {

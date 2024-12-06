@@ -29,6 +29,11 @@ export default {
         '11xl': '190rem',    // 3040px
         '12xl': '220rem',    // 3520px
       },
+      aspectRatio: {
+        'portrait': '7 / 8',
+        'wide': '10 / 4',
+        'ultrawide': '15 / 4',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -46,10 +51,18 @@ export default {
 					DEFAULT: '#F3F1EE'
 				},
         'light': '#E8E1D8',
+        'bittercube': '#17384B',
+
       },
     },
   },
   safelist: [
+    'md:aspect-square',
+    'md:aspect-video',
+    'md:aspect-portrait',
+    'md:aspect-wide',
+    'md:aspect-ultrawide',
+    'bg-bittercube',
     'bg-[#F7F1DB]',
     'bg-dark',
     'bg-light',
@@ -98,6 +111,7 @@ export default {
     'px-8',
     'px-10',
     'px-12',
+    'md:px-12',
     'px-16',
     'px-20',
     'px-28',
@@ -162,7 +176,17 @@ export default {
     'xl:col-span-4',
     'xl:col-span-5',
     'xl:col-span-6',
-
+    'gap-0',
+    'gap-2',
+    'gap-3',
+    'gap-4',
+    'gap-6',
+    'gap-8',
+    'gap-10',
+    'gap-12',
+    'gap-14',
+    'gap-16',
+    'gap-20',
   ],
   plugins: [],
 } satisfies Config;
