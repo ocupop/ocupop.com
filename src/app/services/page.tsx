@@ -24,8 +24,8 @@ export default function ServicesPage() {
           xl_columns={7}
           classNames="h-screen"
           inner_components={[
-            <GridItem key="1" cols={3}><Image key="1" className="p-16" image="/assets/_services/think.svg" alt="Think" /></GridItem>,
-            <GridItem key="2" cols={4}>
+            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col"><Image key="1" className="p-16" image="/assets/_services/think.svg" alt="Think" /></GridItem>,
+            <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="THINK" title="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works. Specifically, here’s a list to help boost our SEO:" />
               <Grid
               key="1"
@@ -33,7 +33,7 @@ export default function ServicesPage() {
               md_columns={2}
               lg_columns={2}
               xl_columns={2}
-              classNames="px-4 sm:px-6 lg:px-8"
+              // classNames="px-4 sm:px-6 lg:px-8"
               inner_components={[
                 <GridItem key="1" cols={1}>
                   <ul>
@@ -80,8 +80,8 @@ export default function ServicesPage() {
           xl_columns={7}
           classNames="h-screen"
           inner_components={[
-            <GridItem key="1" cols={3}><Image key="1" className="p-16" image="/assets/_services/design.svg" alt="Design" /></GridItem>,
-            <GridItem key="2" cols={4}>
+            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col"><Image key="1" className="p-16" image="/assets/_services/design.svg" alt="Design" /></GridItem>,
+            <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="DESIGN" title="We use structure, form, language, and motion to create solutions that captivate, compel and convert." />
               <Grid
               key="1"
@@ -135,8 +135,8 @@ export default function ServicesPage() {
           xl_columns={7}
           classNames="h-screen"
           inner_components={[
-            <GridItem key="1" cols={3}><Image key="1" className="p-16" image="/assets/_services/build.svg" alt="Build" /></GridItem>,
-            <GridItem key="2" cols={4}>
+            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col"><Image key="1" className="p-16" image="/assets/_services/build.svg" alt="Build" /></GridItem>,
+            <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="BUILD" title="From action planning to application creation, we’re here to help you build and maintain an engine for success." />
               <Grid
               key="1"
@@ -187,7 +187,7 @@ export default function ServicesPage() {
           title="our clients"
           margins_and_padding={{
             padding_top: '0',
-            content_width: 'max-w-5xl ml-0 !px-0'
+            content_width: 'max-w-5xl ml-0 !px-0  -mt-12'
           }}
           inner_components={[
             <Heading key="2"alignment="left" eyebrow="CLIENTS" title="Blah blah blah, we work with businesses in a variety of industries. Here’s a quick overview of companies we’ve worked with — just want to make sure you recognize a few so you know we’re cool. 😎" />
