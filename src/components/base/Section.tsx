@@ -86,8 +86,8 @@ const Section = ({
         />
       )}
 
-      <div className={`relative ${is_contained ? `mx-auto px-4 sm:px-6 lg:px-8 ${margins_and_padding?.content_width || 'max-w-7xl'}` : ''}`}>
-        <div className="flex flex-col gap-1">
+      <div className={`relative ${is_contained ? `mx-auto h-full px-4 sm:px-6 lg:px-8 ${margins_and_padding?.content_width || 'max-w-7xl'}` : ''}`}>
+        <div className="flex flex-col gap-1 h-full justify-center">
           {inner_components.map((component, index) => (
             <div key={index}>{component}</div>
           ))}
