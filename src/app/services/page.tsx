@@ -33,7 +33,7 @@ export default function ServicesPage() {
               md_columns={2}
               lg_columns={2}
               xl_columns={2}
-              // classNames="px-4 sm:px-6 lg:px-8"
+              // classNames="px-4 sm:px-6 lg:px-12"
               inner_components={[
                 <GridItem key="1" cols={1}>
                   <ul>

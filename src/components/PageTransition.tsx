@@ -58,7 +58,6 @@ const PageTransition = () => {
           <Lottie
             lottieRef={lottieRef}
             animationData={logoAnimation}
-
             loop={false}
             autoplay={false}
           />
