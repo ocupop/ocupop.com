@@ -1,36 +1,43 @@
 import { useState } from 'react';
 import Link from 'next/link'
-import { motion } from 'framer-motion';
+import { motion, cubicBezier  } from "framer-motion";
 import navData from '@/data/nav.json';
 import { useTransitionContext } from '../../../context/TransitionContext';
 import HamburgerMenu from './HamburgerMenu';
+
 
 export default function MobileNavItems() {
   const { startTransition } = useTransitionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const customEasing = cubicBezier(0.835, 0.070, 0.840, 0.110)
+
+
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     startTransition(href);
-    setIsMenuOpen(false); // Close menu after navigation
+    setIsMenuOpen(false);
   };
 
-  // Updated menu overlay animation
   const menuVariants = {
     open: {
-      transform: "translateX(0%)",
+      clipPath: `circle(${2000}px at calc(100% - 40px) 40px)`,
+      opacity: 1,
       transition: {
-        duration: 0.4,
-        ease: [0.36, 0, 0.66, 1],
-        staggerChildren: 0.1,
+        duration: 0.7,
+        ease: customEasing,
+        // ease: [0.76, 0, 0.24, 1],
+        staggerChildren: 0.07,
         delayChildren: 0.2
       }
     },
     closed: {
-      transform: "translateX(100%)",
+      clipPath: "circle(30px at calc(100% - 40px) 40px)",
+      opacity: 0,
       transition: {
-        duration: 0.4,
-        ease: [0.36, 0, 0.66, 1],
+        duration: 0.7,
+        ease: customEasing,
+        // ease: [0.76, 0, 0.24, 1],
         staggerChildren: 0.05,
         staggerDirection: -1
       }
@@ -59,6 +66,7 @@ export default function MobileNavItems() {
         className={`
           fixed inset-0 bg-black/90 backdrop-blur-sm md:hidden
           flex items-center justify-center
+          pointer-events-${isMenuOpen ? 'auto' : 'none'}
         `}
       >
         <motion.ul
@@ -73,7 +81,7 @@ export default function MobileNavItems() {
               <Link
                 href={item.link}
                 onClick={(e) => handleNavigation(e, item.link)}
-                className="text-2xl font-medium hover:text-gray-300 transition-colors"
+                className="text-2xl font-sans hover:text-gray-300 transition-colors"
               >
                 {item.text}
               </Link>
@@ -89,7 +97,7 @@ export default function MobileNavItems() {
           className="z-50 p-2 rounded-md text-gray-900 hover:text-gray-600"
         >
           <span className="sr-only">Toggle menu</span>
-          <HamburgerMenu isMenuOpen={isMenuOpen} />
+          <HamburgerMenu isMenuOpen={isMenuOpen} isLight={isMenuOpen} />
         </button>
       </div>
     </>

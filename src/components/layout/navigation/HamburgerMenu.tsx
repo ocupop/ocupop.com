@@ -1,17 +1,27 @@
 import { motion } from 'framer-motion';
 
+interface HamburgerMenuProps {
+  isMenuOpen: boolean;
+  isLight?: boolean;
+}
 
-export default function HamburgerMenu({ isMenuOpen }: { isMenuOpen: boolean }) {
+export default function HamburgerMenu({ isMenuOpen, isLight }: HamburgerMenuProps) {
 
   return (
     <motion.svg
-      className="h-6 w-6 scale-150"
+      className={`w-6 h-6 ${isLight ? 'stroke-white' : 'stroke-current'}`}
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
       {/* Circle */}
-      <circle cx="12" cy="12" r="10" strokeWidth={1.5} stroke='#353535' />
+      <circle
+        cx="12"
+        cy="12"
+        r="10"
+        strokeWidth={1.5}
+        className={`${isLight ? 'stroke-white' : 'stroke-current'}`}
+      />
 
       {/* Top line */}
       <motion.line

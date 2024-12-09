@@ -21,7 +21,7 @@ export default function DesktopNavItems() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(initialIndex >= 0 ? initialIndex : null);
   const [activeIndex, setActiveIndex] = useState<number | null>(initialIndex >= 0 ? initialIndex : null);
 
-  const colors = ['#FF6978', '#DBFE87', '#F8A94B', '#74D1D6'];
+  const colors = ['#FF6D39', '#D1C700', '#F7B5ED', '#15A620'];
 
   useEffect(() => {
     const currentIndex = navData.items.findIndex(item => item.link === normalizedPath);
