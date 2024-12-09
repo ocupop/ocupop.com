@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useDarkSection } from '@/context/DarkSectionContext';
 
 interface HamburgerMenuProps {
   isMenuOpen: boolean;
@@ -7,12 +8,15 @@ interface HamburgerMenuProps {
 
 export default function HamburgerMenu({ isMenuOpen, isLight }: HamburgerMenuProps) {
 
+  const { isOverDarkSection } = useDarkSection();
+  const stroke = isLight || isOverDarkSection ? '#FFFFFF' : '#000000';
+
   return (
     <motion.svg
-      className={`w-6 h-6 hamburger ${isLight ? 'stroke-white' : 'stroke-current'}`}
+      className="w-6 h-6 hamburger"
       fill="none"
       viewBox="0 0 24 24"
-      stroke="currentColor"
+      stroke={stroke}
     >
       {/* Circle */}
       <circle
@@ -20,7 +24,8 @@ export default function HamburgerMenu({ isMenuOpen, isLight }: HamburgerMenuProp
         cy="12"
         r="10"
         strokeWidth={1.5}
-        className={`${isLight ? 'stroke-white' : 'stroke-current'} hamburger`}
+        stroke={stroke}
+        className="hamburger"
       />
 
       {/* Top line */}

@@ -14,32 +14,45 @@ export function DarkSectionProvider({ children }: { children: React.ReactNode })
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           const rect = entry.boundingClientRect;
-          // Check if the top of the section is in the nav area (0-80px from top)
-          const isInNavArea = rect.top <= 80 && rect.bottom > 80;
+          const hasDarkClass = entry.target.classList.contains('bg-dark');
+          const isIntersecting = entry.isIntersecting;
 
-          // console.log('Section:', entry.target.classList.contains('bg-dark'), 'Top:', rect.top, 'isInNavArea:', isInNavArea);
-
-          if (isInNavArea && entry.target.classList.contains('bg-dark')) {
-            // console.log('Setting to dark mode');
-            setIsOverDarkSection(true);
-          } else if (isInNavArea) {
-            // console.log('Setting to light mode');
-            setIsOverDarkSection(false);
-          }
+          console.log('Section Intersection:', {
+            isIntersecting,
+            hasDarkClass,
+            top: rect.top,
+            bottom: rect.bottom,
+            classList: Array.from(entry.target.classList),
+            ratio: entry.intersectionRatio
+          });
         });
+
+        const darkSectionInView = entries.some(entry =>
+          entry.isIntersecting &&
+          entry.target.classList.contains('bg-dark')
+        );
+
+        console.log('Setting isOverDarkSection to:', darkSectionInView);
+        setIsOverDarkSection(darkSectionInView);
       },
       {
-        threshold: [0, 0.25, 0.5, 0.75, 1], // More threshold points for smoother detection
-        rootMargin: '-80px 0px 0px 0px' // Matches nav height
+        // Observe the top 80px of the viewport
+        rootMargin: '0px 0px -90% 0px',
+        threshold: [0, 0.1]
       }
     );
 
-    const sections = document.querySelectorAll('section');
-    // console.log('Found sections:', sections.length);
-    sections.forEach((section) => {
-      // console.log('Observing section:', section.classList.contains('bg-dark'), section);
+    // Only observe sections with bg-dark class
+    const darkSections = document.querySelectorAll('section.bg-dark');
+    console.log('Found dark sections:', darkSections.length);
+
+    darkSections.forEach(section => {
+      console.log('Observing section:', {
+        classList: Array.from(section.classList),
+        id: section.id
+      });
       observer.observe(section);
     });
 

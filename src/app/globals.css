@@ -37,6 +37,9 @@ body {
   .nav-item{
     @apply text-white;
   }
+  .logo{
+    @apply fill-white;
+  }
   .hamburger{
     @apply stroke-white;
   }

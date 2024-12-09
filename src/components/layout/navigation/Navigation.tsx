@@ -9,6 +9,7 @@ import { useTransitionContext } from '../../../context/TransitionContext';
 import navData from '@/data/nav.json';
 import DesktopNavItems from './DesktopNavItems';
 import MobileNavItems from './MobileNavItems';
+import Logo from './Logo';
 
 
 export default function Navigation() {
@@ -22,7 +23,7 @@ export default function Navigation() {
       const isScrollingDown = currentScrollPos > prevScrollPos;
 
       // Only update visibility if scroll difference is more than 10px
-      if (Math.abs(currentScrollPos - prevScrollPos) > 10) {
+      if (Math.abs(currentScrollPos - prevScrollPos) > 5) {
         setIsVisible(!isScrollingDown);
       }
 
@@ -55,13 +56,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center gap-4 h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0" onClick={(e) => handleNavigation(e, '/')}>
-            <Image
-              src={navData.logo}
-              alt="Ocupop Logo"
-              width={48}
-              height={48}
-              priority
-            />
+            <Logo />
           </Link>
           <DesktopNavItems />
           <MobileNavItems />
