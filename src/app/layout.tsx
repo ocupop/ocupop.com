@@ -1,12 +1,13 @@
-import { Metadata } from 'next';
-import { defaultSEO } from '@/config/seo';
-import { ThemeProvider } from '../context/ThemeContext';
-import Navigation from "@/components/layout/navigation/Navigation";
-import Footer from '@/components/layout/footer/Footer';
-import { TransitionProvider } from '@/context/TransitionContext';
-import PageTransition from "@/components/PageTransition";
+import Footer from '@/components/layout/footer/Footer'
+import Navigation from "@/components/layout/navigation/Navigation"
+import PageTransition from "@/components/PageTransition"
+import { defaultSEO } from '@/config/seo'
+import { DarkSectionProvider } from '@/context/DarkSectionContext'
+import { TransitionProvider } from '@/context/TransitionContext'
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { Metadata } from 'next'
+import { ThemeProvider } from '../context/ThemeContext'
 import "./globals.css"
-import { DarkSectionProvider } from '@/context/DarkSectionContext';
 
 export const metadata: Metadata = {
   ...defaultSEO,
@@ -64,6 +65,7 @@ export default function RootLayout({
             </TransitionProvider>
           </DarkSectionProvider>
         </ThemeProvider>
+        <GoogleAnalytics gaId="G-TBTWG6ZXWZ" />
       </body>
     </html>
   );
