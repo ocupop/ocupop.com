@@ -127,7 +127,7 @@ export default function Home() {
             theme: 'dark'
           }}
           margins_and_padding={{
-            padding_top: '12',
+            padding_top: '28',
             padding_bottom: '28',
             // margin_top: '[400px]',
             padding_x: '12',
@@ -135,7 +135,7 @@ export default function Home() {
             content_width: 'max-w-8xl'
           }}
           inner_components={[
-            <Heading key="a" title="A super powered creative agency with zero awards."/>,
+            // <Heading key="a" title="A super powered creative agency with zero awards."/>,
             <Grid
               key="1"
               sm_columns={1}

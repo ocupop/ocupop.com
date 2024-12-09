@@ -59,7 +59,7 @@ const PortfolioHeader = ({
       )}
 
       {/* Content Section */}
-      <div className="mx-auto max-w-9xl py-20 lg:py-28 px-4 sm:px-6 lg:px-12 grid md:grid-cols-2 lg:grid-cols-7 gap-8">
+      <div className="mx-auto max-w-9xl py-20 lg:py-28 px-4 sm:px-6 lg:px-10 grid md:grid-cols-2 lg:grid-cols-7 gap-8">
 
 
         {description && (
