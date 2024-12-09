@@ -51,20 +51,20 @@ export default function RootLayout({
           }}
         />
       </head>
-      <ThemeProvider>
       <body className={`theme-transition`}>
-        <DarkSectionProvider>
-          <TransitionProvider>
-            <Navigation />
-            <PageTransition />
-            <main className="pt-20 relative">
-              {children}
-            </main>
-            <Footer />
-          </TransitionProvider>
-        </DarkSectionProvider>
+        <ThemeProvider>
+          <DarkSectionProvider>
+            <TransitionProvider>
+              <Navigation />
+              <PageTransition />
+              <main className="pt-20 relative">
+                {children}
+              </main>
+              <Footer />
+            </TransitionProvider>
+          </DarkSectionProvider>
+        </ThemeProvider>
       </body>
-      </ThemeProvider>
     </html>
   );
 }
