@@ -1,10 +1,9 @@
 import { useState } from 'react';
 import Link from 'next/link'
-import { motion  } from 'framer-motion';
+import { motion } from 'framer-motion';
 import navData from '@/data/nav.json';
 import { useTransitionContext } from '../../../context/TransitionContext';
 import HamburgerMenu from './HamburgerMenu';
-
 
 export default function MobileNavItems() {
   const { startTransition } = useTransitionContext();
@@ -13,69 +12,80 @@ export default function MobileNavItems() {
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     startTransition(href);
+    setIsMenuOpen(false); // Close menu after navigation
   };
 
-  const menuOverlay = {
-    open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  // Updated menu overlay animation
+  const menuVariants = {
+    open: {
+      transform: "translateX(0%)",
       transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2
+        duration: 0.4,
+        ease: [0.36, 0, 0.66, 1],
+        staggerChildren: 0.1,
+        delayChildren: 0.2
       }
-    }),
+    },
     closed: {
-      clipPath: "circle(30px at 40px 40px)",
+      transform: "translateX(100%)",
       transition: {
-        delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40
+        duration: 0.4,
+        ease: [0.36, 0, 0.66, 1],
+        staggerChildren: 0.05,
+        staggerDirection: -1
       }
     }
-  }
+  };
 
+  const itemVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" }
+    },
+    closed: {
+      opacity: 0,
+      y: 20,
+      transition: { duration: 0.4, ease: "easeIn" }
+    }
+  };
 
   return (
     <>
       <motion.div
-        initial={false}
+        initial="closed"
         animate={isMenuOpen ? "open" : "closed"}
-        custom={'100vh'}
-        className='bg-red-500 absolute right-0 top-0  md:hidden'
-        // ref={containerRef}
+        variants={menuVariants}
+        className={`
+          fixed inset-0 bg-black/90 backdrop-blur-sm md:hidden
+          flex items-center justify-center
+        `}
       >
-        <motion.div className="background" variants={menuOverlay} />
-
-          <ul className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end">
-              {navData.items.map((item, index) => (
-                <motion.li
-                  key={`${item.text}-${index}`}
-                  className="relative w-[125px] rounded-full"
-                >
-                  <Link
-                    href={item.link}
-                    onClick={(e) => handleNavigation(e, item.link)}
-                    className="nav-item"
-                  >
-                    {item.text}
-                  </Link>
-                  <motion.div
-                    className={`w-[125px] h-10 -z-10 absolute top-0.5 rounded-full`}
-                  />
-                </motion.li>
-              ))}
-          </ul>
-
+        <motion.ul
+          className="flex flex-col items-center space-y-8 text-white"
+        >
+          {navData.items.map((item, index) => (
+            <motion.li
+              key={`${item.text}-${index}`}
+              variants={itemVariants}
+              className="relative"
+            >
+              <Link
+                href={item.link}
+                onClick={(e) => handleNavigation(e, item.link)}
+                className="text-2xl font-medium hover:text-gray-300 transition-colors"
+              >
+                {item.text}
+              </Link>
+            </motion.li>
+          ))}
+        </motion.ul>
       </motion.div>
 
       {/* Menu button */}
       <div className="flex md:hidden relative">
-          <button
-          onClick={() => {
-            setIsMenuOpen(!isMenuOpen);
-            // console.log(isMenuOpen);
-          }}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="z-50 p-2 rounded-md text-gray-900 hover:text-gray-600"
         >
           <span className="sr-only">Toggle menu</span>
