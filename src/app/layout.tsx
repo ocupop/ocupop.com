@@ -6,6 +6,7 @@ import Footer from '@/components/layout/footer/Footer';
 import { TransitionProvider } from '@/context/TransitionContext';
 import PageTransition from "@/components/PageTransition";
 import "./globals.css"
+import { DarkSectionProvider } from '@/context/DarkSectionContext';
 
 export const metadata: Metadata = {
   ...defaultSEO,
@@ -50,18 +51,20 @@ export default function RootLayout({
           }}
         />
       </head>
-      <ThemeProvider>
       <body className={`theme-transition`}>
-        <TransitionProvider>
-          <Navigation />
-          <PageTransition />
-          <main className="pt-20 relative">
-            {children}
-          </main>
-          <Footer />
-        </TransitionProvider>
+        <ThemeProvider>
+          <DarkSectionProvider>
+            <TransitionProvider>
+              <Navigation />
+              <PageTransition />
+              <main className="pt-20 relative">
+                {children}
+              </main>
+              <Footer />
+            </TransitionProvider>
+          </DarkSectionProvider>
+        </ThemeProvider>
       </body>
-      </ThemeProvider>
     </html>
   );
 }

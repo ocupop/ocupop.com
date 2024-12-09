@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Link from 'next/link'
-import { motion  } from 'framer-motion';
+import { motion, cubicBezier  } from "framer-motion";
 import navData from '@/data/nav.json';
 import { useTransitionContext } from '../../../context/TransitionContext';
 import HamburgerMenu from './HamburgerMenu';
@@ -10,76 +10,94 @@ export default function MobileNavItems() {
   const { startTransition } = useTransitionContext();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const customEasing = cubicBezier(0.835, 0.070, 0.840, 0.110)
+
+
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     startTransition(href);
+    setIsMenuOpen(false);
   };
 
-  const menuOverlay = {
-    open: (height = 1000) => ({
-      clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  const menuVariants = {
+    open: {
+      clipPath: `circle(${2000}px at calc(100% - 40px) 40px)`,
+      opacity: 1,
       transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2
+        duration: 0.7,
+        ease: customEasing,
+        // ease: [0.76, 0, 0.24, 1],
+        staggerChildren: 0.07,
+        delayChildren: 0.2
       }
-    }),
+    },
     closed: {
-      clipPath: "circle(30px at 40px 40px)",
+      clipPath: "circle(30px at calc(100% - 40px) 40px)",
+      opacity: 0,
       transition: {
-        delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40
+        duration: 0.7,
+        ease: customEasing,
+        // ease: [0.76, 0, 0.24, 1],
+        staggerChildren: 0.05,
+        staggerDirection: -1
       }
     }
-  }
+  };
 
+  const itemVariants = {
+    open: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.4, ease: "easeOut" }
+    },
+    closed: {
+      opacity: 0,
+      y: 20,
+      transition: { duration: 0.4, ease: "easeIn" }
+    }
+  };
 
   return (
     <>
       <motion.div
-        initial={false}
+        initial="closed"
         animate={isMenuOpen ? "open" : "closed"}
-        custom={'100vh'}
-        className='bg-red-500 absolute right-0 top-0  md:hidden'
-        // ref={containerRef}
+        variants={menuVariants}
+        className={`
+          fixed inset-0 bg-black/90 backdrop-blur-sm md:hidden
+          flex items-center justify-center
+          pointer-events-${isMenuOpen ? 'auto' : 'none'}
+        `}
       >
-        <motion.div className="background" variants={menuOverlay} />
-
-          <ul className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end">
-              {navData.items.map((item, index) => (
-                <motion.li
-                  key={`${item.text}-${index}`}
-                  className="relative w-[125px] rounded-full"
-                >
-                  <Link
-                    href={item.link}
-                    onClick={(e) => handleNavigation(e, item.link)}
-                    className="nav-item"
-                  >
-                    {item.text}
-                  </Link>
-                  <motion.div
-                    className={`w-[125px] h-10 -z-10 absolute top-0.5 rounded-full`}
-                  />
-                </motion.li>
-              ))}
-          </ul>
-
+        <motion.ul
+          className="flex flex-col items-center space-y-8 text-white"
+        >
+          {navData.items.map((item, index) => (
+            <motion.li
+              key={`${item.text}-${index}`}
+              variants={itemVariants}
+              className="relative"
+            >
+              <Link
+                href={item.link}
+                onClick={(e) => handleNavigation(e, item.link)}
+                className="text-2xl font-sans hover:text-gray-300 transition-colors"
+              >
+                {item.text}
+              </Link>
+            </motion.li>
+          ))}
+        </motion.ul>
       </motion.div>
 
       {/* Menu button */}
       <div className="flex md:hidden relative">
-          <button
-          onClick={() => {
-            setIsMenuOpen(!isMenuOpen);
-            // console.log(isMenuOpen);
-          }}
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="z-50 p-2 rounded-md text-gray-900 hover:text-gray-600"
         >
           <span className="sr-only">Toggle menu</span>
-          <HamburgerMenu isMenuOpen={isMenuOpen} />
+          <HamburgerMenu isMenuOpen={isMenuOpen} isLight={isMenuOpen} />
         </button>
       </div>
     </>
