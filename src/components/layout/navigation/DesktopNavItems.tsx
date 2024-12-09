@@ -5,12 +5,14 @@ import navData from '@/data/nav.json';
 import { useTransitionContext } from '../../../context/TransitionContext';
 import HamburgerMenu from './HamburgerMenu';
 import { usePathname } from 'next/navigation';
+import { useDarkSection } from '@/context/DarkSectionContext';
 
 
 export default function DesktopNavItems() {
   const { startTransition } = useTransitionContext();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const { isOverDarkSection } = useDarkSection();
 
   // Add trailing slash to pathname for comparison
   const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
@@ -50,7 +52,9 @@ export default function DesktopNavItems() {
                   className="fixed top-16 right-0 h-screen sm:bg-transparent sm:h-auto sm:relative sm:top-0"
                 >
                   <motion.ul
-                    className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end"
+                    className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end ${
+                      isOverDarkSection ? 'text-white' : 'text-gray-900'
+                    }`}
                     onMouseLeave={handleMouseLeave}
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
@@ -64,7 +68,7 @@ export default function DesktopNavItems() {
                         <Link
                           href={item.link}
                           onClick={(e) => handleNavigation(e, item.link)}
-                          className="nav-item"
+                          className={`nav-item ${isOverDarkSection ? '!text-white debug-dark' : 'text-gray-900 debug-light'}`}
                           onMouseEnter={() => setHoveredIndex(index)}
                           aria-current={pathname === item.link ? 'page' : undefined}
                         >
