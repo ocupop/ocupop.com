@@ -59,7 +59,7 @@ const Button = ({
   };
 
   const buttonClasses = `
-    inline-flex items-center gap-2 rounded-xl transition-colors w-full font-sans
+    inline-flex items-center gap-2 rounded-xl transition-colors w-full font-sans hover:bg-white/60 transition
     ${getSizeClasses()}
     ${getStyleClasses()}
   `;

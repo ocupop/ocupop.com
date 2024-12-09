@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from 'react';
+import Lottie from "lottie-react";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Image from "@/components/base/Image";
@@ -10,6 +11,7 @@ import PortfolioLogoPile from "@/components/custom/PortfolioLogoPile";
 import Button from "@/components/base/Button";
 import GridItem from "@/components/base/GridItem";
 import { motion, Variants } from "framer-motion";
+import logoAnimation from "../components/LogoTransition.json";
 
 
 export default function Home() {
@@ -31,6 +33,22 @@ export default function Home() {
         duration: 0.5
       }
     }
+  };
+
+  const lottieInteractivity = {
+    mode: "cursor" as const,
+    actions: [
+      {
+        position: { x: [0, 1] as [number, number], y: [0, 1] as [number, number] },
+        type: "loop" as const,
+        frames: [45, 60] as [number, number]
+      },
+      {
+        position: { x: -1, y: -1 },
+        type: 'stop' as const,
+        frames: [0] as [number]
+      }
+    ]
   };
 
   useEffect(() => {
@@ -109,7 +127,7 @@ export default function Home() {
             theme: 'dark'
           }}
           margins_and_padding={{
-            padding_top: '12',
+            padding_top: '28',
             padding_bottom: '28',
             // margin_top: '[400px]',
             padding_x: '12',
@@ -117,7 +135,7 @@ export default function Home() {
             content_width: 'max-w-8xl'
           }}
           inner_components={[
-            <Heading key="a" title="A super powered creative agency with zero awards."/>,
+            // <Heading key="a" title="A super powered creative agency with zero awards."/>,
             <Grid
               key="1"
               sm_columns={1}
@@ -387,11 +405,21 @@ export default function Home() {
             lg_columns={2}
             xl_columns={2}
             inner_components={[
-              <GridItem key="1" cols={2}>
+              <GridItem key="1" cols={1}>
                 <Heading key="1" alignment="left" eyebrow="Click to Speak to a Representative" tagline="An unfortunate inconvenience — our fax machines are down. Please contact us via the links below." />
               </GridItem>,
+              <GridItem key="lottie" cols={1}>
+                <div className="-mt-44 w-96 mx-auto">
+                <Lottie
+                  animationData={logoAnimation}
+                  loop={true}
+                  autoplay={true}
+                  interactivity={lottieInteractivity}
+                />
+                </div>
+              </GridItem>,
               <GridItem key="2" cols={1}>
-                <Button key="1" button_text="Start a Project" link="/start-a-project/" button_style="primary" button_size="md" />
+                <Button key="1" button_text="Start a Project" link="/contact/" button_style="primary" button_size="md" />
               </GridItem>,
               <GridItem key="3" cols={1}>
                 <Button key="1" button_text="View Open Positions" link="/about/careers/" button_style="primary" button_size="md" />
