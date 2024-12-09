@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-import Lottie from "lottie-react";
+import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import { AnimatePresence, motion, cubicBezier  } from "framer-motion";
 import { useTransitionContext } from '@/context/TransitionContext';
 import logoAnimation from "./LogoTransition.json";
@@ -12,7 +12,7 @@ const customEasing = cubicBezier(0.835, 0.070, 0.840, 0.110)
 
 const PageTransition = () => {
   const { isTransitioning } = useTransitionContext();
-  const lottieRef = useRef<any>(null);
+  const lottieRef = useRef<LottieRefCurrentProps>(null);
 
   useEffect(() => {
     if (isTransitioning) {

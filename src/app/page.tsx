@@ -36,20 +36,20 @@ export default function Home() {
   };
 
   const lottieInteractivity = {
-  mode: "cursor",
-   actions: [
+    mode: "cursor" as const,
+    actions: [
       {
-          position: { x: [0, 1], y: [0, 1] },
-          type: "loop",
-          frames: [45, 60]
+        position: { x: [0, 1] as [number, number], y: [0, 1] as [number, number] },
+        type: "loop" as const,
+        frames: [45, 60] as [number, number]
       },
       {
-          position: { x: -1, y: -1 },
-          type: 'stop',
-          frames: [0],
+        position: { x: -1, y: -1 },
+        type: 'stop' as const,
+        frames: [0] as [number]
       }
     ]
-};
+  };
 
   useEffect(() => {
     const handleScroll = () => {

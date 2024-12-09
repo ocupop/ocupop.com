@@ -1,12 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 import Link from 'next/link'
 import { motion } from 'framer-motion';
 
 import { useTransitionContext } from '../../../context/TransitionContext';
-import navData from '@/data/nav.json';
 import DesktopNavItems from './DesktopNavItems';
 import MobileNavItems from './MobileNavItems';
 import Logo from './Logo';

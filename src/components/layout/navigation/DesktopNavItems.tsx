@@ -27,7 +27,7 @@ export default function DesktopNavItems() {
     const currentIndex = navData.items.findIndex(item => item.link === normalizedPath);
     setActiveIndex(currentIndex >= 0 ? currentIndex : null);
     setHoveredIndex(currentIndex >= 0 ? currentIndex : null);
-  }, [pathname]);
+  }, [normalizedPath]);
 
   const handleNavigation = async (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
