@@ -11,7 +11,6 @@ import PortfolioLogoPile from "@/components/custom/PortfolioLogoPile";
 import Button from "@/components/base/Button";
 import GridItem from "@/components/base/GridItem";
 import { motion, Variants } from "framer-motion";
-import logoAnimation from "../components/LogoTransition.json";
 import PencilDog from "../components/lotties/PencilDog.json"
 
 
@@ -42,12 +41,12 @@ export default function Home() {
       {
         position: { x: [0, 1] as [number, number], y: [0, 1] as [number, number] },
         type: "loop" as const,
-        frames: [3600, 5600] as [number, number]
+        frames: [162, 273] as [number, number]
       },
       {
         position: { x: -1, y: -1 },
         type: "loop" as const,
-        frames: [0, 3600] as [number, number]
+        frames: [1, 161] as [number, number]
       }
     ]
   };
