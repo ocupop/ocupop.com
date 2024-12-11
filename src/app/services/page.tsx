@@ -1,8 +1,15 @@
+"use client";
+import Lottie from "lottie-react";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Heading from "@/components/base/Heading";
-import Image from "@/components/base/Image";
 import GridItem from "@/components/base/GridItem";
+import Think from "@/components/lotties/Think.json"
+import Design from "@/components/lotties/Design.json"
+import Build from "@/components/lotties/Build.json"
+
+
+
 
 export default function ServicesPage() {
   return (
@@ -24,7 +31,13 @@ export default function ServicesPage() {
           xl_columns={7}
           classNames="h-screen"
           inner_components={[
-            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col"><Image key="1" className="p-16" image="/assets/_services/think.svg" alt="Think" /></GridItem>,
+            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col">
+              <Lottie
+                  animationData={Think}
+                  loop={true}
+                  autoplay={true}
+                />
+              </GridItem>,
             <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="THINK" title="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works. Specifically, here’s a list to help boost our SEO:" />
               <Grid
@@ -80,7 +93,13 @@ export default function ServicesPage() {
           xl_columns={7}
           classNames="h-screen"
           inner_components={[
-            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col"><Image key="1" className="p-16" image="/assets/_services/design.svg" alt="Design" /></GridItem>,
+            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col">
+              <Lottie
+                  animationData={Design}
+                  loop={true}
+                  autoplay={true}
+                />
+            </GridItem>,
             <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="DESIGN" title="We use structure, form, language, and motion to create solutions that captivate, compel and convert." />
               <Grid
@@ -135,7 +154,13 @@ export default function ServicesPage() {
           xl_columns={7}
           classNames="h-screen"
           inner_components={[
-            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col"><Image key="1" className="p-16" image="/assets/_services/build.svg" alt="Build" /></GridItem>,
+            <GridItem key="1" cols={3} className="flex justify-center items-start flex-col">
+              <Lottie
+                  animationData={Build}
+                  loop={true}
+                  autoplay={true}
+                />
+            </GridItem>,
             <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="BUILD" title="From action planning to application creation, we’re here to help you build and maintain an engine for success." />
               <Grid
