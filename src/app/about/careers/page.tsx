@@ -1,9 +1,6 @@
 import Section from "@/components/base/Section";
 import Heading from "@/components/base/Heading";
 import Image from "@/components/base/Image";
-import GridItem from "@/components/base/GridItem";
-import Grid from "@/components/base/Grid";
-import { div } from "framer-motion/client";
 
 export default function CareersPage() {
   return (

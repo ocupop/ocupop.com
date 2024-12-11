@@ -3,7 +3,6 @@ import Lottie from "lottie-react";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Heading from "@/components/base/Heading";
-import Image from "@/components/base/Image";
 import GridItem from "@/components/base/GridItem";
 import Think from "@/components/lotties/Think.json"
 import Design from "@/components/lotties/Design.json"
