@@ -12,6 +12,7 @@ import Button from "@/components/base/Button";
 import GridItem from "@/components/base/GridItem";
 import { motion, Variants } from "framer-motion";
 import logoAnimation from "../components/LogoTransition.json";
+import PencilDog from "../components/lotties/PencilDog.json"
 
 
 export default function Home() {
@@ -41,12 +42,12 @@ export default function Home() {
       {
         position: { x: [0, 1] as [number, number], y: [0, 1] as [number, number] },
         type: "loop" as const,
-        frames: [45, 60] as [number, number]
+        frames: [3600, 5600] as [number, number]
       },
       {
         position: { x: -1, y: -1 },
-        type: 'stop' as const,
-        frames: [0] as [number]
+        type: "loop" as const,
+        frames: [0, 3600] as [number, number]
       }
     ]
   };
@@ -411,7 +412,7 @@ export default function Home() {
               <GridItem key="lottie" cols={1}>
                 <div className="-mt-44 w-96 mx-auto">
                 <Lottie
-                  animationData={logoAnimation}
+                  animationData={PencilDog}
                   loop={true}
                   autoplay={true}
                   interactivity={lottieInteractivity}

@@ -1,27 +1,40 @@
 import Section from "@/components/base/Section";
 import Heading from "@/components/base/Heading";
+import Image from "@/components/base/Image";
+import GridItem from "@/components/base/GridItem";
+import Grid from "@/components/base/Grid";
 
 export default function ContactPage() {
   return (
+    <>
+    <div className="-mt-20">
+        <Image key="1" image="/assets/_careers/ocupop-team.jpg" alt="Part of the Ocupop team posing for a photo on the roof" />
+    </div>
     <Section
       title="About Hero"
-      // is_contained={true}
+      is_contained={true}
       margins_and_padding={{
-        padding_x: '4',
+        // padding_x: '4',
         content_width: 'max-w-9xl'
       }}
       inner_components={[
-        <Section
+        <Grid
           key="1"
-          is_contained={true}
-          margins_and_padding={{
-            content_width: 'max-w-xl !mx-0'
-          }}
+          sm_columns={1}
+          md_columns={2}
+          lg_columns={2}
+          xl_columns={2}
           inner_components={[
-            <Heading key="1" alignment="left" eyebrow="You see what you get" title="We are, simply speaking, a small shop, with all of the benefits and pit-falls therein. " />,
+            <GridItem key="headind" cols={1}>
+              <Heading key="1" alignment="left" eyebrow="Get in touch" title="Hey, yeah, let’s talk. Here’s where we write something real neat to encourage and direct folks to fill out the form." />,
+            </GridItem>,
+            <GridItem key="contact" cols={1}>
+              contact form
+            </GridItem>,
           ]}
         />
       ]}
-    />
+      />
+    </>
   );
 }

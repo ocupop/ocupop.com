@@ -7,7 +7,7 @@ import { useState, useEffect } from 'react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-  const locations = ['Whistler', 'Milwaukee', 'Savanah'];
+  const locations = ['Whistler', 'Milwaukee', 'Savannah'];
   const [currentLocation, setCurrentLocation] = useState(0);
 
   useEffect(() => {
