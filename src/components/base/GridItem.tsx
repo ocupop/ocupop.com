@@ -8,7 +8,7 @@ interface GridItemProps {
 
 const GridItem = ({ cols = 1, children, className }: GridItemProps) => {
   return (
-    <div className={`col-span-1 md:col-span-${cols} ${className}`}>
+    <div className={`col-span-1 md:col-span-${cols} ${className ? className : ''}`}>
       {children}
     </div>
   );
