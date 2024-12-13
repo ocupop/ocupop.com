@@ -59,7 +59,7 @@ const Button = ({
   };
 
   const buttonClasses = `
-    inline-flex items-center gap-2 rounded-xl transition-colors w-full font-sans hover:bg-white/60 transition
+    inline-flex items-center gap-2 rounded-xl transition-colors w-full font-sans hover:bg-white/60 transition flex justify-between
     ${getSizeClasses()}
     ${getStyleClasses()}
   `;
@@ -81,7 +81,10 @@ const Button = ({
           />
         )}
         {button_text}
-        {icon && icon.side === 'right' && (
+        <span>
+        →
+        </span>
+        {/* {icon && icon.side === 'right' && (
           <Image
             src={icon.image}
             alt=""
@@ -89,7 +92,7 @@ const Button = ({
             width={24}
             height={24}
           />
-        )}
+        )} */}
       </Link>
     </div>
   );

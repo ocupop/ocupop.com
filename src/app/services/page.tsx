@@ -1,5 +1,7 @@
 "use client";
-import Lottie from "lottie-react";
+
+import { useEffect } from "react";
+import { useLottie }  from "lottie-react";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Heading from "@/components/base/Heading";
@@ -10,16 +12,64 @@ import Build from "@/components/lotties/Build.json"
 
 
 
-
 export default function ServicesPage() {
+  const thinkAnimation = useLottie({
+    animationData: Think,
+    loop: false,
+    autoplay: true,
+    onComplete: () => {
+      setTimeout(() => {
+        thinkAnimation.play();
+      }, 400);
+    }
+  });
+
+  const designAnimation = useLottie({
+    animationData: Design,
+    loop: false,
+    autoplay: false,
+    onComplete: () => {
+      setTimeout(() => {
+        designAnimation.play();
+      }, 300);
+    }
+  });
+
+  const buildAnimation = useLottie({
+    animationData: Build,
+    loop: false,
+    autoplay: false,
+    onComplete: () => {
+      setTimeout(() => {
+        buildAnimation.play();
+      }, 400);
+    }
+  });
+
+  useEffect(() => {
+    const designTimer = setTimeout(() => {
+      designAnimation.play();
+    }, 8000);
+
+    const buildTimer = setTimeout(() => {
+      buildAnimation.play();
+    }, 1000);
+
+    return () => {
+      clearTimeout(designTimer);
+      clearTimeout(buildTimer);
+    };
+  }, [designAnimation, buildAnimation]);
+
+
   return (
     <>
     <Section
       title="think"
-      className="h-screen -mt-12"
+      className="-mt-12"
       margins_and_padding={{
-        padding_top: '0',
-        padding_bottom: '0',
+        // padding_top: '0',
+        // padding_bottom: '0',
         content_width: 'max-w-9xl'
       }}
       inner_components={[
@@ -29,15 +79,11 @@ export default function ServicesPage() {
           md_columns={2}
           lg_columns={7}
           xl_columns={7}
-          classNames="h-screen"
+          // classNames="h-screen"
           inner_components={[
             <GridItem key="1" cols={3} className="flex justify-center items-start flex-col">
-              <Lottie
-                  animationData={Think}
-                  loop={true}
-                  autoplay={true}
-                />
-              </GridItem>,
+              {thinkAnimation.View}
+            </GridItem>,
             <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="THINK" title="Creativity demands curiosity. We’ll use ours to understand your needs and deliver what works. Specifically, here’s a list to help boost our SEO:" />
               <Grid
@@ -77,11 +123,11 @@ export default function ServicesPage() {
       ]}
     />
     <Section
-      className="bg-light h-screen"
+      className="bg-light"
       title="design"
       margins_and_padding={{
-        padding_top: '0',
-        padding_bottom: '0',
+        // padding_top: '0',
+        // padding_bottom: '0',
         content_width: 'max-w-9xl'
       }}
       inner_components={[
@@ -91,14 +137,10 @@ export default function ServicesPage() {
           md_columns={2}
           lg_columns={7}
           xl_columns={7}
-          classNames="h-screen"
+          // classNames="h-screen"
           inner_components={[
             <GridItem key="1" cols={3} className="flex justify-center items-start flex-col">
-              <Lottie
-                  animationData={Design}
-                  loop={true}
-                  autoplay={true}
-                />
+              {designAnimation.View}
             </GridItem>,
             <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="DESIGN" title="We use structure, form, language, and motion to create solutions that captivate, compel and convert." />
@@ -138,11 +180,11 @@ export default function ServicesPage() {
       ]}
     />
     <Section
-      className="h-screen"
+      // className="h-screen"
       title="design"
       margins_and_padding={{
-        padding_top: '0',
-        padding_bottom: '0',
+        // padding_top: '0',
+        // padding_bottom: '0',
         content_width: 'max-w-9xl'
       }}
       inner_components={[
@@ -152,14 +194,10 @@ export default function ServicesPage() {
           md_columns={2}
           lg_columns={7}
           xl_columns={7}
-          classNames="h-screen"
+          // classNames="h-screen"
           inner_components={[
             <GridItem key="1" cols={3} className="flex justify-center items-start flex-col">
-              <Lottie
-                  animationData={Build}
-                  loop={true}
-                  autoplay={true}
-                />
+              {buildAnimation.View}
             </GridItem>,
             <GridItem key="2" cols={4} className="flex justify-center items-start flex-col -mt-12">
               <Heading key="2"alignment="left" eyebrow="BUILD" title="From action planning to application creation, we’re here to help you build and maintain an engine for success." />
@@ -199,11 +237,11 @@ export default function ServicesPage() {
       ]}
     />
     <Section
-      className="bg-light h-screen"
+      className="bg-light"
       title="our clients"
       margins_and_padding={{
-        padding_top: '0',
-        padding_bottom: '0',
+        // padding_top: '0',
+        // padding_bottom: '0',
         content_width: 'max-w-9xl'
       }}
       inner_components={[

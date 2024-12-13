@@ -5,14 +5,14 @@ import navData from '@/data/nav.json';
 import { useTransitionContext } from '../../../context/TransitionContext';
 import HamburgerMenu from './HamburgerMenu';
 import { usePathname } from 'next/navigation';
-import { useDarkSection } from '@/context/DarkSectionContext';
+// import { useDarkSection } from '@/context/DarkSectionContext';
 
 
 export default function DesktopNavItems() {
   const { startTransition } = useTransitionContext();
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(true);
-  const { isOverDarkSection } = useDarkSection();
+  // const { isOverDarkSection } = useDarkSection();
 
   // Add trailing slash to pathname for comparison
   const normalizedPath = pathname.endsWith('/') ? pathname : `${pathname}/`;
@@ -21,7 +21,7 @@ export default function DesktopNavItems() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(initialIndex >= 0 ? initialIndex : null);
   const [activeIndex, setActiveIndex] = useState<number | null>(initialIndex >= 0 ? initialIndex : null);
 
-  const colors = ['#FF6D39', '#D1C700', '#F7B5ED', '#15A620'];
+  const colors = ['#33A3E2', '#FF6D39', '#8CC125', '#F7B5ED'];
 
   useEffect(() => {
     const currentIndex = navData.items.findIndex(item => item.link === normalizedPath);
@@ -52,9 +52,7 @@ export default function DesktopNavItems() {
                   className="fixed top-16 right-0 h-screen sm:bg-transparent sm:h-auto sm:relative sm:top-0"
                 >
                   <motion.ul
-                    className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end ${
-                      isOverDarkSection ? 'text-white' : 'text-gray-900'
-                    }`}
+                    className={`flex flex-col sm:flex-row space-y-4 sm:space-y-0 p-8 sm:p-0 relative justify-end text-gray-900`}
                     onMouseLeave={handleMouseLeave}
                     initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
@@ -68,7 +66,7 @@ export default function DesktopNavItems() {
                         <Link
                           href={item.link}
                           onClick={(e) => handleNavigation(e, item.link)}
-                          className={`nav-item ${isOverDarkSection ? '!text-white debug-dark' : 'text-gray-900 debug-light'}`}
+                          className={`nav-item text-gray-900 debug-light`}
                           onMouseEnter={() => setHoveredIndex(index)}
                           aria-current={pathname === item.link ? 'page' : undefined}
                         >
