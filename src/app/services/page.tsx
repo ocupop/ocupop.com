@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import Lottie, { useLottie }  from "lottie-react";
+import { useLottie }  from "lottie-react";
 import Section from "@/components/base/Section";
 import Grid from "@/components/base/Grid";
 import Heading from "@/components/base/Heading";
