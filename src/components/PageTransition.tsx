@@ -43,7 +43,7 @@ const PageTransition = () => {
           }}
         >
           <motion.div
-            className="absolute right-0 top-0 w-[40vw] h-screen bg-[#15A620] origin-center-left z-50"
+            className="absolute right-0 top-0 w-[40vw] h-screen bg-[#33A3E2] origin-center-left z-50"
             style={{ originX: 0 }}
             animate={{
               width: ["100vw", "0vw"]

@@ -3,7 +3,7 @@ import PortfolioHeader from "@/components/custom/PortfolioHeader";
 export default function RadioMilwaukeePage() {
   return (
     <div>
-      <PortfolioHeader
+      {/* <PortfolioHeader
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         client="Radio Milwaukee"
         hero={{
@@ -16,7 +16,7 @@ export default function RadioMilwaukeePage() {
           { tag: "illustration" },
           { tag: "Type Design" },
         ]}
-      />
+      /> */}
     </div>
   );
 }

@@ -16,7 +16,7 @@ export default function CareersPage() {
         <div key="1" className="max-w-4xl">
           <Heading key="1" alignment="left" title="Here’s a description about how we work and the a little insight into our hiring process. In addition, the standard we hold ourselves to." />
         </div>,
-        <Image key="2" image="/assets/_careers/ocupop-team.jpg" alt="Part of the Ocupop team posing for a photo on the roof" className="rounded-2xl" />
+        <Image key="2" image="/assets/_careers/team-work.jpg" alt="Part of the Ocupop team posing for a photo on the roof" className="rounded-2xl" />
       ]}
       />
     <Section

@@ -211,7 +211,7 @@ export default function Home() {
                       { tag: 'Strategy' }
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/radio-milwaukee-mark.svg",
+                      image: "/assets/_home/portfolio_projects/piko.jpg",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -230,7 +230,7 @@ export default function Home() {
                       { tag: 'Strategy' }
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/io-connect.png",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -249,7 +249,7 @@ export default function Home() {
                       { tag: 'Strategy' }
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/cr-baby.png",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -266,7 +266,7 @@ export default function Home() {
                       { tag: 'Design' },
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/ietf.png",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -284,7 +284,7 @@ export default function Home() {
                       { tag: 'Animation' },
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/gemini.png",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -303,7 +303,7 @@ export default function Home() {
                       { tag: 'Strategy' }
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/dev-summit.jpg",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -322,7 +322,7 @@ export default function Home() {
                       { tag: 'Strategy' }
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/refed.jpg",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 
@@ -341,7 +341,7 @@ export default function Home() {
                       { tag: 'Strategy' }
                     ]}
                     image={{
-                      image: "/assets/_home/portfolio_projects/bittercube-photo.jpg",
+                      image: "/assets/_home/portfolio_projects/nfc.png",
                       max_height: '100%',
                       alt: "Example Project Screenshot",
 

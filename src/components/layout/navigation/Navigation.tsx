@@ -39,7 +39,7 @@ export default function Navigation() {
 
   return (
     <motion.nav
-      className="fixed top-0 w-full z-50"
+      className="fixed top-0 w-full z-40"
       id="primary-nav"
       animate={{
         opacity: isVisible ? 1 : 0,
@@ -50,7 +50,7 @@ export default function Navigation() {
         ease: "easeInOut"
       }}
     >
-      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="max-w-9xl mx-auto px-4 sm:px-6 lg:px-10 bg-white/40">
         <div className="flex justify-between items-center gap-4 h-20">
           {/* Logo */}
           <Link href="/" className="flex-shrink-0" onClick={(e) => handleNavigation(e, '/')}>
